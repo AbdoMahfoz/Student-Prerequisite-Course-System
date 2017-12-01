@@ -24,7 +24,7 @@ public class ArrayList<T>
     public ArrayList()
     {
         count = 0;
-        capacity = 0;
+        capacity = 2;
         arr = new T[2];
     }
     public ArrayList(int IntialCount)
@@ -85,6 +85,12 @@ public class ArrayList<T>
             arr[i] = arr[i + 1];
         }
         count--;
+    }
+    public void Clear()
+    {
+        arr = new T[2];
+        capacity = 2;
+        count = 0;
     }
     public T[] ToArray()
     {
