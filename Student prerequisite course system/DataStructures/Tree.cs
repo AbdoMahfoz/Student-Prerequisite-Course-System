@@ -54,7 +54,7 @@ public class Tree<T> where T : ITreeElement
             T tmp = q.Top();
             q.Dequeue();
             if (AdjacencyList[tmp.TreeIndex] == null) continue;
-            foreach(int n in AdjacencyList[tmp.TreeIndex])
+            foreach (int n in AdjacencyList[tmp.TreeIndex])
             {
                 T tmpTarget = Elements[n];
                 if (!Array.Exists(AlreadyTaken, new Predicate<T>((T a) => { return a == tmpTarget; })))
@@ -76,10 +76,12 @@ public class Tree<T> where T : ITreeElement
             {
                 Course c = Elements[i] as Course;
                 tmp.Append(c.Name + " ");
-                if (AdjacencyList[i] == null) continue;
-                for (int j = 0; j < AdjacencyList[i].Count; j++)
+                if (AdjacencyList[i] != null)
                 {
-                    tmp.Append(AdjacencyList[i][j] + " ");
+                    for (int j = 0; j < AdjacencyList[i].Count; j++)
+                    {
+                        tmp.Append(AdjacencyList[i][j] + " ");
+                    }
                 }
                 tmp.Remove(tmp.Length - 1, 1);
                 res.Append(tmp.ToString());
@@ -101,7 +103,6 @@ public class Tree<T> where T : ITreeElement
             {
                 AdjacencyList[i] = new ArrayList<int>();
                 string[] fields = filedata[i].Split(' ', '\0');
-                if (fields.Length <= 1) continue;
                 Course c = FileOperations.CoursesFile.GetCourse(fields[0]);
                 c.TreeIndex = i;
                 Elements.Append(c as T);
