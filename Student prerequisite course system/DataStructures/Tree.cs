@@ -29,7 +29,7 @@ public class Tree<T> where T : ITreeElement
     {
         get => count;
     }
-    public void AddCourse(T value)
+    public void AddElement(T value)
     {
         value.TreeIndex = count;
         Elements.Append(value);
@@ -44,7 +44,7 @@ public class Tree<T> where T : ITreeElement
         }
         AdjacencyList[dependant.TreeIndex].Append(dependee.TreeIndex);
     }
-    public T[] GetDependantCourses(T Target, T[] AlreadyTaken)
+    public T[] GetDependantElements(T Target, T[] AlreadyTaken)
     {
         ArrayList<T> res = new ArrayList<T>();
         ArrayList<T> queue = new ArrayList<T>();
@@ -53,7 +53,8 @@ public class Tree<T> where T : ITreeElement
         {
             T tmp = queue[Count - 1];
             queue.PopBack();
-            for (int i = 0; AdjacencyList[tmp.TreeIndex] != null && i < AdjacencyList[tmp.TreeIndex].Count; i++)
+            if (AdjacencyList[tmp.TreeIndex] == null) continue;
+            for (int i = 0; i < AdjacencyList[tmp.TreeIndex].Count; i++)
             {
                 T tmpTarget = Elements[AdjacencyList[tmp.TreeIndex][i]];
                 if (!Array.Exists(AlreadyTaken, new Predicate<T>((T a) => { return a == tmpTarget; })))
@@ -88,7 +89,7 @@ public class Tree<T> where T : ITreeElement
         }
         else
         {
-            return null;
+            throw new NotImplementedException("UnloadToFile only works with Course type");
         }
     }
     public void LoadFromFile(string[] filedata)
@@ -109,6 +110,10 @@ public class Tree<T> where T : ITreeElement
                     AdjacencyList[i].Append(int.Parse(fields[j]));
                 }
             }
+        }
+        else
+        {
+            throw new NotImplementedException("LoadFromFile only works with Course type");
         }
     }
 }
