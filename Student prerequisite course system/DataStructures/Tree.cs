@@ -47,19 +47,19 @@ public class Tree<T> where T : ITreeElement
     public T[] GetDependantElements(T Target, T[] AlreadyTaken)
     {
         ArrayList<T> res = new ArrayList<T>();
-        ArrayList<T> queue = new ArrayList<T>();
-        queue.Append(Target);
-        while (queue.Count > 0)
+        Queue<T> q = new Queue<T>();
+        q.Enqueue(Target);
+        while (q.Count > 0)
         {
-            T tmp = queue[Count - 1];
-            queue.PopBack();
+            T tmp = q.Top();
+            q.Dequeue();
             if (AdjacencyList[tmp.TreeIndex] == null) continue;
             for (int i = 0; i < AdjacencyList[tmp.TreeIndex].Count; i++)
             {
                 T tmpTarget = Elements[AdjacencyList[tmp.TreeIndex][i]];
                 if (!Array.Exists(AlreadyTaken, new Predicate<T>((T a) => { return a == tmpTarget; })))
                 {
-                    queue.Append(tmpTarget);
+                    q.Enqueue(tmpTarget);
                     res.Append(tmpTarget);
                 }
             }
