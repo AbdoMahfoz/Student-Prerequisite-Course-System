@@ -71,11 +71,44 @@ static public class FileOperations
     {
         static public void AddCourse(Course c)
         {
-            throw new NotImplementedException();
+            FileStream FS = new FileStream("Courses.txt", FileMode.Append);
+            StreamWriter SW = new StreamWriter(FS);
+            string str = c.Name + "@" + c.Description + "#";
+            SW.Write(str);
+            SW.Close();
+
         }
         static public Course GetCourse(string name)
         {
-            throw new NotImplementedException();
+            FileStream fs = new FileStream("Courses.txt", FileMode.Open);
+            StreamReader sr = new StreamReader(fs);
+            string[] Records, Fields;
+            bool found = false;
+            Records = sr.ReadToEnd().Split('#');
+            sr.Close();
+            int index = 0;
+            for (int i = 0; i < Records.Length - 1; i++)
+            {
+                Fields = Records[i].Split('@');
+                if (Fields[0] == name)
+                {
+                    found = true;
+                    index = i;
+                    break;
+                }
+            }
+            if (found == false)
+            {
+                return null;
+            }
+            else
+            {
+                Course course = new Course();
+                Fields = Records[index].Split('@');
+                course.Name = Fields[0];
+                course.Description = Fields[1];
+                return course;
+            }
         }
     }
     static public class TreeFile
