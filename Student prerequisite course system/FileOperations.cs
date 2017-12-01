@@ -211,15 +211,62 @@ static public class FileOperations
             sw.Close();
         }
     }
-    static public class Subjects_UsersFile
+       static public class Subjects_UsersFile
     {
+        static ArrayList<Pair<string, ArrayList<string>>> Data = null;
+        static void LoadData()
+        {
+            FileStream FS = new FileStream("Subjects_User.txt", FileMode.Open);
+            StreamReader SR = new StreamReader(FS);
+            Data = new ArrayList<Pair<string, ArrayList<string>>>();
+            while (!SR.EndOfStream)
+            {
+                ArrayList<string> s = new ArrayList<string>();
+                Pair<string, ArrayList<string>> cs = new Pair<string, ArrayList<string>>();
+                string c;
+                string line = SR.ReadLine();
+                string[] fields = line.Split('@');
+                c = fields[0];
+                for (int i = 1; i < fields.Length; i++)
+                {
+                    string IDStudent = fields[i];
+                    s.Append(IDStudent);
+                }
+                cs.First = c;
+                cs.Second = s;
+                Data.Append(cs);
+            }
+            SR.Close();
+        }
         static public void UpdateSubject(Course c, Student s)
         {
-            throw new NotImplementedException();
+            if (Data == null)
+            {
+                LoadData();
+            }
+            for (int i = 0; i < Data.Count; i++)
+            {
+                if (c.Name == Data[i].First)
+                {
+                    Data[i].Second.Append(s.ID);
+                    break;
+                }
+            }
         }
-        static public Student[] GetStudents(Course c)
+        static public int[] GetStudents(Course c)
         {
-            throw new NotImplementedException();
+            if (Data == null)
+            {
+                LoadData();
+            }
+            for (int i = 0; i < Data.Count; i++)
+            {
+                if (c.Name == Data[i].First)
+                {
+                    return Data[i].Second.ToArray();
+                    break;
+                }
+            }
         }
     }
 }
