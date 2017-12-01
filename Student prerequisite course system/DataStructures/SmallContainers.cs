@@ -1,12 +1,12 @@
 ﻿
-public class Course
+public abstract class ITreeElement
+{
+    public int TreeIndex = -1;
+}
+
+public class Course : ITreeElement
 {
     public string Name, Description;
-    public int TreeIndex;
-    Course()
-    {
-        TreeIndex = -1;
-    }
 }
 
 public struct Student

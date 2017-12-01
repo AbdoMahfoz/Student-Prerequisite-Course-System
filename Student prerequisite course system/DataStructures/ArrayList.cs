@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
-public class ArrayList<T>
+public class ArrayList<T> : IEnumerable<T>
 {
     //private
     T[] arr;
@@ -24,11 +26,14 @@ public class ArrayList<T>
     public ArrayList()
     {
         count = 0;
-        capacity = 0;
+        capacity = 2;
+        arr = new T[2];
     }
     public ArrayList(int IntialCount)
     {
+        capacity = IntialCount;
         Count = IntialCount;
+        arr = new T[IntialCount];
     }
     public int Count
     {
@@ -37,7 +42,7 @@ public class ArrayList<T>
         {
             if(capacity < value)
             {
-                Capacity = value;
+                Capacity = value * 2;
             }
             count = value;
         }
@@ -67,9 +72,9 @@ public class ArrayList<T>
     {
         CheckIndex(index);
         CheckSizeCapacity();
-        for(int i = index; i < count; i++)
+        for(int i = count; i > index; i++)
         {
-            arr[i + 1] = arr[i];
+            arr[i] = arr[i - 1];
         }
         arr[index] = value;
         count++;
@@ -77,11 +82,17 @@ public class ArrayList<T>
     public void DeleteAt(int index)
     {
         CheckIndex(index);
-        for (int i = count - 1; i > index; i++)
+        for (int i = index; i < count - 1; i++)
         {
-            arr[i - 1] = arr[i];
+            arr[i] = arr[i + 1];
         }
         count--;
+    }
+    public void Clear()
+    {
+        arr = new T[2];
+        capacity = 2;
+        count = 0;
     }
     public T[] ToArray()
     {
@@ -92,6 +103,17 @@ public class ArrayList<T>
         T[] tmp = new T[count];
         Array.ConstrainedCopy(arr, 0, tmp, 0, count);
         return tmp;
+    }
+    public IEnumerator<T> GetEnumerator()
+    {
+        for(int i = 0; i < count; i++)
+        {
+            yield return arr[i];
+        }
+    }
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
     }
     public T this[int index]
     {

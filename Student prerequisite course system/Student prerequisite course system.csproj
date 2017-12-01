@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStructures\ArrayList.cs" />
+    <Compile Include="DataStructures\Queue.cs" />
     <Compile Include="DataStructures\SmallContainers.cs" />
     <Compile Include="FileOperations.cs" />
     <Compile Include="DataStructures\Tree.cs" />
