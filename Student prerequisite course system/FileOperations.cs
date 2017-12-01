@@ -9,21 +9,16 @@ static public class FileOperations
         {
             FileStream FW = new FileStream("User.Txt", FileMode.Append);
             StreamWriter SW = new StreamWriter(FW);
-
-            SW.WriteLine(s.ID + "@" + s.Name + "@" + s.Password + "@" + s.Academic_Year);
-
+            SW.WriteLine(s.ID + "@" + s.Name + "@" + s.Password + "@" + s.AcademicYear);
             SW.Close();
         }
-
         static public bool CheckUser(Student s)
         {
             FileStream FR = new FileStream("User.Txt", FileMode.Open);
             StreamReader SR = new StreamReader(FR);
             bool found = false;
-
             while ((SR.Peek() != -1) && (found == false))
             {
-
                 string Recored = SR.ReadLine();
                 string[] field;
                 field = Recored.Split('@');
@@ -31,7 +26,6 @@ static public class FileOperations
                 string Name = field[1];
                 string password = field[2];
                 string Academic_Year = field[3];
-
                 if ((s.Name.CompareTo(Name) == 0) && (s.Password.CompareTo(password) == 0))
                     found = true;
             }
@@ -40,27 +34,22 @@ static public class FileOperations
                 return true;
             else
                 return false;
-
         }
     }
-
     static public class AdminFile
     {
         static public void WriteAdmin(Admin s)
         {
             FileStream FW = new FileStream("Admin.Txt", FileMode.Append);
             StreamWriter SW = new StreamWriter(FW);
-
             SW.WriteLine(s.Name + "@" + s.Password);
-
             SW.Close();
         }
-        static public void CheckAdmin(Admin s)
+        static public bool CheckAdmin(Admin s)
         {
             FileStream FR = new FileStream("Admin.Txt", FileMode.Open);
             StreamReader SR = new StreamReader(FR);
             bool found = false;
-
             while ((SR.Peek() != -1) && (found == false))
             {
                 string Recored = SR.ReadLine();
@@ -68,9 +57,8 @@ static public class FileOperations
                 field = Recored.Split('@');
                 string Name = field[0];
                 string password = field[1];
-
                 if ((s.Name.CompareTo(Name) == 0) && (s.Password.CompareTo(password) == 0))
-                    found = true
+                    found = true;
             }
             SR.Close();
             if (found == true)
@@ -79,7 +67,6 @@ static public class FileOperations
                 return false;
         }
     }
-
     static public class CoursesFile
     {
         static public void AddCourse(Course c)
