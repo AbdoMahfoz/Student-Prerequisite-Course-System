@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
-public class ArrayList<T>
+public class ArrayList<T> : IEnumerable<T>
 {
     //private
     T[] arr;
@@ -101,6 +103,17 @@ public class ArrayList<T>
         T[] tmp = new T[count];
         Array.ConstrainedCopy(arr, 0, tmp, 0, count);
         return tmp;
+    }
+    public IEnumerator<T> GetEnumerator()
+    {
+        for(int i = 0; i < count; i++)
+        {
+            yield return arr[i];
+        }
+    }
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
     }
     public T this[int index]
     {

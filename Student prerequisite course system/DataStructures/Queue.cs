@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
-public class Queue<T>
+public class Queue<T> : IEnumerable<T>
 {
     //private
     class Node
@@ -56,5 +58,18 @@ public class Queue<T>
             throw new InvalidOperationException("Queue is empty");
         }
         return head.value;
+    }
+    public IEnumerator<T> GetEnumerator()
+    {
+        Node tmp = head;
+        while(tmp != null)
+        {
+            yield return tmp.value;
+            tmp = tmp.next;
+        }
+    }
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return GetEnumerator();
     }
 }

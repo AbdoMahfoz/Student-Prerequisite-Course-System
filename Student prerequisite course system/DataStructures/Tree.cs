@@ -54,9 +54,9 @@ public class Tree<T> where T : ITreeElement
             T tmp = q.Top();
             q.Dequeue();
             if (AdjacencyList[tmp.TreeIndex] == null) continue;
-            for (int i = 0; i < AdjacencyList[tmp.TreeIndex].Count; i++)
+            foreach(int n in AdjacencyList[tmp.TreeIndex])
             {
-                T tmpTarget = Elements[AdjacencyList[tmp.TreeIndex][i]];
+                T tmpTarget = Elements[n];
                 if (!Array.Exists(AlreadyTaken, new Predicate<T>((T a) => { return a == tmpTarget; })))
                 {
                     q.Enqueue(tmpTarget);
