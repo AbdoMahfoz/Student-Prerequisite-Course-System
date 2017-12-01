@@ -38,6 +38,10 @@ public class CourseTree
     public void Connect(Course dependant, Course dependee)
     {
         CheckIndex(dependant.TreeIndex, dependee.TreeIndex);
+        if(AdjacencyList[dependant.TreeIndex] == null)
+        {
+            AdjacencyList[dependant.TreeIndex] = new ArrayList<int>();
+        }
         AdjacencyList[dependant.TreeIndex].Append(dependee.TreeIndex);
     }
     public Course[] GetDependantCourses(Course Target, Course[] AlreadyTaken)
@@ -49,7 +53,7 @@ public class CourseTree
         {
             Course tmp = queue[Count - 1];
             queue.PopBack();
-            for(int i = 0; i < AdjacencyList[tmp.TreeIndex].Count; i++)
+            for(int i = 0; AdjacencyList[tmp.TreeIndex] != null && i < AdjacencyList[tmp.TreeIndex].Count; i++)
             {
                 Course tmpTarget = Courses[AdjacencyList[tmp.TreeIndex][i]];
                 if(!Array.Exists(AlreadyTaken, new Predicate<Course>((Course a) => { return a == tmpTarget; })))
@@ -68,6 +72,7 @@ public class CourseTree
         for(int i = 0; i < count; i++)
         {
             tmp.Append(Courses[i].Name + " ");
+            if (AdjacencyList[i] == null) continue;
             for(int j = 0; j < AdjacencyList[i].Count; j++)
             {
                 tmp.Append(AdjacencyList[i][j] + " ");
@@ -83,6 +88,7 @@ public class CourseTree
         AdjacencyList.Count = filedata.Length;
         for(int i = 0; i < filedata.Length; i++)
         {
+            AdjacencyList[i] = new ArrayList<int>();
             string[] fields = filedata[i].Split(' ', '\0');
             if (fields.Length <= 1) continue;
             Course c = FileOperations.CoursesFile.GetCourse(fields[0]);

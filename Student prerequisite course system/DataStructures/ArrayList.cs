@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 public class ArrayList<T>
 {
@@ -40,7 +41,7 @@ public class ArrayList<T>
         {
             if(capacity < value)
             {
-                Capacity = value;
+                Capacity = value * 2;
             }
             count = value;
         }
@@ -70,9 +71,9 @@ public class ArrayList<T>
     {
         CheckIndex(index);
         CheckSizeCapacity();
-        for(int i = index; i < count; i++)
+        for(int i = count; i > index; i++)
         {
-            arr[i + 1] = arr[i];
+            arr[i] = arr[i - 1];
         }
         arr[index] = value;
         count++;
@@ -80,9 +81,9 @@ public class ArrayList<T>
     public void DeleteAt(int index)
     {
         CheckIndex(index);
-        for (int i = count - 1; i > index; i++)
+        for (int i = index; i < count - 1; i++)
         {
-            arr[i - 1] = arr[i];
+            arr[i] = arr[i + 1];
         }
         count--;
     }

@@ -119,6 +119,7 @@ static public class FileOperations
         }
         static public void WriteData()
         {
+            if (Data == null) return;
             FileStream fs = new FileStream("Users_Subjects.txt", FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
             for(int i = 0; i < Data.Count; i++)
