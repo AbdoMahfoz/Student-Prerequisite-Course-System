@@ -11,7 +11,7 @@ public class Course : ITreeElement
 
 public struct Student
 {
-    public string Name, Password;
+    public string Name, Password, AcademicYear;
     public int ID;
     public Course[] RegisteredCourses;
     public bool IsAdmin;
