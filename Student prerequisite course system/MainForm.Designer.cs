@@ -1,6 +1,6 @@
 ﻿namespace Student_prerequisite_course_system
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
