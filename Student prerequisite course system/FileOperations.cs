@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 
 static public class FileOperations
@@ -41,7 +41,7 @@ static public class FileOperations
             StreamReader sr = new StreamReader(fs);
             string[] Records, Fields;
             bool found = false;
-            Records = sr.ReadToEnd().Split(new [] { Environment.NewLine}, StringSplitOptions.None);
+            Records = sr.ReadToEnd().Split(new[] { Environment.NewLine }, StringSplitOptions.None);
             sr.Close();
             int index = 0;
             for (int i = 0; i < Records.Length - 1; i++)
@@ -60,19 +60,15 @@ static public class FileOperations
             }
             else
             {
-               Student student = new Student();
+                Student student = new Student();
                 Fields = Records[index].Split('@');
-                student.ID = Fields[0];
+                student.ID = int.Parse(Fields[0]);
                 student.Name = Fields[1];
                 student.Password = Fields[2];
                 student.AcademicYear = Fields[3];
                 return student;
             }
         }
-
-    }
-
-
     }
     static public class AdminFile
     {
@@ -114,7 +110,6 @@ static public class FileOperations
             string str = c.Name + "@" + c.Description + "#";
             SW.Write(str);
             SW.Close();
-
         }
         static public Course GetCourse(string name)
         {
@@ -268,7 +263,7 @@ static public class FileOperations
                 c = fields[0];
                 for (int i = 1; i < fields.Length; i++)
                 {
-        
+
                     s.Append(UsersFile.GetUser(fields[i]));
                 }
                 cs.First = c;
@@ -287,12 +282,12 @@ static public class FileOperations
             {
                 if (c.Name == Data[i].First)
                 {
-                    Data[i].Second.Append(s.ID);
+                    Data[i].Second.Append(s);
                     break;
                 }
             }
         }
-        static public int[] GetStudents(Course c)
+        static public Student[] GetStudents(Course c)
         {
             if (Data == null)
             {
@@ -303,26 +298,27 @@ static public class FileOperations
                 if (c.Name == Data[i].First)
                 {
                     return Data[i].Second.ToArray();
-                    break;
                 }
             }
+            return null;
         }
-    static public void WriteSubjects()
-    {
-        if (Data == null) return;
-        FileStream fs = new FileStream("Subjects_User.txt", FileMode.Create);
-        StreamWriter sw = new StreamWriter(fs);
-        for (int i = 0; i < Data.Count; i++)
+        static public void WriteSubjects()
         {
-            sw.Write(Data[i].First + "@");
-            for (int j = 0; i < Data[i].Second.Count; j++)
+            if (Data == null) return;
+            FileStream fs = new FileStream("Subjects_User.txt", FileMode.Create);
+            StreamWriter sw = new StreamWriter(fs);
+            for (int i = 0; i < Data.Count; i++)
             {
-                sw.Write(Data[i].Second[j]);
-                if (j != Data[i].Second.Count - 1)
-                    sw.Write("@");
+                sw.Write(Data[i].First + "@");
+                for (int j = 0; i < Data[i].Second.Count; j++)
+                {
+                    sw.Write(Data[i].Second[j]);
+                    if (j != Data[i].Second.Count - 1)
+                        sw.Write("@");
+                }
+                sw.Write(sw.NewLine);
             }
-            sw.Write(sw.NewLine);
+            sw.Close();
         }
-        sw.Close();
     }
 }
