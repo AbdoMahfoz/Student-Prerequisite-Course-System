@@ -117,5 +117,15 @@ public class Tree<T> where T : ITreeElement
             throw new NotImplementedException("LoadFromFile only works with Course type");
         }
     }
+    public T this[int index]
+    {
+        get
+        {
+            return Elements[index];
+        }
+        set
+        {
+            Elements[index] = value;
+        }
+    }
 }
-
