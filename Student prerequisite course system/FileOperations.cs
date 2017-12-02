@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 
 static public class FileOperations
@@ -35,6 +35,44 @@ static public class FileOperations
             else
                 return false;
         }
+        static public Student GetUser(string Name)
+        {
+            FileStream fs = new FileStream("User.txt", FileMode.Open);
+            StreamReader sr = new StreamReader(fs);
+            string[] Records, Fields;
+            bool found = false;
+            Records = sr.ReadToEnd().Split(new [] { Environment.NewLine}, StringSplitOptions.None);
+            sr.Close();
+            int index = 0;
+            for (int i = 0; i < Records.Length - 1; i++)
+            {
+                Fields = Records[i].Split('@');
+                if (Fields[1] == Name)
+                {
+                    found = true;
+                    index = i;
+                    break;
+                }
+            }
+            if (found == false)
+            {
+                return null;
+            }
+            else
+            {
+               Student student = new Student();
+                Fields = Records[index].Split('@');
+                student.ID = Fields[0];
+                student.Name = Fields[1];
+                student.Password = Fields[2];
+                student.AcademicYear = Fields[3];
+                return student;
+            }
+        }
+
+    }
+
+
     }
     static public class AdminFile
     {
@@ -213,13 +251,78 @@ static public class FileOperations
     }
     static public class Subjects_UsersFile
     {
+        static ArrayList<Pair<string, ArrayList<Student>>> Data = null;
+
+        static void LoadData()
+        {
+            FileStream FS = new FileStream("Subjects_User.txt", FileMode.Open);
+            StreamReader SR = new StreamReader(FS);
+            Data = new ArrayList<Pair<string, ArrayList<Student>>>();
+            while (!SR.EndOfStream)
+            {
+                ArrayList<Student> s = new ArrayList<Student>();
+                Pair<string, ArrayList<Student>> cs = new Pair<string, ArrayList<Student>>();
+                string c;
+                string line = SR.ReadLine();
+                string[] fields = line.Split('@');
+                c = fields[0];
+                for (int i = 1; i < fields.Length; i++)
+                {
+        
+                    s.Append(UsersFile.GetUser(fields[i]));
+                }
+                cs.First = c;
+                cs.Second = s;
+                Data.Append(cs);
+            }
+            SR.Close();
+        }
         static public void UpdateSubject(Course c, Student s)
         {
-            throw new NotImplementedException();
+            if (Data == null)
+            {
+                LoadData();
+            }
+            for (int i = 0; i < Data.Count; i++)
+            {
+                if (c.Name == Data[i].First)
+                {
+                    Data[i].Second.Append(s.ID);
+                    break;
+                }
+            }
         }
-        static public Student[] GetStudents(Course c)
+        static public int[] GetStudents(Course c)
         {
-            throw new NotImplementedException();
+            if (Data == null)
+            {
+                LoadData();
+            }
+            for (int i = 0; i < Data.Count; i++)
+            {
+                if (c.Name == Data[i].First)
+                {
+                    return Data[i].Second.ToArray();
+                    break;
+                }
+            }
         }
+    static public void WriteSubjects()
+    {
+        if (Data == null) return;
+        FileStream fs = new FileStream("Subjects_User.txt", FileMode.Create);
+        StreamWriter sw = new StreamWriter(fs);
+        for (int i = 0; i < Data.Count; i++)
+        {
+            sw.Write(Data[i].First + "@");
+            for (int j = 0; i < Data[i].Second.Count; j++)
+            {
+                sw.Write(Data[i].Second[j]);
+                if (j != Data[i].Second.Count - 1)
+                    sw.Write("@");
+            }
+            sw.Write(sw.NewLine);
+        }
+        sw.Close();
     }
 }
