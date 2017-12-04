@@ -5,13 +5,9 @@ public abstract class ITreeElement
     public int TreeIndex = -1;
 }
 
-public class Course : ITreeElement, IComparable
+public class Course : ITreeElement
 {
     public string Name, Description;
-    public int CompareTo(object obj)
-    {
-        throw new NotImplementedException();
-    }
 }
 
 public class Student
@@ -19,7 +15,6 @@ public class Student
     public string Name, Password, AcademicYear;
     public int ID;
     public ArrayList<Pair<bool, Course>> RegisteredCourses;
-    public bool IsAdmin;
     public bool Remove(Course c)
     {
         throw new NotImplementedException();

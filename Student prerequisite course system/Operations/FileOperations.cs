@@ -33,7 +33,11 @@ static public class FileOperations
                 string password = field[2];
                 string Academic_Year = field[3];
                 if ((s.Name.CompareTo(Name) == 0) && (s.Password.CompareTo(password) == 0))
+                {
                     found = true;
+                    s.ID = int.Parse(field[0]);
+                    s.AcademicYear = field[3];
+                }
             }
             SR.Close();
             if (found == true)
