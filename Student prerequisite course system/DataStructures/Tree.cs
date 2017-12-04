@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
-public class Tree<T> where T : ITreeElement
+public class Tree<T> : IEnumerable<T> where T : ITreeElement
 {
     //private
     ArrayList<T> Elements;
@@ -66,6 +68,47 @@ public class Tree<T> where T : ITreeElement
         }
         return res.ToArray();
     }
+    public T[] GetAvailableElements(T[] AlreadyTaken)
+    {
+        ArrayList<T> Answers = new ArrayList<T>();
+        for(int i = 0; i < AdjacencyList.Count; i++)
+        {
+            bool Available = true;
+            bool Taken = false;
+            foreach (T e in AlreadyTaken)
+            {
+                if (Elements[i] == e)
+                {
+                    Taken = true;
+                    break;
+                }
+            }
+            if (Taken) continue;
+            for (int j = 0; j < AdjacencyList[i].Count; j++)
+            {
+                T element = Elements[AdjacencyList[i][j]];
+                Taken = false;
+                foreach(T e in AlreadyTaken)
+                {
+                    if(element == e)
+                    {
+                        Taken = true;
+                        break;
+                    }
+                }
+                if(!Taken)
+                {
+                    Available = false;
+                    break;
+                }
+            }
+            if(Available)
+            {
+                Answers.Append(Elements[i]);
+            }
+        }
+        return Answers.ToArray();
+    }
     public string[] UnloadToFile()
     {
         if (typeof(T) == typeof(Course))
@@ -117,14 +160,30 @@ public class Tree<T> where T : ITreeElement
             throw new NotImplementedException("LoadFromFile only works with Course type");
         }
     }
+    public IEnumerator<T> GetEnumerator()
+    {
+        return ((IEnumerable<T>)Elements).GetEnumerator();
+    }
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return ((IEnumerable<T>)Elements).GetEnumerator();
+    }
     public T this[int index]
     {
         get
         {
+            if(index >= count || index < 0)
+            {
+                throw new IndexOutOfRangeException();
+            }
             return Elements[index];
         }
         set
         {
+            if (index >= count || index < 0)
+            {
+                throw new IndexOutOfRangeException();
+            }
             Elements[index] = value;
         }
     }
