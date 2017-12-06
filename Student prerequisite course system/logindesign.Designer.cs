@@ -64,6 +64,9 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.EditPanel = new System.Windows.Forms.Panel();
             this.Previous = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.Loginpanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -132,6 +135,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.textBox4);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Location = new System.Drawing.Point(211, 115);
             this.panel4.Name = "panel4";
@@ -149,6 +153,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.textBox3);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Location = new System.Drawing.Point(211, 35);
             this.panel3.Name = "panel3";
@@ -234,6 +239,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.textBox2);
             this.splitContainer1.Panel2.Controls.Add(this.vcscroll2);
             this.splitContainer1.Panel2.Controls.Add(this.AllCbtn);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
@@ -244,13 +250,14 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(6, 55);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(118, 20);
             this.textBox1.TabIndex = 4;
             // 
             // vScrollBar1
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(128, 4);
+            this.vScrollBar1.Location = new System.Drawing.Point(127, 4);
             this.vScrollBar1.Name = "vScrollBar1";
             this.vScrollBar1.Size = new System.Drawing.Size(14, 161);
             this.vScrollBar1.TabIndex = 0;
@@ -392,6 +399,28 @@
             this.Previous.UseVisualStyleBackColor = true;
             this.Previous.Click += new System.EventHandler(this.Previous_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(24, 55);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(55, 4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(174, 20);
+            this.textBox3.TabIndex = 1;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(55, 3);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(173, 20);
+            this.textBox4.TabIndex = 1;
+            // 
             // logindesign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,7 +438,9 @@
             this.Loginpanel.ResumeLayout(false);
             this.Loginpanel.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.CurrentDetails.ResumeLayout(false);
             this.viewCourses.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -460,5 +491,8 @@
         private System.Windows.Forms.ListView CurrentCoursesList;
         private System.Windows.Forms.VScrollBar currentcoursesscroll;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
