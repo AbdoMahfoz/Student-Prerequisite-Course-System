@@ -21,8 +21,8 @@ namespace Student_prerequisite_course_system
         {
             string username;
             string password;
-            username = TB_username.Text;
-            password = TB_password.Text;
+            username = username.Text;
+            password = password.Text;
             if (Student.Login(username, password))
             {
                 Globals._Login = true;
@@ -102,6 +102,46 @@ namespace Student_prerequisite_course_system
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Previous_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void vScrollBar4_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void LOGIN_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

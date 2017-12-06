@@ -30,86 +30,105 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(logindesign));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.Loginpanel = new System.Windows.Forms.Panel();
             this.LOGIN = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.PasswordLABEL = new System.Windows.Forms.Label();
+            this.UNLABEL = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.Next = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.CurrentDetails = new System.Windows.Forms.Panel();
+            this.currentcoursesscroll = new System.Windows.Forms.VScrollBar();
+            this.CurrentCoursesList = new System.Windows.Forms.ListView();
+            this.DetailscurrentCourses = new System.Windows.Forms.Button();
+            this.currentNext = new System.Windows.Forms.Button();
+            this.viewCourses = new System.Windows.Forms.Panel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
+            this.AvailableCbtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.vcscroll2 = new System.Windows.Forms.VScrollBar();
+            this.AllCbtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.VCNext = new System.Windows.Forms.Button();
+            this.VCPrevious = new System.Windows.Forms.Button();
+            this.RegisterPanel = new System.Windows.Forms.Panel();
+            this.RegisterScroll = new System.Windows.Forms.VScrollBar();
+            this.RegistercheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.RegisterPrevious = new System.Windows.Forms.Button();
+            this.Register = new System.Windows.Forms.Button();
+            this.RegisterNext = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1.SuspendLayout();
+            this.EditPanel = new System.Windows.Forms.Panel();
+            this.Previous = new System.Windows.Forms.Button();
+            this.Loginpanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.CurrentDetails.SuspendLayout();
+            this.viewCourses.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.RegisterPanel.SuspendLayout();
+            this.EditPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // Loginpanel
             // 
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.LOGIN);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Location = new System.Drawing.Point(57, 21);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(443, 196);
-            this.panel1.TabIndex = 0;
+            this.Loginpanel.Controls.Add(this.LOGIN);
+            this.Loginpanel.Controls.Add(this.panel2);
+            this.Loginpanel.Controls.Add(this.PasswordLABEL);
+            this.Loginpanel.Controls.Add(this.UNLABEL);
+            this.Loginpanel.Controls.Add(this.panel4);
+            this.Loginpanel.Controls.Add(this.panel3);
+            this.Loginpanel.Location = new System.Drawing.Point(57, 21);
+            this.Loginpanel.Name = "Loginpanel";
+            this.Loginpanel.Size = new System.Drawing.Size(443, 196);
+            this.Loginpanel.TabIndex = 0;
             // 
             // LOGIN
             // 
-            this.LOGIN.Location = new System.Drawing.Point(277, 169);
+            this.LOGIN.Location = new System.Drawing.Point(270, 173);
             this.LOGIN.Name = "LOGIN";
             this.LOGIN.Size = new System.Drawing.Size(43, 20);
-            this.LOGIN.TabIndex = 5;
+            this.LOGIN.TabIndex = 6;
             this.LOGIN.Text = "OK";
             this.LOGIN.UseVisualStyleBackColor = true;
-            this.LOGIN.Click += new System.EventHandler(this.button7_Click);
+            this.LOGIN.Click += new System.EventHandler(this.LOGIN_Click);
             // 
-            // label2
+            // panel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(215, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Password";
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(205, 196);
+            this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // label1
+            // PasswordLABEL
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(218, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.PasswordLABEL.AutoSize = true;
+            this.PasswordLABEL.Location = new System.Drawing.Point(215, 91);
+            this.PasswordLABEL.Name = "PasswordLABEL";
+            this.PasswordLABEL.Size = new System.Drawing.Size(53, 13);
+            this.PasswordLABEL.TabIndex = 4;
+            this.PasswordLABEL.Text = "Password";
+            this.PasswordLABEL.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // UNLABEL
+            // 
+            this.UNLABEL.AutoSize = true;
+            this.UNLABEL.Location = new System.Drawing.Point(218, 13);
+            this.UNLABEL.Name = "UNLABEL";
+            this.UNLABEL.Size = new System.Drawing.Size(55, 13);
+            this.UNLABEL.TabIndex = 3;
+            this.UNLABEL.Text = "Username";
+            this.UNLABEL.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel4
             // 
@@ -145,187 +164,233 @@
             this.panel5.Size = new System.Drawing.Size(48, 37);
             this.panel5.TabIndex = 0;
             // 
-            // panel2
+            // CurrentDetails
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(205, 196);
-            this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.CurrentDetails.Controls.Add(this.currentcoursesscroll);
+            this.CurrentDetails.Controls.Add(this.CurrentCoursesList);
+            this.CurrentDetails.Controls.Add(this.DetailscurrentCourses);
+            this.CurrentDetails.Controls.Add(this.currentNext);
+            this.CurrentDetails.Location = new System.Drawing.Point(506, 34);
+            this.CurrentDetails.Name = "CurrentDetails";
+            this.CurrentDetails.Size = new System.Drawing.Size(464, 190);
+            this.CurrentDetails.TabIndex = 1;
             // 
-            // panel7
+            // currentcoursesscroll
             // 
-            this.panel7.Controls.Add(this.checkBox1);
-            this.panel7.Controls.Add(this.listBox2);
-            this.panel7.Controls.Add(this.button3);
-            this.panel7.Controls.Add(this.button2);
-            this.panel7.Location = new System.Drawing.Point(601, 31);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(464, 190);
-            this.panel7.TabIndex = 1;
+            this.currentcoursesscroll.Location = new System.Drawing.Point(449, 43);
+            this.currentcoursesscroll.Name = "currentcoursesscroll";
+            this.currentcoursesscroll.Size = new System.Drawing.Size(15, 114);
+            this.currentcoursesscroll.TabIndex = 6;
             // 
-            // checkBox1
+            // CurrentCoursesList
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(175, 12);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CurrentCoursesList.Location = new System.Drawing.Point(3, 43);
+            this.CurrentCoursesList.Name = "CurrentCoursesList";
+            this.CurrentCoursesList.Size = new System.Drawing.Size(461, 114);
+            this.CurrentCoursesList.TabIndex = 5;
+            this.CurrentCoursesList.UseCompatibleStateImageBehavior = false;
+            this.CurrentCoursesList.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
-            // listBox2
+            // DetailscurrentCourses
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(23, 62);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(397, 95);
-            this.listBox2.TabIndex = 3;
+            this.DetailscurrentCourses.Location = new System.Drawing.Point(3, 13);
+            this.DetailscurrentCourses.Name = "DetailscurrentCourses";
+            this.DetailscurrentCourses.Size = new System.Drawing.Size(157, 25);
+            this.DetailscurrentCourses.TabIndex = 2;
+            this.DetailscurrentCourses.Text = " Details Of Current Courses";
+            this.DetailscurrentCourses.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // currentNext
             // 
-            this.button3.Location = new System.Drawing.Point(3, 13);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(157, 25);
-            this.button3.TabIndex = 2;
-            this.button3.Text = " Details Of Current Courses";
-            this.button3.UseVisualStyleBackColor = true;
+            this.currentNext.Location = new System.Drawing.Point(354, 163);
+            this.currentNext.Name = "currentNext";
+            this.currentNext.Size = new System.Drawing.Size(75, 23);
+            this.currentNext.TabIndex = 2;
+            this.currentNext.Text = "Next";
+            this.currentNext.UseVisualStyleBackColor = true;
+            this.currentNext.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // viewCourses
             // 
-            this.button2.Location = new System.Drawing.Point(354, 163);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Next";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.viewCourses.Controls.Add(this.splitContainer1);
+            this.viewCourses.Controls.Add(this.VCNext);
+            this.viewCourses.Controls.Add(this.VCPrevious);
+            this.viewCourses.Location = new System.Drawing.Point(0, 241);
+            this.viewCourses.Name = "viewCourses";
+            this.viewCourses.Size = new System.Drawing.Size(431, 193);
+            this.viewCourses.TabIndex = 2;
             // 
-            // panel8
+            // splitContainer1
             // 
-            this.panel8.Controls.Add(this.button6);
-            this.panel8.Controls.Add(this.button5);
-            this.panel8.Controls.Add(this.button4);
-            this.panel8.Controls.Add(this.button1);
-            this.panel8.Location = new System.Drawing.Point(57, 249);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(431, 193);
-            this.panel8.TabIndex = 2;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // button6
+            // splitContainer1.Panel1
             // 
-            this.button6.Location = new System.Drawing.Point(185, 166);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 2;
-            this.button6.Text = "Next";
-            this.button6.UseVisualStyleBackColor = true;
+            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.vScrollBar1);
+            this.splitContainer1.Panel1.Controls.Add(this.AvailableCbtn);
+            this.splitContainer1.Panel1.Controls.Add(this.label3);
             // 
-            // button5
+            // splitContainer1.Panel2
             // 
-            this.button5.Location = new System.Drawing.Point(185, 13);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(155, 21);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Available Courses";
-            this.button5.UseVisualStyleBackColor = true;
+            this.splitContainer1.Panel2.Controls.Add(this.vcscroll2);
+            this.splitContainer1.Panel2.Controls.Add(this.AllCbtn);
+            this.splitContainer1.Panel2.Controls.Add(this.label4);
+            this.splitContainer1.Size = new System.Drawing.Size(428, 165);
+            this.splitContainer1.SplitterDistance = 142;
+            this.splitContainer1.TabIndex = 5;
             // 
-            // button4
+            // textBox1
             // 
-            this.button4.Location = new System.Drawing.Point(24, 14);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(110, 21);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "All Courses";
-            this.button4.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(6, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(118, 20);
+            this.textBox1.TabIndex = 4;
             // 
-            // button1
+            // vScrollBar1
             // 
-            this.button1.Location = new System.Drawing.Point(59, 167);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Previous ";
-            this.button1.UseVisualStyleBackColor = true;
+            this.vScrollBar1.Location = new System.Drawing.Point(128, 4);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(14, 161);
+            this.vScrollBar1.TabIndex = 0;
             // 
-            // panel9
+            // AvailableCbtn
             // 
-            this.panel9.Controls.Add(this.button7);
-            this.panel9.Controls.Add(this.Next);
-            this.panel9.Location = new System.Drawing.Point(434, 227);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(336, 176);
-            this.panel9.TabIndex = 3;
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            this.AvailableCbtn.Location = new System.Drawing.Point(3, 4);
+            this.AvailableCbtn.Name = "AvailableCbtn";
+            this.AvailableCbtn.Size = new System.Drawing.Size(122, 21);
+            this.AvailableCbtn.TabIndex = 1;
+            this.AvailableCbtn.Text = "Available Courses";
+            this.AvailableCbtn.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // label3
             // 
-            this.button7.Location = new System.Drawing.Point(19, 13);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 2;
-            this.button7.Text = "Register";
-            this.button7.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 33);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click_1);
             // 
-            // Next
+            // vcscroll2
             // 
-            this.Next.Location = new System.Drawing.Point(256, 132);
-            this.Next.Name = "Next";
-            this.Next.Size = new System.Drawing.Size(75, 23);
-            this.Next.TabIndex = 1;
-            this.Next.Text = "Next";
-            this.Next.UseVisualStyleBackColor = true;
+            this.vcscroll2.Location = new System.Drawing.Point(264, 4);
+            this.vcscroll2.Name = "vcscroll2";
+            this.vcscroll2.Size = new System.Drawing.Size(14, 161);
+            this.vcscroll2.TabIndex = 0;
             // 
-            // tabControl1
+            // AllCbtn
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(716, 246);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(323, 192);
-            this.tabControl1.TabIndex = 0;
+            this.AllCbtn.Location = new System.Drawing.Point(81, 3);
+            this.AllCbtn.Name = "AllCbtn";
+            this.AllCbtn.Size = new System.Drawing.Size(110, 21);
+            this.AllCbtn.TabIndex = 0;
+            this.AllCbtn.Text = "All Courses";
+            this.AllCbtn.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // label4
             // 
-            this.tabPage1.Controls.Add(this.checkedListBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(315, 166);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(21, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "label4";
+            this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
-            // checkedListBox1
+            // VCNext
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(6, 8);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(300, 154);
-            this.checkedListBox1.TabIndex = 0;
+            this.VCNext.Location = new System.Drawing.Point(353, 166);
+            this.VCNext.Name = "VCNext";
+            this.VCNext.Size = new System.Drawing.Size(75, 23);
+            this.VCNext.TabIndex = 2;
+            this.VCNext.Text = "Next";
+            this.VCNext.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // VCPrevious
             // 
-            this.tabPage2.Controls.Add(this.listBox1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(315, 166);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.VCPrevious.Location = new System.Drawing.Point(265, 166);
+            this.VCPrevious.Name = "VCPrevious";
+            this.VCPrevious.Size = new System.Drawing.Size(75, 23);
+            this.VCPrevious.TabIndex = 1;
+            this.VCPrevious.Text = "Previous ";
+            this.VCPrevious.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // RegisterPanel
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(22, 16);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(253, 121);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.RegisterPanel.Controls.Add(this.RegisterScroll);
+            this.RegisterPanel.Controls.Add(this.RegistercheckedListBox);
+            this.RegisterPanel.Controls.Add(this.RegisterPrevious);
+            this.RegisterPanel.Controls.Add(this.Register);
+            this.RegisterPanel.Controls.Add(this.RegisterNext);
+            this.RegisterPanel.Location = new System.Drawing.Point(437, 258);
+            this.RegisterPanel.Name = "RegisterPanel";
+            this.RegisterPanel.Size = new System.Drawing.Size(356, 176);
+            this.RegisterPanel.TabIndex = 3;
+            this.RegisterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // RegisterScroll
+            // 
+            this.RegisterScroll.Location = new System.Drawing.Point(333, 32);
+            this.RegisterScroll.Name = "RegisterScroll";
+            this.RegisterScroll.Size = new System.Drawing.Size(20, 106);
+            this.RegisterScroll.TabIndex = 6;
+            // 
+            // RegistercheckedListBox
+            // 
+            this.RegistercheckedListBox.FormattingEnabled = true;
+            this.RegistercheckedListBox.Location = new System.Drawing.Point(3, 32);
+            this.RegistercheckedListBox.Name = "RegistercheckedListBox";
+            this.RegistercheckedListBox.Size = new System.Drawing.Size(350, 109);
+            this.RegistercheckedListBox.TabIndex = 5;
+            // 
+            // RegisterPrevious
+            // 
+            this.RegisterPrevious.Location = new System.Drawing.Point(188, 150);
+            this.RegisterPrevious.Name = "RegisterPrevious";
+            this.RegisterPrevious.Size = new System.Drawing.Size(75, 23);
+            this.RegisterPrevious.TabIndex = 3;
+            this.RegisterPrevious.Text = "Previous";
+            this.RegisterPrevious.UseVisualStyleBackColor = true;
+            this.RegisterPrevious.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // Register
+            // 
+            this.Register.Location = new System.Drawing.Point(3, 3);
+            this.Register.Name = "Register";
+            this.Register.Size = new System.Drawing.Size(75, 23);
+            this.Register.TabIndex = 2;
+            this.Register.Text = "Register";
+            this.Register.UseVisualStyleBackColor = true;
+            // 
+            // RegisterNext
+            // 
+            this.RegisterNext.Location = new System.Drawing.Point(278, 150);
+            this.RegisterNext.Name = "RegisterNext";
+            this.RegisterNext.Size = new System.Drawing.Size(75, 23);
+            this.RegisterNext.TabIndex = 1;
+            this.RegisterNext.Text = "Next";
+            this.RegisterNext.UseVisualStyleBackColor = true;
+            // 
+            // EditPanel
+            // 
+            this.EditPanel.Controls.Add(this.Previous);
+            this.EditPanel.Location = new System.Drawing.Point(815, 261);
+            this.EditPanel.Name = "EditPanel";
+            this.EditPanel.Size = new System.Drawing.Size(200, 169);
+            this.EditPanel.TabIndex = 4;
+            // 
+            // Previous
+            // 
+            this.Previous.Location = new System.Drawing.Point(45, 16);
+            this.Previous.Name = "Previous";
+            this.Previous.Size = new System.Drawing.Size(75, 23);
+            this.Previous.TabIndex = 0;
+            this.Previous.Text = "Edit";
+            this.Previous.UseVisualStyleBackColor = true;
+            this.Previous.Click += new System.EventHandler(this.Previous_Click);
             // 
             // logindesign
             // 
@@ -333,58 +398,67 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1051, 475);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.EditPanel);
+            this.Controls.Add(this.RegisterPanel);
+            this.Controls.Add(this.CurrentDetails);
+            this.Controls.Add(this.viewCourses);
+            this.Controls.Add(this.Loginpanel);
             this.Name = "logindesign";
-            this.Text = "logindesign";
+            this.Text = "Previous";
             this.Load += new System.EventHandler(this.logindesign_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Loginpanel.ResumeLayout(false);
+            this.Loginpanel.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.CurrentDetails.ResumeLayout(false);
+            this.viewCourses.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.RegisterPanel.ResumeLayout(false);
+            this.EditPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel Loginpanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label UNLABEL;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Label PasswordLABEL;
+        private System.Windows.Forms.Panel viewCourses;
+        private System.Windows.Forms.Panel RegisterPanel;
+        private System.Windows.Forms.Button VCPrevious;
+        private System.Windows.Forms.Button AvailableCbtn;
+        private System.Windows.Forms.Button AllCbtn;
+        private System.Windows.Forms.Button VCNext;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button currentNext;
+        private System.Windows.Forms.Button DetailscurrentCourses;
+        private System.Windows.Forms.Panel CurrentDetails;
+        private System.Windows.Forms.Button RegisterNext;
+        private System.Windows.Forms.Button Register;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button RegisterPrevious;
         private System.Windows.Forms.Button LOGIN;
-        private System.Windows.Forms.Button Next;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.VScrollBar vcscroll2;
+        private System.Windows.Forms.VScrollBar RegisterScroll;
+        private System.Windows.Forms.CheckedListBox RegistercheckedListBox;
+        private System.Windows.Forms.Panel EditPanel;
+        private System.Windows.Forms.Button Previous;
+        private System.Windows.Forms.ListView CurrentCoursesList;
+        private System.Windows.Forms.VScrollBar currentcoursesscroll;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

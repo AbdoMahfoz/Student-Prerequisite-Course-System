@@ -16,5 +16,15 @@ namespace Student_prerequisite_course_system
         {
             InitializeComponent();
         }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LOGIN_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
