@@ -54,7 +54,7 @@ namespace Student_prerequisite_course_system
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            //next button in view details of current courses (second form)
         }
 
         private void logindesign_Load(object sender, EventArgs e)
@@ -108,7 +108,7 @@ namespace Student_prerequisite_course_system
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            //previous button in register form
         }
 
         private void label3_Click_1(object sender, EventArgs e)
@@ -123,7 +123,7 @@ namespace Student_prerequisite_course_system
 
         private void Previous_Click(object sender, EventArgs e)
         {
-
+            //Edit button in fifth form
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,13 +137,48 @@ namespace Student_prerequisite_course_system
         }
 
         private void LOGIN_Click(object sender, EventArgs e)
-        {
-
+        { //login button
+            if  (usertxt.text  )
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void AvailableCbtn_Click(object sender, EventArgs e)
+        {
+            //panel3 available courses button 
+        }
+
+        private void AllCbtn_Click(object sender, EventArgs e)
+        {
+            //panel3 all courses button
+        }
+
+        private void DetailscurrentCourses_Click(object sender, EventArgs e)
+        {
+            //panel2 details of current courses button
+        }
+
+        private void Register_Click(object sender, EventArgs e)
+        {
+            //4th form "register" button
+        }
+
+        private void VCPrevious_Click(object sender, EventArgs e)
+        {
+            //previous button of third form (all and available courses)
+        }
+
+        private void VCNext_Click(object sender, EventArgs e)
+        {
+            //next button of third form (all and available courses)
+        }
+
+        private void RegisterNext_Click(object sender, EventArgs e)
+        {
+            //next button in register form 
         }
     }
 }

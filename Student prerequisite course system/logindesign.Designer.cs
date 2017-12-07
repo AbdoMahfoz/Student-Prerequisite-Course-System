@@ -36,8 +36,10 @@
             this.PasswordLABEL = new System.Windows.Forms.Label();
             this.UNLABEL = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.CurrentDetails = new System.Windows.Forms.Panel();
             this.currentcoursesscroll = new System.Windows.Forms.VScrollBar();
@@ -50,6 +52,7 @@
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.AvailableCbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.vcscroll2 = new System.Windows.Forms.VScrollBar();
             this.AllCbtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -64,9 +67,6 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.EditPanel = new System.Windows.Forms.Panel();
             this.Previous = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.Loginpanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -142,6 +142,13 @@
             this.panel4.Size = new System.Drawing.Size(231, 40);
             this.panel4.TabIndex = 2;
             // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(55, 3);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(173, 20);
+            this.textBox4.TabIndex = 1;
+            // 
             // panel6
             // 
             this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
@@ -159,6 +166,13 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(232, 40);
             this.panel3.TabIndex = 1;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(55, 4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(174, 20);
+            this.textBox3.TabIndex = 1;
             // 
             // panel5
             // 
@@ -204,6 +218,7 @@
             this.DetailscurrentCourses.TabIndex = 2;
             this.DetailscurrentCourses.Text = " Details Of Current Courses";
             this.DetailscurrentCourses.UseVisualStyleBackColor = true;
+            this.DetailscurrentCourses.Click += new System.EventHandler(this.DetailscurrentCourses_Click);
             // 
             // currentNext
             // 
@@ -270,6 +285,7 @@
             this.AvailableCbtn.TabIndex = 1;
             this.AvailableCbtn.Text = "Available Courses";
             this.AvailableCbtn.UseVisualStyleBackColor = true;
+            this.AvailableCbtn.Click += new System.EventHandler(this.AvailableCbtn_Click);
             // 
             // label3
             // 
@@ -280,6 +296,14 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             this.label3.Click += new System.EventHandler(this.label3_Click_1);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(24, 55);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 5;
             // 
             // vcscroll2
             // 
@@ -296,6 +320,7 @@
             this.AllCbtn.TabIndex = 0;
             this.AllCbtn.Text = "All Courses";
             this.AllCbtn.UseVisualStyleBackColor = true;
+            this.AllCbtn.Click += new System.EventHandler(this.AllCbtn_Click);
             // 
             // label4
             // 
@@ -315,6 +340,7 @@
             this.VCNext.TabIndex = 2;
             this.VCNext.Text = "Next";
             this.VCNext.UseVisualStyleBackColor = true;
+            this.VCNext.Click += new System.EventHandler(this.VCNext_Click);
             // 
             // VCPrevious
             // 
@@ -324,6 +350,7 @@
             this.VCPrevious.TabIndex = 1;
             this.VCPrevious.Text = "Previous ";
             this.VCPrevious.UseVisualStyleBackColor = true;
+            this.VCPrevious.Click += new System.EventHandler(this.VCPrevious_Click);
             // 
             // RegisterPanel
             // 
@@ -371,6 +398,7 @@
             this.Register.TabIndex = 2;
             this.Register.Text = "Register";
             this.Register.UseVisualStyleBackColor = true;
+            this.Register.Click += new System.EventHandler(this.Register_Click);
             // 
             // RegisterNext
             // 
@@ -380,6 +408,7 @@
             this.RegisterNext.TabIndex = 1;
             this.RegisterNext.Text = "Next";
             this.RegisterNext.UseVisualStyleBackColor = true;
+            this.RegisterNext.Click += new System.EventHandler(this.RegisterNext_Click);
             // 
             // EditPanel
             // 
@@ -398,28 +427,6 @@
             this.Previous.Text = "Edit";
             this.Previous.UseVisualStyleBackColor = true;
             this.Previous.Click += new System.EventHandler(this.Previous_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(24, 55);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(55, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(174, 20);
-            this.textBox3.TabIndex = 1;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(55, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(173, 20);
-            this.textBox4.TabIndex = 1;
             // 
             // logindesign
             // 
