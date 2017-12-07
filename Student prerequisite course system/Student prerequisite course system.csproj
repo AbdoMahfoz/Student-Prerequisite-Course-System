@@ -45,20 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin form.cs">
+    <Compile Include="Admin_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin form.Designer.cs">
-      <DependentUpon>Admin form.cs</DependentUpon>
+    <Compile Include="Admin_form.Designer.cs">
+      <DependentUpon>Admin_form.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\ArrayList.cs" />
     <Compile Include="DataStructures\Queue.cs" />
     <Compile Include="DataStructures\SmallContainers.cs" />
-    <Compile Include="logindesign.cs">
+    <Compile Include="Student_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="logindesign.Designer.cs">
-      <DependentUpon>logindesign.cs</DependentUpon>
+    <Compile Include="Student_form.Designer.cs">
+      <DependentUpon>Student_form.cs</DependentUpon>
     </Compile>
     <Compile Include="Operations\FileOperations.cs" />
     <Compile Include="DataStructures\Tree.cs" />
@@ -71,11 +71,11 @@
     <Compile Include="Operations\UserOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin form.resx">
-      <DependentUpon>Admin form.cs</DependentUpon>
+    <EmbeddedResource Include="Admin_form.resx">
+      <DependentUpon>Admin_form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="logindesign.resx">
-      <DependentUpon>logindesign.cs</DependentUpon>
+    <EmbeddedResource Include="Student_form.resx">
+      <DependentUpon>Student_form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

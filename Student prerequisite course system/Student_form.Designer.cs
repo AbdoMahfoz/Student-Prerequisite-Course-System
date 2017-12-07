@@ -1,6 +1,6 @@
 ﻿namespace Student_prerequisite_course_system
 {
-    partial class logindesign
+    partial class Student_form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(logindesign));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_form));
             this.Loginpanel = new System.Windows.Forms.Panel();
             this.LOGIN = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -68,6 +68,7 @@
             this.EditPanel = new System.Windows.Forms.Panel();
             this.Previous = new System.Windows.Forms.Button();
             this.Loginpanel.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.CurrentDetails.SuspendLayout();
@@ -107,6 +108,7 @@
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Controls.Add(this.viewCourses);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(205, 196);
@@ -189,7 +191,7 @@
             this.CurrentDetails.Controls.Add(this.CurrentCoursesList);
             this.CurrentDetails.Controls.Add(this.DetailscurrentCourses);
             this.CurrentDetails.Controls.Add(this.currentNext);
-            this.CurrentDetails.Location = new System.Drawing.Point(506, 34);
+            this.CurrentDetails.Location = new System.Drawing.Point(57, 24);
             this.CurrentDetails.Name = "CurrentDetails";
             this.CurrentDetails.Size = new System.Drawing.Size(464, 190);
             this.CurrentDetails.TabIndex = 1;
@@ -235,7 +237,7 @@
             this.viewCourses.Controls.Add(this.splitContainer1);
             this.viewCourses.Controls.Add(this.VCNext);
             this.viewCourses.Controls.Add(this.VCPrevious);
-            this.viewCourses.Location = new System.Drawing.Point(0, 241);
+            this.viewCourses.Location = new System.Drawing.Point(3, 0);
             this.viewCourses.Name = "viewCourses";
             this.viewCourses.Size = new System.Drawing.Size(431, 193);
             this.viewCourses.TabIndex = 2;
@@ -359,7 +361,7 @@
             this.RegisterPanel.Controls.Add(this.RegisterPrevious);
             this.RegisterPanel.Controls.Add(this.Register);
             this.RegisterPanel.Controls.Add(this.RegisterNext);
-            this.RegisterPanel.Location = new System.Drawing.Point(437, 258);
+            this.RegisterPanel.Location = new System.Drawing.Point(57, 21);
             this.RegisterPanel.Name = "RegisterPanel";
             this.RegisterPanel.Size = new System.Drawing.Size(356, 176);
             this.RegisterPanel.TabIndex = 3;
@@ -413,7 +415,7 @@
             // EditPanel
             // 
             this.EditPanel.Controls.Add(this.Previous);
-            this.EditPanel.Location = new System.Drawing.Point(815, 261);
+            this.EditPanel.Location = new System.Drawing.Point(57, 21);
             this.EditPanel.Name = "EditPanel";
             this.EditPanel.Size = new System.Drawing.Size(200, 169);
             this.EditPanel.TabIndex = 4;
@@ -437,13 +439,13 @@
             this.Controls.Add(this.EditPanel);
             this.Controls.Add(this.RegisterPanel);
             this.Controls.Add(this.CurrentDetails);
-            this.Controls.Add(this.viewCourses);
             this.Controls.Add(this.Loginpanel);
             this.Name = "logindesign";
             this.Text = "Previous";
             this.Load += new System.EventHandler(this.logindesign_Load);
             this.Loginpanel.ResumeLayout(false);
             this.Loginpanel.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);

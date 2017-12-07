@@ -24,7 +24,17 @@ namespace Student_prerequisite_course_system
 
         private void LOGIN_Click(object sender, EventArgs e)
         {
+            //admin login button
+        }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //enter details of student's current courses button
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //next button in form 2 of details of current courses
         }
     }
 }

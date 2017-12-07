@@ -40,17 +40,20 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.AdminRegister = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Next = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.AdminDetailsC = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
             this.adusernamepanel = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.LOGIN = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.AdminLogin = new System.Windows.Forms.Panel();
             this.AdminViewC = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -63,15 +66,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.EditPanel = new System.Windows.Forms.Panel();
             this.Previous = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.AdminRegister.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.AdminDetailsC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.adusernamepanel.SuspendLayout();
@@ -82,7 +83,6 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.EditPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,6 +103,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = " Details Of Current Courses";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -112,6 +113,7 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "Next";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listBox1
             // 
@@ -171,6 +173,15 @@
             this.AdminRegister.Size = new System.Drawing.Size(321, 176);
             this.AdminRegister.TabIndex = 7;
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(3, 32);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(315, 109);
+            this.dataGridView2.TabIndex = 3;
+            // 
             // Next
             // 
             this.Next.Location = new System.Drawing.Point(243, 147);
@@ -194,7 +205,7 @@
             this.AdminDetailsC.Controls.Add(this.dataGridView1);
             this.AdminDetailsC.Controls.Add(this.button3);
             this.AdminDetailsC.Controls.Add(this.button2);
-            this.AdminDetailsC.Location = new System.Drawing.Point(478, 11);
+            this.AdminDetailsC.Location = new System.Drawing.Point(12, 11);
             this.AdminDetailsC.Name = "AdminDetailsC";
             this.AdminDetailsC.Size = new System.Drawing.Size(464, 190);
             this.AdminDetailsC.TabIndex = 1;
@@ -227,6 +238,13 @@
             this.adusernamepanel.Name = "adusernamepanel";
             this.adusernamepanel.Size = new System.Drawing.Size(232, 40);
             this.adusernamepanel.TabIndex = 1;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(54, 3);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(174, 20);
+            this.textBox2.TabIndex = 1;
             // 
             // panel6
             // 
@@ -274,6 +292,13 @@
             this.panel4.Size = new System.Drawing.Size(231, 40);
             this.panel4.TabIndex = 2;
             // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(54, 4);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(175, 20);
+            this.textBox3.TabIndex = 1;
+            // 
             // AdminLogin
             // 
             this.AdminLogin.Controls.Add(this.LOGIN);
@@ -289,17 +314,16 @@
             // 
             // AdminViewC
             // 
-            this.AdminViewC.Controls.Add(this.splitContainer1);
             this.AdminViewC.Controls.Add(this.button6);
             this.AdminViewC.Controls.Add(this.button1);
-            this.AdminViewC.Location = new System.Drawing.Point(12, 243);
+            this.AdminViewC.Location = new System.Drawing.Point(12, 235);
             this.AdminViewC.Name = "AdminViewC";
             this.AdminViewC.Size = new System.Drawing.Size(431, 193);
             this.AdminViewC.TabIndex = 4;
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Location = new System.Drawing.Point(12, 243);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -315,7 +339,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.vScrollBar2);
             this.splitContainer1.Panel2.Controls.Add(this.button4);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
-            this.splitContainer1.Size = new System.Drawing.Size(428, 165);
+            this.splitContainer1.Size = new System.Drawing.Size(428, 167);
             this.splitContainer1.SplitterDistance = 142;
             this.splitContainer1.TabIndex = 5;
             // 
@@ -378,7 +402,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(353, 166);
+            this.button6.Location = new System.Drawing.Point(349, 170);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 23);
             this.button6.TabIndex = 2;
@@ -387,21 +411,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(265, 166);
+            this.button1.Location = new System.Drawing.Point(265, 170);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
             this.button1.Text = "Previous ";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.HighlightText;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 32);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(315, 109);
-            this.dataGridView2.TabIndex = 3;
             // 
             // EditPanel
             // 
@@ -420,26 +435,13 @@
             this.Previous.Text = "Edit";
             this.Previous.UseVisualStyleBackColor = true;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(54, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 20);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(54, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(175, 20);
-            this.textBox3.TabIndex = 1;
-            // 
             // Admin_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1049, 482);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.EditPanel);
             this.Controls.Add(this.AdminViewC);
             this.Controls.Add(this.AdminDetailsC);
@@ -451,6 +453,7 @@
             this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.AdminRegister.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.AdminDetailsC.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.adusernamepanel.ResumeLayout(false);
@@ -466,7 +469,6 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.EditPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
