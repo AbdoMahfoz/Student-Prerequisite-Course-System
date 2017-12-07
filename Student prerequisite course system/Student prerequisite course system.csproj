@@ -45,9 +45,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin form.Designer.cs">
+      <DependentUpon>Admin form.cs</DependentUpon>
+    </Compile>
     <Compile Include="DataStructures\ArrayList.cs" />
     <Compile Include="DataStructures\Queue.cs" />
     <Compile Include="DataStructures\SmallContainers.cs" />
+    <Compile Include="logindesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logindesign.Designer.cs">
+      <DependentUpon>logindesign.cs</DependentUpon>
+    </Compile>
     <Compile Include="Operations\FileOperations.cs" />
     <Compile Include="DataStructures\Tree.cs" />
     <Compile Include="MainForm.cs">
@@ -59,6 +71,12 @@
     <Compile Include="Operations\UserOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin form.resx">
+      <DependentUpon>Admin form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logindesign.resx">
+      <DependentUpon>logindesign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
