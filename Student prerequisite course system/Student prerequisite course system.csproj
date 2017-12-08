@@ -45,11 +45,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin_form.cs">
+    <Compile Include="AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_form.Designer.cs">
-      <DependentUpon>Admin_form.cs</DependentUpon>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="DataStructures\ArrayList.cs" />
     <Compile Include="DataStructures\Queue.cs" />
@@ -71,8 +71,8 @@
     <Compile Include="Operations\UserOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Admin_form.resx">
-      <DependentUpon>Admin_form.cs</DependentUpon>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Student_form.resx">
       <DependentUpon>Student_form.cs</DependentUpon>

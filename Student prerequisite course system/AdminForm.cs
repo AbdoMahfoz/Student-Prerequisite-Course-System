@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Student_prerequisite_course_system
 {
-    public partial class Admin_form : Form
+    public partial class AdminForm : Form
     {
-        public Admin_form()
+        public AdminForm()
         {
             InitializeComponent();
         }
