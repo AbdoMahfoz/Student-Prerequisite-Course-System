@@ -120,7 +120,7 @@ namespace Student_prerequisite_course_system
 
         private void LOGIN_Click(object sender, EventArgs e)
         { //login button
-           
+           Text
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -161,6 +161,16 @@ namespace Student_prerequisite_course_system
         private void RegisterNext_Click(object sender, EventArgs e)
         {
             //next button in register form 
+        }
+
+        private void CurrentDetails_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            TextBox.Focus();
         }
     }
 }
