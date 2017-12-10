@@ -1,38 +1,37 @@
-﻿namespace Student_prerequisite_course_system
+﻿
+partial class Student_form
 {
-    partial class Student_form
+    /// <summary>
+    /// Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+    /// <summary>
+    /// Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing)
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        if (disposing && (components != null))
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
+            components.Dispose();
         }
+        base.Dispose(disposing);
+    }
 
-        #region Windows Form Designer generated code
+    #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+    /// <summary>
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent()
+    {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_form));
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.LoginButton = new System.Windows.Forms.Button();
             this.UserNamePlaceHolder = new System.Windows.Forms.Panel();
-            this.UserNameTextNox = new System.Windows.Forms.TextBox();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
             this.DumyyUserPicture = new System.Windows.Forms.Panel();
             this.PasswordPlaceHolder = new System.Windows.Forms.Panel();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
@@ -42,6 +41,7 @@
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.ViewCourses = new System.Windows.Forms.Panel();
             this.ViewContainer = new System.Windows.Forms.SplitContainer();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.AvailableCoursesButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -56,7 +56,6 @@
             this.HomeRegister = new System.Windows.Forms.Button();
             this.HomeView = new System.Windows.Forms.Button();
             this.HomeCurrent = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.LoginPanel.SuspendLayout();
             this.UserNamePlaceHolder.SuspendLayout();
             this.PasswordPlaceHolder.SuspendLayout();
@@ -85,28 +84,30 @@
             // 
             // LoginButton
             // 
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.LoginButton.Location = new System.Drawing.Point(452, 195);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(43, 20);
             this.LoginButton.TabIndex = 6;
             this.LoginButton.Text = "OK";
             this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // UserNamePlaceHolder
             // 
-            this.UserNamePlaceHolder.Controls.Add(this.UserNameTextNox);
+            this.UserNamePlaceHolder.Controls.Add(this.UserNameTextBox);
             this.UserNamePlaceHolder.Controls.Add(this.DumyyUserPicture);
             this.UserNamePlaceHolder.Location = new System.Drawing.Point(367, 57);
             this.UserNamePlaceHolder.Name = "UserNamePlaceHolder";
             this.UserNamePlaceHolder.Size = new System.Drawing.Size(232, 40);
             this.UserNamePlaceHolder.TabIndex = 1;
             // 
-            // UserNameTextNox
+            // UserNameTextBox
             // 
-            this.UserNameTextNox.Location = new System.Drawing.Point(55, 4);
-            this.UserNameTextNox.Name = "UserNameTextNox";
-            this.UserNameTextNox.Size = new System.Drawing.Size(174, 20);
-            this.UserNameTextNox.TabIndex = 1;
+            this.UserNameTextBox.Location = new System.Drawing.Point(55, 4);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(174, 20);
+            this.UserNameTextBox.TabIndex = 1;
             // 
             // DumyyUserPicture
             // 
@@ -199,8 +200,20 @@
             this.ViewContainer.SplitterDistance = 250;
             this.ViewContainer.TabIndex = 5;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(9, 57);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(203, 67);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.Text = "just a very long and boring description about a course that is as useful as weird" +
+    " computer subjects we took in primaty schoools";
+            // 
             // AvailableCoursesButton
             // 
+            this.AvailableCoursesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AvailableCoursesButton.Location = new System.Drawing.Point(58, 3);
             this.AvailableCoursesButton.Name = "AvailableCoursesButton";
             this.AvailableCoursesButton.Size = new System.Drawing.Size(122, 21);
@@ -228,6 +241,7 @@
             // 
             // AllCoursesButton
             // 
+            this.AllCoursesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AllCoursesButton.Location = new System.Drawing.Point(76, 3);
             this.AllCoursesButton.Name = "AllCoursesButton";
             this.AllCoursesButton.Size = new System.Drawing.Size(110, 21);
@@ -281,6 +295,7 @@
             // 
             // Register
             // 
+            this.Register.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.Register.Location = new System.Drawing.Point(230, 221);
             this.Register.Name = "Register";
             this.Register.Size = new System.Drawing.Size(75, 23);
@@ -302,41 +317,36 @@
             // 
             // HomeRegister
             // 
+            this.HomeRegister.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.HomeRegister.Location = new System.Drawing.Point(15, 183);
             this.HomeRegister.Name = "HomeRegister";
             this.HomeRegister.Size = new System.Drawing.Size(108, 23);
             this.HomeRegister.TabIndex = 2;
             this.HomeRegister.Text = "Register Courses";
             this.HomeRegister.UseVisualStyleBackColor = true;
+            this.HomeRegister.Click += new System.EventHandler(this.HomeRegister_Click);
             // 
             // HomeView
             // 
+            this.HomeView.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.HomeView.Location = new System.Drawing.Point(15, 103);
             this.HomeView.Name = "HomeView";
             this.HomeView.Size = new System.Drawing.Size(108, 23);
             this.HomeView.TabIndex = 1;
             this.HomeView.Text = "View Courses";
             this.HomeView.UseVisualStyleBackColor = true;
+            this.HomeView.Click += new System.EventHandler(this.HomeView_Click);
             // 
             // HomeCurrent
             // 
+            this.HomeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.HomeCurrent.Location = new System.Drawing.Point(15, 25);
             this.HomeCurrent.Name = "HomeCurrent";
             this.HomeCurrent.Size = new System.Drawing.Size(108, 23);
             this.HomeCurrent.TabIndex = 0;
             this.HomeCurrent.Text = "Current Courses";
             this.HomeCurrent.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(9, 57);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(203, 67);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "just a very long and boring description about a course that is as useful as weird" +
-    " computer subjects we took in primaty schoools";
+            this.HomeCurrent.Click += new System.EventHandler(this.HomeCurrent_Click);
             // 
             // Student_form
             // 
@@ -344,8 +354,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(682, 247);
-            this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.ViewCourses);
+            this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.CurrentDetails);
             this.Controls.Add(this.RegisterPanel);
@@ -369,37 +379,36 @@
             this.NavigationPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
-        }
-
-        #endregion
-
-        private System.Windows.Forms.Panel LoginPanel;
-        private System.Windows.Forms.Panel BigUserPicture;
-        private System.Windows.Forms.Label UserNameLabel;
-        private System.Windows.Forms.Panel PasswordPlaceHolder;
-        private System.Windows.Forms.Panel DumyyPasswordPicture;
-        private System.Windows.Forms.Panel UserNamePlaceHolder;
-        private System.Windows.Forms.Panel DumyyUserPicture;
-        private System.Windows.Forms.Label PasswordLabel;
-        private System.Windows.Forms.Panel ViewCourses;
-        private System.Windows.Forms.Panel RegisterPanel;
-        private System.Windows.Forms.Button AvailableCoursesButton;
-        private System.Windows.Forms.Button AllCoursesButton;
-        private System.Windows.Forms.Panel CurrentDetails;
-        private System.Windows.Forms.Button Register;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button LoginButton;
-        private System.Windows.Forms.SplitContainer ViewContainer;
-        private System.Windows.Forms.CheckedListBox RegistercheckedListBox;
-        private System.Windows.Forms.ListView CurrentCoursesList;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox PasswordTextBox;
-        private System.Windows.Forms.TextBox UserNameTextNox;
-        private System.Windows.Forms.Panel NavigationPanel;
-        private System.Windows.Forms.Button HomeRegister;
-        private System.Windows.Forms.Button HomeView;
-        private System.Windows.Forms.Button HomeCurrent;
-        private System.Windows.Forms.TextBox textBox1;
     }
+
+    #endregion
+
+    private System.Windows.Forms.Panel LoginPanel;
+    private System.Windows.Forms.Panel BigUserPicture;
+    private System.Windows.Forms.Label UserNameLabel;
+    private System.Windows.Forms.Panel PasswordPlaceHolder;
+    private System.Windows.Forms.Panel DumyyPasswordPicture;
+    private System.Windows.Forms.Panel UserNamePlaceHolder;
+    private System.Windows.Forms.Panel DumyyUserPicture;
+    private System.Windows.Forms.Label PasswordLabel;
+    private System.Windows.Forms.Panel ViewCourses;
+    private System.Windows.Forms.Panel RegisterPanel;
+    private System.Windows.Forms.Button AvailableCoursesButton;
+    private System.Windows.Forms.Button AllCoursesButton;
+    private System.Windows.Forms.Panel CurrentDetails;
+    private System.Windows.Forms.Button Register;
+    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Button LoginButton;
+    private System.Windows.Forms.SplitContainer ViewContainer;
+    private System.Windows.Forms.CheckedListBox RegistercheckedListBox;
+    private System.Windows.Forms.ListView CurrentCoursesList;
+    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.TextBox PasswordTextBox;
+    private System.Windows.Forms.TextBox UserNameTextBox;
+    private System.Windows.Forms.Panel NavigationPanel;
+    private System.Windows.Forms.Button HomeRegister;
+    private System.Windows.Forms.Button HomeView;
+    private System.Windows.Forms.Button HomeCurrent;
+    private System.Windows.Forms.TextBox textBox1;
 }
