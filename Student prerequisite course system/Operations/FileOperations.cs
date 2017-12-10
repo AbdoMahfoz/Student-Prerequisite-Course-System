@@ -204,6 +204,10 @@ static public class FileOperations
         }
         static public string[] Read()
         {
+            if(!File.Exists("Tree.txt"))
+            {
+                return null;
+            }
             ArrayList<string> list = new ArrayList<string>();
             FileStream file = new FileStream("Tree.txt", FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(file);
