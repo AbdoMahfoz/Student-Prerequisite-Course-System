@@ -28,56 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_form));
             this.Loginpanel = new System.Windows.Forms.Panel();
             this.LOGIN = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.usernametextbox = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.passwordtextbox = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.PasswordLABEL = new System.Windows.Forms.Label();
+            this.UNLABEL = new System.Windows.Forms.Label();
             this.viewCourses = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.AvailableCbtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.vcscroll2 = new System.Windows.Forms.VScrollBar();
             this.AllCbtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.VCNext = new System.Windows.Forms.Button();
             this.VCPrevious = new System.Windows.Forms.Button();
-            this.PasswordLABEL = new System.Windows.Forms.Label();
-            this.UNLABEL = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.passwordtextbox = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.usernametextbox = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.CurrentDetails = new System.Windows.Forms.Panel();
             this.currentcoursesscroll = new System.Windows.Forms.VScrollBar();
             this.CurrentCoursesList = new System.Windows.Forms.ListView();
             this.DetailscurrentCourses = new System.Windows.Forms.Button();
             this.currentNext = new System.Windows.Forms.Button();
             this.RegisterPanel = new System.Windows.Forms.Panel();
-            this.RegisterScroll = new System.Windows.Forms.VScrollBar();
             this.RegistercheckedListBox = new System.Windows.Forms.CheckedListBox();
             this.RegisterPrevious = new System.Windows.Forms.Button();
             this.Register = new System.Windows.Forms.Button();
             this.RegisterNext = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.EditPanel = new System.Windows.Forms.Panel();
-            this.Previous = new System.Windows.Forms.Button();
             this.Loginpanel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.viewCourses.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.CurrentDetails.SuspendLayout();
             this.RegisterPanel.SuspendLayout();
-            this.EditPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Loginpanel
@@ -88,14 +80,14 @@
             this.Loginpanel.Controls.Add(this.panel2);
             this.Loginpanel.Controls.Add(this.PasswordLABEL);
             this.Loginpanel.Controls.Add(this.UNLABEL);
-            this.Loginpanel.Location = new System.Drawing.Point(57, 21);
+            this.Loginpanel.Location = new System.Drawing.Point(0, 1);
             this.Loginpanel.Name = "Loginpanel";
-            this.Loginpanel.Size = new System.Drawing.Size(443, 196);
+            this.Loginpanel.Size = new System.Drawing.Size(527, 246);
             this.Loginpanel.TabIndex = 0;
             // 
             // LOGIN
             // 
-            this.LOGIN.Location = new System.Drawing.Point(270, 173);
+            this.LOGIN.Location = new System.Drawing.Point(363, 191);
             this.LOGIN.Name = "LOGIN";
             this.LOGIN.Size = new System.Drawing.Size(43, 20);
             this.LOGIN.TabIndex = 6;
@@ -103,24 +95,95 @@
             this.LOGIN.UseVisualStyleBackColor = true;
             this.LOGIN.Click += new System.EventHandler(this.LOGIN_Click);
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.usernametextbox);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Location = new System.Drawing.Point(278, 53);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(232, 40);
+            this.panel3.TabIndex = 1;
+            // 
+            // usernametextbox
+            // 
+            this.usernametextbox.Location = new System.Drawing.Point(55, 4);
+            this.usernametextbox.Name = "usernametextbox";
+            this.usernametextbox.Size = new System.Drawing.Size(174, 20);
+            this.usernametextbox.TabIndex = 1;
+            this.usernametextbox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Location = new System.Drawing.Point(1, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(48, 37);
+            this.panel5.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.passwordtextbox);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Location = new System.Drawing.Point(278, 133);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(231, 40);
+            this.panel4.TabIndex = 2;
+            // 
+            // passwordtextbox
+            // 
+            this.passwordtextbox.Location = new System.Drawing.Point(55, 3);
+            this.passwordtextbox.Name = "passwordtextbox";
+            this.passwordtextbox.Size = new System.Drawing.Size(173, 20);
+            this.passwordtextbox.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel6.Location = new System.Drawing.Point(3, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(46, 38);
+            this.panel6.TabIndex = 0;
+            // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(205, 196);
+            this.panel2.Size = new System.Drawing.Size(240, 243);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // PasswordLABEL
+            // 
+            this.PasswordLABEL.AutoSize = true;
+            this.PasswordLABEL.Location = new System.Drawing.Point(282, 109);
+            this.PasswordLABEL.Name = "PasswordLABEL";
+            this.PasswordLABEL.Size = new System.Drawing.Size(53, 13);
+            this.PasswordLABEL.TabIndex = 4;
+            this.PasswordLABEL.Text = "Password";
+            this.PasswordLABEL.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // UNLABEL
+            // 
+            this.UNLABEL.AutoSize = true;
+            this.UNLABEL.Location = new System.Drawing.Point(285, 31);
+            this.UNLABEL.Name = "UNLABEL";
+            this.UNLABEL.Size = new System.Drawing.Size(55, 13);
+            this.UNLABEL.TabIndex = 3;
+            this.UNLABEL.Text = "Username";
+            this.UNLABEL.Click += new System.EventHandler(this.label1_Click);
             // 
             // viewCourses
             // 
             this.viewCourses.Controls.Add(this.splitContainer1);
             this.viewCourses.Controls.Add(this.VCNext);
             this.viewCourses.Controls.Add(this.VCPrevious);
-            this.viewCourses.Location = new System.Drawing.Point(544, 90);
+            this.viewCourses.Location = new System.Drawing.Point(0, 0);
             this.viewCourses.Name = "viewCourses";
-            this.viewCourses.Size = new System.Drawing.Size(431, 193);
+            this.viewCourses.Size = new System.Drawing.Size(530, 247);
             this.viewCourses.TabIndex = 2;
             // 
             // splitContainer1
@@ -131,18 +194,16 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.textBox1);
-            this.splitContainer1.Panel1.Controls.Add(this.vScrollBar1);
             this.splitContainer1.Panel1.Controls.Add(this.AvailableCbtn);
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.textBox2);
-            this.splitContainer1.Panel2.Controls.Add(this.vcscroll2);
             this.splitContainer1.Panel2.Controls.Add(this.AllCbtn);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
-            this.splitContainer1.Size = new System.Drawing.Size(428, 165);
-            this.splitContainer1.SplitterDistance = 142;
+            this.splitContainer1.Size = new System.Drawing.Size(527, 212);
+            this.splitContainer1.SplitterDistance = 174;
             this.splitContainer1.TabIndex = 5;
             // 
             // textBox1
@@ -153,16 +214,9 @@
             this.textBox1.Size = new System.Drawing.Size(118, 20);
             this.textBox1.TabIndex = 4;
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(127, 4);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(14, 161);
-            this.vScrollBar1.TabIndex = 0;
-            // 
             // AvailableCbtn
             // 
-            this.AvailableCbtn.Location = new System.Drawing.Point(3, 4);
+            this.AvailableCbtn.Location = new System.Drawing.Point(25, 3);
             this.AvailableCbtn.Name = "AvailableCbtn";
             this.AvailableCbtn.Size = new System.Drawing.Size(122, 21);
             this.AvailableCbtn.TabIndex = 1;
@@ -188,16 +242,9 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
             // 
-            // vcscroll2
-            // 
-            this.vcscroll2.Location = new System.Drawing.Point(264, 4);
-            this.vcscroll2.Name = "vcscroll2";
-            this.vcscroll2.Size = new System.Drawing.Size(14, 161);
-            this.vcscroll2.TabIndex = 0;
-            // 
             // AllCbtn
             // 
-            this.AllCbtn.Location = new System.Drawing.Point(81, 3);
+            this.AllCbtn.Location = new System.Drawing.Point(138, 3);
             this.AllCbtn.Name = "AllCbtn";
             this.AllCbtn.Size = new System.Drawing.Size(110, 21);
             this.AllCbtn.TabIndex = 0;
@@ -217,7 +264,7 @@
             // 
             // VCNext
             // 
-            this.VCNext.Location = new System.Drawing.Point(353, 166);
+            this.VCNext.Location = new System.Drawing.Point(455, 224);
             this.VCNext.Name = "VCNext";
             this.VCNext.Size = new System.Drawing.Size(75, 23);
             this.VCNext.TabIndex = 2;
@@ -227,7 +274,7 @@
             // 
             // VCPrevious
             // 
-            this.VCPrevious.Location = new System.Drawing.Point(265, 166);
+            this.VCPrevious.Location = new System.Drawing.Point(0, 224);
             this.VCPrevious.Name = "VCPrevious";
             this.VCPrevious.Size = new System.Drawing.Size(75, 23);
             this.VCPrevious.TabIndex = 1;
@@ -235,86 +282,15 @@
             this.VCPrevious.UseVisualStyleBackColor = true;
             this.VCPrevious.Click += new System.EventHandler(this.VCPrevious_Click);
             // 
-            // PasswordLABEL
-            // 
-            this.PasswordLABEL.AutoSize = true;
-            this.PasswordLABEL.Location = new System.Drawing.Point(215, 91);
-            this.PasswordLABEL.Name = "PasswordLABEL";
-            this.PasswordLABEL.Size = new System.Drawing.Size(53, 13);
-            this.PasswordLABEL.TabIndex = 4;
-            this.PasswordLABEL.Text = "Password";
-            this.PasswordLABEL.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // UNLABEL
-            // 
-            this.UNLABEL.AutoSize = true;
-            this.UNLABEL.Location = new System.Drawing.Point(218, 13);
-            this.UNLABEL.Name = "UNLABEL";
-            this.UNLABEL.Size = new System.Drawing.Size(55, 13);
-            this.UNLABEL.TabIndex = 3;
-            this.UNLABEL.Text = "Username";
-            this.UNLABEL.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.passwordtextbox);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(211, 115);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(231, 40);
-            this.panel4.TabIndex = 2;
-            // 
-            // passwordtextbox
-            // 
-            this.passwordtextbox.Location = new System.Drawing.Point(55, 3);
-            this.passwordtextbox.Name = "passwordtextbox";
-            this.passwordtextbox.Size = new System.Drawing.Size(173, 20);
-            this.passwordtextbox.TabIndex = 1;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Location = new System.Drawing.Point(3, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(46, 38);
-            this.panel6.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.usernametextbox);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Location = new System.Drawing.Point(211, 35);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(232, 40);
-            this.panel3.TabIndex = 1;
-            // 
-            // usernametextbox
-            // 
-            this.usernametextbox.Location = new System.Drawing.Point(55, 4);
-            this.usernametextbox.Name = "usernametextbox";
-            this.usernametextbox.Size = new System.Drawing.Size(174, 20);
-            this.usernametextbox.TabIndex = 1;
-            this.usernametextbox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Location = new System.Drawing.Point(1, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(48, 37);
-            this.panel5.TabIndex = 0;
-            // 
             // CurrentDetails
             // 
             this.CurrentDetails.Controls.Add(this.currentcoursesscroll);
             this.CurrentDetails.Controls.Add(this.CurrentCoursesList);
             this.CurrentDetails.Controls.Add(this.DetailscurrentCourses);
             this.CurrentDetails.Controls.Add(this.currentNext);
-            this.CurrentDetails.Location = new System.Drawing.Point(57, 24);
+            this.CurrentDetails.Location = new System.Drawing.Point(0, 0);
             this.CurrentDetails.Name = "CurrentDetails";
-            this.CurrentDetails.Size = new System.Drawing.Size(464, 190);
+            this.CurrentDetails.Size = new System.Drawing.Size(530, 247);
             this.CurrentDetails.TabIndex = 1;
             this.CurrentDetails.Paint += new System.Windows.Forms.PaintEventHandler(this.CurrentDetails_Paint);
             // 
@@ -356,35 +332,27 @@
             // 
             // RegisterPanel
             // 
-            this.RegisterPanel.Controls.Add(this.RegisterScroll);
             this.RegisterPanel.Controls.Add(this.RegistercheckedListBox);
             this.RegisterPanel.Controls.Add(this.RegisterPrevious);
             this.RegisterPanel.Controls.Add(this.Register);
             this.RegisterPanel.Controls.Add(this.RegisterNext);
-            this.RegisterPanel.Location = new System.Drawing.Point(57, 21);
+            this.RegisterPanel.Location = new System.Drawing.Point(0, 0);
             this.RegisterPanel.Name = "RegisterPanel";
-            this.RegisterPanel.Size = new System.Drawing.Size(356, 176);
+            this.RegisterPanel.Size = new System.Drawing.Size(530, 247);
             this.RegisterPanel.TabIndex = 3;
             this.RegisterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
-            // 
-            // RegisterScroll
-            // 
-            this.RegisterScroll.Location = new System.Drawing.Point(333, 32);
-            this.RegisterScroll.Name = "RegisterScroll";
-            this.RegisterScroll.Size = new System.Drawing.Size(20, 106);
-            this.RegisterScroll.TabIndex = 6;
             // 
             // RegistercheckedListBox
             // 
             this.RegistercheckedListBox.FormattingEnabled = true;
-            this.RegistercheckedListBox.Location = new System.Drawing.Point(3, 32);
+            this.RegistercheckedListBox.Location = new System.Drawing.Point(3, 2);
             this.RegistercheckedListBox.Name = "RegistercheckedListBox";
-            this.RegistercheckedListBox.Size = new System.Drawing.Size(350, 109);
+            this.RegistercheckedListBox.Size = new System.Drawing.Size(524, 214);
             this.RegistercheckedListBox.TabIndex = 5;
             // 
             // RegisterPrevious
             // 
-            this.RegisterPrevious.Location = new System.Drawing.Point(188, 150);
+            this.RegisterPrevious.Location = new System.Drawing.Point(0, 222);
             this.RegisterPrevious.Name = "RegisterPrevious";
             this.RegisterPrevious.Size = new System.Drawing.Size(75, 23);
             this.RegisterPrevious.TabIndex = 3;
@@ -394,7 +362,7 @@
             // 
             // Register
             // 
-            this.Register.Location = new System.Drawing.Point(3, 3);
+            this.Register.Location = new System.Drawing.Point(230, 221);
             this.Register.Name = "Register";
             this.Register.Size = new System.Drawing.Size(75, 23);
             this.Register.TabIndex = 2;
@@ -404,7 +372,7 @@
             // 
             // RegisterNext
             // 
-            this.RegisterNext.Location = new System.Drawing.Point(278, 150);
+            this.RegisterNext.Location = new System.Drawing.Point(455, 224);
             this.RegisterNext.Name = "RegisterNext";
             this.RegisterNext.Size = new System.Drawing.Size(75, 23);
             this.RegisterNext.TabIndex = 1;
@@ -412,33 +380,14 @@
             this.RegisterNext.UseVisualStyleBackColor = true;
             this.RegisterNext.Click += new System.EventHandler(this.RegisterNext_Click);
             // 
-            // EditPanel
-            // 
-            this.EditPanel.Controls.Add(this.Previous);
-            this.EditPanel.Location = new System.Drawing.Point(57, 21);
-            this.EditPanel.Name = "EditPanel";
-            this.EditPanel.Size = new System.Drawing.Size(200, 169);
-            this.EditPanel.TabIndex = 4;
-            // 
-            // Previous
-            // 
-            this.Previous.Location = new System.Drawing.Point(45, 16);
-            this.Previous.Name = "Previous";
-            this.Previous.Size = new System.Drawing.Size(75, 23);
-            this.Previous.TabIndex = 0;
-            this.Previous.Text = "Edit";
-            this.Previous.UseVisualStyleBackColor = true;
-            this.Previous.Click += new System.EventHandler(this.Previous_Click);
-            // 
             // Student_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1051, 475);
-            this.Controls.Add(this.viewCourses);
+            this.ClientSize = new System.Drawing.Size(528, 247);
             this.Controls.Add(this.Loginpanel);
-            this.Controls.Add(this.EditPanel);
+            this.Controls.Add(this.viewCourses);
             this.Controls.Add(this.RegisterPanel);
             this.Controls.Add(this.CurrentDetails);
             this.Name = "Student_form";
@@ -446,6 +395,10 @@
             this.Load += new System.EventHandler(this.logindesign_Load);
             this.Loginpanel.ResumeLayout(false);
             this.Loginpanel.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.viewCourses.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
@@ -453,13 +406,8 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.CurrentDetails.ResumeLayout(false);
             this.RegisterPanel.ResumeLayout(false);
-            this.EditPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -480,7 +428,6 @@
         private System.Windows.Forms.Button AvailableCbtn;
         private System.Windows.Forms.Button AllCbtn;
         private System.Windows.Forms.Button VCNext;
-        private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button currentNext;
         private System.Windows.Forms.Button DetailscurrentCourses;
         private System.Windows.Forms.Panel CurrentDetails;
@@ -491,12 +438,7 @@
         private System.Windows.Forms.Button RegisterPrevious;
         private System.Windows.Forms.Button LOGIN;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.VScrollBar vcscroll2;
-        private System.Windows.Forms.VScrollBar RegisterScroll;
         private System.Windows.Forms.CheckedListBox RegistercheckedListBox;
-        private System.Windows.Forms.Panel EditPanel;
-        private System.Windows.Forms.Button Previous;
         private System.Windows.Forms.ListView CurrentCoursesList;
         private System.Windows.Forms.VScrollBar currentcoursesscroll;
         private System.Windows.Forms.TextBox textBox1;
