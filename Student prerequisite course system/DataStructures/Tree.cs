@@ -139,6 +139,10 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
     }
     public void LoadFromFile(string[] filedata)
     {
+        if(filedata == null)
+        {
+            return;
+        }
         if (typeof(T) == typeof(Course))
         {
             AdjacencyList.Count = filedata.Length;
