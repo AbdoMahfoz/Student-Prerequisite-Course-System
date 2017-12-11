@@ -141,6 +141,7 @@ namespace Student_prerequisite_course_system
         private void DetailscurrentCourses_Click(object sender, EventArgs e)
         {
             //panel2 details of current courses button
+
         }
 
         private void Register_Click(object sender, EventArgs e)
@@ -170,7 +171,7 @@ namespace Student_prerequisite_course_system
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            TextBox.Focus();
+            textBox1.Focus();
         }
     }
 }
