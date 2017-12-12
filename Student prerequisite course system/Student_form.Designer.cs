@@ -1,35 +1,34 @@
-﻿namespace Student_prerequisite_course_system
+﻿
+partial class Student_form
 {
-    partial class Student_form
+    /// <summary>
+    /// Required designer variable.
+    /// </summary>
+    private System.ComponentModel.IContainer components = null;
+
+    /// <summary>
+    /// Clean up any resources being used.
+    /// </summary>
+    /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+    protected override void Dispose(bool disposing)
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        if (disposing && (components != null))
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
+            components.Dispose();
         }
+        base.Dispose(disposing);
+    }
 
-        #region Windows Form Designer generated code
+    #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            this.components = new System.ComponentModel.Container();
+    /// <summary>
+    /// Required method for Designer support - do not modify
+    /// the contents of this method with the code editor.
+    /// </summary>
+    private void InitializeComponent()
+    {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_form));
+<<<<<<< HEAD
             this.Loginpanel = new System.Windows.Forms.Panel();
             this.LOGIN = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,26 +42,38 @@
             this.UNLABEL = new System.Windows.Forms.Label();
             this.viewCourses = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+=======
+            this.LoginPanel = new System.Windows.Forms.Panel();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.UserNamePlaceHolder = new System.Windows.Forms.Panel();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.DumyyUserPicture = new System.Windows.Forms.Panel();
+            this.PasswordPlaceHolder = new System.Windows.Forms.Panel();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.DumyyPasswordPicture = new System.Windows.Forms.Panel();
+            this.BigUserPicture = new System.Windows.Forms.Panel();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UserNameLabel = new System.Windows.Forms.Label();
+            this.ViewCourses = new System.Windows.Forms.Panel();
+            this.ViewContainer = new System.Windows.Forms.SplitContainer();
+>>>>>>> c4373d2a9c4ca7dfcbf008b9d0f45b94f71b6781
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.AvailableCbtn = new System.Windows.Forms.Button();
+            this.AvailableCoursesButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.vcscroll2 = new System.Windows.Forms.VScrollBar();
-            this.AllCbtn = new System.Windows.Forms.Button();
+            this.AllCoursesButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.VCNext = new System.Windows.Forms.Button();
             this.VCPrevious = new System.Windows.Forms.Button();
+=======
+>>>>>>> c4373d2a9c4ca7dfcbf008b9d0f45b94f71b6781
             this.CurrentDetails = new System.Windows.Forms.Panel();
-            this.currentcoursesscroll = new System.Windows.Forms.VScrollBar();
             this.CurrentCoursesList = new System.Windows.Forms.ListView();
-            this.DetailscurrentCourses = new System.Windows.Forms.Button();
-            this.currentNext = new System.Windows.Forms.Button();
             this.RegisterPanel = new System.Windows.Forms.Panel();
-            this.RegisterScroll = new System.Windows.Forms.VScrollBar();
             this.RegistercheckedListBox = new System.Windows.Forms.CheckedListBox();
-            this.RegisterPrevious = new System.Windows.Forms.Button();
             this.Register = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.RegisterNext = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.EditPanel = new System.Windows.Forms.Panel();
@@ -76,11 +87,26 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+=======
+            this.NavigationPanel = new System.Windows.Forms.Panel();
+            this.HomeRegister = new System.Windows.Forms.Button();
+            this.HomeView = new System.Windows.Forms.Button();
+            this.HomeCurrent = new System.Windows.Forms.Button();
+            this.LoginPanel.SuspendLayout();
+            this.UserNamePlaceHolder.SuspendLayout();
+            this.PasswordPlaceHolder.SuspendLayout();
+            this.ViewCourses.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewContainer)).BeginInit();
+            this.ViewContainer.Panel1.SuspendLayout();
+            this.ViewContainer.Panel2.SuspendLayout();
+            this.ViewContainer.SuspendLayout();
+>>>>>>> c4373d2a9c4ca7dfcbf008b9d0f45b94f71b6781
             this.CurrentDetails.SuspendLayout();
             this.RegisterPanel.SuspendLayout();
-            this.EditPanel.SuspendLayout();
+            this.NavigationPanel.SuspendLayout();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // Loginpanel
             // 
             this.Loginpanel.Controls.Add(this.LOGIN);
@@ -217,41 +243,169 @@
             this.splitContainer1.Size = new System.Drawing.Size(428, 165);
             this.splitContainer1.SplitterDistance = 142;
             this.splitContainer1.TabIndex = 5;
+=======
+            // LoginPanel
+            // 
+            this.LoginPanel.Controls.Add(this.LoginButton);
+            this.LoginPanel.Controls.Add(this.UserNamePlaceHolder);
+            this.LoginPanel.Controls.Add(this.PasswordPlaceHolder);
+            this.LoginPanel.Controls.Add(this.BigUserPicture);
+            this.LoginPanel.Controls.Add(this.PasswordLabel);
+            this.LoginPanel.Controls.Add(this.UserNameLabel);
+            this.LoginPanel.Location = new System.Drawing.Point(0, 1);
+            this.LoginPanel.Name = "LoginPanel";
+            this.LoginPanel.Size = new System.Drawing.Size(681, 246);
+            this.LoginPanel.TabIndex = 0;
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LoginButton.Location = new System.Drawing.Point(452, 195);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(43, 20);
+            this.LoginButton.TabIndex = 6;
+            this.LoginButton.Text = "OK";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            // 
+            // UserNamePlaceHolder
+            // 
+            this.UserNamePlaceHolder.Controls.Add(this.UserNameTextBox);
+            this.UserNamePlaceHolder.Controls.Add(this.DumyyUserPicture);
+            this.UserNamePlaceHolder.Location = new System.Drawing.Point(367, 57);
+            this.UserNamePlaceHolder.Name = "UserNamePlaceHolder";
+            this.UserNamePlaceHolder.Size = new System.Drawing.Size(232, 40);
+            this.UserNamePlaceHolder.TabIndex = 1;
+            // 
+            // UserNameTextBox
+            // 
+            this.UserNameTextBox.Location = new System.Drawing.Point(55, 4);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(174, 20);
+            this.UserNameTextBox.TabIndex = 1;
+            // 
+            // DumyyUserPicture
+            // 
+            this.DumyyUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyUserPicture.BackgroundImage")));
+            this.DumyyUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DumyyUserPicture.Location = new System.Drawing.Point(1, 2);
+            this.DumyyUserPicture.Name = "DumyyUserPicture";
+            this.DumyyUserPicture.Size = new System.Drawing.Size(48, 37);
+            this.DumyyUserPicture.TabIndex = 0;
+            // 
+            // PasswordPlaceHolder
+            // 
+            this.PasswordPlaceHolder.Controls.Add(this.PasswordTextBox);
+            this.PasswordPlaceHolder.Controls.Add(this.DumyyPasswordPicture);
+            this.PasswordPlaceHolder.Location = new System.Drawing.Point(367, 137);
+            this.PasswordPlaceHolder.Name = "PasswordPlaceHolder";
+            this.PasswordPlaceHolder.Size = new System.Drawing.Size(231, 40);
+            this.PasswordPlaceHolder.TabIndex = 2;
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.Location = new System.Drawing.Point(55, 3);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(173, 20);
+            this.PasswordTextBox.TabIndex = 1;
+            // 
+            // DumyyPasswordPicture
+            // 
+            this.DumyyPasswordPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyPasswordPicture.BackgroundImage")));
+            this.DumyyPasswordPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DumyyPasswordPicture.Location = new System.Drawing.Point(3, 0);
+            this.DumyyPasswordPicture.Name = "DumyyPasswordPicture";
+            this.DumyyPasswordPicture.Size = new System.Drawing.Size(46, 38);
+            this.DumyyPasswordPicture.TabIndex = 0;
+            // 
+            // BigUserPicture
+            // 
+            this.BigUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BigUserPicture.BackgroundImage")));
+            this.BigUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BigUserPicture.Location = new System.Drawing.Point(0, 0);
+            this.BigUserPicture.Name = "BigUserPicture";
+            this.BigUserPicture.Size = new System.Drawing.Size(240, 243);
+            this.BigUserPicture.TabIndex = 0;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Location = new System.Drawing.Point(371, 113);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(53, 13);
+            this.PasswordLabel.TabIndex = 4;
+            this.PasswordLabel.Text = "Password";
+            // 
+            // UserNameLabel
+            // 
+            this.UserNameLabel.AutoSize = true;
+            this.UserNameLabel.Location = new System.Drawing.Point(374, 35);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(55, 13);
+            this.UserNameLabel.TabIndex = 3;
+            this.UserNameLabel.Text = "Username";
+            // 
+            // ViewCourses
+            // 
+            this.ViewCourses.Controls.Add(this.ViewContainer);
+            this.ViewCourses.Location = new System.Drawing.Point(0, 0);
+            this.ViewCourses.Name = "ViewCourses";
+            this.ViewCourses.Size = new System.Drawing.Size(530, 247);
+            this.ViewCourses.TabIndex = 2;
+            this.ViewCourses.Visible = false;
+            // 
+            // ViewContainer
+            // 
+            this.ViewContainer.Location = new System.Drawing.Point(3, 3);
+            this.ViewContainer.Name = "ViewContainer";
+            // 
+            // ViewContainer.Panel1
+            // 
+            this.ViewContainer.Panel1.Controls.Add(this.textBox1);
+            this.ViewContainer.Panel1.Controls.Add(this.AvailableCoursesButton);
+            this.ViewContainer.Panel1.Controls.Add(this.label3);
+            this.ViewContainer.Panel1MinSize = 230;
+            // 
+            // ViewContainer.Panel2
+            // 
+            this.ViewContainer.Panel2.Controls.Add(this.textBox2);
+            this.ViewContainer.Panel2.Controls.Add(this.AllCoursesButton);
+            this.ViewContainer.Panel2.Controls.Add(this.label4);
+            this.ViewContainer.Size = new System.Drawing.Size(527, 244);
+            this.ViewContainer.SplitterDistance = 250;
+            this.ViewContainer.TabIndex = 5;
+>>>>>>> c4373d2a9c4ca7dfcbf008b9d0f45b94f71b6781
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 55);
+            this.textBox1.Location = new System.Drawing.Point(9, 57);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 20);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(203, 67);
             this.textBox1.TabIndex = 4;
+            this.textBox1.Text = "just a very long and boring description about a course that is as useful as weird" +
+    " computer subjects we took in primaty schoools";
             // 
-            // vScrollBar1
+            // AvailableCoursesButton
             // 
-            this.vScrollBar1.Location = new System.Drawing.Point(127, 4);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(14, 161);
-            this.vScrollBar1.TabIndex = 0;
-            // 
-            // AvailableCbtn
-            // 
-            this.AvailableCbtn.Location = new System.Drawing.Point(3, 4);
-            this.AvailableCbtn.Name = "AvailableCbtn";
-            this.AvailableCbtn.Size = new System.Drawing.Size(122, 21);
-            this.AvailableCbtn.TabIndex = 1;
-            this.AvailableCbtn.Text = "Available Courses";
-            this.AvailableCbtn.UseVisualStyleBackColor = true;
-            this.AvailableCbtn.Click += new System.EventHandler(this.AvailableCbtn_Click);
+            this.AvailableCoursesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AvailableCoursesButton.Location = new System.Drawing.Point(58, 3);
+            this.AvailableCoursesButton.Name = "AvailableCoursesButton";
+            this.AvailableCoursesButton.Size = new System.Drawing.Size(122, 21);
+            this.AvailableCoursesButton.TabIndex = 1;
+            this.AvailableCoursesButton.Text = "Available Courses";
+            this.AvailableCoursesButton.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 33);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(154, 25);
             this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
-            this.label3.Click += new System.EventHandler(this.label3_Click_1);
+            this.label3.Text = "Course Name";
             // 
             // textBox2
             // 
@@ -261,22 +415,15 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
             // 
-            // vcscroll2
+            // AllCoursesButton
             // 
-            this.vcscroll2.Location = new System.Drawing.Point(264, 4);
-            this.vcscroll2.Name = "vcscroll2";
-            this.vcscroll2.Size = new System.Drawing.Size(14, 161);
-            this.vcscroll2.TabIndex = 0;
-            // 
-            // AllCbtn
-            // 
-            this.AllCbtn.Location = new System.Drawing.Point(81, 3);
-            this.AllCbtn.Name = "AllCbtn";
-            this.AllCbtn.Size = new System.Drawing.Size(110, 21);
-            this.AllCbtn.TabIndex = 0;
-            this.AllCbtn.Text = "All Courses";
-            this.AllCbtn.UseVisualStyleBackColor = true;
-            this.AllCbtn.Click += new System.EventHandler(this.AllCbtn_Click);
+            this.AllCoursesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AllCoursesButton.Location = new System.Drawing.Point(76, 3);
+            this.AllCoursesButton.Name = "AllCoursesButton";
+            this.AllCoursesButton.Size = new System.Drawing.Size(110, 21);
+            this.AllCoursesButton.TabIndex = 0;
+            this.AllCoursesButton.Text = "All Courses";
+            this.AllCoursesButton.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -286,6 +433,7 @@
             this.label4.Size = new System.Drawing.Size(35, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "label4";
+<<<<<<< HEAD
             this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // VCNext
@@ -307,136 +455,110 @@
             this.VCPrevious.Text = "Previous ";
             this.VCPrevious.UseVisualStyleBackColor = true;
             this.VCPrevious.Click += new System.EventHandler(this.VCPrevious_Click);
+=======
+>>>>>>> c4373d2a9c4ca7dfcbf008b9d0f45b94f71b6781
             // 
             // CurrentDetails
             // 
-            this.CurrentDetails.Controls.Add(this.currentcoursesscroll);
             this.CurrentDetails.Controls.Add(this.CurrentCoursesList);
+<<<<<<< HEAD
             this.CurrentDetails.Controls.Add(this.DetailscurrentCourses);
             this.CurrentDetails.Controls.Add(this.currentNext);
+=======
+>>>>>>> c4373d2a9c4ca7dfcbf008b9d0f45b94f71b6781
             this.CurrentDetails.Location = new System.Drawing.Point(0, 0);
             this.CurrentDetails.Name = "CurrentDetails";
-            this.CurrentDetails.Size = new System.Drawing.Size(464, 190);
+            this.CurrentDetails.Size = new System.Drawing.Size(530, 247);
             this.CurrentDetails.TabIndex = 1;
-            this.CurrentDetails.Paint += new System.Windows.Forms.PaintEventHandler(this.CurrentDetails_Paint);
-            // 
-            // currentcoursesscroll
-            // 
-            this.currentcoursesscroll.Location = new System.Drawing.Point(449, 43);
-            this.currentcoursesscroll.Name = "currentcoursesscroll";
-            this.currentcoursesscroll.Size = new System.Drawing.Size(15, 114);
-            this.currentcoursesscroll.TabIndex = 6;
+            this.CurrentDetails.Visible = false;
             // 
             // CurrentCoursesList
             // 
-            this.CurrentCoursesList.Location = new System.Drawing.Point(3, 43);
+            this.CurrentCoursesList.Location = new System.Drawing.Point(3, 2);
             this.CurrentCoursesList.Name = "CurrentCoursesList";
-            this.CurrentCoursesList.Size = new System.Drawing.Size(461, 114);
+            this.CurrentCoursesList.Size = new System.Drawing.Size(524, 239);
             this.CurrentCoursesList.TabIndex = 5;
             this.CurrentCoursesList.UseCompatibleStateImageBehavior = false;
-            this.CurrentCoursesList.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // DetailscurrentCourses
-            // 
-            this.DetailscurrentCourses.Location = new System.Drawing.Point(3, 13);
-            this.DetailscurrentCourses.Name = "DetailscurrentCourses";
-            this.DetailscurrentCourses.Size = new System.Drawing.Size(157, 25);
-            this.DetailscurrentCourses.TabIndex = 2;
-            this.DetailscurrentCourses.Text = " Details Of Current Courses";
-            this.DetailscurrentCourses.UseVisualStyleBackColor = true;
-            this.DetailscurrentCourses.Click += new System.EventHandler(this.DetailscurrentCourses_Click);
-            // 
-            // currentNext
-            // 
-            this.currentNext.Location = new System.Drawing.Point(354, 163);
-            this.currentNext.Name = "currentNext";
-            this.currentNext.Size = new System.Drawing.Size(75, 23);
-            this.currentNext.TabIndex = 2;
-            this.currentNext.Text = "Next";
-            this.currentNext.UseVisualStyleBackColor = true;
-            this.currentNext.Click += new System.EventHandler(this.button2_Click);
             // 
             // RegisterPanel
             // 
-            this.RegisterPanel.Controls.Add(this.RegisterScroll);
             this.RegisterPanel.Controls.Add(this.RegistercheckedListBox);
-            this.RegisterPanel.Controls.Add(this.RegisterPrevious);
             this.RegisterPanel.Controls.Add(this.Register);
-            this.RegisterPanel.Controls.Add(this.RegisterNext);
-            this.RegisterPanel.Location = new System.Drawing.Point(57, 21);
+            this.RegisterPanel.Location = new System.Drawing.Point(0, 0);
             this.RegisterPanel.Name = "RegisterPanel";
-            this.RegisterPanel.Size = new System.Drawing.Size(356, 176);
+            this.RegisterPanel.Size = new System.Drawing.Size(530, 247);
             this.RegisterPanel.TabIndex = 3;
-            this.RegisterPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
-            // 
-            // RegisterScroll
-            // 
-            this.RegisterScroll.Location = new System.Drawing.Point(333, 32);
-            this.RegisterScroll.Name = "RegisterScroll";
-            this.RegisterScroll.Size = new System.Drawing.Size(20, 106);
-            this.RegisterScroll.TabIndex = 6;
+            this.RegisterPanel.Visible = false;
             // 
             // RegistercheckedListBox
             // 
             this.RegistercheckedListBox.FormattingEnabled = true;
-            this.RegistercheckedListBox.Location = new System.Drawing.Point(3, 32);
+            this.RegistercheckedListBox.Location = new System.Drawing.Point(3, 2);
             this.RegistercheckedListBox.Name = "RegistercheckedListBox";
-            this.RegistercheckedListBox.Size = new System.Drawing.Size(350, 109);
+            this.RegistercheckedListBox.Size = new System.Drawing.Size(524, 214);
             this.RegistercheckedListBox.TabIndex = 5;
-            // 
-            // RegisterPrevious
-            // 
-            this.RegisterPrevious.Location = new System.Drawing.Point(188, 150);
-            this.RegisterPrevious.Name = "RegisterPrevious";
-            this.RegisterPrevious.Size = new System.Drawing.Size(75, 23);
-            this.RegisterPrevious.TabIndex = 3;
-            this.RegisterPrevious.Text = "Previous";
-            this.RegisterPrevious.UseVisualStyleBackColor = true;
-            this.RegisterPrevious.Click += new System.EventHandler(this.button8_Click);
             // 
             // Register
             // 
-            this.Register.Location = new System.Drawing.Point(3, 3);
+            this.Register.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.Register.Location = new System.Drawing.Point(230, 221);
             this.Register.Name = "Register";
             this.Register.Size = new System.Drawing.Size(75, 23);
             this.Register.TabIndex = 2;
             this.Register.Text = "Register";
             this.Register.UseVisualStyleBackColor = true;
-            this.Register.Click += new System.EventHandler(this.Register_Click);
             // 
-            // RegisterNext
+            // NavigationPanel
             // 
-            this.RegisterNext.Location = new System.Drawing.Point(278, 150);
-            this.RegisterNext.Name = "RegisterNext";
-            this.RegisterNext.Size = new System.Drawing.Size(75, 23);
-            this.RegisterNext.TabIndex = 1;
-            this.RegisterNext.Text = "Next";
-            this.RegisterNext.UseVisualStyleBackColor = true;
-            this.RegisterNext.Click += new System.EventHandler(this.RegisterNext_Click);
+            this.NavigationPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.NavigationPanel.Controls.Add(this.HomeRegister);
+            this.NavigationPanel.Controls.Add(this.HomeView);
+            this.NavigationPanel.Controls.Add(this.HomeCurrent);
+            this.NavigationPanel.Location = new System.Drawing.Point(533, 1);
+            this.NavigationPanel.Name = "NavigationPanel";
+            this.NavigationPanel.Size = new System.Drawing.Size(148, 246);
+            this.NavigationPanel.TabIndex = 7;
+            this.NavigationPanel.Visible = false;
             // 
-            // EditPanel
+            // HomeRegister
             // 
-            this.EditPanel.Controls.Add(this.Previous);
-            this.EditPanel.Location = new System.Drawing.Point(57, 21);
-            this.EditPanel.Name = "EditPanel";
-            this.EditPanel.Size = new System.Drawing.Size(200, 169);
-            this.EditPanel.TabIndex = 4;
+            this.HomeRegister.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeRegister.Location = new System.Drawing.Point(15, 183);
+            this.HomeRegister.Name = "HomeRegister";
+            this.HomeRegister.Size = new System.Drawing.Size(108, 23);
+            this.HomeRegister.TabIndex = 2;
+            this.HomeRegister.Text = "Register Courses";
+            this.HomeRegister.UseVisualStyleBackColor = true;
+            this.HomeRegister.Click += new System.EventHandler(this.HomeRegister_Click);
             // 
-            // Previous
+            // HomeView
             // 
-            this.Previous.Location = new System.Drawing.Point(45, 16);
-            this.Previous.Name = "Previous";
-            this.Previous.Size = new System.Drawing.Size(75, 23);
-            this.Previous.TabIndex = 0;
-            this.Previous.Text = "Edit";
-            this.Previous.UseVisualStyleBackColor = true;
-            this.Previous.Click += new System.EventHandler(this.Previous_Click);
+            this.HomeView.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeView.Location = new System.Drawing.Point(15, 103);
+            this.HomeView.Name = "HomeView";
+            this.HomeView.Size = new System.Drawing.Size(108, 23);
+            this.HomeView.TabIndex = 1;
+            this.HomeView.Text = "View Courses";
+            this.HomeView.UseVisualStyleBackColor = true;
+            this.HomeView.Click += new System.EventHandler(this.HomeView_Click);
+            // 
+            // HomeCurrent
+            // 
+            this.HomeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeCurrent.Location = new System.Drawing.Point(15, 25);
+            this.HomeCurrent.Name = "HomeCurrent";
+            this.HomeCurrent.Size = new System.Drawing.Size(108, 23);
+            this.HomeCurrent.TabIndex = 0;
+            this.HomeCurrent.Text = "Current Courses";
+            this.HomeCurrent.UseVisualStyleBackColor = true;
+            this.HomeCurrent.Click += new System.EventHandler(this.HomeCurrent_Click);
             // 
             // Student_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1051, 475);
             this.Controls.Add(this.viewCourses);
             this.Controls.Add(this.Loginpanel);
@@ -459,51 +581,64 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+=======
+            this.ClientSize = new System.Drawing.Size(682, 247);
+            this.Controls.Add(this.ViewCourses);
+            this.Controls.Add(this.NavigationPanel);
+            this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.CurrentDetails);
+            this.Controls.Add(this.RegisterPanel);
+            this.Name = "Student_form";
+            this.Text = "Previous";
+            this.LoginPanel.ResumeLayout(false);
+            this.LoginPanel.PerformLayout();
+            this.UserNamePlaceHolder.ResumeLayout(false);
+            this.UserNamePlaceHolder.PerformLayout();
+            this.PasswordPlaceHolder.ResumeLayout(false);
+            this.PasswordPlaceHolder.PerformLayout();
+            this.ViewCourses.ResumeLayout(false);
+            this.ViewContainer.Panel1.ResumeLayout(false);
+            this.ViewContainer.Panel1.PerformLayout();
+            this.ViewContainer.Panel2.ResumeLayout(false);
+            this.ViewContainer.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ViewContainer)).EndInit();
+            this.ViewContainer.ResumeLayout(false);
+>>>>>>> c4373d2a9c4ca7dfcbf008b9d0f45b94f71b6781
             this.CurrentDetails.ResumeLayout(false);
             this.RegisterPanel.ResumeLayout(false);
-            this.EditPanel.ResumeLayout(false);
+            this.NavigationPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
-        }
-
-        #endregion
-
-        private System.Windows.Forms.Panel Loginpanel;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label UNLABEL;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label PasswordLABEL;
-        private System.Windows.Forms.Panel viewCourses;
-        private System.Windows.Forms.Panel RegisterPanel;
-        private System.Windows.Forms.Button VCPrevious;
-        private System.Windows.Forms.Button AvailableCbtn;
-        private System.Windows.Forms.Button AllCbtn;
-        private System.Windows.Forms.Button VCNext;
-        private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Button currentNext;
-        private System.Windows.Forms.Button DetailscurrentCourses;
-        private System.Windows.Forms.Panel CurrentDetails;
-        private System.Windows.Forms.Button RegisterNext;
-        private System.Windows.Forms.Button Register;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button RegisterPrevious;
-        private System.Windows.Forms.Button LOGIN;
-        private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.VScrollBar vcscroll2;
-        private System.Windows.Forms.VScrollBar RegisterScroll;
-        private System.Windows.Forms.CheckedListBox RegistercheckedListBox;
-        private System.Windows.Forms.Panel EditPanel;
-        private System.Windows.Forms.Button Previous;
-        private System.Windows.Forms.ListView CurrentCoursesList;
-        private System.Windows.Forms.VScrollBar currentcoursesscroll;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox passwordtextbox;
-        private System.Windows.Forms.TextBox usernametextbox;
     }
+
+    #endregion
+
+    private System.Windows.Forms.Panel LoginPanel;
+    private System.Windows.Forms.Panel BigUserPicture;
+    private System.Windows.Forms.Label UserNameLabel;
+    private System.Windows.Forms.Panel PasswordPlaceHolder;
+    private System.Windows.Forms.Panel DumyyPasswordPicture;
+    private System.Windows.Forms.Panel UserNamePlaceHolder;
+    private System.Windows.Forms.Panel DumyyUserPicture;
+    private System.Windows.Forms.Label PasswordLabel;
+    private System.Windows.Forms.Panel ViewCourses;
+    private System.Windows.Forms.Panel RegisterPanel;
+    private System.Windows.Forms.Button AvailableCoursesButton;
+    private System.Windows.Forms.Button AllCoursesButton;
+    private System.Windows.Forms.Panel CurrentDetails;
+    private System.Windows.Forms.Button Register;
+    private System.Windows.Forms.Label label4;
+    private System.Windows.Forms.Label label3;
+    private System.Windows.Forms.Button LoginButton;
+    private System.Windows.Forms.SplitContainer ViewContainer;
+    private System.Windows.Forms.CheckedListBox RegistercheckedListBox;
+    private System.Windows.Forms.ListView CurrentCoursesList;
+    private System.Windows.Forms.TextBox textBox2;
+    private System.Windows.Forms.TextBox PasswordTextBox;
+    private System.Windows.Forms.TextBox UserNameTextBox;
+    private System.Windows.Forms.Panel NavigationPanel;
+    private System.Windows.Forms.Button HomeRegister;
+    private System.Windows.Forms.Button HomeView;
+    private System.Windows.Forms.Button HomeCurrent;
+    private System.Windows.Forms.TextBox textBox1;
 }

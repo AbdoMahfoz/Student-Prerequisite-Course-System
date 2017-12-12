@@ -1,61 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Student_prerequisite_course_system
+public partial class Student_form : Form
 {
-    public partial class Student_form : Form
+    Panel _currentActivePanel;
+    Panel CurrentActivePanel
     {
-        public Student_form()
+        get
         {
-            InitializeComponent();
+            return _currentActivePanel;
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        set
         {
-            
+            _currentActivePanel = value;
+            HomeCurrent.Enabled = true;
+            HomeRegister.Enabled = true;
+            HomeView.Enabled = true;
+            if(value == ViewCourses)
+            {
+                HomeView.Enabled = false;
+            }
+            else if(value == RegisterPanel)
+            {
+                HomeRegister.Enabled = false;
+            }
+            else
+            {
+                HomeCurrent.Enabled = false;
+            }
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //next button in view details of current courses (second form)
-        }
-
-        private void logindesign_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void editToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
+<<<<<<< HEAD
 
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
@@ -160,18 +134,54 @@ namespace Student_prerequisite_course_system
         }
 
         private void RegisterNext_Click(object sender, EventArgs e)
+=======
+    }
+    public Student_form()
+    {
+        InitializeComponent();
+    }
+    private void LoginButton_Click(object sender, EventArgs e)
+    {
+        /*Student s = new Student()
+>>>>>>> c4373d2a9c4ca7dfcbf008b9d0f45b94f71b6781
         {
-            //next button in register form 
+            Name = UserNameTextBox.Text,
+            Password = PasswordTextBox.Text
+        };*/
+        if(/*UserOperations.LogIn(s)*/ UserNameTextBox.Text == "Admin" && PasswordTextBox.Text == "Admin")
+        {
+            ViewCourses.Visible = true;
+            NavigationPanel.Visible = true;
+            LoginPanel.Visible = false;
+            CurrentActivePanel = ViewCourses;
         }
-
-        private void CurrentDetails_Paint(object sender, PaintEventArgs e)
+        else
         {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
+<<<<<<< HEAD
             textBox1.Focus();
+=======
+            MessageBox.Show("No");
+            UserNameTextBox.Text = "";
+            PasswordTextBox.Text = "";
+>>>>>>> c4373d2a9c4ca7dfcbf008b9d0f45b94f71b6781
         }
+    }
+    private void HomeCurrent_Click(object sender, EventArgs e)
+    {
+        CurrentDetails.Visible = true;
+        CurrentActivePanel.Visible = false;
+        CurrentActivePanel = CurrentDetails;
+    }
+    private void HomeRegister_Click(object sender, EventArgs e)
+    {
+        RegisterPanel.Visible = true;
+        CurrentActivePanel.Visible = false;
+        CurrentActivePanel = RegisterPanel;
+    }
+    private void HomeView_Click(object sender, EventArgs e)
+    {
+        ViewCourses.Visible = true;
+        CurrentActivePanel.Visible = false;
+        CurrentActivePanel = ViewCourses;
     }
 }
