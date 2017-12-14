@@ -40,8 +40,6 @@ partial class Student_form
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.ViewCourses = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.CurrentDetails = new System.Windows.Forms.Panel();
             this.CurrentCoursesList = new System.Windows.Forms.ListView();
             this.RegisterPanel = new System.Windows.Forms.Panel();
@@ -60,7 +58,6 @@ partial class Student_form
             this.CurrentDetails.SuspendLayout();
             this.RegisterPanel.SuspendLayout();
             this.NavigationPanel.SuspendLayout();
-            this.DynamicCourcesPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoginPanel
@@ -173,27 +170,7 @@ partial class Student_form
             this.ViewCourses.Size = new System.Drawing.Size(530, 247);
             this.ViewCourses.TabIndex = 2;
             this.ViewCourses.Visible = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(3, 29);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(508, 61);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "just a very long and boring description about a course that is as useful as weird" +
-    " computer subjects we took in primaty schoools";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 1);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Course Name";
+            this.ViewCourses.VisibleChanged += new System.EventHandler(this.ViewCourses_VisibleChanged);
             // 
             // CurrentDetails
             // 
@@ -288,8 +265,6 @@ partial class Student_form
             // DynamicCourcesPanel
             // 
             this.DynamicCourcesPanel.AutoScroll = true;
-            this.DynamicCourcesPanel.Controls.Add(this.label3);
-            this.DynamicCourcesPanel.Controls.Add(this.textBox1);
             this.DynamicCourcesPanel.Location = new System.Drawing.Point(0, 26);
             this.DynamicCourcesPanel.Name = "DynamicCourcesPanel";
             this.DynamicCourcesPanel.Size = new System.Drawing.Size(530, 221);
@@ -305,6 +280,7 @@ partial class Student_form
             this.AvailCourseCheckbox.TabIndex = 6;
             this.AvailCourseCheckbox.Text = "Show available courses only";
             this.AvailCourseCheckbox.UseVisualStyleBackColor = true;
+            this.AvailCourseCheckbox.CheckedChanged += new System.EventHandler(this.AvailCourseCheckbox_CheckedChanged);
             // 
             // Student_form
             // 
@@ -313,9 +289,9 @@ partial class Student_form
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(682, 247);
             this.Controls.Add(this.ViewCourses);
+            this.Controls.Add(this.CurrentDetails);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
-            this.Controls.Add(this.CurrentDetails);
             this.Controls.Add(this.RegisterPanel);
             this.Name = "Student_form";
             this.Text = "Previous";
@@ -330,8 +306,6 @@ partial class Student_form
             this.CurrentDetails.ResumeLayout(false);
             this.RegisterPanel.ResumeLayout(false);
             this.NavigationPanel.ResumeLayout(false);
-            this.DynamicCourcesPanel.ResumeLayout(false);
-            this.DynamicCourcesPanel.PerformLayout();
             this.ResumeLayout(false);
 
     }
@@ -350,7 +324,6 @@ partial class Student_form
     private System.Windows.Forms.Panel RegisterPanel;
     private System.Windows.Forms.Panel CurrentDetails;
     private System.Windows.Forms.Button Register;
-    private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Button LoginButton;
     private System.Windows.Forms.CheckedListBox RegistercheckedListBox;
     private System.Windows.Forms.ListView CurrentCoursesList;
@@ -360,7 +333,6 @@ partial class Student_form
     private System.Windows.Forms.Button HomeRegister;
     private System.Windows.Forms.Button HomeView;
     private System.Windows.Forms.Button HomeCurrent;
-    private System.Windows.Forms.TextBox textBox1;
     private System.Windows.Forms.CheckBox AvailCourseCheckbox;
     private System.Windows.Forms.Panel DynamicCourcesPanel;
 }
