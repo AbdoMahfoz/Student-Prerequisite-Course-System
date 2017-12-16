@@ -40,13 +40,6 @@ partial class Student_form
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.ViewCourses = new System.Windows.Forms.Panel();
-            this.ViewContainer = new System.Windows.Forms.SplitContainer();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.AvailableCoursesButton = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.AllCoursesButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.CurrentDetails = new System.Windows.Forms.Panel();
             this.CurrentCoursesList = new System.Windows.Forms.ListView();
             this.RegisterPanel = new System.Windows.Forms.Panel();
@@ -56,14 +49,12 @@ partial class Student_form
             this.HomeRegister = new System.Windows.Forms.Button();
             this.HomeView = new System.Windows.Forms.Button();
             this.HomeCurrent = new System.Windows.Forms.Button();
+            this.DynamicCourcesPanel = new System.Windows.Forms.Panel();
+            this.AvailCourseCheckbox = new System.Windows.Forms.CheckBox();
             this.LoginPanel.SuspendLayout();
             this.UserNamePlaceHolder.SuspendLayout();
             this.PasswordPlaceHolder.SuspendLayout();
             this.ViewCourses.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewContainer)).BeginInit();
-            this.ViewContainer.Panel1.SuspendLayout();
-            this.ViewContainer.Panel2.SuspendLayout();
-            this.ViewContainer.SuspendLayout();
             this.CurrentDetails.SuspendLayout();
             this.RegisterPanel.SuspendLayout();
             this.NavigationPanel.SuspendLayout();
@@ -172,91 +163,14 @@ partial class Student_form
             // 
             // ViewCourses
             // 
-            this.ViewCourses.Controls.Add(this.ViewContainer);
+            this.ViewCourses.Controls.Add(this.AvailCourseCheckbox);
+            this.ViewCourses.Controls.Add(this.DynamicCourcesPanel);
             this.ViewCourses.Location = new System.Drawing.Point(0, 0);
             this.ViewCourses.Name = "ViewCourses";
             this.ViewCourses.Size = new System.Drawing.Size(530, 247);
             this.ViewCourses.TabIndex = 2;
             this.ViewCourses.Visible = false;
-            // 
-            // ViewContainer
-            // 
-            this.ViewContainer.Location = new System.Drawing.Point(3, 3);
-            this.ViewContainer.Name = "ViewContainer";
-            // 
-            // ViewContainer.Panel1
-            // 
-            this.ViewContainer.Panel1.Controls.Add(this.textBox1);
-            this.ViewContainer.Panel1.Controls.Add(this.AvailableCoursesButton);
-            this.ViewContainer.Panel1.Controls.Add(this.label3);
-            this.ViewContainer.Panel1MinSize = 230;
-            // 
-            // ViewContainer.Panel2
-            // 
-            this.ViewContainer.Panel2.Controls.Add(this.textBox2);
-            this.ViewContainer.Panel2.Controls.Add(this.AllCoursesButton);
-            this.ViewContainer.Panel2.Controls.Add(this.label4);
-            this.ViewContainer.Size = new System.Drawing.Size(527, 244);
-            this.ViewContainer.SplitterDistance = 250;
-            this.ViewContainer.TabIndex = 5;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(9, 57);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(203, 67);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "just a very long and boring description about a course that is as useful as weird" +
-    " computer subjects we took in primaty schoools";
-            // 
-            // AvailableCoursesButton
-            // 
-            this.AvailableCoursesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.AvailableCoursesButton.Location = new System.Drawing.Point(58, 3);
-            this.AvailableCoursesButton.Name = "AvailableCoursesButton";
-            this.AvailableCoursesButton.Size = new System.Drawing.Size(122, 21);
-            this.AvailableCoursesButton.TabIndex = 1;
-            this.AvailableCoursesButton.Text = "Available Courses";
-            this.AvailableCoursesButton.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 33);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Course Name";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(24, 55);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // AllCoursesButton
-            // 
-            this.AllCoursesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.AllCoursesButton.Location = new System.Drawing.Point(76, 3);
-            this.AllCoursesButton.Name = "AllCoursesButton";
-            this.AllCoursesButton.Size = new System.Drawing.Size(110, 21);
-            this.AllCoursesButton.TabIndex = 0;
-            this.AllCoursesButton.Text = "All Courses";
-            this.AllCoursesButton.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.ViewCourses.VisibleChanged += new System.EventHandler(this.ViewCourses_VisibleChanged);
             // 
             // CurrentDetails
             // 
@@ -348,6 +262,26 @@ partial class Student_form
             this.HomeCurrent.UseVisualStyleBackColor = true;
             this.HomeCurrent.Click += new System.EventHandler(this.HomeCurrent_Click);
             // 
+            // DynamicCourcesPanel
+            // 
+            this.DynamicCourcesPanel.AutoScroll = true;
+            this.DynamicCourcesPanel.Location = new System.Drawing.Point(0, 26);
+            this.DynamicCourcesPanel.Name = "DynamicCourcesPanel";
+            this.DynamicCourcesPanel.Size = new System.Drawing.Size(530, 221);
+            this.DynamicCourcesPanel.TabIndex = 5;
+            // 
+            // AvailCourseCheckbox
+            // 
+            this.AvailCourseCheckbox.AutoSize = true;
+            this.AvailCourseCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AvailCourseCheckbox.Location = new System.Drawing.Point(184, 4);
+            this.AvailCourseCheckbox.Name = "AvailCourseCheckbox";
+            this.AvailCourseCheckbox.Size = new System.Drawing.Size(166, 18);
+            this.AvailCourseCheckbox.TabIndex = 6;
+            this.AvailCourseCheckbox.Text = "Show available courses only";
+            this.AvailCourseCheckbox.UseVisualStyleBackColor = true;
+            this.AvailCourseCheckbox.CheckedChanged += new System.EventHandler(this.AvailCourseCheckbox_CheckedChanged);
+            // 
             // Student_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -355,9 +289,9 @@ partial class Student_form
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(682, 247);
             this.Controls.Add(this.ViewCourses);
+            this.Controls.Add(this.CurrentDetails);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
-            this.Controls.Add(this.CurrentDetails);
             this.Controls.Add(this.RegisterPanel);
             this.Name = "Student_form";
             this.Text = "Previous";
@@ -368,12 +302,7 @@ partial class Student_form
             this.PasswordPlaceHolder.ResumeLayout(false);
             this.PasswordPlaceHolder.PerformLayout();
             this.ViewCourses.ResumeLayout(false);
-            this.ViewContainer.Panel1.ResumeLayout(false);
-            this.ViewContainer.Panel1.PerformLayout();
-            this.ViewContainer.Panel2.ResumeLayout(false);
-            this.ViewContainer.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ViewContainer)).EndInit();
-            this.ViewContainer.ResumeLayout(false);
+            this.ViewCourses.PerformLayout();
             this.CurrentDetails.ResumeLayout(false);
             this.RegisterPanel.ResumeLayout(false);
             this.NavigationPanel.ResumeLayout(false);
@@ -393,22 +322,17 @@ partial class Student_form
     private System.Windows.Forms.Label PasswordLabel;
     private System.Windows.Forms.Panel ViewCourses;
     private System.Windows.Forms.Panel RegisterPanel;
-    private System.Windows.Forms.Button AvailableCoursesButton;
-    private System.Windows.Forms.Button AllCoursesButton;
     private System.Windows.Forms.Panel CurrentDetails;
     private System.Windows.Forms.Button Register;
-    private System.Windows.Forms.Label label4;
-    private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Button LoginButton;
-    private System.Windows.Forms.SplitContainer ViewContainer;
     private System.Windows.Forms.CheckedListBox RegistercheckedListBox;
     private System.Windows.Forms.ListView CurrentCoursesList;
-    private System.Windows.Forms.TextBox textBox2;
     private System.Windows.Forms.TextBox PasswordTextBox;
     private System.Windows.Forms.TextBox UserNameTextBox;
     private System.Windows.Forms.Panel NavigationPanel;
     private System.Windows.Forms.Button HomeRegister;
     private System.Windows.Forms.Button HomeView;
     private System.Windows.Forms.Button HomeCurrent;
-    private System.Windows.Forms.TextBox textBox1;
+    private System.Windows.Forms.CheckBox AvailCourseCheckbox;
+    private System.Windows.Forms.Panel DynamicCourcesPanel;
 }
