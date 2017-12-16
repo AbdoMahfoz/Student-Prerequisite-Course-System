@@ -13,5 +13,25 @@ namespace Student_prerequisite_course_system
             ActiveStudent = null;
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

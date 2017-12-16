@@ -1,6 +1,6 @@
-﻿namespace Student_prerequisite_course_system
+﻿namespace Student_prerequisite_course_system.Operations
 {
-    partial class MainForm
+    partial class Admin_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Admin_Form
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1247, 422);
+            this.Name = "Admin_Form";
+            this.Text = "Admin_Form";
+            this.Load += new System.EventHandler(this.Admin_Form_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-

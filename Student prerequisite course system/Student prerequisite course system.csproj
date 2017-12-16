@@ -57,15 +57,18 @@
     </Compile>
     <Compile Include="Operations\FileOperations.cs" />
     <Compile Include="DataStructures\Tree.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Admin Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Admin Form.Designer.cs">
+      <DependentUpon>Admin Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Operations\UserOperations.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin Form.resx">
+      <DependentUpon>Admin Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Student_form.resx">
       <DependentUpon>Student_form.cs</DependentUpon>
     </EmbeddedResource>

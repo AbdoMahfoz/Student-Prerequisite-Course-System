@@ -1,6 +1,4 @@
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student prerequisite course system.csprojResolveAssemblyReference.cache
-C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.Admin_form.resources
-C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.logindesign.resources
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.Properties.Resources.resources
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student prerequisite course system.csproj.GenerateResource.Cache
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student prerequisite course system.csproj.CoreCompileInputs.cache
@@ -9,8 +7,6 @@ C:\A.Dsproject\Student prerequisite course system\bin\Debug\Student prerequisite
 C:\A.Dsproject\Student prerequisite course system\bin\Debug\Student prerequisite course system.pdb
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student prerequisite course system.exe
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student prerequisite course system.pdb
-C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.AdminForm.resources
-C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.Student_form.resources
 D:\Projects\Student prerequsite course system\Student prerequisite course system\obj\Debug\Student prerequisite course system.csprojResolveAssemblyReference.cache
 D:\Projects\Student prerequsite course system\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.AdminForm.resources
 D:\Projects\Student prerequsite course system\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.Properties.Resources.resources
@@ -21,3 +17,5 @@ D:\Projects\Student prerequsite course system\Student prerequisite course system
 D:\Projects\Student prerequsite course system\Student prerequisite course system\bin\Debug\Student prerequisite course system.exe
 D:\Projects\Student prerequsite course system\Student prerequisite course system\bin\Debug\Student prerequisite course system.pdb
 D:\Projects\Student prerequsite course system\Student prerequisite course system\obj\Debug\Student_form.resources
+C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_form.resources
+C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.MainForm.resources
