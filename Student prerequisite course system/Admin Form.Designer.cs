@@ -29,167 +29,163 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.LoginPanel = new System.Windows.Forms.Panel();
+            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.PasswordHolderPanel = new System.Windows.Forms.Panel();
+            this.Password = new System.Windows.Forms.TextBox();
+            this.PasswordpictureHolder = new System.Windows.Forms.Panel();
+            this.UsernameHolderPanel = new System.Windows.Forms.Panel();
+            this.Username = new System.Windows.Forms.TextBox();
             this.NavigationPanel = new System.Windows.Forms.Panel();
             this.HomeView = new System.Windows.Forms.Button();
             this.HomeCurrent = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.AvailableCoursesDataGridView = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.CourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ViewCoursesPanel = new System.Windows.Forms.Panel();
+            this.AllCoursesPanel = new System.Windows.Forms.Panel();
+            this.AllCoursesdataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.AllCoursesButton = new System.Windows.Forms.Button();
+            this.AvailableCoursesPanel = new System.Windows.Forms.Panel();
+            this.AvailableCoursesDataGridView = new System.Windows.Forms.DataGridView();
+            this.CourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AvailableCoursesButton = new System.Windows.Forms.Button();
+            this.UsernamePictureHolder = new System.Windows.Forms.Panel();
+            this.Registration = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.CurrentCousesinHome = new System.Windows.Forms.Button();
+            this.ViewCousesInHome = new System.Windows.Forms.Button();
+            this.Navigation = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.LoginPanel.SuspendLayout();
+            this.PasswordHolderPanel.SuspendLayout();
+            this.UsernameHolderPanel.SuspendLayout();
             this.NavigationPanel.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel8.SuspendLayout();
+            this.ViewCoursesPanel.SuspendLayout();
+            this.AllCoursesPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AllCoursesdataGridView2)).BeginInit();
+            this.AvailableCoursesPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvailableCoursesDataGridView)).BeginInit();
+            this.Registration.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Navigation.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // LoginPanel
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.panel5);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(639, 238);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.LoginPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LoginPanel.Controls.Add(this.panel2);
+            this.LoginPanel.Controls.Add(this.Navigation);
+            this.LoginPanel.Controls.Add(this.PasswordLabel);
+            this.LoginPanel.Controls.Add(this.UsernameLabel);
+            this.LoginPanel.Controls.Add(this.LoginButton);
+            this.LoginPanel.Controls.Add(this.PasswordHolderPanel);
+            this.LoginPanel.Controls.Add(this.UsernameHolderPanel);
+            this.LoginPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginPanel.Location = new System.Drawing.Point(12, 12);
+            this.LoginPanel.Name = "LoginPanel";
+            this.LoginPanel.Size = new System.Drawing.Size(658, 238);
+            this.LoginPanel.TabIndex = 0;
+            this.LoginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button1
+            // UsernameLabel
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(540, 208);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 27);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = false;
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.UsernameLabel.Location = new System.Drawing.Point(270, 17);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(79, 16);
+            this.UsernameLabel.TabIndex = 1;
+            this.UsernameLabel.Text = "Username";
+            this.UsernameLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panel5
+            // PasswordLabel
             // 
-            this.panel5.Controls.Add(this.textBox2);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Location = new System.Drawing.Point(300, 144);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(242, 47);
-            this.panel5.TabIndex = 4;
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.PasswordLabel.Location = new System.Drawing.Point(265, 115);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(76, 16);
+            this.PasswordLabel.TabIndex = 2;
+            this.PasswordLabel.Text = "Password";
+            this.PasswordLabel.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // LoginButton
             // 
-            this.textBox2.Location = new System.Drawing.Point(55, 15);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 20);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.LoginButton.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.LoginButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LoginButton.BackgroundImage")));
+            this.LoginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LoginButton.Location = new System.Drawing.Point(436, 208);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(57, 27);
+            this.LoginButton.TabIndex = 5;
+            this.LoginButton.Text = "OK";
+            this.LoginButton.UseVisualStyleBackColor = false;
+            this.LoginButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panel6
+            // PasswordHolderPanel
             // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(49, 47);
-            this.panel6.TabIndex = 0;
+            this.PasswordHolderPanel.Controls.Add(this.Password);
+            this.PasswordHolderPanel.Controls.Add(this.PasswordpictureHolder);
+            this.PasswordHolderPanel.Location = new System.Drawing.Point(268, 141);
+            this.PasswordHolderPanel.Name = "PasswordHolderPanel";
+            this.PasswordHolderPanel.Size = new System.Drawing.Size(242, 48);
+            this.PasswordHolderPanel.TabIndex = 4;
             // 
-            // panel3
+            // Password
             // 
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(300, 49);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(243, 43);
-            this.panel3.TabIndex = 3;
+            this.Password.Location = new System.Drawing.Point(55, 15);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(184, 20);
+            this.Password.TabIndex = 1;
+            this.Password.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // panel4
+            // PasswordpictureHolder
             // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(49, 43);
-            this.panel4.TabIndex = 1;
+            this.PasswordpictureHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PasswordpictureHolder.BackgroundImage")));
+            this.PasswordpictureHolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PasswordpictureHolder.Location = new System.Drawing.Point(0, 0);
+            this.PasswordpictureHolder.Name = "PasswordpictureHolder";
+            this.PasswordpictureHolder.Size = new System.Drawing.Size(49, 47);
+            this.PasswordpictureHolder.TabIndex = 0;
             // 
-            // textBox1
+            // UsernameHolderPanel
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 20);
-            this.textBox1.TabIndex = 0;
+            this.UsernameHolderPanel.Controls.Add(this.UsernamePictureHolder);
+            this.UsernameHolderPanel.Controls.Add(this.Username);
+            this.UsernameHolderPanel.Location = new System.Drawing.Point(268, 46);
+            this.UsernameHolderPanel.Name = "UsernameHolderPanel";
+            this.UsernameHolderPanel.Size = new System.Drawing.Size(243, 43);
+            this.UsernameHolderPanel.TabIndex = 3;
             // 
-            // label2
+            // Username
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(279, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Password";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(279, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Username";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(262, 238);
-            this.panel2.TabIndex = 0;
+            this.Username.Location = new System.Drawing.Point(55, 12);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(185, 20);
+            this.Username.TabIndex = 0;
+            this.Username.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // NavigationPanel
             // 
             this.NavigationPanel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.NavigationPanel.Controls.Add(this.HomeView);
             this.NavigationPanel.Controls.Add(this.HomeCurrent);
-            this.NavigationPanel.Location = new System.Drawing.Point(491, 0);
+            this.NavigationPanel.Location = new System.Drawing.Point(491, 3);
             this.NavigationPanel.Name = "NavigationPanel";
-            this.NavigationPanel.Size = new System.Drawing.Size(148, 228);
+            this.NavigationPanel.Size = new System.Drawing.Size(161, 228);
             this.NavigationPanel.TabIndex = 8;
-            this.NavigationPanel.Visible = false;
             // 
             // HomeView
             // 
@@ -213,90 +209,37 @@
             this.HomeCurrent.Text = "Current Courses";
             this.HomeCurrent.UseVisualStyleBackColor = true;
             // 
-            // panel7
+            // ViewCoursesPanel
             // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel7.Controls.Add(this.panel9);
-            this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.NavigationPanel);
-            this.panel7.Location = new System.Drawing.Point(12, 269);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(639, 234);
-            this.panel7.TabIndex = 9;
+            this.ViewCoursesPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ViewCoursesPanel.Controls.Add(this.AllCoursesPanel);
+            this.ViewCoursesPanel.Controls.Add(this.AvailableCoursesPanel);
+            this.ViewCoursesPanel.Controls.Add(this.NavigationPanel);
+            this.ViewCoursesPanel.Location = new System.Drawing.Point(15, 12);
+            this.ViewCoursesPanel.Name = "ViewCoursesPanel";
+            this.ViewCoursesPanel.Size = new System.Drawing.Size(639, 234);
+            this.ViewCoursesPanel.TabIndex = 9;
             // 
-            // panel9
+            // AllCoursesPanel
             // 
-            this.panel9.Controls.Add(this.dataGridView2);
-            this.panel9.Controls.Add(this.button2);
-            this.panel9.Location = new System.Drawing.Point(222, 3);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(263, 228);
-            this.panel9.TabIndex = 10;
+            this.AllCoursesPanel.Controls.Add(this.AllCoursesdataGridView2);
+            this.AllCoursesPanel.Controls.Add(this.AllCoursesButton);
+            this.AllCoursesPanel.Location = new System.Drawing.Point(222, 3);
+            this.AllCoursesPanel.Name = "AllCoursesPanel";
+            this.AllCoursesPanel.Size = new System.Drawing.Size(263, 228);
+            this.AllCoursesPanel.TabIndex = 10;
             // 
-            // dataGridView2
+            // AllCoursesdataGridView2
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AllCoursesdataGridView2.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.AllCoursesdataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AllCoursesdataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dataGridView2.Location = new System.Drawing.Point(4, 32);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(256, 193);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(60, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(135, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "All Courses";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.AvailableCoursesDataGridView);
-            this.panel8.Controls.Add(this.button3);
-            this.panel8.Location = new System.Drawing.Point(1, 3);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(215, 228);
-            this.panel8.TabIndex = 9;
-            // 
-            // AvailableCoursesDataGridView
-            // 
-            this.AvailableCoursesDataGridView.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.AvailableCoursesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AvailableCoursesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CourseName,
-            this.Description});
-            this.AvailableCoursesDataGridView.Location = new System.Drawing.Point(3, 32);
-            this.AvailableCoursesDataGridView.Name = "AvailableCoursesDataGridView";
-            this.AvailableCoursesDataGridView.Size = new System.Drawing.Size(209, 193);
-            this.AvailableCoursesDataGridView.TabIndex = 1;
-            // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(35, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Available Courses";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // CourseName
-            // 
-            this.CourseName.HeaderText = "Course Name";
-            this.CourseName.Name = "CourseName";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
+            this.AllCoursesdataGridView2.Location = new System.Drawing.Point(4, 32);
+            this.AllCoursesdataGridView2.Name = "AllCoursesdataGridView2";
+            this.AllCoursesdataGridView2.Size = new System.Drawing.Size(256, 193);
+            this.AllCoursesdataGridView2.TabIndex = 1;
             // 
             // Column1
             // 
@@ -308,60 +251,229 @@
             this.Column2.HeaderText = "Description";
             this.Column2.Name = "Column2";
             // 
+            // AllCoursesButton
+            // 
+            this.AllCoursesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AllCoursesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AllCoursesButton.Location = new System.Drawing.Point(60, 3);
+            this.AllCoursesButton.Name = "AllCoursesButton";
+            this.AllCoursesButton.Size = new System.Drawing.Size(135, 23);
+            this.AllCoursesButton.TabIndex = 0;
+            this.AllCoursesButton.Text = "All Courses";
+            this.AllCoursesButton.UseVisualStyleBackColor = true;
+            this.AllCoursesButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // AvailableCoursesPanel
+            // 
+            this.AvailableCoursesPanel.Controls.Add(this.AvailableCoursesDataGridView);
+            this.AvailableCoursesPanel.Controls.Add(this.AvailableCoursesButton);
+            this.AvailableCoursesPanel.Location = new System.Drawing.Point(1, 3);
+            this.AvailableCoursesPanel.Name = "AvailableCoursesPanel";
+            this.AvailableCoursesPanel.Size = new System.Drawing.Size(215, 228);
+            this.AvailableCoursesPanel.TabIndex = 9;
+            // 
+            // AvailableCoursesDataGridView
+            // 
+            this.AvailableCoursesDataGridView.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.AvailableCoursesDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AvailableCoursesDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CourseName,
+            this.Description});
+            this.AvailableCoursesDataGridView.Location = new System.Drawing.Point(3, 32);
+            this.AvailableCoursesDataGridView.Name = "AvailableCoursesDataGridView";
+            this.AvailableCoursesDataGridView.Size = new System.Drawing.Size(209, 193);
+            this.AvailableCoursesDataGridView.TabIndex = 1;
+            // 
+            // CourseName
+            // 
+            this.CourseName.HeaderText = "Course Name";
+            this.CourseName.Name = "CourseName";
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Description";
+            this.Description.Name = "Description";
+            // 
+            // AvailableCoursesButton
+            // 
+            this.AvailableCoursesButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AvailableCoursesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AvailableCoursesButton.Location = new System.Drawing.Point(35, 3);
+            this.AvailableCoursesButton.Name = "AvailableCoursesButton";
+            this.AvailableCoursesButton.Size = new System.Drawing.Size(138, 23);
+            this.AvailableCoursesButton.TabIndex = 0;
+            this.AvailableCoursesButton.Text = "Available Courses";
+            this.AvailableCoursesButton.UseVisualStyleBackColor = true;
+            this.AvailableCoursesButton.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // UsernamePictureHolder
+            // 
+            this.UsernamePictureHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UsernamePictureHolder.BackgroundImage")));
+            this.UsernamePictureHolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.UsernamePictureHolder.Location = new System.Drawing.Point(0, 0);
+            this.UsernamePictureHolder.Name = "UsernamePictureHolder";
+            this.UsernamePictureHolder.Size = new System.Drawing.Size(49, 43);
+            this.UsernamePictureHolder.TabIndex = 1;
+            // 
+            // Registration
+            // 
+            this.Registration.Controls.Add(this.dataGridView1);
+            this.Registration.Controls.Add(this.panel1);
+            this.Registration.Location = new System.Drawing.Point(19, 12);
+            this.Registration.Name = "Registration";
+            this.Registration.Size = new System.Drawing.Size(680, 228);
+            this.Registration.TabIndex = 10;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Highlight;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(532, 225);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(259, 238);
+            this.panel2.TabIndex = 0;
+            // 
+            // CurrentCousesinHome
+            // 
+            this.CurrentCousesinHome.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.CurrentCousesinHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentCousesinHome.Location = new System.Drawing.Point(15, 25);
+            this.CurrentCousesinHome.Name = "CurrentCousesinHome";
+            this.CurrentCousesinHome.Size = new System.Drawing.Size(108, 23);
+            this.CurrentCousesinHome.TabIndex = 0;
+            this.CurrentCousesinHome.Text = "Current Courses";
+            this.CurrentCousesinHome.UseVisualStyleBackColor = true;
+            // 
+            // ViewCousesInHome
+            // 
+            this.ViewCousesInHome.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ViewCousesInHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewCousesInHome.Location = new System.Drawing.Point(15, 141);
+            this.ViewCousesInHome.Name = "ViewCousesInHome";
+            this.ViewCousesInHome.Size = new System.Drawing.Size(108, 23);
+            this.ViewCousesInHome.TabIndex = 1;
+            this.ViewCousesInHome.Text = "View Courses";
+            this.ViewCousesInHome.UseVisualStyleBackColor = true;
+            // 
+            // Navigation
+            // 
+            this.Navigation.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Navigation.Controls.Add(this.ViewCousesInHome);
+            this.Navigation.Controls.Add(this.CurrentCousesinHome);
+            this.Navigation.Location = new System.Drawing.Point(510, 1);
+            this.Navigation.Name = "Navigation";
+            this.Navigation.Size = new System.Drawing.Size(148, 237);
+            this.Navigation.TabIndex = 9;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(532, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(148, 237);
+            this.panel1.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(15, 141);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "View Courses";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(15, 25);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(108, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Current Courses";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1242, 515);
-            this.Controls.Add(this.panel7);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Registration);
+            this.Controls.Add(this.ViewCoursesPanel);
+            this.Controls.Add(this.LoginPanel);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.LoginPanel.ResumeLayout(false);
+            this.LoginPanel.PerformLayout();
+            this.PasswordHolderPanel.ResumeLayout(false);
+            this.PasswordHolderPanel.PerformLayout();
+            this.UsernameHolderPanel.ResumeLayout(false);
+            this.UsernameHolderPanel.PerformLayout();
             this.NavigationPanel.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel8.ResumeLayout(false);
+            this.ViewCoursesPanel.ResumeLayout(false);
+            this.AllCoursesPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AllCoursesdataGridView2)).EndInit();
+            this.AvailableCoursesPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AvailableCoursesDataGridView)).EndInit();
+            this.Registration.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Navigation.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel LoginPanel;
+        private System.Windows.Forms.Panel UsernameHolderPanel;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.Label UsernameLabel;
+        private System.Windows.Forms.Panel PasswordHolderPanel;
+        private System.Windows.Forms.TextBox Password;
+        private System.Windows.Forms.Panel PasswordpictureHolder;
+        private System.Windows.Forms.TextBox Username;
+        private System.Windows.Forms.Button LoginButton;
         private System.Windows.Forms.Panel NavigationPanel;
         private System.Windows.Forms.Button HomeView;
         private System.Windows.Forms.Button HomeCurrent;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Panel ViewCoursesPanel;
+        private System.Windows.Forms.Panel AllCoursesPanel;
+        private System.Windows.Forms.Button AllCoursesButton;
+        private System.Windows.Forms.Panel AvailableCoursesPanel;
+        private System.Windows.Forms.Button AvailableCoursesButton;
+        private System.Windows.Forms.DataGridView AllCoursesdataGridView2;
         private System.Windows.Forms.DataGridView AvailableCoursesDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn CourseName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.Panel UsernamePictureHolder;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel Navigation;
+        private System.Windows.Forms.Button ViewCousesInHome;
+        private System.Windows.Forms.Button CurrentCousesinHome;
+        private System.Windows.Forms.Panel Registration;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
 
