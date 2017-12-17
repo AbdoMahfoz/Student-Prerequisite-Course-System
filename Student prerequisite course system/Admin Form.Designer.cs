@@ -30,13 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.LoginPanel = new System.Windows.Forms.Panel();
-            this.UsernameLabel = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Navigation = new System.Windows.Forms.Panel();
+            this.ViewCousesInHome = new System.Windows.Forms.Button();
+            this.CurrentCousesinHome = new System.Windows.Forms.Button();
             this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UsernameLabel = new System.Windows.Forms.Label();
             this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordHolderPanel = new System.Windows.Forms.Panel();
             this.Password = new System.Windows.Forms.TextBox();
             this.PasswordpictureHolder = new System.Windows.Forms.Panel();
             this.UsernameHolderPanel = new System.Windows.Forms.Panel();
+            this.UsernamePictureHolder = new System.Windows.Forms.Panel();
             this.Username = new System.Windows.Forms.TextBox();
             this.NavigationPanel = new System.Windows.Forms.Panel();
             this.HomeView = new System.Windows.Forms.Button();
@@ -52,17 +57,13 @@
             this.CourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AvailableCoursesButton = new System.Windows.Forms.Button();
-            this.UsernamePictureHolder = new System.Windows.Forms.Panel();
             this.Registration = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.CurrentCousesinHome = new System.Windows.Forms.Button();
-            this.ViewCousesInHome = new System.Windows.Forms.Button();
-            this.Navigation = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.LoginPanel.SuspendLayout();
+            this.Navigation.SuspendLayout();
             this.PasswordHolderPanel.SuspendLayout();
             this.UsernameHolderPanel.SuspendLayout();
             this.NavigationPanel.SuspendLayout();
@@ -73,7 +74,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.AvailableCoursesDataGridView)).BeginInit();
             this.Registration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.Navigation.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,17 +94,46 @@
             this.LoginPanel.TabIndex = 0;
             this.LoginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // UsernameLabel
+            // panel2
             // 
-            this.UsernameLabel.AutoSize = true;
-            this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.UsernameLabel.Location = new System.Drawing.Point(270, 17);
-            this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(79, 16);
-            this.UsernameLabel.TabIndex = 1;
-            this.UsernameLabel.Text = "Username";
-            this.UsernameLabel.Click += new System.EventHandler(this.label1_Click);
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(259, 238);
+            this.panel2.TabIndex = 0;
+            // 
+            // Navigation
+            // 
+            this.Navigation.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Navigation.Controls.Add(this.ViewCousesInHome);
+            this.Navigation.Controls.Add(this.CurrentCousesinHome);
+            this.Navigation.Location = new System.Drawing.Point(510, 1);
+            this.Navigation.Name = "Navigation";
+            this.Navigation.Size = new System.Drawing.Size(148, 237);
+            this.Navigation.TabIndex = 9;
+            // 
+            // ViewCousesInHome
+            // 
+            this.ViewCousesInHome.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ViewCousesInHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ViewCousesInHome.Location = new System.Drawing.Point(15, 141);
+            this.ViewCousesInHome.Name = "ViewCousesInHome";
+            this.ViewCousesInHome.Size = new System.Drawing.Size(108, 23);
+            this.ViewCousesInHome.TabIndex = 1;
+            this.ViewCousesInHome.Text = "View Courses";
+            this.ViewCousesInHome.UseVisualStyleBackColor = true;
+            // 
+            // CurrentCousesinHome
+            // 
+            this.CurrentCousesinHome.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.CurrentCousesinHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentCousesinHome.Location = new System.Drawing.Point(15, 25);
+            this.CurrentCousesinHome.Name = "CurrentCousesinHome";
+            this.CurrentCousesinHome.Size = new System.Drawing.Size(108, 23);
+            this.CurrentCousesinHome.TabIndex = 0;
+            this.CurrentCousesinHome.Text = "Current Courses";
+            this.CurrentCousesinHome.UseVisualStyleBackColor = true;
             // 
             // PasswordLabel
             // 
@@ -117,6 +146,18 @@
             this.PasswordLabel.TabIndex = 2;
             this.PasswordLabel.Text = "Password";
             this.PasswordLabel.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // UsernameLabel
+            // 
+            this.UsernameLabel.AutoSize = true;
+            this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.UsernameLabel.Location = new System.Drawing.Point(270, 17);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(79, 16);
+            this.UsernameLabel.TabIndex = 1;
+            this.UsernameLabel.Text = "Username";
+            this.UsernameLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // LoginButton
             // 
@@ -168,6 +209,15 @@
             this.UsernameHolderPanel.Name = "UsernameHolderPanel";
             this.UsernameHolderPanel.Size = new System.Drawing.Size(243, 43);
             this.UsernameHolderPanel.TabIndex = 3;
+            // 
+            // UsernamePictureHolder
+            // 
+            this.UsernamePictureHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UsernamePictureHolder.BackgroundImage")));
+            this.UsernamePictureHolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.UsernamePictureHolder.Location = new System.Drawing.Point(0, 0);
+            this.UsernamePictureHolder.Name = "UsernamePictureHolder";
+            this.UsernamePictureHolder.Size = new System.Drawing.Size(49, 43);
+            this.UsernamePictureHolder.TabIndex = 1;
             // 
             // Username
             // 
@@ -306,15 +356,6 @@
             this.AvailableCoursesButton.UseVisualStyleBackColor = true;
             this.AvailableCoursesButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // UsernamePictureHolder
-            // 
-            this.UsernamePictureHolder.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UsernamePictureHolder.BackgroundImage")));
-            this.UsernamePictureHolder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.UsernamePictureHolder.Location = new System.Drawing.Point(0, 0);
-            this.UsernamePictureHolder.Name = "UsernamePictureHolder";
-            this.UsernamePictureHolder.Size = new System.Drawing.Size(49, 43);
-            this.UsernamePictureHolder.TabIndex = 1;
-            // 
             // Registration
             // 
             this.Registration.Controls.Add(this.dataGridView1);
@@ -333,47 +374,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(532, 225);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(259, 238);
-            this.panel2.TabIndex = 0;
-            // 
-            // CurrentCousesinHome
-            // 
-            this.CurrentCousesinHome.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.CurrentCousesinHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CurrentCousesinHome.Location = new System.Drawing.Point(15, 25);
-            this.CurrentCousesinHome.Name = "CurrentCousesinHome";
-            this.CurrentCousesinHome.Size = new System.Drawing.Size(108, 23);
-            this.CurrentCousesinHome.TabIndex = 0;
-            this.CurrentCousesinHome.Text = "Current Courses";
-            this.CurrentCousesinHome.UseVisualStyleBackColor = true;
-            // 
-            // ViewCousesInHome
-            // 
-            this.ViewCousesInHome.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.ViewCousesInHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewCousesInHome.Location = new System.Drawing.Point(15, 141);
-            this.ViewCousesInHome.Name = "ViewCousesInHome";
-            this.ViewCousesInHome.Size = new System.Drawing.Size(108, 23);
-            this.ViewCousesInHome.TabIndex = 1;
-            this.ViewCousesInHome.Text = "View Courses";
-            this.ViewCousesInHome.UseVisualStyleBackColor = true;
-            // 
-            // Navigation
-            // 
-            this.Navigation.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Navigation.Controls.Add(this.ViewCousesInHome);
-            this.Navigation.Controls.Add(this.CurrentCousesinHome);
-            this.Navigation.Location = new System.Drawing.Point(510, 1);
-            this.Navigation.Name = "Navigation";
-            this.Navigation.Size = new System.Drawing.Size(148, 237);
-            this.Navigation.TabIndex = 9;
             // 
             // panel1
             // 
@@ -413,14 +413,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1242, 515);
+            this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.Registration);
             this.Controls.Add(this.ViewCoursesPanel);
-            this.Controls.Add(this.LoginPanel);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
+            this.Navigation.ResumeLayout(false);
             this.PasswordHolderPanel.ResumeLayout(false);
             this.PasswordHolderPanel.PerformLayout();
             this.UsernameHolderPanel.ResumeLayout(false);
@@ -433,7 +434,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.AvailableCoursesDataGridView)).EndInit();
             this.Registration.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.Navigation.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

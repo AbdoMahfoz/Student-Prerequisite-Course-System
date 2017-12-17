@@ -1,4 +1,3 @@
-C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student prerequisite course system.csprojResolveAssemblyReference.cache
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.Properties.Resources.resources
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student prerequisite course system.csproj.GenerateResource.Cache
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student prerequisite course system.csproj.CoreCompileInputs.cache
