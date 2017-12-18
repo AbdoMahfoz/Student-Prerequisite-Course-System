@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 public partial class Student_form : Form
 {
     Panel _currentActivePanel;
+    List<CourseView> DrawnCourses = new List<CourseView>();
     Panel CurrentActivePanel
     {
         get
@@ -72,5 +74,34 @@ public partial class Student_form : Form
         ViewCourses.Visible = true;
         CurrentActivePanel.Visible = false;
         CurrentActivePanel = ViewCourses;
+    }
+    private void ViewCourses_VisibleChanged(object sender, EventArgs e)
+    {
+        if(ViewCourses.Visible)
+        {
+            DrawnCourses.Add(new CourseView("Test Name", "Test Description", 0, DynamicCourcesPanel));
+            DrawnCourses.Add(new CourseView("Test Name", "Test Description", 100, DynamicCourcesPanel));
+            DrawnCourses.Add(new CourseView("Test Name", "Test Description", 200, DynamicCourcesPanel));
+        }
+        else
+        {
+            foreach(CourseView c in DrawnCourses)
+            {
+                c.Clear();
+            }
+            DrawnCourses.Clear();
+            AvailCourseCheckbox.Checked = false;
+        }
+    }
+    private void AvailCourseCheckbox_CheckedChanged(object sender, EventArgs e)
+    {
+        if(AvailCourseCheckbox.Checked)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 }
