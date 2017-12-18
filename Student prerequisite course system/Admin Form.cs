@@ -73,5 +73,35 @@ namespace Student_prerequisite_course_system
         {
             //login button
         }
+
+        private void radioButton2_CheckedChanged(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button4_Click_1(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
