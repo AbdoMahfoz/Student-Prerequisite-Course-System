@@ -91,7 +91,7 @@ namespace Student_prerequisite_course_system
 
         private void button4_Click_1(object sender, System.EventArgs e)
         {
-
+            //view sTUDENTS nav panel last form
         }
 
         private void button3_Click_1(object sender, System.EventArgs e)
@@ -100,6 +100,17 @@ namespace Student_prerequisite_course_system
         }
 
         private void button7_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void studentDetails_Click(object sender, System.EventArgs e)
+        {
+            //view button in navigation panel in add new course form
+            
+        }
+
+        private void ViewStudents_Click(object sender, System.EventArgs e)
         {
 
         }

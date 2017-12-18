@@ -30,31 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.currentCourses = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.IDstudent = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.NameStudent = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.AllStudentsRegisteredInEachCourse = new System.Windows.Forms.Panel();
+            this.Home = new System.Windows.Forms.Panel();
+            this.viewallstudents = new System.Windows.Forms.Button();
+            this.DetailsOFstudents = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
+            this.navigatepanel = new System.Windows.Forms.Panel();
+            this.viewstudentsinallcourseshomepanel = new System.Windows.Forms.Button();
+            this.navigationpanelstudentdetails = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.homeCoursesDetails = new System.Windows.Forms.Button();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.NewStudentPanel = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.panelhome = new System.Windows.Forms.Panel();
+            this.homeStudentDetails = new System.Windows.Forms.Button();
             this.Navigationpanel = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
@@ -67,63 +67,63 @@
             this.UsernameHolderPanel = new System.Windows.Forms.Panel();
             this.UsernamePictureHolder = new System.Windows.Forms.Panel();
             this.Username = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.id = new System.Windows.Forms.TextBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.newstudent = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.navViewStudents = new System.Windows.Forms.Button();
+            this.navStudentDetails = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel = new System.Windows.Forms.Panel();
+            this.ok = new System.Windows.Forms.Button();
+            this.EnterStudentinfoSecondpanel = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.AddNewCourse = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.CourseName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.CourseDescription = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button15 = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
+            this.addcourse = new System.Windows.Forms.Button();
+            this.add = new System.Windows.Forms.RadioButton();
+            this.remove = new System.Windows.Forms.RadioButton();
+            this.homeViewstudents = new System.Windows.Forms.Button();
+            this.detOfCourses = new System.Windows.Forms.Button();
+            this.DetailsOfCourses = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
+            this.navCoursesDetails = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
+            this.homepanel = new System.Windows.Forms.Panel();
+            this.Detailscourses = new System.Windows.Forms.Button();
+            this.view = new System.Windows.Forms.Button();
+            this.studdents = new System.Windows.Forms.Button();
+            this.AllStudentsRegisteredInEachCourse.SuspendLayout();
+            this.Home.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel11.SuspendLayout();
+            this.navigatepanel.SuspendLayout();
             this.LoginPanel.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.NewStudentPanel.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.panelhome.SuspendLayout();
             this.Navigationpanel.SuspendLayout();
             this.PasswordHolderPanel.SuspendLayout();
             this.UsernameHolderPanel.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel.SuspendLayout();
+            this.EnterStudentinfoSecondpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel12.SuspendLayout();
+            this.AddNewCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            this.panel13.SuspendLayout();
+            this.homepanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // listBox1
@@ -134,13 +134,13 @@
             this.listBox1.Size = new System.Drawing.Size(293, 173);
             this.listBox1.TabIndex = 9;
             // 
-            // textBox5
+            // currentCourses
             // 
-            this.textBox5.Location = new System.Drawing.Point(6, 151);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(168, 38);
-            this.textBox5.TabIndex = 15;
+            this.currentCourses.Location = new System.Drawing.Point(6, 151);
+            this.currentCourses.Multiline = true;
+            this.currentCourses.Name = "currentCourses";
+            this.currentCourses.Size = new System.Drawing.Size(168, 38);
+            this.currentCourses.TabIndex = 15;
             // 
             // label7
             // 
@@ -153,12 +153,12 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Current Courses";
             // 
-            // textBox4
+            // IDstudent
             // 
-            this.textBox4.Location = new System.Drawing.Point(6, 100);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(168, 20);
-            this.textBox4.TabIndex = 13;
+            this.IDstudent.Location = new System.Drawing.Point(6, 100);
+            this.IDstudent.Name = "IDstudent";
+            this.IDstudent.Size = new System.Drawing.Size(168, 20);
+            this.IDstudent.TabIndex = 13;
             // 
             // label6
             // 
@@ -171,12 +171,12 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Student ID";
             // 
-            // textBox3
+            // NameStudent
             // 
-            this.textBox3.Location = new System.Drawing.Point(6, 54);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(168, 20);
-            this.textBox3.TabIndex = 11;
+            this.NameStudent.Location = new System.Drawing.Point(6, 54);
+            this.NameStudent.Name = "NameStudent";
+            this.NameStudent.Size = new System.Drawing.Size(168, 20);
+            this.NameStudent.TabIndex = 11;
             // 
             // label5
             // 
@@ -199,54 +199,55 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "New Student";
             // 
-            // panel8
+            // AllStudentsRegisteredInEachCourse
             // 
-            this.panel8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel8.Controls.Add(this.dataGridView2);
-            this.panel8.Controls.Add(this.label9);
-            this.panel8.Controls.Add(this.panel9);
-            this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel8.Location = new System.Drawing.Point(10, 6);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(434, 205);
-            this.panel8.TabIndex = 12;
+            this.AllStudentsRegisteredInEachCourse.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AllStudentsRegisteredInEachCourse.Controls.Add(this.dataGridView2);
+            this.AllStudentsRegisteredInEachCourse.Controls.Add(this.label9);
+            this.AllStudentsRegisteredInEachCourse.Controls.Add(this.Home);
+            this.AllStudentsRegisteredInEachCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AllStudentsRegisteredInEachCourse.Location = new System.Drawing.Point(10, 6);
+            this.AllStudentsRegisteredInEachCourse.Name = "AllStudentsRegisteredInEachCourse";
+            this.AllStudentsRegisteredInEachCourse.Size = new System.Drawing.Size(434, 205);
+            this.AllStudentsRegisteredInEachCourse.TabIndex = 12;
             // 
-            // panel9
+            // Home
             // 
-            this.panel9.Controls.Add(this.button18);
-            this.panel9.Controls.Add(this.button4);
-            this.panel9.Controls.Add(this.button6);
-            this.panel9.Location = new System.Drawing.Point(302, 0);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(132, 202);
-            this.panel9.TabIndex = 8;
+            this.Home.Controls.Add(this.DetailsOfCourses);
+            this.Home.Controls.Add(this.viewallstudents);
+            this.Home.Controls.Add(this.DetailsOFstudents);
+            this.Home.Location = new System.Drawing.Point(302, 0);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(132, 202);
+            this.Home.TabIndex = 8;
             // 
-            // button4
+            // viewallstudents
             // 
-            this.button4.Location = new System.Drawing.Point(11, 140);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(111, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Courses Details";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.viewallstudents.Location = new System.Drawing.Point(11, 140);
+            this.viewallstudents.Name = "viewallstudents";
+            this.viewallstudents.Size = new System.Drawing.Size(111, 23);
+            this.viewallstudents.TabIndex = 8;
+            this.viewallstudents.Text = "View Students";
+            this.viewallstudents.UseVisualStyleBackColor = true;
+            this.viewallstudents.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // button6
+            // DetailsOFstudents
             // 
-            this.button6.Location = new System.Drawing.Point(9, 35);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(111, 23);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Student Details";
-            this.button6.UseVisualStyleBackColor = true;
+            this.DetailsOFstudents.Location = new System.Drawing.Point(9, 35);
+            this.DetailsOFstudents.Name = "DetailsOFstudents";
+            this.DetailsOFstudents.Size = new System.Drawing.Size(111, 23);
+            this.DetailsOFstudents.TabIndex = 7;
+            this.DetailsOFstudents.Text = "Student Details";
+            this.DetailsOFstudents.UseVisualStyleBackColor = true;
+            this.DetailsOFstudents.Click += new System.EventHandler(this.ViewStudents_Click);
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel10.Controls.Add(this.button15);
+            this.panel10.Controls.Add(this.addcourse);
             this.panel10.Controls.Add(this.dataGridView1);
             this.panel10.Controls.Add(this.label13);
-            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Controls.Add(this.navigatepanel);
             this.panel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel10.Location = new System.Drawing.Point(12, 6);
             this.panel10.Name = "panel10";
@@ -275,34 +276,34 @@
             this.label13.TabIndex = 9;
             this.label13.Text = "View All Courses";
             // 
-            // panel11
+            // navigatepanel
             // 
-            this.panel11.Controls.Add(this.button17);
-            this.panel11.Controls.Add(this.button11);
-            this.panel11.Controls.Add(this.button12);
-            this.panel11.Location = new System.Drawing.Point(302, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(132, 202);
-            this.panel11.TabIndex = 8;
+            this.navigatepanel.Controls.Add(this.detOfCourses);
+            this.navigatepanel.Controls.Add(this.viewstudentsinallcourseshomepanel);
+            this.navigatepanel.Controls.Add(this.navigationpanelstudentdetails);
+            this.navigatepanel.Location = new System.Drawing.Point(302, 0);
+            this.navigatepanel.Name = "navigatepanel";
+            this.navigatepanel.Size = new System.Drawing.Size(132, 202);
+            this.navigatepanel.TabIndex = 8;
             // 
-            // button11
+            // viewstudentsinallcourseshomepanel
             // 
-            this.button11.Location = new System.Drawing.Point(11, 152);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(111, 23);
-            this.button11.TabIndex = 8;
-            this.button11.Text = "View Students";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.viewstudentsinallcourseshomepanel.Location = new System.Drawing.Point(11, 152);
+            this.viewstudentsinallcourseshomepanel.Name = "viewstudentsinallcourseshomepanel";
+            this.viewstudentsinallcourseshomepanel.Size = new System.Drawing.Size(111, 23);
+            this.viewstudentsinallcourseshomepanel.TabIndex = 8;
+            this.viewstudentsinallcourseshomepanel.Text = "View Students";
+            this.viewstudentsinallcourseshomepanel.UseVisualStyleBackColor = true;
+            this.viewstudentsinallcourseshomepanel.Click += new System.EventHandler(this.button11_Click);
             // 
-            // button12
+            // navigationpanelstudentdetails
             // 
-            this.button12.Location = new System.Drawing.Point(9, 35);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(111, 23);
-            this.button12.TabIndex = 7;
-            this.button12.Text = "Student Details";
-            this.button12.UseVisualStyleBackColor = true;
+            this.navigationpanelstudentdetails.Location = new System.Drawing.Point(9, 35);
+            this.navigationpanelstudentdetails.Name = "navigationpanelstudentdetails";
+            this.navigationpanelstudentdetails.Size = new System.Drawing.Size(111, 23);
+            this.navigationpanelstudentdetails.TabIndex = 7;
+            this.navigationpanelstudentdetails.Text = "Student Details";
+            this.navigationpanelstudentdetails.UseVisualStyleBackColor = true;
             // 
             // label3
             // 
@@ -314,14 +315,14 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "View Current Details Of Student";
             // 
-            // button5
+            // homeCoursesDetails
             // 
-            this.button5.Location = new System.Drawing.Point(9, 93);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(111, 23);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Courses Details";
-            this.button5.UseVisualStyleBackColor = true;
+            this.homeCoursesDetails.Location = new System.Drawing.Point(9, 93);
+            this.homeCoursesDetails.Name = "homeCoursesDetails";
+            this.homeCoursesDetails.Size = new System.Drawing.Size(111, 23);
+            this.homeCoursesDetails.TabIndex = 8;
+            this.homeCoursesDetails.Text = "Courses Details";
+            this.homeCoursesDetails.UseVisualStyleBackColor = true;
             // 
             // LoginPanel
             // 
@@ -347,57 +348,57 @@
             this.panel2.Size = new System.Drawing.Size(174, 202);
             this.panel2.TabIndex = 0;
             // 
-            // panel4
+            // NewStudentPanel
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.listBox1);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.Navigationpanel);
-            this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.Location = new System.Drawing.Point(12, 9);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(434, 205);
-            this.panel4.TabIndex = 7;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            this.NewStudentPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.NewStudentPanel.Controls.Add(this.panel6);
+            this.NewStudentPanel.Controls.Add(this.listBox1);
+            this.NewStudentPanel.Controls.Add(this.label3);
+            this.NewStudentPanel.Controls.Add(this.Navigationpanel);
+            this.NewStudentPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewStudentPanel.Location = new System.Drawing.Point(12, 9);
+            this.NewStudentPanel.Name = "NewStudentPanel";
+            this.NewStudentPanel.Size = new System.Drawing.Size(434, 205);
+            this.NewStudentPanel.TabIndex = 7;
+            this.NewStudentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel6.Controls.Add(this.radioButton2);
-            this.panel6.Controls.Add(this.radioButton1);
-            this.panel6.Controls.Add(this.textBox5);
+            this.panel6.Controls.Add(this.remove);
+            this.panel6.Controls.Add(this.add);
+            this.panel6.Controls.Add(this.currentCourses);
             this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.textBox4);
+            this.panel6.Controls.Add(this.IDstudent);
             this.panel6.Controls.Add(this.label6);
-            this.panel6.Controls.Add(this.textBox3);
+            this.panel6.Controls.Add(this.NameStudent);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label4);
-            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.panelhome);
             this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(434, 205);
             this.panel6.TabIndex = 8;
             // 
-            // panel7
+            // panelhome
             // 
-            this.panel7.Controls.Add(this.button16);
-            this.panel7.Controls.Add(this.button5);
-            this.panel7.Controls.Add(this.button10);
-            this.panel7.Location = new System.Drawing.Point(302, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(132, 202);
-            this.panel7.TabIndex = 8;
+            this.panelhome.Controls.Add(this.homeViewstudents);
+            this.panelhome.Controls.Add(this.homeCoursesDetails);
+            this.panelhome.Controls.Add(this.homeStudentDetails);
+            this.panelhome.Location = new System.Drawing.Point(302, 0);
+            this.panelhome.Name = "panelhome";
+            this.panelhome.Size = new System.Drawing.Size(132, 202);
+            this.panelhome.TabIndex = 8;
             // 
-            // button10
+            // homeStudentDetails
             // 
-            this.button10.Location = new System.Drawing.Point(9, 35);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(111, 23);
-            this.button10.TabIndex = 7;
-            this.button10.Text = "Student Details";
-            this.button10.UseVisualStyleBackColor = true;
+            this.homeStudentDetails.Location = new System.Drawing.Point(9, 35);
+            this.homeStudentDetails.Name = "homeStudentDetails";
+            this.homeStudentDetails.Size = new System.Drawing.Size(111, 23);
+            this.homeStudentDetails.TabIndex = 7;
+            this.homeStudentDetails.Text = "Student Details";
+            this.homeStudentDetails.UseVisualStyleBackColor = true;
             // 
             // Navigationpanel
             // 
@@ -515,57 +516,57 @@
             this.Username.Size = new System.Drawing.Size(185, 20);
             this.Username.TabIndex = 0;
             // 
-            // textBox2
+            // id
             // 
-            this.textBox2.Location = new System.Drawing.Point(25, 108);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 20);
-            this.textBox2.TabIndex = 9;
+            this.id.Location = new System.Drawing.Point(25, 108);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(189, 20);
+            this.id.TabIndex = 9;
             // 
-            // textBox1
+            // name
             // 
-            this.textBox1.Location = new System.Drawing.Point(25, 42);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 8;
+            this.name.Location = new System.Drawing.Point(25, 42);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(189, 20);
+            this.name.TabIndex = 8;
             // 
-            // button8
+            // newstudent
             // 
-            this.button8.Location = new System.Drawing.Point(25, 162);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(203, 23);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "Add New Student";
-            this.button8.UseVisualStyleBackColor = true;
+            this.newstudent.Location = new System.Drawing.Point(25, 162);
+            this.newstudent.Name = "newstudent";
+            this.newstudent.Size = new System.Drawing.Size(203, 23);
+            this.newstudent.TabIndex = 7;
+            this.newstudent.Text = "Add New Student";
+            this.newstudent.UseVisualStyleBackColor = true;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button21);
-            this.panel3.Controls.Add(this.button7);
-            this.panel3.Controls.Add(this.button2);
+            this.panel3.Controls.Add(this.navCoursesDetails);
+            this.panel3.Controls.Add(this.navViewStudents);
+            this.panel3.Controls.Add(this.navStudentDetails);
             this.panel3.Location = new System.Drawing.Point(302, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(132, 202);
             this.panel3.TabIndex = 6;
             // 
-            // button7
+            // navViewStudents
             // 
-            this.button7.Location = new System.Drawing.Point(11, 145);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(111, 23);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "View Students";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.navViewStudents.Location = new System.Drawing.Point(11, 145);
+            this.navViewStudents.Name = "navViewStudents";
+            this.navViewStudents.Size = new System.Drawing.Size(111, 23);
+            this.navViewStudents.TabIndex = 8;
+            this.navViewStudents.Text = "View Students";
+            this.navViewStudents.UseVisualStyleBackColor = true;
+            this.navViewStudents.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button2
+            // navStudentDetails
             // 
-            this.button2.Location = new System.Drawing.Point(9, 35);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Student Details";
-            this.button2.UseVisualStyleBackColor = true;
+            this.navStudentDetails.Location = new System.Drawing.Point(9, 35);
+            this.navStudentDetails.Name = "navStudentDetails";
+            this.navStudentDetails.Size = new System.Drawing.Size(111, 23);
+            this.navStudentDetails.TabIndex = 7;
+            this.navStudentDetails.Text = "Student Details";
+            this.navStudentDetails.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -589,36 +590,36 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Student Name";
             // 
-            // button1
+            // ok
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Location = new System.Drawing.Point(234, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(57, 27);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = false;
+            this.ok.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ok.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ok.BackgroundImage")));
+            this.ok.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ok.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ok.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ok.Location = new System.Drawing.Point(234, 159);
+            this.ok.Name = "ok";
+            this.ok.Size = new System.Drawing.Size(57, 27);
+            this.ok.TabIndex = 5;
+            this.ok.Text = "OK";
+            this.ok.UseVisualStyleBackColor = false;
             // 
-            // panel
+            // EnterStudentinfoSecondpanel
             // 
-            this.panel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel.Controls.Add(this.textBox2);
-            this.panel.Controls.Add(this.textBox1);
-            this.panel.Controls.Add(this.button8);
-            this.panel.Controls.Add(this.panel3);
-            this.panel.Controls.Add(this.label1);
-            this.panel.Controls.Add(this.label2);
-            this.panel.Controls.Add(this.button1);
-            this.panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel.Location = new System.Drawing.Point(12, 9);
-            this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(434, 205);
-            this.panel.TabIndex = 11;
+            this.EnterStudentinfoSecondpanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EnterStudentinfoSecondpanel.Controls.Add(this.id);
+            this.EnterStudentinfoSecondpanel.Controls.Add(this.name);
+            this.EnterStudentinfoSecondpanel.Controls.Add(this.newstudent);
+            this.EnterStudentinfoSecondpanel.Controls.Add(this.panel3);
+            this.EnterStudentinfoSecondpanel.Controls.Add(this.label1);
+            this.EnterStudentinfoSecondpanel.Controls.Add(this.label2);
+            this.EnterStudentinfoSecondpanel.Controls.Add(this.ok);
+            this.EnterStudentinfoSecondpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnterStudentinfoSecondpanel.Location = new System.Drawing.Point(12, 9);
+            this.EnterStudentinfoSecondpanel.Name = "EnterStudentinfoSecondpanel";
+            this.EnterStudentinfoSecondpanel.Size = new System.Drawing.Size(434, 205);
+            this.EnterStudentinfoSecondpanel.TabIndex = 11;
             // 
             // label9
             // 
@@ -653,22 +654,23 @@
             this.Column4.HeaderText = "Name";
             this.Column4.Name = "Column4";
             // 
-            // panel12
+            // AddNewCourse
             // 
-            this.panel12.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel12.Controls.Add(this.dataGridView3);
-            this.panel12.Controls.Add(this.label12);
-            this.panel12.Controls.Add(this.textBox7);
-            this.panel12.Controls.Add(this.label14);
-            this.panel12.Controls.Add(this.textBox9);
-            this.panel12.Controls.Add(this.label15);
-            this.panel12.Controls.Add(this.label16);
-            this.panel12.Controls.Add(this.panel13);
-            this.panel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel12.Location = new System.Drawing.Point(12, 6);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(434, 205);
-            this.panel12.TabIndex = 13;
+            this.AddNewCourse.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AddNewCourse.Controls.Add(this.homepanel);
+            this.AddNewCourse.Controls.Add(this.studdents);
+            this.AddNewCourse.Controls.Add(this.dataGridView3);
+            this.AddNewCourse.Controls.Add(this.label12);
+            this.AddNewCourse.Controls.Add(this.CourseName);
+            this.AddNewCourse.Controls.Add(this.label14);
+            this.AddNewCourse.Controls.Add(this.CourseDescription);
+            this.AddNewCourse.Controls.Add(this.label15);
+            this.AddNewCourse.Controls.Add(this.label16);
+            this.AddNewCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewCourse.Location = new System.Drawing.Point(12, 6);
+            this.AddNewCourse.Name = "AddNewCourse";
+            this.AddNewCourse.Size = new System.Drawing.Size(434, 205);
+            this.AddNewCourse.TabIndex = 13;
             // 
             // dataGridView3
             // 
@@ -702,13 +704,13 @@
             this.label12.TabIndex = 16;
             this.label12.Text = "Students Registered in Course";
             // 
-            // textBox7
+            // CourseName
             // 
-            this.textBox7.Location = new System.Drawing.Point(6, 99);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(246, 29);
-            this.textBox7.TabIndex = 15;
+            this.CourseName.Location = new System.Drawing.Point(6, 99);
+            this.CourseName.Multiline = true;
+            this.CourseName.Name = "CourseName";
+            this.CourseName.Size = new System.Drawing.Size(246, 29);
+            this.CourseName.TabIndex = 15;
             // 
             // label14
             // 
@@ -721,12 +723,12 @@
             this.label14.TabIndex = 14;
             this.label14.Text = "Course Description";
             // 
-            // textBox9
+            // CourseDescription
             // 
-            this.textBox9.Location = new System.Drawing.Point(6, 47);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(246, 20);
-            this.textBox9.TabIndex = 11;
+            this.CourseDescription.Location = new System.Drawing.Point(6, 47);
+            this.CourseDescription.Name = "CourseDescription";
+            this.CourseDescription.Size = new System.Drawing.Size(246, 20);
+            this.CourseDescription.TabIndex = 11;
             // 
             // label15
             // 
@@ -749,34 +751,6 @@
             this.label16.TabIndex = 9;
             this.label16.Text = "Add New Course";
             // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.button19);
-            this.panel13.Controls.Add(this.button13);
-            this.panel13.Controls.Add(this.button14);
-            this.panel13.Location = new System.Drawing.Point(302, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(132, 202);
-            this.panel13.TabIndex = 8;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(9, 97);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(111, 23);
-            this.button13.TabIndex = 8;
-            this.button13.Text = "Courses Details";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(9, 35);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(111, 23);
-            this.button14.TabIndex = 7;
-            this.button14.Text = "Student Details";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
             // Column2
             // 
             this.Column2.HeaderText = "Course Name";
@@ -787,73 +761,65 @@
             this.Column5.HeaderText = "Course Description";
             this.Column5.Name = "Column5";
             // 
-            // button15
+            // addcourse
             // 
-            this.button15.Location = new System.Drawing.Point(99, 179);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(109, 23);
-            this.button15.TabIndex = 11;
-            this.button15.Text = "Add New Course";
-            this.button15.UseVisualStyleBackColor = true;
+            this.addcourse.Location = new System.Drawing.Point(99, 179);
+            this.addcourse.Name = "addcourse";
+            this.addcourse.Size = new System.Drawing.Size(109, 23);
+            this.addcourse.TabIndex = 11;
+            this.addcourse.Text = "Add New Course";
+            this.addcourse.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // add
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(179, 149);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(95, 17);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Add Student";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.add.AutoSize = true;
+            this.add.Location = new System.Drawing.Point(179, 149);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(95, 17);
+            this.add.TabIndex = 16;
+            this.add.TabStop = true;
+            this.add.Text = "Add Student";
+            this.add.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // remove
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(180, 172);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(119, 17);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Remove Student";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.remove.AutoSize = true;
+            this.remove.Location = new System.Drawing.Point(180, 172);
+            this.remove.Name = "remove";
+            this.remove.Size = new System.Drawing.Size(119, 17);
+            this.remove.TabIndex = 17;
+            this.remove.TabStop = true;
+            this.remove.Text = "Remove Student";
+            this.remove.UseVisualStyleBackColor = true;
+            this.remove.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // button16
+            // homeViewstudents
             // 
-            this.button16.Location = new System.Drawing.Point(9, 149);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(111, 23);
-            this.button16.TabIndex = 9;
-            this.button16.Text = "View Students";
-            this.button16.UseVisualStyleBackColor = true;
+            this.homeViewstudents.Location = new System.Drawing.Point(9, 149);
+            this.homeViewstudents.Name = "homeViewstudents";
+            this.homeViewstudents.Size = new System.Drawing.Size(111, 23);
+            this.homeViewstudents.TabIndex = 9;
+            this.homeViewstudents.Text = "View Students";
+            this.homeViewstudents.UseVisualStyleBackColor = true;
             // 
-            // button17
+            // detOfCourses
             // 
-            this.button17.Location = new System.Drawing.Point(11, 90);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(111, 23);
-            this.button17.TabIndex = 9;
-            this.button17.Text = "Courses Details";
-            this.button17.UseVisualStyleBackColor = true;
+            this.detOfCourses.Location = new System.Drawing.Point(11, 90);
+            this.detOfCourses.Name = "detOfCourses";
+            this.detOfCourses.Size = new System.Drawing.Size(111, 23);
+            this.detOfCourses.TabIndex = 9;
+            this.detOfCourses.Text = "Courses Details";
+            this.detOfCourses.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // DetailsOfCourses
             // 
-            this.button18.Location = new System.Drawing.Point(11, 90);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(111, 23);
-            this.button18.TabIndex = 9;
-            this.button18.Text = "Courses Details";
-            this.button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            this.button19.Location = new System.Drawing.Point(9, 149);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(111, 23);
-            this.button19.TabIndex = 9;
-            this.button19.Text = "View Students";
-            this.button19.UseVisualStyleBackColor = true;
+            this.DetailsOfCourses.Location = new System.Drawing.Point(11, 90);
+            this.DetailsOfCourses.Name = "DetailsOfCourses";
+            this.DetailsOfCourses.Size = new System.Drawing.Size(111, 23);
+            this.DetailsOfCourses.TabIndex = 9;
+            this.DetailsOfCourses.Text = "Courses Details";
+            this.DetailsOfCourses.UseVisualStyleBackColor = true;
+            this.DetailsOfCourses.Click += new System.EventHandler(this.studentDetails_Click);
             // 
             // button20
             // 
@@ -864,19 +830,55 @@
             this.button20.Text = "Courses Details";
             this.button20.UseVisualStyleBackColor = true;
             // 
-            // button21
+            // navCoursesDetails
             // 
-            this.button21.Location = new System.Drawing.Point(11, 90);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(111, 23);
-            this.button21.TabIndex = 9;
-            this.button21.Text = "Courses Details";
-            this.button21.UseVisualStyleBackColor = true;
+            this.navCoursesDetails.Location = new System.Drawing.Point(11, 90);
+            this.navCoursesDetails.Name = "navCoursesDetails";
+            this.navCoursesDetails.Size = new System.Drawing.Size(111, 23);
+            this.navCoursesDetails.TabIndex = 9;
+            this.navCoursesDetails.Text = "Courses Details";
+            this.navCoursesDetails.UseVisualStyleBackColor = true;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Course Name";
             this.Column1.Name = "Column1";
+            // 
+            // homepanel
+            // 
+            this.homepanel.Controls.Add(this.Detailscourses);
+            this.homepanel.Controls.Add(this.view);
+            this.homepanel.Location = new System.Drawing.Point(302, 3);
+            this.homepanel.Name = "homepanel";
+            this.homepanel.Size = new System.Drawing.Size(132, 202);
+            this.homepanel.TabIndex = 18;
+            // 
+            // Detailscourses
+            // 
+            this.Detailscourses.Location = new System.Drawing.Point(11, 90);
+            this.Detailscourses.Name = "Detailscourses";
+            this.Detailscourses.Size = new System.Drawing.Size(111, 23);
+            this.Detailscourses.TabIndex = 9;
+            this.Detailscourses.Text = "Courses Details";
+            this.Detailscourses.UseVisualStyleBackColor = true;
+            // 
+            // view
+            // 
+            this.view.Location = new System.Drawing.Point(11, 140);
+            this.view.Name = "view";
+            this.view.Size = new System.Drawing.Size(111, 23);
+            this.view.TabIndex = 8;
+            this.view.Text = "View Students";
+            this.view.UseVisualStyleBackColor = true;
+            // 
+            // studdents
+            // 
+            this.studdents.Location = new System.Drawing.Point(0, 0);
+            this.studdents.Name = "studdents";
+            this.studdents.Size = new System.Drawing.Size(111, 23);
+            this.studdents.TabIndex = 7;
+            this.studdents.Text = "Student Details";
+            this.studdents.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -884,77 +886,77 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(1242, 515);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.AllStudentsRegisteredInEachCourse);
+            this.Controls.Add(this.AddNewCourse);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel);
+            this.Controls.Add(this.NewStudentPanel);
+            this.Controls.Add(this.EnterStudentinfoSecondpanel);
             this.Controls.Add(this.LoginPanel);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "MainForm";
             this.Text = "Form1";
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel9.ResumeLayout(false);
+            this.AllStudentsRegisteredInEachCourse.ResumeLayout(false);
+            this.AllStudentsRegisteredInEachCourse.PerformLayout();
+            this.Home.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel11.ResumeLayout(false);
+            this.navigatepanel.ResumeLayout(false);
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.NewStudentPanel.ResumeLayout(false);
+            this.NewStudentPanel.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
+            this.panelhome.ResumeLayout(false);
             this.Navigationpanel.ResumeLayout(false);
             this.PasswordHolderPanel.ResumeLayout(false);
             this.PasswordHolderPanel.PerformLayout();
             this.UsernameHolderPanel.ResumeLayout(false);
             this.UsernameHolderPanel.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel.ResumeLayout(false);
-            this.panel.PerformLayout();
+            this.EnterStudentinfoSecondpanel.ResumeLayout(false);
+            this.EnterStudentinfoSecondpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
+            this.AddNewCourse.ResumeLayout(false);
+            this.AddNewCourse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            this.panel13.ResumeLayout(false);
+            this.homepanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox currentCourses;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox IDstudent;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox NameStudent;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel AllStudentsRegisteredInEachCourse;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel Home;
+        private System.Windows.Forms.Button viewallstudents;
+        private System.Windows.Forms.Button DetailsOFstudents;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Panel navigatepanel;
+        private System.Windows.Forms.Button viewstudentsinallcourseshomepanel;
+        private System.Windows.Forms.Button navigationpanelstudentdetails;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button homeCoursesDetails;
         private System.Windows.Forms.Panel LoginPanel;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel NewStudentPanel;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Panel panelhome;
+        private System.Windows.Forms.Button homeStudentDetails;
         private System.Windows.Forms.Panel Navigationpanel;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button9;
@@ -967,41 +969,41 @@
         private System.Windows.Forms.Panel UsernameHolderPanel;
         private System.Windows.Forms.Panel UsernamePictureHolder;
         private System.Windows.Forms.TextBox Username;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox id;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.Button newstudent;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button navViewStudents;
+        private System.Windows.Forms.Button navStudentDetails;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Button ok;
+        private System.Windows.Forms.Panel EnterStudentinfoSecondpanel;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel AddNewCourse;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox CourseName;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox CourseDescription;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button addcourse;
+        private System.Windows.Forms.RadioButton remove;
+        private System.Windows.Forms.RadioButton add;
+        private System.Windows.Forms.Button detOfCourses;
+        private System.Windows.Forms.Button homeViewstudents;
+        private System.Windows.Forms.Button DetailsOfCourses;
         private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button navCoursesDetails;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Panel homepanel;
+        private System.Windows.Forms.Button Detailscourses;
+        private System.Windows.Forms.Button view;
+        private System.Windows.Forms.Button studdents;
     }
 }
 
