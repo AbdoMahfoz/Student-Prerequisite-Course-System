@@ -118,7 +118,6 @@
             this.HomeStudentsOfCourseButton.TabIndex = 1;
             this.HomeStudentsOfCourseButton.Text = "Students Of Course";
             this.HomeStudentsOfCourseButton.UseVisualStyleBackColor = true;
-            this.HomeStudentsOfCourseButton.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // HomeAllCoursesButton
             // 
@@ -184,7 +183,6 @@
             this.AllCoursesGrid.Name = "AllCoursesGrid";
             this.AllCoursesGrid.Size = new System.Drawing.Size(442, 183);
             this.AllCoursesGrid.TabIndex = 10;
-            this.AllCoursesGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // CO_NameColumn
             // 
@@ -228,7 +226,6 @@
             this.StudentOverviewPanel.Size = new System.Drawing.Size(450, 214);
             this.StudentOverviewPanel.TabIndex = 7;
             this.StudentOverviewPanel.Visible = false;
-            this.StudentOverviewPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // AllStudentsGrid
             // 
