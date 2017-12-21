@@ -202,6 +202,7 @@ partial class Student_form
             // 
             // CurrentDetails
             // 
+            this.CurrentDetails.Controls.Add(this.LoginPanel);
             this.CurrentDetails.Controls.Add(this.CurrentCoursesList);
             this.CurrentDetails.Location = new System.Drawing.Point(0, 0);
             this.CurrentDetails.Name = "CurrentDetails";
@@ -302,7 +303,6 @@ partial class Student_form
             this.ClientSize = new System.Drawing.Size(682, 247);
             this.Controls.Add(this.CurrentDetails);
             this.Controls.Add(this.NavigationPanel);
-            this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.ViewCourses);
             this.Controls.Add(this.RegisterPanel);
             this.Name = "Student_form";
