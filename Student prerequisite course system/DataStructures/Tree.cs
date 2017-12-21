@@ -191,4 +191,8 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
             Elements[index] = value;
         }
     }
+    public T[] ToArray()
+    {
+        return Elements.ToArray();
+    }
 }

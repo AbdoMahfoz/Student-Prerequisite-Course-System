@@ -11,6 +11,10 @@ static public class FileOperations
     }
     static public class UsersFile
     {
+        static public void UpdateUser(Student s)
+        {
+            throw new NotImplementedException();
+        }
         static public void WriteUser(Student s)
         {
             FileStream FW = new FileStream("User.Txt", FileMode.Append);
