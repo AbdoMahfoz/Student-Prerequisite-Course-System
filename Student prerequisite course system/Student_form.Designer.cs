@@ -40,6 +40,8 @@ partial class Student_form
             this.PasswordLabel = new System.Windows.Forms.Label();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.ViewCourses = new System.Windows.Forms.Panel();
+            this.AvailCourseCheckbox = new System.Windows.Forms.CheckBox();
+            this.DynamicCourcesPanel = new System.Windows.Forms.Panel();
             this.CurrentDetails = new System.Windows.Forms.Panel();
             this.CurrentCoursesList = new System.Windows.Forms.ListView();
             this.RegisterPanel = new System.Windows.Forms.Panel();
@@ -49,8 +51,6 @@ partial class Student_form
             this.HomeRegister = new System.Windows.Forms.Button();
             this.HomeView = new System.Windows.Forms.Button();
             this.HomeCurrent = new System.Windows.Forms.Button();
-            this.DynamicCourcesPanel = new System.Windows.Forms.Panel();
-            this.AvailCourseCheckbox = new System.Windows.Forms.CheckBox();
             this.LoginPanel.SuspendLayout();
             this.UserNamePlaceHolder.SuspendLayout();
             this.PasswordPlaceHolder.SuspendLayout();
@@ -76,6 +76,8 @@ partial class Student_form
             // LoginButton
             // 
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.LoginButton.Location = new System.Drawing.Point(452, 195);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(43, 20);
@@ -129,9 +131,9 @@ partial class Student_form
             // 
             this.DumyyPasswordPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyPasswordPicture.BackgroundImage")));
             this.DumyyPasswordPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DumyyPasswordPicture.Location = new System.Drawing.Point(3, 0);
+            this.DumyyPasswordPicture.Location = new System.Drawing.Point(0, 0);
             this.DumyyPasswordPicture.Name = "DumyyPasswordPicture";
-            this.DumyyPasswordPicture.Size = new System.Drawing.Size(46, 38);
+            this.DumyyPasswordPicture.Size = new System.Drawing.Size(49, 40);
             this.DumyyPasswordPicture.TabIndex = 0;
             // 
             // BigUserPicture
@@ -146,18 +148,22 @@ partial class Student_form
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.PasswordLabel.Location = new System.Drawing.Point(371, 113);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(53, 13);
+            this.PasswordLabel.Size = new System.Drawing.Size(76, 16);
             this.PasswordLabel.TabIndex = 4;
             this.PasswordLabel.Text = "Password";
             // 
             // UserNameLabel
             // 
             this.UserNameLabel.AutoSize = true;
+            this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.UserNameLabel.Location = new System.Drawing.Point(374, 35);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(55, 13);
+            this.UserNameLabel.Size = new System.Drawing.Size(79, 16);
             this.UserNameLabel.TabIndex = 3;
             this.UserNameLabel.Text = "Username";
             // 
@@ -171,6 +177,28 @@ partial class Student_form
             this.ViewCourses.TabIndex = 2;
             this.ViewCourses.Visible = false;
             this.ViewCourses.VisibleChanged += new System.EventHandler(this.ViewCourses_VisibleChanged);
+            // 
+            // AvailCourseCheckbox
+            // 
+            this.AvailCourseCheckbox.AutoSize = true;
+            this.AvailCourseCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.AvailCourseCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AvailCourseCheckbox.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.AvailCourseCheckbox.Location = new System.Drawing.Point(184, 4);
+            this.AvailCourseCheckbox.Name = "AvailCourseCheckbox";
+            this.AvailCourseCheckbox.Size = new System.Drawing.Size(213, 20);
+            this.AvailCourseCheckbox.TabIndex = 6;
+            this.AvailCourseCheckbox.Text = "Show available courses only";
+            this.AvailCourseCheckbox.UseVisualStyleBackColor = true;
+            this.AvailCourseCheckbox.CheckedChanged += new System.EventHandler(this.AvailCourseCheckbox_CheckedChanged);
+            // 
+            // DynamicCourcesPanel
+            // 
+            this.DynamicCourcesPanel.AutoScroll = true;
+            this.DynamicCourcesPanel.Location = new System.Drawing.Point(0, 26);
+            this.DynamicCourcesPanel.Name = "DynamicCourcesPanel";
+            this.DynamicCourcesPanel.Size = new System.Drawing.Size(530, 221);
+            this.DynamicCourcesPanel.TabIndex = 5;
             // 
             // CurrentDetails
             // 
@@ -232,6 +260,7 @@ partial class Student_form
             // HomeRegister
             // 
             this.HomeRegister.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeRegister.Location = new System.Drawing.Point(15, 183);
             this.HomeRegister.Name = "HomeRegister";
             this.HomeRegister.Size = new System.Drawing.Size(108, 23);
@@ -243,6 +272,7 @@ partial class Student_form
             // HomeView
             // 
             this.HomeView.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeView.Location = new System.Drawing.Point(15, 103);
             this.HomeView.Name = "HomeView";
             this.HomeView.Size = new System.Drawing.Size(108, 23);
@@ -254,6 +284,8 @@ partial class Student_form
             // HomeCurrent
             // 
             this.HomeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeCurrent.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.HomeCurrent.Location = new System.Drawing.Point(15, 25);
             this.HomeCurrent.Name = "HomeCurrent";
             this.HomeCurrent.Size = new System.Drawing.Size(108, 23);
@@ -262,36 +294,16 @@ partial class Student_form
             this.HomeCurrent.UseVisualStyleBackColor = true;
             this.HomeCurrent.Click += new System.EventHandler(this.HomeCurrent_Click);
             // 
-            // DynamicCourcesPanel
-            // 
-            this.DynamicCourcesPanel.AutoScroll = true;
-            this.DynamicCourcesPanel.Location = new System.Drawing.Point(0, 26);
-            this.DynamicCourcesPanel.Name = "DynamicCourcesPanel";
-            this.DynamicCourcesPanel.Size = new System.Drawing.Size(530, 221);
-            this.DynamicCourcesPanel.TabIndex = 5;
-            // 
-            // AvailCourseCheckbox
-            // 
-            this.AvailCourseCheckbox.AutoSize = true;
-            this.AvailCourseCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.AvailCourseCheckbox.Location = new System.Drawing.Point(184, 4);
-            this.AvailCourseCheckbox.Name = "AvailCourseCheckbox";
-            this.AvailCourseCheckbox.Size = new System.Drawing.Size(166, 18);
-            this.AvailCourseCheckbox.TabIndex = 6;
-            this.AvailCourseCheckbox.Text = "Show available courses only";
-            this.AvailCourseCheckbox.UseVisualStyleBackColor = true;
-            this.AvailCourseCheckbox.CheckedChanged += new System.EventHandler(this.AvailCourseCheckbox_CheckedChanged);
-            // 
             // Student_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(682, 247);
-            this.Controls.Add(this.ViewCourses);
             this.Controls.Add(this.CurrentDetails);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.ViewCourses);
             this.Controls.Add(this.RegisterPanel);
             this.Name = "Student_form";
             this.Text = "Previous";

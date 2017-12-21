@@ -83,8 +83,8 @@
             // 
             // Home
             // 
-            this.Home.Controls.Add(this.HomeCourseBox);
             this.Home.Controls.Add(this.HomeStudentBox);
+            this.Home.Controls.Add(this.HomeCourseBox);
             this.Home.Location = new System.Drawing.Point(445, 0);
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(132, 214);
@@ -104,18 +104,20 @@
             // 
             // HomeCPQButton
             // 
-            this.HomeCPQButton.Location = new System.Drawing.Point(6, 77);
+            this.HomeCPQButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeCPQButton.Location = new System.Drawing.Point(1, 77);
             this.HomeCPQButton.Name = "HomeCPQButton";
-            this.HomeCPQButton.Size = new System.Drawing.Size(108, 23);
+            this.HomeCPQButton.Size = new System.Drawing.Size(120, 23);
             this.HomeCPQButton.TabIndex = 2;
             this.HomeCPQButton.Text = "Set Prerequisites";
             this.HomeCPQButton.UseVisualStyleBackColor = true;
             // 
             // HomeStudentsOfCourseButton
             // 
-            this.HomeStudentsOfCourseButton.Location = new System.Drawing.Point(6, 48);
+            this.HomeStudentsOfCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeStudentsOfCourseButton.Location = new System.Drawing.Point(0, 48);
             this.HomeStudentsOfCourseButton.Name = "HomeStudentsOfCourseButton";
-            this.HomeStudentsOfCourseButton.Size = new System.Drawing.Size(107, 23);
+            this.HomeStudentsOfCourseButton.Size = new System.Drawing.Size(120, 23);
             this.HomeStudentsOfCourseButton.TabIndex = 1;
             this.HomeStudentsOfCourseButton.Text = "Students Of Course";
             this.HomeStudentsOfCourseButton.UseVisualStyleBackColor = true;
@@ -123,9 +125,10 @@
             // 
             // HomeAllCoursesButton
             // 
-            this.HomeAllCoursesButton.Location = new System.Drawing.Point(6, 19);
+            this.HomeAllCoursesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeAllCoursesButton.Location = new System.Drawing.Point(1, 19);
             this.HomeAllCoursesButton.Name = "HomeAllCoursesButton";
-            this.HomeAllCoursesButton.Size = new System.Drawing.Size(107, 23);
+            this.HomeAllCoursesButton.Size = new System.Drawing.Size(119, 23);
             this.HomeAllCoursesButton.TabIndex = 0;
             this.HomeAllCoursesButton.Text = "All Courses";
             this.HomeAllCoursesButton.UseVisualStyleBackColor = true;
@@ -134,7 +137,7 @@
             // 
             this.HomeStudentBox.Controls.Add(this.HomeCoursesOfStudentButton);
             this.HomeStudentBox.Controls.Add(this.HomeAllStudentsButton);
-            this.HomeStudentBox.Location = new System.Drawing.Point(7, 9);
+            this.HomeStudentBox.Location = new System.Drawing.Point(6, 6);
             this.HomeStudentBox.Name = "HomeStudentBox";
             this.HomeStudentBox.Size = new System.Drawing.Size(120, 84);
             this.HomeStudentBox.TabIndex = 10;
@@ -143,18 +146,20 @@
             // 
             // HomeCoursesOfStudentButton
             // 
-            this.HomeCoursesOfStudentButton.Location = new System.Drawing.Point(6, 48);
+            this.HomeCoursesOfStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeCoursesOfStudentButton.Location = new System.Drawing.Point(-1, 48);
             this.HomeCoursesOfStudentButton.Name = "HomeCoursesOfStudentButton";
-            this.HomeCoursesOfStudentButton.Size = new System.Drawing.Size(107, 23);
+            this.HomeCoursesOfStudentButton.Size = new System.Drawing.Size(120, 23);
             this.HomeCoursesOfStudentButton.TabIndex = 1;
             this.HomeCoursesOfStudentButton.Text = "Courses Of Student";
             this.HomeCoursesOfStudentButton.UseVisualStyleBackColor = true;
             // 
             // HomeAllStudentsButton
             // 
-            this.HomeAllStudentsButton.Location = new System.Drawing.Point(6, 19);
+            this.HomeAllStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeAllStudentsButton.Location = new System.Drawing.Point(-1, 19);
             this.HomeAllStudentsButton.Name = "HomeAllStudentsButton";
-            this.HomeAllStudentsButton.Size = new System.Drawing.Size(107, 23);
+            this.HomeAllStudentsButton.Size = new System.Drawing.Size(120, 23);
             this.HomeAllStudentsButton.TabIndex = 0;
             this.HomeAllStudentsButton.Text = "All Students";
             this.HomeAllStudentsButton.UseVisualStyleBackColor = true;
@@ -299,14 +304,16 @@
             // DummySICLabel
             // 
             this.DummySICLabel.AutoSize = true;
-            this.DummySICLabel.Location = new System.Drawing.Point(106, 11);
+            this.DummySICLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DummySICLabel.Location = new System.Drawing.Point(75, 9);
             this.DummySICLabel.Name = "DummySICLabel";
-            this.DummySICLabel.Size = new System.Drawing.Size(71, 13);
+            this.DummySICLabel.Size = new System.Drawing.Size(102, 16);
             this.DummySICLabel.TabIndex = 1;
             this.DummySICLabel.Text = "Course Name";
             // 
             // StudentsInCourseGoButton
             // 
+            this.StudentsInCourseGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentsInCourseGoButton.Location = new System.Drawing.Point(289, 5);
             this.StudentsInCourseGoButton.Name = "StudentsInCourseGoButton";
             this.StudentsInCourseGoButton.Size = new System.Drawing.Size(75, 23);
@@ -353,6 +360,7 @@
             // 
             // StudentInCoursesGoButton
             // 
+            this.StudentInCoursesGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentInCoursesGoButton.Location = new System.Drawing.Point(300, 3);
             this.StudentInCoursesGoButton.Name = "StudentInCoursesGoButton";
             this.StudentInCoursesGoButton.Size = new System.Drawing.Size(75, 23);
@@ -370,9 +378,10 @@
             // DummyCoursesInStudentLabel
             // 
             this.DummyCoursesInStudentLabel.AutoSize = true;
-            this.DummyCoursesInStudentLabel.Location = new System.Drawing.Point(113, 8);
+            this.DummyCoursesInStudentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DummyCoursesInStudentLabel.Location = new System.Drawing.Point(83, 5);
             this.DummyCoursesInStudentLabel.Name = "DummyCoursesInStudentLabel";
-            this.DummyCoursesInStudentLabel.Size = new System.Drawing.Size(75, 13);
+            this.DummyCoursesInStudentLabel.Size = new System.Drawing.Size(105, 16);
             this.DummyCoursesInStudentLabel.TabIndex = 0;
             this.DummyCoursesInStudentLabel.Text = "Student Name";
             // 
@@ -438,12 +447,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(577, 214);
-            this.Controls.Add(this.CoursesPrerequisites);
-            this.Controls.Add(this.StudentsInCourse);
-            this.Controls.Add(this.CourseOverviewPanel);
-            this.Controls.Add(this.StudentOverviewPanel);
-            this.Controls.Add(this.CoursesInStudent);
             this.Controls.Add(this.Home);
+            this.Controls.Add(this.StudentsInCourse);
+            this.Controls.Add(this.StudentOverviewPanel);
+            this.Controls.Add(this.CoursesPrerequisites);
+            this.Controls.Add(this.CourseOverviewPanel);
+            this.Controls.Add(this.CoursesInStudent);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "AdminForm";
             this.Text = "Admin Control";
