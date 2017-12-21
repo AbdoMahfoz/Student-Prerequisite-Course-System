@@ -2,11 +2,11 @@
 
 namespace Student_prerequisite_course_system
 {
-    public partial class MainForm : Form
+    public partial class AdminForm : Form
     {
         Tree<Course> Courses;
         Student ActiveStudent;
-        public MainForm()
+        public AdminForm()
         {
             Courses = new Tree<Course>();
             Courses.LoadFromFile(FileOperations.TreeFile.Read());
@@ -111,6 +111,16 @@ namespace Student_prerequisite_course_system
         }
 
         private void ViewStudents_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, System.EventArgs e)
         {
 
         }
