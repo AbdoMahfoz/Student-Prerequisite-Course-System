@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.Home = new System.Windows.Forms.Panel();
+            this.HomeStudentBox = new System.Windows.Forms.GroupBox();
+            this.HomeCoursesOfStudentButton = new System.Windows.Forms.Button();
+            this.HomeAllStudentsButton = new System.Windows.Forms.Button();
             this.HomeCourseBox = new System.Windows.Forms.GroupBox();
             this.HomeCPQButton = new System.Windows.Forms.Button();
             this.HomeStudentsOfCourseButton = new System.Windows.Forms.Button();
             this.HomeAllCoursesButton = new System.Windows.Forms.Button();
-            this.HomeStudentBox = new System.Windows.Forms.GroupBox();
-            this.HomeCoursesOfStudentButton = new System.Windows.Forms.Button();
-            this.HomeAllStudentsButton = new System.Windows.Forms.Button();
             this.CourseOverviewPanel = new System.Windows.Forms.Panel();
             this.AllCoursesGrid = new System.Windows.Forms.DataGridView();
             this.CO_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,9 +64,23 @@
             this.InputCPQ = new System.Windows.Forms.TextBox();
             this.CPQGoButton = new System.Windows.Forms.Button();
             this.CPQDummyLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.LogIn = new System.Windows.Forms.Panel();
+            this.BigUserPicture = new System.Windows.Forms.Panel();
+            this.UserNameLabel = new System.Windows.Forms.Label();
+            this.UserNamePlaceHolder = new System.Windows.Forms.Panel();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.DumyyUserPicture = new System.Windows.Forms.Panel();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.PasswordPlaceHolder = new System.Windows.Forms.Panel();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.DumyyPasswordPicture = new System.Windows.Forms.Panel();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.Home.SuspendLayout();
-            this.HomeCourseBox.SuspendLayout();
             this.HomeStudentBox.SuspendLayout();
+            this.HomeCourseBox.SuspendLayout();
             this.CourseOverviewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllCoursesGrid)).BeginInit();
             this.StudentOverviewPanel.SuspendLayout();
@@ -76,6 +91,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.CoursesInStudentGrid)).BeginInit();
             this.CoursesPrerequisites.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).BeginInit();
+            this.LogIn.SuspendLayout();
+            this.UserNamePlaceHolder.SuspendLayout();
+            this.PasswordPlaceHolder.SuspendLayout();
             this.SuspendLayout();
             // 
             // Home
@@ -86,6 +104,37 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(132, 214);
             this.Home.TabIndex = 8;
+            // 
+            // HomeStudentBox
+            // 
+            this.HomeStudentBox.Controls.Add(this.HomeCoursesOfStudentButton);
+            this.HomeStudentBox.Controls.Add(this.HomeAllStudentsButton);
+            this.HomeStudentBox.Location = new System.Drawing.Point(6, 6);
+            this.HomeStudentBox.Name = "HomeStudentBox";
+            this.HomeStudentBox.Size = new System.Drawing.Size(120, 84);
+            this.HomeStudentBox.TabIndex = 10;
+            this.HomeStudentBox.TabStop = false;
+            this.HomeStudentBox.Text = "Student";
+            // 
+            // HomeCoursesOfStudentButton
+            // 
+            this.HomeCoursesOfStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeCoursesOfStudentButton.Location = new System.Drawing.Point(-1, 48);
+            this.HomeCoursesOfStudentButton.Name = "HomeCoursesOfStudentButton";
+            this.HomeCoursesOfStudentButton.Size = new System.Drawing.Size(120, 23);
+            this.HomeCoursesOfStudentButton.TabIndex = 1;
+            this.HomeCoursesOfStudentButton.Text = "Courses Of Student";
+            this.HomeCoursesOfStudentButton.UseVisualStyleBackColor = true;
+            // 
+            // HomeAllStudentsButton
+            // 
+            this.HomeAllStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeAllStudentsButton.Location = new System.Drawing.Point(-1, 19);
+            this.HomeAllStudentsButton.Name = "HomeAllStudentsButton";
+            this.HomeAllStudentsButton.Size = new System.Drawing.Size(120, 23);
+            this.HomeAllStudentsButton.TabIndex = 0;
+            this.HomeAllStudentsButton.Text = "All Students";
+            this.HomeAllStudentsButton.UseVisualStyleBackColor = true;
             // 
             // HomeCourseBox
             // 
@@ -101,7 +150,7 @@
             // 
             // HomeCPQButton
             // 
-            this.HomeCPQButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeCPQButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeCPQButton.Location = new System.Drawing.Point(1, 77);
             this.HomeCPQButton.Name = "HomeCPQButton";
             this.HomeCPQButton.Size = new System.Drawing.Size(120, 23);
@@ -111,7 +160,7 @@
             // 
             // HomeStudentsOfCourseButton
             // 
-            this.HomeStudentsOfCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeStudentsOfCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeStudentsOfCourseButton.Location = new System.Drawing.Point(0, 48);
             this.HomeStudentsOfCourseButton.Name = "HomeStudentsOfCourseButton";
             this.HomeStudentsOfCourseButton.Size = new System.Drawing.Size(120, 23);
@@ -121,44 +170,13 @@
             // 
             // HomeAllCoursesButton
             // 
-            this.HomeAllCoursesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeAllCoursesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeAllCoursesButton.Location = new System.Drawing.Point(1, 19);
             this.HomeAllCoursesButton.Name = "HomeAllCoursesButton";
             this.HomeAllCoursesButton.Size = new System.Drawing.Size(119, 23);
             this.HomeAllCoursesButton.TabIndex = 0;
             this.HomeAllCoursesButton.Text = "All Courses";
             this.HomeAllCoursesButton.UseVisualStyleBackColor = true;
-            // 
-            // HomeStudentBox
-            // 
-            this.HomeStudentBox.Controls.Add(this.HomeCoursesOfStudentButton);
-            this.HomeStudentBox.Controls.Add(this.HomeAllStudentsButton);
-            this.HomeStudentBox.Location = new System.Drawing.Point(6, 6);
-            this.HomeStudentBox.Name = "HomeStudentBox";
-            this.HomeStudentBox.Size = new System.Drawing.Size(120, 84);
-            this.HomeStudentBox.TabIndex = 10;
-            this.HomeStudentBox.TabStop = false;
-            this.HomeStudentBox.Text = "Student";
-            // 
-            // HomeCoursesOfStudentButton
-            // 
-            this.HomeCoursesOfStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeCoursesOfStudentButton.Location = new System.Drawing.Point(-1, 48);
-            this.HomeCoursesOfStudentButton.Name = "HomeCoursesOfStudentButton";
-            this.HomeCoursesOfStudentButton.Size = new System.Drawing.Size(120, 23);
-            this.HomeCoursesOfStudentButton.TabIndex = 1;
-            this.HomeCoursesOfStudentButton.Text = "Courses Of Student";
-            this.HomeCoursesOfStudentButton.UseVisualStyleBackColor = true;
-            // 
-            // HomeAllStudentsButton
-            // 
-            this.HomeAllStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeAllStudentsButton.Location = new System.Drawing.Point(-1, 19);
-            this.HomeAllStudentsButton.Name = "HomeAllStudentsButton";
-            this.HomeAllStudentsButton.Size = new System.Drawing.Size(120, 23);
-            this.HomeAllStudentsButton.TabIndex = 0;
-            this.HomeAllStudentsButton.Text = "All Students";
-            this.HomeAllStudentsButton.UseVisualStyleBackColor = true;
             // 
             // CourseOverviewPanel
             // 
@@ -252,6 +270,9 @@
             // 
             // StudentsInCourse
             // 
+            this.StudentsInCourse.Controls.Add(this.button1);
+            this.StudentsInCourse.Controls.Add(this.textBox1);
+            this.StudentsInCourse.Controls.Add(this.label1);
             this.StudentsInCourse.Controls.Add(this.StudentsInCourseGrid);
             this.StudentsInCourse.Location = new System.Drawing.Point(0, 0);
             this.StudentsInCourse.Name = "StudentsInCourse";
@@ -405,24 +426,159 @@
             this.CPQDummyLabel.TabIndex = 0;
             this.CPQDummyLabel.Text = "Course Name:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(47, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Courses Name";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(164, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(282, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "GO";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // LogIn
+            // 
+            this.LogIn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LogIn.Controls.Add(this.LoginButton);
+            this.LogIn.Controls.Add(this.PasswordPlaceHolder);
+            this.LogIn.Controls.Add(this.PasswordLabel);
+            this.LogIn.Controls.Add(this.UserNamePlaceHolder);
+            this.LogIn.Controls.Add(this.UserNameLabel);
+            this.LogIn.Controls.Add(this.BigUserPicture);
+            this.LogIn.Location = new System.Drawing.Point(0, 0);
+            this.LogIn.Name = "LogIn";
+            this.LogIn.Size = new System.Drawing.Size(576, 214);
+            this.LogIn.TabIndex = 4;
+            // 
+            // BigUserPicture
+            // 
+            this.BigUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BigUserPicture.BackgroundImage")));
+            this.BigUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BigUserPicture.Location = new System.Drawing.Point(2, 2);
+            this.BigUserPicture.Name = "BigUserPicture";
+            this.BigUserPicture.Size = new System.Drawing.Size(240, 209);
+            this.BigUserPicture.TabIndex = 1;
+            // 
+            // UserNameLabel
+            // 
+            this.UserNameLabel.AutoSize = true;
+            this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.UserNameLabel.Location = new System.Drawing.Point(248, 16);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(79, 16);
+            this.UserNameLabel.TabIndex = 4;
+            this.UserNameLabel.Text = "Username";
+            // 
+            // UserNamePlaceHolder
+            // 
+            this.UserNamePlaceHolder.Controls.Add(this.UserNameTextBox);
+            this.UserNamePlaceHolder.Controls.Add(this.DumyyUserPicture);
+            this.UserNamePlaceHolder.Location = new System.Drawing.Point(248, 37);
+            this.UserNamePlaceHolder.Name = "UserNamePlaceHolder";
+            this.UserNamePlaceHolder.Size = new System.Drawing.Size(232, 40);
+            this.UserNamePlaceHolder.TabIndex = 5;
+            // 
+            // UserNameTextBox
+            // 
+            this.UserNameTextBox.Location = new System.Drawing.Point(55, 4);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(174, 20);
+            this.UserNameTextBox.TabIndex = 1;
+            // 
+            // DumyyUserPicture
+            // 
+            this.DumyyUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyUserPicture.BackgroundImage")));
+            this.DumyyUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DumyyUserPicture.Location = new System.Drawing.Point(1, 2);
+            this.DumyyUserPicture.Name = "DumyyUserPicture";
+            this.DumyyUserPicture.Size = new System.Drawing.Size(48, 37);
+            this.DumyyUserPicture.TabIndex = 0;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.PasswordLabel.Location = new System.Drawing.Point(250, 99);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(76, 16);
+            this.PasswordLabel.TabIndex = 6;
+            this.PasswordLabel.Text = "Password";
+            // 
+            // PasswordPlaceHolder
+            // 
+            this.PasswordPlaceHolder.Controls.Add(this.PasswordTextBox);
+            this.PasswordPlaceHolder.Controls.Add(this.DumyyPasswordPicture);
+            this.PasswordPlaceHolder.Location = new System.Drawing.Point(253, 118);
+            this.PasswordPlaceHolder.Name = "PasswordPlaceHolder";
+            this.PasswordPlaceHolder.Size = new System.Drawing.Size(231, 40);
+            this.PasswordPlaceHolder.TabIndex = 7;
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.Location = new System.Drawing.Point(55, 3);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(173, 20);
+            this.PasswordTextBox.TabIndex = 1;
+            // 
+            // DumyyPasswordPicture
+            // 
+            this.DumyyPasswordPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyPasswordPicture.BackgroundImage")));
+            this.DumyyPasswordPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DumyyPasswordPicture.Location = new System.Drawing.Point(0, 0);
+            this.DumyyPasswordPicture.Name = "DumyyPasswordPicture";
+            this.DumyyPasswordPicture.Size = new System.Drawing.Size(49, 40);
+            this.DumyyPasswordPicture.TabIndex = 0;
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LoginButton.Location = new System.Drawing.Point(342, 178);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(43, 20);
+            this.LoginButton.TabIndex = 8;
+            this.LoginButton.Text = "OK";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(577, 214);
-            this.Controls.Add(this.Home);
-            this.Controls.Add(this.StudentsInCourse);
-            this.Controls.Add(this.StudentOverviewPanel);
+            this.Controls.Add(this.LogIn);
             this.Controls.Add(this.CoursesPrerequisites);
-            this.Controls.Add(this.CourseOverviewPanel);
+            this.Controls.Add(this.StudentOverviewPanel);
             this.Controls.Add(this.CoursesInStudent);
+            this.Controls.Add(this.StudentsInCourse);
+            this.Controls.Add(this.Home);
+            this.Controls.Add(this.CourseOverviewPanel);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "AdminForm";
             this.Text = "Admin Control";
             this.Home.ResumeLayout(false);
-            this.HomeCourseBox.ResumeLayout(false);
             this.HomeStudentBox.ResumeLayout(false);
+            this.HomeCourseBox.ResumeLayout(false);
             this.CourseOverviewPanel.ResumeLayout(false);
             this.CourseOverviewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllCoursesGrid)).EndInit();
@@ -430,6 +586,7 @@
             this.StudentOverviewPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllStudentsGrid)).EndInit();
             this.StudentsInCourse.ResumeLayout(false);
+            this.StudentsInCourse.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).EndInit();
             this.CoursesInStudent.ResumeLayout(false);
             this.CoursesInStudent.PerformLayout();
@@ -437,6 +594,12 @@
             this.CoursesPrerequisites.ResumeLayout(false);
             this.CoursesPrerequisites.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).EndInit();
+            this.LogIn.ResumeLayout(false);
+            this.LogIn.PerformLayout();
+            this.UserNamePlaceHolder.ResumeLayout(false);
+            this.UserNamePlaceHolder.PerformLayout();
+            this.PasswordPlaceHolder.ResumeLayout(false);
+            this.PasswordPlaceHolder.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -477,6 +640,20 @@
         private System.Windows.Forms.Label CPQDummyLabel;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPQ_NameColumn;
         private System.Windows.Forms.Button HomeCPQButton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel LogIn;
+        private System.Windows.Forms.Panel BigUserPicture;
+        private System.Windows.Forms.Label UserNameLabel;
+        private System.Windows.Forms.Panel UserNamePlaceHolder;
+        private System.Windows.Forms.TextBox UserNameTextBox;
+        private System.Windows.Forms.Panel DumyyUserPicture;
+        private System.Windows.Forms.Label PasswordLabel;
+        private System.Windows.Forms.Panel PasswordPlaceHolder;
+        private System.Windows.Forms.TextBox PasswordTextBox;
+        private System.Windows.Forms.Panel DumyyPasswordPicture;
+        private System.Windows.Forms.Button LoginButton;
     }
 }
 
