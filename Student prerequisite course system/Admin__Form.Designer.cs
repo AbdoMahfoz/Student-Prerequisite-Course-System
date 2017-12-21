@@ -30,6 +30,7 @@
         {
             this.Home = new System.Windows.Forms.Panel();
             this.HomeCourseBox = new System.Windows.Forms.GroupBox();
+            this.HomeCPQButton = new System.Windows.Forms.Button();
             this.HomeStudentsOfCourseButton = new System.Windows.Forms.Button();
             this.HomeAllCoursesButton = new System.Windows.Forms.Button();
             this.HomeStudentBox = new System.Windows.Forms.GroupBox();
@@ -46,6 +47,12 @@
             this.SO_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SO_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentsInCourse = new System.Windows.Forms.Panel();
+            this.StudentsInCourseGrid = new System.Windows.Forms.DataGridView();
+            this.SIC_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIC_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InputStudentsInCourse = new System.Windows.Forms.TextBox();
+            this.DummySICLabel = new System.Windows.Forms.Label();
+            this.StudentsInCourseGoButton = new System.Windows.Forms.Button();
             this.CoursesInStudent = new System.Windows.Forms.Panel();
             this.CoursesInStudentGrid = new System.Windows.Forms.DataGridView();
             this.CIS_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,19 +60,12 @@
             this.StudentInCoursesGoButton = new System.Windows.Forms.Button();
             this.InputCoursesInStudent = new System.Windows.Forms.TextBox();
             this.DummyCoursesInStudentLabel = new System.Windows.Forms.Label();
-            this.StudentsInCourseGoButton = new System.Windows.Forms.Button();
-            this.DummySICLabel = new System.Windows.Forms.Label();
-            this.InputStudentsInCourse = new System.Windows.Forms.TextBox();
-            this.StudentsInCourseGrid = new System.Windows.Forms.DataGridView();
-            this.SIC_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SIC_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CoursesPrerequisites = new System.Windows.Forms.Panel();
-            this.CPQDummyLabel = new System.Windows.Forms.Label();
-            this.CPQGoButton = new System.Windows.Forms.Button();
-            this.InputCPQ = new System.Windows.Forms.TextBox();
             this.CPQDataGrid = new System.Windows.Forms.DataGridView();
             this.CPQ_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HomeCPQButton = new System.Windows.Forms.Button();
+            this.InputCPQ = new System.Windows.Forms.TextBox();
+            this.CPQGoButton = new System.Windows.Forms.Button();
+            this.CPQDummyLabel = new System.Windows.Forms.Label();
             this.Home.SuspendLayout();
             this.HomeCourseBox.SuspendLayout();
             this.HomeStudentBox.SuspendLayout();
@@ -74,9 +74,9 @@
             this.StudentOverviewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllStudentsGrid)).BeginInit();
             this.StudentsInCourse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).BeginInit();
             this.CoursesInStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CoursesInStudentGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).BeginInit();
             this.CoursesPrerequisites.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +101,15 @@
             this.HomeCourseBox.TabIndex = 0;
             this.HomeCourseBox.TabStop = false;
             this.HomeCourseBox.Text = "Courses";
+            // 
+            // HomeCPQButton
+            // 
+            this.HomeCPQButton.Location = new System.Drawing.Point(6, 77);
+            this.HomeCPQButton.Name = "HomeCPQButton";
+            this.HomeCPQButton.Size = new System.Drawing.Size(108, 23);
+            this.HomeCPQButton.TabIndex = 2;
+            this.HomeCPQButton.Text = "Set Prerequisites";
+            this.HomeCPQButton.UseVisualStyleBackColor = true;
             // 
             // HomeStudentsOfCourseButton
             // 
@@ -254,6 +263,57 @@
             this.StudentsInCourse.TabIndex = 11;
             this.StudentsInCourse.Visible = false;
             // 
+            // StudentsInCourseGrid
+            // 
+            this.StudentsInCourseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentsInCourseGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SIC_IDColumn,
+            this.SIC_NameColumn});
+            this.StudentsInCourseGrid.Location = new System.Drawing.Point(3, 31);
+            this.StudentsInCourseGrid.Name = "StudentsInCourseGrid";
+            this.StudentsInCourseGrid.ReadOnly = true;
+            this.StudentsInCourseGrid.Size = new System.Drawing.Size(442, 180);
+            this.StudentsInCourseGrid.TabIndex = 3;
+            // 
+            // SIC_IDColumn
+            // 
+            this.SIC_IDColumn.HeaderText = "Student ID";
+            this.SIC_IDColumn.Name = "SIC_IDColumn";
+            this.SIC_IDColumn.ReadOnly = true;
+            this.SIC_IDColumn.Width = 50;
+            // 
+            // SIC_NameColumn
+            // 
+            this.SIC_NameColumn.HeaderText = "Student Name";
+            this.SIC_NameColumn.Name = "SIC_NameColumn";
+            this.SIC_NameColumn.ReadOnly = true;
+            this.SIC_NameColumn.Width = 348;
+            // 
+            // InputStudentsInCourse
+            // 
+            this.InputStudentsInCourse.Location = new System.Drawing.Point(183, 6);
+            this.InputStudentsInCourse.Name = "InputStudentsInCourse";
+            this.InputStudentsInCourse.Size = new System.Drawing.Size(100, 20);
+            this.InputStudentsInCourse.TabIndex = 2;
+            // 
+            // DummySICLabel
+            // 
+            this.DummySICLabel.AutoSize = true;
+            this.DummySICLabel.Location = new System.Drawing.Point(106, 11);
+            this.DummySICLabel.Name = "DummySICLabel";
+            this.DummySICLabel.Size = new System.Drawing.Size(71, 13);
+            this.DummySICLabel.TabIndex = 1;
+            this.DummySICLabel.Text = "Course Name";
+            // 
+            // StudentsInCourseGoButton
+            // 
+            this.StudentsInCourseGoButton.Location = new System.Drawing.Point(289, 5);
+            this.StudentsInCourseGoButton.Name = "StudentsInCourseGoButton";
+            this.StudentsInCourseGoButton.Size = new System.Drawing.Size(75, 23);
+            this.StudentsInCourseGoButton.TabIndex = 0;
+            this.StudentsInCourseGoButton.Text = "Go";
+            this.StudentsInCourseGoButton.UseVisualStyleBackColor = true;
+            // 
             // CoursesInStudent
             // 
             this.CoursesInStudent.Controls.Add(this.CoursesInStudentGrid);
@@ -316,57 +376,6 @@
             this.DummyCoursesInStudentLabel.TabIndex = 0;
             this.DummyCoursesInStudentLabel.Text = "Student Name";
             // 
-            // StudentsInCourseGoButton
-            // 
-            this.StudentsInCourseGoButton.Location = new System.Drawing.Point(289, 5);
-            this.StudentsInCourseGoButton.Name = "StudentsInCourseGoButton";
-            this.StudentsInCourseGoButton.Size = new System.Drawing.Size(75, 23);
-            this.StudentsInCourseGoButton.TabIndex = 0;
-            this.StudentsInCourseGoButton.Text = "Go";
-            this.StudentsInCourseGoButton.UseVisualStyleBackColor = true;
-            // 
-            // DummySICLabel
-            // 
-            this.DummySICLabel.AutoSize = true;
-            this.DummySICLabel.Location = new System.Drawing.Point(106, 11);
-            this.DummySICLabel.Name = "DummySICLabel";
-            this.DummySICLabel.Size = new System.Drawing.Size(71, 13);
-            this.DummySICLabel.TabIndex = 1;
-            this.DummySICLabel.Text = "Course Name";
-            // 
-            // InputStudentsInCourse
-            // 
-            this.InputStudentsInCourse.Location = new System.Drawing.Point(183, 6);
-            this.InputStudentsInCourse.Name = "InputStudentsInCourse";
-            this.InputStudentsInCourse.Size = new System.Drawing.Size(100, 20);
-            this.InputStudentsInCourse.TabIndex = 2;
-            // 
-            // StudentsInCourseGrid
-            // 
-            this.StudentsInCourseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsInCourseGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SIC_IDColumn,
-            this.SIC_NameColumn});
-            this.StudentsInCourseGrid.Location = new System.Drawing.Point(3, 31);
-            this.StudentsInCourseGrid.Name = "StudentsInCourseGrid";
-            this.StudentsInCourseGrid.ReadOnly = true;
-            this.StudentsInCourseGrid.Size = new System.Drawing.Size(442, 180);
-            this.StudentsInCourseGrid.TabIndex = 3;
-            // 
-            // SIC_IDColumn
-            // 
-            this.SIC_IDColumn.HeaderText = "Student ID";
-            this.SIC_IDColumn.Name = "SIC_IDColumn";
-            this.SIC_IDColumn.ReadOnly = true;
-            this.SIC_IDColumn.Width = 50;
-            // 
-            // SIC_NameColumn
-            // 
-            this.SIC_NameColumn.HeaderText = "Student Name";
-            this.SIC_NameColumn.Name = "SIC_NameColumn";
-            this.SIC_NameColumn.ReadOnly = true;
-            this.SIC_NameColumn.Width = 348;
-            // 
             // CoursesPrerequisites
             // 
             this.CoursesPrerequisites.Controls.Add(this.CPQDataGrid);
@@ -379,33 +388,9 @@
             this.CoursesPrerequisites.TabIndex = 12;
             this.CoursesPrerequisites.Visible = false;
             // 
-            // CPQDummyLabel
-            // 
-            this.CPQDummyLabel.AutoSize = true;
-            this.CPQDummyLabel.Location = new System.Drawing.Point(76, 38);
-            this.CPQDummyLabel.Name = "CPQDummyLabel";
-            this.CPQDummyLabel.Size = new System.Drawing.Size(74, 13);
-            this.CPQDummyLabel.TabIndex = 0;
-            this.CPQDummyLabel.Text = "Course Name:";
-            // 
-            // CPQGoButton
-            // 
-            this.CPQGoButton.Location = new System.Drawing.Point(75, 109);
-            this.CPQGoButton.Name = "CPQGoButton";
-            this.CPQGoButton.Size = new System.Drawing.Size(75, 23);
-            this.CPQGoButton.TabIndex = 1;
-            this.CPQGoButton.Text = "Go";
-            this.CPQGoButton.UseVisualStyleBackColor = true;
-            // 
-            // InputCPQ
-            // 
-            this.InputCPQ.Location = new System.Drawing.Point(63, 73);
-            this.InputCPQ.Name = "InputCPQ";
-            this.InputCPQ.Size = new System.Drawing.Size(100, 20);
-            this.InputCPQ.TabIndex = 2;
-            // 
             // CPQDataGrid
             // 
+            this.CPQDataGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.CPQDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CPQDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CPQ_NameColumn});
@@ -420,14 +405,32 @@
             this.CPQ_NameColumn.Name = "CPQ_NameColumn";
             this.CPQ_NameColumn.Width = 150;
             // 
-            // HomeCPQButton
+            // InputCPQ
             // 
-            this.HomeCPQButton.Location = new System.Drawing.Point(6, 77);
-            this.HomeCPQButton.Name = "HomeCPQButton";
-            this.HomeCPQButton.Size = new System.Drawing.Size(108, 23);
-            this.HomeCPQButton.TabIndex = 2;
-            this.HomeCPQButton.Text = "Set Prerequisites";
-            this.HomeCPQButton.UseVisualStyleBackColor = true;
+            this.InputCPQ.Location = new System.Drawing.Point(29, 73);
+            this.InputCPQ.Name = "InputCPQ";
+            this.InputCPQ.Size = new System.Drawing.Size(185, 20);
+            this.InputCPQ.TabIndex = 2;
+            // 
+            // CPQGoButton
+            // 
+            this.CPQGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPQGoButton.Location = new System.Drawing.Point(82, 117);
+            this.CPQGoButton.Name = "CPQGoButton";
+            this.CPQGoButton.Size = new System.Drawing.Size(75, 23);
+            this.CPQGoButton.TabIndex = 1;
+            this.CPQGoButton.Text = "Go";
+            this.CPQGoButton.UseVisualStyleBackColor = true;
+            // 
+            // CPQDummyLabel
+            // 
+            this.CPQDummyLabel.AutoSize = true;
+            this.CPQDummyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPQDummyLabel.Location = new System.Drawing.Point(26, 31);
+            this.CPQDummyLabel.Name = "CPQDummyLabel";
+            this.CPQDummyLabel.Size = new System.Drawing.Size(106, 16);
+            this.CPQDummyLabel.TabIndex = 0;
+            this.CPQDummyLabel.Text = "Course Name:";
             // 
             // AdminForm
             // 
@@ -455,10 +458,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.AllStudentsGrid)).EndInit();
             this.StudentsInCourse.ResumeLayout(false);
             this.StudentsInCourse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).EndInit();
             this.CoursesInStudent.ResumeLayout(false);
             this.CoursesInStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CoursesInStudentGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).EndInit();
             this.CoursesPrerequisites.ResumeLayout(false);
             this.CoursesPrerequisites.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).EndInit();
