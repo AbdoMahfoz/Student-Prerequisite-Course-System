@@ -8,76 +8,77 @@ static public class FileOperations
         CoursesFile.Write();
         Users_SubjectsFile.WriteData();
         Subjects_UsersFile.WriteSubjects();
+        UsersFile.WriteinFile();
     }
     static public class UsersFile
     {
-        static public void WriteUser(Student s)
+        static ArrayList<Student> Data = null;
+        static public void AddStudent(Student s)
         {
-            FileStream FW = new FileStream("User.Txt", FileMode.Append);
-            StreamWriter SW = new StreamWriter(FW);
-            SW.WriteLine(s.ID + "@" + s.Name + "@" + s.Password + "@" + s.AcademicYear);
-            SW.Close();
-        }
-        static public bool CheckUser(Student s)
-        {
-            FileStream FR = new FileStream("User.Txt", FileMode.Open);
-            StreamReader SR = new StreamReader(FR);
-            bool found = false;
-            while ((SR.Peek() != -1) && (found == false))
-            {
-                string Recored = SR.ReadLine();
-                string[] field;
-                field = Recored.Split('@');
-                string ID = field[0];
-                string Name = field[1];
-                string password = field[2];
-                string Academic_Year = field[3];
-                if ((s.Name.CompareTo(Name) == 0) && (s.Password.CompareTo(password) == 0))
-                {
-                    found = true;
-                    s.ID = int.Parse(field[0]);
-                    s.AcademicYear = field[3];
-                }
-            }
-            SR.Close();
-            if (found == true)
-                return true;
-            else
-                return false;
+            Data.Append(s);
         }
         static public Student GetUser(int ID)
         {
+            foreach(Student s in Data)
+            {
+                if(s.ID == ID)
+                {
+                    return s;
+                }
+            }
+            return null;
+        }
+        static void Read()
+        {
+            if (Data != null) return;
+            Data = new ArrayList<Student>();
+            if (!File.Exists("User.txt"))
+            {
+                return;
+            }
             FileStream fs = new FileStream("User.txt", FileMode.Open);
             StreamReader sr = new StreamReader(fs);
             string[] Records, Fields;
-            bool found = false;
-            Records = sr.ReadToEnd().Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+            Records = sr.ReadToEnd().Split('#');
             sr.Close();
-            int index = 0;
-            for (int i = 0; i < Records.Length - 1; i++)
+            for (int i = 0; i < Records.Length; i++)
             {
                 Fields = Records[i].Split('@');
-                if (int.Parse(Fields[0]) == ID)
+                Data[i].ID = int.Parse(Fields[0]);
+                Data[i].Name = Fields[1];
+                Data[i].Password = Fields[2];
+                Data[i].AcademicYear = Fields[3];
+            }
+        }
+        static public void WriteinFile()
+        {
+            FileStream fs = new FileStream("User.Txt", FileMode.Create);
+            StreamWriter sw = new StreamWriter(fs);
+            string Recordss = "";
+            for (int i = 0; i < Data.Count; i++)
+            {
+                Recordss = Data[i].ID + "@" + Data[i].Name + "@" + Data[i].Password + "@" + Data[i].AcademicYear + "#";
+            }
+            sw.Write(Recordss);
+        }
+        static public bool CheckUser(string Name, string Password)
+        {
+            bool found = false;
+            bool RightPass = false;
+            for (int i = 0; i < Data.Count; i++)
+            {
+                if (Data[i].Name.CompareTo(Name) == 0)
                 {
                     found = true;
-                    index = i;
+                    if (Data[i].Password.CompareTo(Password) == 0)
+                    {
+                        RightPass = true;
+                    }
                     break;
                 }
             }
-            if (found == false)
-            {
-                return null;
-            }
-            else
-            {
-                Student student = new Student();
-                Fields = Records[index].Split('@');
-                student.ID = int.Parse(Fields[0]);
-                student.Name = Fields[1];
-                student.Password = Fields[2];
-                student.AcademicYear = Fields[3];
-                return student;
-            }
+            if (found && RightPass) return true;
+            else return false;
         }
     }
     static public class AdminFile
@@ -204,7 +205,7 @@ static public class FileOperations
         }
         static public string[] Read()
         {
-            if(!File.Exists("Tree.txt"))
+            if (!File.Exists("Tree.txt"))
             {
                 return null;
             }
@@ -373,3 +374,4 @@ static public class FileOperations
         }
     }
 }
+
