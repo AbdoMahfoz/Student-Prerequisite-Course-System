@@ -223,16 +223,39 @@ public partial class AdminForm : Form
     {
         CPQDataGrid.Rows.Clear();
         InputCPQ.Text = "";
+        CPQActiveCourseLabel.Text = "null";
     }
     private void CPQGoButton_Click(object sender, System.EventArgs e)
     {
-        foreach (Course c in AdminOperations.CourseFunctions.GetAllConnectedCourses(InputCPQ.Text))
+        CPQDataGrid.Rows.Clear();
+        Course[] childs = AdminOperations.CourseFunctions.GetAllConnectedCourses(InputCPQ.Text);
+        if(childs == null)
+        {
+            MessageBox.Show("Course non existant");
+            CPQActiveCourseLabel.Text = "null";
+            return;
+        }
+        CPQActiveCourseLabel.Text = InputCPQ.Text;
+        InputCPQ.Text = "";
+        foreach (Course c in childs)
         {
             CPQDataGrid.Rows.Add(c.Name);
         }
     }
-    private void CPQDataGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+    private void CPQAddButton_Click(object sender, System.EventArgs e)
     {
-
+        if (!AdminOperations.CourseFunctions.ConnectCourses(CPQActiveCourseLabel.Text, CPQAddInputTextBox.Text))
+        {
+            MessageBox.Show("Course is non existant");
+        }
+        else
+        {
+            CPQDataGrid.Rows.Add(CPQAddInputTextBox.Text);
+        }
+        CPQAddInputTextBox.Text = "";
+    }
+    private void CPQDataGrid_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+    {
+        AdminOperations.CourseFunctions.DisconnectCourses(CPQActiveCourseLabel.Text, e.Row.Cells[0].Value as string);
     }
 }

@@ -33,7 +33,7 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
     {
         value.TreeIndex = count;
         Elements.Append(value);
-        AdjacencyList.Count++;
+        AdjacencyList.Append(new ArrayList<int>());
         count++;
         if(typeof(T) == typeof(Course))
         {
@@ -49,50 +49,45 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
         }
         AdjacencyList[dependant.TreeIndex].Append(dependee.TreeIndex);
     }
+    public void Disconnect(T dependant, T dependee)
+    {
+        for(int i = 0; i < AdjacencyList[dependant.TreeIndex].Count; i++)
+        {
+            if(AdjacencyList[dependant.TreeIndex][i] == dependee.TreeIndex)
+            {
+                AdjacencyList[dependant.TreeIndex].DeleteAt(i);
+                return;
+            }
+        }
+    }
     public void DeleteElement(T value)
     {
         if(value.TreeIndex == -1)
         {
             return;
         }
-        for(int i = 0; i < AdjacencyList.Count; i++)
-        {
-            if(i == value.TreeIndex)
-            {
-                AdjacencyList.DeleteAt(i);
-                i--;
-            }
-            else
-            {
-                bool UpdateIndex = false;
-                for(int j = 0; j < AdjacencyList[i].Count; j++)
-                {
-                    if(j == value.TreeIndex)
-                    {
-                        AdjacencyList[i].DeleteAt(j);
-                        j--;
-                        UpdateIndex = true;
-                    }
-                    else if(UpdateIndex)
-                    {
-                        AdjacencyList[i][j]--;
-                    }
-                }
-            }
-        }
-        bool Flag = false;
+        bool HitElement = false;
         for(int i = 0; i < Elements.Count; i++)
         {
-            if(Elements[i] == value)
+            if(Elements[i].TreeIndex == value.TreeIndex)
             {
-                Flag = true;
+                HitElement = true;
             }
-            else if(Flag)
+            else if(HitElement)
             {
                 Elements[i].TreeIndex--;
             }
         }
+        for(int i = 0; i < AdjacencyList.Count; i++)
+        {
+            for(int j = 0; j < AdjacencyList[i].Count; j++)
+            {
+                AdjacencyList[i][j] = Elements[AdjacencyList[i][j]].TreeIndex;
+            }
+        }
         Elements.DeleteAt(value.TreeIndex);
+        AdjacencyList.DeleteAt(value.TreeIndex);
+        value.TreeIndex = -1;
         count--;
     }
     public T[] GetAllConnectedElements(T Target)

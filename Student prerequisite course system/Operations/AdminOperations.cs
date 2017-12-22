@@ -56,6 +56,21 @@ static public class AdminOperations
             Courses.AddElement(c);
             return true;
         }
+        static public bool ConnectCourses(string DependantName, string DependeeName)
+        {
+            Course Dependant = FileOperations.CoursesFile.GetCourse(DependantName);
+            Course Dependee = FileOperations.CoursesFile.GetCourse(DependeeName);
+            if(Dependant == null || Dependee == null)
+            {
+                return false;
+            }
+            Courses.Connect(Dependant, Dependee);
+            return true;
+        }
+        static public void DisconnectCourses(string DependantName, string DependeeName)
+        {
+            Courses.Disconnect(FileOperations.CoursesFile.GetCourse(DependantName), FileOperations.CoursesFile.GetCourse(DependeeName));
+        }
         static public Student[] GetStudentsEnrolledInCourse(string CourseName)
         {
             Course c = FileOperations.CoursesFile.GetCourse(CourseName);
@@ -63,6 +78,10 @@ static public class AdminOperations
         }
         static public Course[] GetAllConnectedCourses(string CourseName)
         {
+            if(Courses == null)
+            {
+                LoadCourse();
+            }
             Course c = FileOperations.CoursesFile.GetCourse(CourseName);
             return Courses.GetAllConnectedElements(c);
         }

@@ -27,610 +27,683 @@ partial class AdminForm
     /// </summary>
     private void InitializeComponent()
     {
-        System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
-        this.Home = new System.Windows.Forms.Panel();
-        this.HomeStudentBox = new System.Windows.Forms.GroupBox();
-        this.HomeCoursesOfStudentButton = new System.Windows.Forms.Button();
-        this.HomeAllStudentsButton = new System.Windows.Forms.Button();
-        this.HomeCourseBox = new System.Windows.Forms.GroupBox();
-        this.HomeCPQButton = new System.Windows.Forms.Button();
-        this.HomeStudentsOfCourseButton = new System.Windows.Forms.Button();
-        this.HomeAllCoursesButton = new System.Windows.Forms.Button();
-        this.CourseOverviewPanel = new System.Windows.Forms.Panel();
-        this.AllCoursesGrid = new System.Windows.Forms.DataGridView();
-        this.CO_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.CO_DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.DummyAllCoursesLabel = new System.Windows.Forms.Label();
-        this.DummyAllStudentsLabel = new System.Windows.Forms.Label();
-        this.StudentOverviewPanel = new System.Windows.Forms.Panel();
-        this.AllStudentsGrid = new System.Windows.Forms.DataGridView();
-        this.StudentsInCourse = new System.Windows.Forms.Panel();
-        this.button1 = new System.Windows.Forms.Button();
-        this.textBox1 = new System.Windows.Forms.TextBox();
-        this.label1 = new System.Windows.Forms.Label();
-        this.StudentsInCourseGrid = new System.Windows.Forms.DataGridView();
-        this.SIC_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.SIC_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.CoursesInStudent = new System.Windows.Forms.Panel();
-        this.CoursesInStudentGrid = new System.Windows.Forms.DataGridView();
-        this.CIS_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.CIS_DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.StudentInCoursesGoButton = new System.Windows.Forms.Button();
-        this.InputCoursesInStudent = new System.Windows.Forms.TextBox();
-        this.DummyCoursesInStudentLabel = new System.Windows.Forms.Label();
-        this.CoursesPrerequisites = new System.Windows.Forms.Panel();
-        this.CPQDataGrid = new System.Windows.Forms.DataGridView();
-        this.CPQ_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.InputCPQ = new System.Windows.Forms.TextBox();
-        this.CPQGoButton = new System.Windows.Forms.Button();
-        this.CPQDummyLabel = new System.Windows.Forms.Label();
-        this.LogIn = new System.Windows.Forms.Panel();
-        this.LoginButton = new System.Windows.Forms.Button();
-        this.PasswordPlaceHolder = new System.Windows.Forms.Panel();
-        this.PasswordTextBox = new System.Windows.Forms.TextBox();
-        this.DumyyPasswordPicture = new System.Windows.Forms.Panel();
-        this.PasswordLabel = new System.Windows.Forms.Label();
-        this.UserNamePlaceHolder = new System.Windows.Forms.Panel();
-        this.UserNameTextBox = new System.Windows.Forms.TextBox();
-        this.DumyyUserPicture = new System.Windows.Forms.Panel();
-        this.UserNameLabel = new System.Windows.Forms.Label();
-        this.BigUserPicture = new System.Windows.Forms.Panel();
-        this.SO_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.SO_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.SO_PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.SO_YearColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-        this.Home.SuspendLayout();
-        this.HomeStudentBox.SuspendLayout();
-        this.HomeCourseBox.SuspendLayout();
-        this.CourseOverviewPanel.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.AllCoursesGrid)).BeginInit();
-        this.StudentOverviewPanel.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.AllStudentsGrid)).BeginInit();
-        this.StudentsInCourse.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).BeginInit();
-        this.CoursesInStudent.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.CoursesInStudentGrid)).BeginInit();
-        this.CoursesPrerequisites.SuspendLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).BeginInit();
-        this.LogIn.SuspendLayout();
-        this.PasswordPlaceHolder.SuspendLayout();
-        this.UserNamePlaceHolder.SuspendLayout();
-        this.SuspendLayout();
-        // 
-        // Home
-        // 
-        this.Home.Controls.Add(this.HomeStudentBox);
-        this.Home.Controls.Add(this.HomeCourseBox);
-        this.Home.Location = new System.Drawing.Point(445, 0);
-        this.Home.Name = "Home";
-        this.Home.Size = new System.Drawing.Size(132, 214);
-        this.Home.TabIndex = 8;
-        this.Home.Visible = false;
-        // 
-        // HomeStudentBox
-        // 
-        this.HomeStudentBox.Controls.Add(this.HomeCoursesOfStudentButton);
-        this.HomeStudentBox.Controls.Add(this.HomeAllStudentsButton);
-        this.HomeStudentBox.Location = new System.Drawing.Point(6, 6);
-        this.HomeStudentBox.Name = "HomeStudentBox";
-        this.HomeStudentBox.Size = new System.Drawing.Size(120, 84);
-        this.HomeStudentBox.TabIndex = 10;
-        this.HomeStudentBox.TabStop = false;
-        this.HomeStudentBox.Text = "Student";
-        // 
-        // HomeCoursesOfStudentButton
-        // 
-        this.HomeCoursesOfStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.HomeCoursesOfStudentButton.Location = new System.Drawing.Point(-1, 48);
-        this.HomeCoursesOfStudentButton.Name = "HomeCoursesOfStudentButton";
-        this.HomeCoursesOfStudentButton.Size = new System.Drawing.Size(120, 23);
-        this.HomeCoursesOfStudentButton.TabIndex = 1;
-        this.HomeCoursesOfStudentButton.Text = "Courses Of Student";
-        this.HomeCoursesOfStudentButton.UseVisualStyleBackColor = true;
-        this.HomeCoursesOfStudentButton.Click += new System.EventHandler(this.HomeButtonClick);
-        // 
-        // HomeAllStudentsButton
-        // 
-        this.HomeAllStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.HomeAllStudentsButton.Location = new System.Drawing.Point(-1, 19);
-        this.HomeAllStudentsButton.Name = "HomeAllStudentsButton";
-        this.HomeAllStudentsButton.Size = new System.Drawing.Size(120, 23);
-        this.HomeAllStudentsButton.TabIndex = 0;
-        this.HomeAllStudentsButton.Text = "All Students";
-        this.HomeAllStudentsButton.UseVisualStyleBackColor = true;
-        this.HomeAllStudentsButton.Click += new System.EventHandler(this.HomeButtonClick);
-        // 
-        // HomeCourseBox
-        // 
-        this.HomeCourseBox.Controls.Add(this.HomeCPQButton);
-        this.HomeCourseBox.Controls.Add(this.HomeStudentsOfCourseButton);
-        this.HomeCourseBox.Controls.Add(this.HomeAllCoursesButton);
-        this.HomeCourseBox.Location = new System.Drawing.Point(6, 98);
-        this.HomeCourseBox.Name = "HomeCourseBox";
-        this.HomeCourseBox.Size = new System.Drawing.Size(120, 113);
-        this.HomeCourseBox.TabIndex = 0;
-        this.HomeCourseBox.TabStop = false;
-        this.HomeCourseBox.Text = "Courses";
-        // 
-        // HomeCPQButton
-        // 
-        this.HomeCPQButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.HomeCPQButton.Location = new System.Drawing.Point(1, 77);
-        this.HomeCPQButton.Name = "HomeCPQButton";
-        this.HomeCPQButton.Size = new System.Drawing.Size(120, 23);
-        this.HomeCPQButton.TabIndex = 2;
-        this.HomeCPQButton.Text = "Set Prerequisites";
-        this.HomeCPQButton.UseVisualStyleBackColor = true;
-        this.HomeCPQButton.Click += new System.EventHandler(this.HomeButtonClick);
-        // 
-        // HomeStudentsOfCourseButton
-        // 
-        this.HomeStudentsOfCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.HomeStudentsOfCourseButton.Location = new System.Drawing.Point(0, 48);
-        this.HomeStudentsOfCourseButton.Name = "HomeStudentsOfCourseButton";
-        this.HomeStudentsOfCourseButton.Size = new System.Drawing.Size(120, 23);
-        this.HomeStudentsOfCourseButton.TabIndex = 1;
-        this.HomeStudentsOfCourseButton.Text = "Students Of Course";
-        this.HomeStudentsOfCourseButton.UseVisualStyleBackColor = true;
-        this.HomeStudentsOfCourseButton.Click += new System.EventHandler(this.HomeButtonClick);
-        // 
-        // HomeAllCoursesButton
-        // 
-        this.HomeAllCoursesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.HomeAllCoursesButton.Location = new System.Drawing.Point(1, 19);
-        this.HomeAllCoursesButton.Name = "HomeAllCoursesButton";
-        this.HomeAllCoursesButton.Size = new System.Drawing.Size(119, 23);
-        this.HomeAllCoursesButton.TabIndex = 0;
-        this.HomeAllCoursesButton.Text = "All Courses";
-        this.HomeAllCoursesButton.UseVisualStyleBackColor = true;
-        this.HomeAllCoursesButton.Click += new System.EventHandler(this.HomeButtonClick);
-        // 
-        // CourseOverviewPanel
-        // 
-        this.CourseOverviewPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-        this.CourseOverviewPanel.Controls.Add(this.AllCoursesGrid);
-        this.CourseOverviewPanel.Controls.Add(this.DummyAllCoursesLabel);
-        this.CourseOverviewPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.CourseOverviewPanel.Location = new System.Drawing.Point(0, 0);
-        this.CourseOverviewPanel.Name = "CourseOverviewPanel";
-        this.CourseOverviewPanel.Size = new System.Drawing.Size(446, 214);
-        this.CourseOverviewPanel.TabIndex = 10;
-        this.CourseOverviewPanel.Visible = false;
-        this.CourseOverviewPanel.VisibleChanged += new System.EventHandler(this.CourseOverviewPanel_VisibleChanged);
-        // 
-        // AllCoursesGrid
-        // 
-        this.AllCoursesGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-        this.AllCoursesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.AllCoursesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
+            this.Home = new System.Windows.Forms.Panel();
+            this.HomeStudentBox = new System.Windows.Forms.GroupBox();
+            this.HomeCoursesOfStudentButton = new System.Windows.Forms.Button();
+            this.HomeAllStudentsButton = new System.Windows.Forms.Button();
+            this.HomeCourseBox = new System.Windows.Forms.GroupBox();
+            this.HomeCPQButton = new System.Windows.Forms.Button();
+            this.HomeStudentsOfCourseButton = new System.Windows.Forms.Button();
+            this.HomeAllCoursesButton = new System.Windows.Forms.Button();
+            this.CourseOverviewPanel = new System.Windows.Forms.Panel();
+            this.AllCoursesGrid = new System.Windows.Forms.DataGridView();
+            this.CO_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CO_DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DummyAllCoursesLabel = new System.Windows.Forms.Label();
+            this.DummyAllStudentsLabel = new System.Windows.Forms.Label();
+            this.StudentOverviewPanel = new System.Windows.Forms.Panel();
+            this.AllStudentsGrid = new System.Windows.Forms.DataGridView();
+            this.SO_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_YearColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentsInCourse = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.StudentsInCourseGrid = new System.Windows.Forms.DataGridView();
+            this.SIC_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIC_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CoursesInStudent = new System.Windows.Forms.Panel();
+            this.CoursesInStudentGrid = new System.Windows.Forms.DataGridView();
+            this.CIS_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CIS_DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentInCoursesGoButton = new System.Windows.Forms.Button();
+            this.InputCoursesInStudent = new System.Windows.Forms.TextBox();
+            this.DummyCoursesInStudentLabel = new System.Windows.Forms.Label();
+            this.CoursesPrerequisites = new System.Windows.Forms.Panel();
+            this.CPQGroupBox = new System.Windows.Forms.GroupBox();
+            this.DummyCourseNameInBoxLabel = new System.Windows.Forms.Label();
+            this.CPQAddButton = new System.Windows.Forms.Button();
+            this.CPQAddInputTextBox = new System.Windows.Forms.TextBox();
+            this.CPQDummyActiveCourseLabel = new System.Windows.Forms.Label();
+            this.CPQActiveCourseLabel = new System.Windows.Forms.Label();
+            this.CPQDataGrid = new System.Windows.Forms.DataGridView();
+            this.CPQ_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InputCPQ = new System.Windows.Forms.TextBox();
+            this.CPQGoButton = new System.Windows.Forms.Button();
+            this.CPQDummyLabel = new System.Windows.Forms.Label();
+            this.LogIn = new System.Windows.Forms.Panel();
+            this.LoginButton = new System.Windows.Forms.Button();
+            this.PasswordPlaceHolder = new System.Windows.Forms.Panel();
+            this.PasswordTextBox = new System.Windows.Forms.TextBox();
+            this.DumyyPasswordPicture = new System.Windows.Forms.Panel();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UserNamePlaceHolder = new System.Windows.Forms.Panel();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.DumyyUserPicture = new System.Windows.Forms.Panel();
+            this.UserNameLabel = new System.Windows.Forms.Label();
+            this.BigUserPicture = new System.Windows.Forms.Panel();
+            this.Home.SuspendLayout();
+            this.HomeStudentBox.SuspendLayout();
+            this.HomeCourseBox.SuspendLayout();
+            this.CourseOverviewPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AllCoursesGrid)).BeginInit();
+            this.StudentOverviewPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AllStudentsGrid)).BeginInit();
+            this.StudentsInCourse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).BeginInit();
+            this.CoursesInStudent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CoursesInStudentGrid)).BeginInit();
+            this.CoursesPrerequisites.SuspendLayout();
+            this.CPQGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).BeginInit();
+            this.LogIn.SuspendLayout();
+            this.PasswordPlaceHolder.SuspendLayout();
+            this.UserNamePlaceHolder.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // Home
+            // 
+            this.Home.Controls.Add(this.HomeStudentBox);
+            this.Home.Controls.Add(this.HomeCourseBox);
+            this.Home.Location = new System.Drawing.Point(445, 0);
+            this.Home.Name = "Home";
+            this.Home.Size = new System.Drawing.Size(132, 214);
+            this.Home.TabIndex = 8;
+            this.Home.Visible = false;
+            // 
+            // HomeStudentBox
+            // 
+            this.HomeStudentBox.Controls.Add(this.HomeCoursesOfStudentButton);
+            this.HomeStudentBox.Controls.Add(this.HomeAllStudentsButton);
+            this.HomeStudentBox.Location = new System.Drawing.Point(6, 6);
+            this.HomeStudentBox.Name = "HomeStudentBox";
+            this.HomeStudentBox.Size = new System.Drawing.Size(120, 84);
+            this.HomeStudentBox.TabIndex = 10;
+            this.HomeStudentBox.TabStop = false;
+            this.HomeStudentBox.Text = "Student";
+            // 
+            // HomeCoursesOfStudentButton
+            // 
+            this.HomeCoursesOfStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeCoursesOfStudentButton.Location = new System.Drawing.Point(-1, 48);
+            this.HomeCoursesOfStudentButton.Name = "HomeCoursesOfStudentButton";
+            this.HomeCoursesOfStudentButton.Size = new System.Drawing.Size(120, 23);
+            this.HomeCoursesOfStudentButton.TabIndex = 1;
+            this.HomeCoursesOfStudentButton.Text = "Courses Of Student";
+            this.HomeCoursesOfStudentButton.UseVisualStyleBackColor = true;
+            this.HomeCoursesOfStudentButton.Click += new System.EventHandler(this.HomeButtonClick);
+            // 
+            // HomeAllStudentsButton
+            // 
+            this.HomeAllStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeAllStudentsButton.Location = new System.Drawing.Point(-1, 19);
+            this.HomeAllStudentsButton.Name = "HomeAllStudentsButton";
+            this.HomeAllStudentsButton.Size = new System.Drawing.Size(120, 23);
+            this.HomeAllStudentsButton.TabIndex = 0;
+            this.HomeAllStudentsButton.Text = "All Students";
+            this.HomeAllStudentsButton.UseVisualStyleBackColor = true;
+            this.HomeAllStudentsButton.Click += new System.EventHandler(this.HomeButtonClick);
+            // 
+            // HomeCourseBox
+            // 
+            this.HomeCourseBox.Controls.Add(this.HomeCPQButton);
+            this.HomeCourseBox.Controls.Add(this.HomeStudentsOfCourseButton);
+            this.HomeCourseBox.Controls.Add(this.HomeAllCoursesButton);
+            this.HomeCourseBox.Location = new System.Drawing.Point(6, 98);
+            this.HomeCourseBox.Name = "HomeCourseBox";
+            this.HomeCourseBox.Size = new System.Drawing.Size(120, 113);
+            this.HomeCourseBox.TabIndex = 0;
+            this.HomeCourseBox.TabStop = false;
+            this.HomeCourseBox.Text = "Courses";
+            // 
+            // HomeCPQButton
+            // 
+            this.HomeCPQButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeCPQButton.Location = new System.Drawing.Point(1, 77);
+            this.HomeCPQButton.Name = "HomeCPQButton";
+            this.HomeCPQButton.Size = new System.Drawing.Size(120, 23);
+            this.HomeCPQButton.TabIndex = 2;
+            this.HomeCPQButton.Text = "Set Prerequisites";
+            this.HomeCPQButton.UseVisualStyleBackColor = true;
+            this.HomeCPQButton.Click += new System.EventHandler(this.HomeButtonClick);
+            // 
+            // HomeStudentsOfCourseButton
+            // 
+            this.HomeStudentsOfCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeStudentsOfCourseButton.Location = new System.Drawing.Point(0, 48);
+            this.HomeStudentsOfCourseButton.Name = "HomeStudentsOfCourseButton";
+            this.HomeStudentsOfCourseButton.Size = new System.Drawing.Size(120, 23);
+            this.HomeStudentsOfCourseButton.TabIndex = 1;
+            this.HomeStudentsOfCourseButton.Text = "Students Of Course";
+            this.HomeStudentsOfCourseButton.UseVisualStyleBackColor = true;
+            this.HomeStudentsOfCourseButton.Click += new System.EventHandler(this.HomeButtonClick);
+            // 
+            // HomeAllCoursesButton
+            // 
+            this.HomeAllCoursesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeAllCoursesButton.Location = new System.Drawing.Point(1, 19);
+            this.HomeAllCoursesButton.Name = "HomeAllCoursesButton";
+            this.HomeAllCoursesButton.Size = new System.Drawing.Size(119, 23);
+            this.HomeAllCoursesButton.TabIndex = 0;
+            this.HomeAllCoursesButton.Text = "All Courses";
+            this.HomeAllCoursesButton.UseVisualStyleBackColor = true;
+            this.HomeAllCoursesButton.Click += new System.EventHandler(this.HomeButtonClick);
+            // 
+            // CourseOverviewPanel
+            // 
+            this.CourseOverviewPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CourseOverviewPanel.Controls.Add(this.AllCoursesGrid);
+            this.CourseOverviewPanel.Controls.Add(this.DummyAllCoursesLabel);
+            this.CourseOverviewPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseOverviewPanel.Location = new System.Drawing.Point(0, 0);
+            this.CourseOverviewPanel.Name = "CourseOverviewPanel";
+            this.CourseOverviewPanel.Size = new System.Drawing.Size(446, 214);
+            this.CourseOverviewPanel.TabIndex = 10;
+            this.CourseOverviewPanel.Visible = false;
+            this.CourseOverviewPanel.VisibleChanged += new System.EventHandler(this.CourseOverviewPanel_VisibleChanged);
+            // 
+            // AllCoursesGrid
+            // 
+            this.AllCoursesGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.AllCoursesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AllCoursesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CO_NameColumn,
             this.CO_DescriptionColumn});
-        this.AllCoursesGrid.Location = new System.Drawing.Point(1, 28);
-        this.AllCoursesGrid.Name = "AllCoursesGrid";
-        this.AllCoursesGrid.Size = new System.Drawing.Size(442, 183);
-        this.AllCoursesGrid.TabIndex = 10;
-        this.AllCoursesGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllCoursesGrid_CellValueChanged);
-        this.AllCoursesGrid.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.AllCoursesGrid_UserDeletingRow);
-        // 
-        // CO_NameColumn
-        // 
-        this.CO_NameColumn.HeaderText = "Course Name";
-        this.CO_NameColumn.Name = "CO_NameColumn";
-        // 
-        // CO_DescriptionColumn
-        // 
-        this.CO_DescriptionColumn.HeaderText = "Course Description";
-        this.CO_DescriptionColumn.Name = "CO_DescriptionColumn";
-        this.CO_DescriptionColumn.Width = 299;
-        // 
-        // DummyAllCoursesLabel
-        // 
-        this.DummyAllCoursesLabel.AutoSize = true;
-        this.DummyAllCoursesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.DummyAllCoursesLabel.Location = new System.Drawing.Point(163, 9);
-        this.DummyAllCoursesLabel.Name = "DummyAllCoursesLabel";
-        this.DummyAllCoursesLabel.Size = new System.Drawing.Size(87, 16);
-        this.DummyAllCoursesLabel.TabIndex = 9;
-        this.DummyAllCoursesLabel.Text = "All Courses";
-        // 
-        // DummyAllStudentsLabel
-        // 
-        this.DummyAllStudentsLabel.AutoSize = true;
-        this.DummyAllStudentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.DummyAllStudentsLabel.Location = new System.Drawing.Point(176, 9);
-        this.DummyAllStudentsLabel.Name = "DummyAllStudentsLabel";
-        this.DummyAllStudentsLabel.Size = new System.Drawing.Size(90, 16);
-        this.DummyAllStudentsLabel.TabIndex = 8;
-        this.DummyAllStudentsLabel.Text = "All Students";
-        // 
-        // StudentOverviewPanel
-        // 
-        this.StudentOverviewPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-        this.StudentOverviewPanel.Controls.Add(this.AllStudentsGrid);
-        this.StudentOverviewPanel.Controls.Add(this.DummyAllStudentsLabel);
-        this.StudentOverviewPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.StudentOverviewPanel.Location = new System.Drawing.Point(-2, 0);
-        this.StudentOverviewPanel.Name = "StudentOverviewPanel";
-        this.StudentOverviewPanel.Size = new System.Drawing.Size(450, 214);
-        this.StudentOverviewPanel.TabIndex = 7;
-        this.StudentOverviewPanel.Visible = false;
-        this.StudentOverviewPanel.VisibleChanged += new System.EventHandler(this.StudentOverviewPanel_VisibleChanged);
-        // 
-        // AllStudentsGrid
-        // 
-        this.AllStudentsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.AllStudentsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AllCoursesGrid.Location = new System.Drawing.Point(1, 28);
+            this.AllCoursesGrid.Name = "AllCoursesGrid";
+            this.AllCoursesGrid.Size = new System.Drawing.Size(442, 183);
+            this.AllCoursesGrid.TabIndex = 10;
+            this.AllCoursesGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllCoursesGrid_CellValueChanged);
+            this.AllCoursesGrid.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.AllCoursesGrid_UserDeletingRow);
+            // 
+            // CO_NameColumn
+            // 
+            this.CO_NameColumn.HeaderText = "Course Name";
+            this.CO_NameColumn.Name = "CO_NameColumn";
+            // 
+            // CO_DescriptionColumn
+            // 
+            this.CO_DescriptionColumn.HeaderText = "Course Description";
+            this.CO_DescriptionColumn.Name = "CO_DescriptionColumn";
+            this.CO_DescriptionColumn.Width = 299;
+            // 
+            // DummyAllCoursesLabel
+            // 
+            this.DummyAllCoursesLabel.AutoSize = true;
+            this.DummyAllCoursesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DummyAllCoursesLabel.Location = new System.Drawing.Point(163, 9);
+            this.DummyAllCoursesLabel.Name = "DummyAllCoursesLabel";
+            this.DummyAllCoursesLabel.Size = new System.Drawing.Size(87, 16);
+            this.DummyAllCoursesLabel.TabIndex = 9;
+            this.DummyAllCoursesLabel.Text = "All Courses";
+            // 
+            // DummyAllStudentsLabel
+            // 
+            this.DummyAllStudentsLabel.AutoSize = true;
+            this.DummyAllStudentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DummyAllStudentsLabel.Location = new System.Drawing.Point(176, 9);
+            this.DummyAllStudentsLabel.Name = "DummyAllStudentsLabel";
+            this.DummyAllStudentsLabel.Size = new System.Drawing.Size(90, 16);
+            this.DummyAllStudentsLabel.TabIndex = 8;
+            this.DummyAllStudentsLabel.Text = "All Students";
+            // 
+            // StudentOverviewPanel
+            // 
+            this.StudentOverviewPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.StudentOverviewPanel.Controls.Add(this.AllStudentsGrid);
+            this.StudentOverviewPanel.Controls.Add(this.DummyAllStudentsLabel);
+            this.StudentOverviewPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentOverviewPanel.Location = new System.Drawing.Point(-2, 0);
+            this.StudentOverviewPanel.Name = "StudentOverviewPanel";
+            this.StudentOverviewPanel.Size = new System.Drawing.Size(450, 214);
+            this.StudentOverviewPanel.TabIndex = 7;
+            this.StudentOverviewPanel.Visible = false;
+            this.StudentOverviewPanel.VisibleChanged += new System.EventHandler(this.StudentOverviewPanel_VisibleChanged);
+            // 
+            // AllStudentsGrid
+            // 
+            this.AllStudentsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AllStudentsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SO_IDColumn,
             this.SO_NameColumn,
             this.SO_PasswordColumn,
             this.SO_YearColumn});
-        this.AllStudentsGrid.Location = new System.Drawing.Point(3, 35);
-        this.AllStudentsGrid.Name = "AllStudentsGrid";
-        this.AllStudentsGrid.Size = new System.Drawing.Size(442, 176);
-        this.AllStudentsGrid.TabIndex = 9;
-        this.AllStudentsGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllStudentsGrid_CellValueChanged);
-        this.AllStudentsGrid.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.AllStudentsGrid_UserDeletingRow);
-        // 
-        // StudentsInCourse
-        // 
-        this.StudentsInCourse.Controls.Add(this.button1);
-        this.StudentsInCourse.Controls.Add(this.textBox1);
-        this.StudentsInCourse.Controls.Add(this.label1);
-        this.StudentsInCourse.Controls.Add(this.StudentsInCourseGrid);
-        this.StudentsInCourse.Location = new System.Drawing.Point(0, 0);
-        this.StudentsInCourse.Name = "StudentsInCourse";
-        this.StudentsInCourse.Size = new System.Drawing.Size(448, 214);
-        this.StudentsInCourse.TabIndex = 11;
-        this.StudentsInCourse.Visible = false;
-        // 
-        // button1
-        // 
-        this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.button1.Location = new System.Drawing.Point(282, 7);
-        this.button1.Name = "button1";
-        this.button1.Size = new System.Drawing.Size(52, 23);
-        this.button1.TabIndex = 6;
-        this.button1.Text = "GO";
-        this.button1.UseVisualStyleBackColor = true;
-        // 
-        // textBox1
-        // 
-        this.textBox1.Location = new System.Drawing.Point(164, 7);
-        this.textBox1.Name = "textBox1";
-        this.textBox1.Size = new System.Drawing.Size(100, 20);
-        this.textBox1.TabIndex = 5;
-        // 
-        // label1
-        // 
-        this.label1.AutoSize = true;
-        this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.label1.Location = new System.Drawing.Point(47, 7);
-        this.label1.Name = "label1";
-        this.label1.Size = new System.Drawing.Size(110, 16);
-        this.label1.TabIndex = 4;
-        this.label1.Text = "Courses Name";
-        // 
-        // StudentsInCourseGrid
-        // 
-        this.StudentsInCourseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.StudentsInCourseGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.AllStudentsGrid.Location = new System.Drawing.Point(3, 35);
+            this.AllStudentsGrid.Name = "AllStudentsGrid";
+            this.AllStudentsGrid.Size = new System.Drawing.Size(442, 176);
+            this.AllStudentsGrid.TabIndex = 9;
+            this.AllStudentsGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllStudentsGrid_CellValueChanged);
+            this.AllStudentsGrid.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.AllStudentsGrid_UserDeletingRow);
+            // 
+            // SO_IDColumn
+            // 
+            this.SO_IDColumn.HeaderText = "ID";
+            this.SO_IDColumn.Name = "SO_IDColumn";
+            this.SO_IDColumn.Width = 50;
+            // 
+            // SO_NameColumn
+            // 
+            this.SO_NameColumn.HeaderText = "Student Name";
+            this.SO_NameColumn.Name = "SO_NameColumn";
+            this.SO_NameColumn.Width = 148;
+            // 
+            // SO_PasswordColumn
+            // 
+            this.SO_PasswordColumn.HeaderText = "Password";
+            this.SO_PasswordColumn.Name = "SO_PasswordColumn";
+            // 
+            // SO_YearColumn
+            // 
+            this.SO_YearColumn.HeaderText = "Acadmic Year";
+            this.SO_YearColumn.Name = "SO_YearColumn";
+            // 
+            // StudentsInCourse
+            // 
+            this.StudentsInCourse.Controls.Add(this.button1);
+            this.StudentsInCourse.Controls.Add(this.textBox1);
+            this.StudentsInCourse.Controls.Add(this.label1);
+            this.StudentsInCourse.Controls.Add(this.StudentsInCourseGrid);
+            this.StudentsInCourse.Location = new System.Drawing.Point(0, 0);
+            this.StudentsInCourse.Name = "StudentsInCourse";
+            this.StudentsInCourse.Size = new System.Drawing.Size(448, 214);
+            this.StudentsInCourse.TabIndex = 11;
+            this.StudentsInCourse.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(282, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "GO";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(164, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(47, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Courses Name";
+            // 
+            // StudentsInCourseGrid
+            // 
+            this.StudentsInCourseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentsInCourseGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SIC_IDColumn,
             this.SIC_NameColumn});
-        this.StudentsInCourseGrid.Location = new System.Drawing.Point(3, 31);
-        this.StudentsInCourseGrid.Name = "StudentsInCourseGrid";
-        this.StudentsInCourseGrid.ReadOnly = true;
-        this.StudentsInCourseGrid.Size = new System.Drawing.Size(442, 180);
-        this.StudentsInCourseGrid.TabIndex = 3;
-        // 
-        // SIC_IDColumn
-        // 
-        this.SIC_IDColumn.HeaderText = "Student ID";
-        this.SIC_IDColumn.Name = "SIC_IDColumn";
-        this.SIC_IDColumn.ReadOnly = true;
-        this.SIC_IDColumn.Width = 50;
-        // 
-        // SIC_NameColumn
-        // 
-        this.SIC_NameColumn.HeaderText = "Student Name";
-        this.SIC_NameColumn.Name = "SIC_NameColumn";
-        this.SIC_NameColumn.ReadOnly = true;
-        this.SIC_NameColumn.Width = 348;
-        // 
-        // CoursesInStudent
-        // 
-        this.CoursesInStudent.Controls.Add(this.CoursesInStudentGrid);
-        this.CoursesInStudent.Controls.Add(this.StudentInCoursesGoButton);
-        this.CoursesInStudent.Controls.Add(this.InputCoursesInStudent);
-        this.CoursesInStudent.Controls.Add(this.DummyCoursesInStudentLabel);
-        this.CoursesInStudent.Location = new System.Drawing.Point(0, 0);
-        this.CoursesInStudent.Name = "CoursesInStudent";
-        this.CoursesInStudent.Size = new System.Drawing.Size(448, 214);
-        this.CoursesInStudent.TabIndex = 0;
-        this.CoursesInStudent.Visible = false;
-        // 
-        // CoursesInStudentGrid
-        // 
-        this.CoursesInStudentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.CoursesInStudentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StudentsInCourseGrid.Location = new System.Drawing.Point(3, 31);
+            this.StudentsInCourseGrid.Name = "StudentsInCourseGrid";
+            this.StudentsInCourseGrid.ReadOnly = true;
+            this.StudentsInCourseGrid.Size = new System.Drawing.Size(442, 180);
+            this.StudentsInCourseGrid.TabIndex = 3;
+            // 
+            // SIC_IDColumn
+            // 
+            this.SIC_IDColumn.HeaderText = "Student ID";
+            this.SIC_IDColumn.Name = "SIC_IDColumn";
+            this.SIC_IDColumn.ReadOnly = true;
+            this.SIC_IDColumn.Width = 50;
+            // 
+            // SIC_NameColumn
+            // 
+            this.SIC_NameColumn.HeaderText = "Student Name";
+            this.SIC_NameColumn.Name = "SIC_NameColumn";
+            this.SIC_NameColumn.ReadOnly = true;
+            this.SIC_NameColumn.Width = 348;
+            // 
+            // CoursesInStudent
+            // 
+            this.CoursesInStudent.Controls.Add(this.CoursesInStudentGrid);
+            this.CoursesInStudent.Controls.Add(this.StudentInCoursesGoButton);
+            this.CoursesInStudent.Controls.Add(this.InputCoursesInStudent);
+            this.CoursesInStudent.Controls.Add(this.DummyCoursesInStudentLabel);
+            this.CoursesInStudent.Location = new System.Drawing.Point(0, 0);
+            this.CoursesInStudent.Name = "CoursesInStudent";
+            this.CoursesInStudent.Size = new System.Drawing.Size(448, 214);
+            this.CoursesInStudent.TabIndex = 0;
+            this.CoursesInStudent.Visible = false;
+            // 
+            // CoursesInStudentGrid
+            // 
+            this.CoursesInStudentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CoursesInStudentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CIS_NameColumn,
             this.CIS_DescriptionColumn});
-        this.CoursesInStudentGrid.Location = new System.Drawing.Point(1, 28);
-        this.CoursesInStudentGrid.Name = "CoursesInStudentGrid";
-        this.CoursesInStudentGrid.ReadOnly = true;
-        this.CoursesInStudentGrid.Size = new System.Drawing.Size(447, 186);
-        this.CoursesInStudentGrid.TabIndex = 3;
-        // 
-        // CIS_NameColumn
-        // 
-        this.CIS_NameColumn.HeaderText = "Course Name";
-        this.CIS_NameColumn.Name = "CIS_NameColumn";
-        this.CIS_NameColumn.ReadOnly = true;
-        // 
-        // CIS_DescriptionColumn
-        // 
-        this.CIS_DescriptionColumn.HeaderText = "Course Description";
-        this.CIS_DescriptionColumn.Name = "CIS_DescriptionColumn";
-        this.CIS_DescriptionColumn.ReadOnly = true;
-        this.CIS_DescriptionColumn.Width = 304;
-        // 
-        // StudentInCoursesGoButton
-        // 
-        this.StudentInCoursesGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.StudentInCoursesGoButton.Location = new System.Drawing.Point(300, 3);
-        this.StudentInCoursesGoButton.Name = "StudentInCoursesGoButton";
-        this.StudentInCoursesGoButton.Size = new System.Drawing.Size(75, 23);
-        this.StudentInCoursesGoButton.TabIndex = 2;
-        this.StudentInCoursesGoButton.Text = "Go";
-        this.StudentInCoursesGoButton.UseVisualStyleBackColor = true;
-        // 
-        // InputCoursesInStudent
-        // 
-        this.InputCoursesInStudent.Location = new System.Drawing.Point(194, 5);
-        this.InputCoursesInStudent.Name = "InputCoursesInStudent";
-        this.InputCoursesInStudent.Size = new System.Drawing.Size(100, 20);
-        this.InputCoursesInStudent.TabIndex = 1;
-        // 
-        // DummyCoursesInStudentLabel
-        // 
-        this.DummyCoursesInStudentLabel.AutoSize = true;
-        this.DummyCoursesInStudentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.DummyCoursesInStudentLabel.Location = new System.Drawing.Point(83, 5);
-        this.DummyCoursesInStudentLabel.Name = "DummyCoursesInStudentLabel";
-        this.DummyCoursesInStudentLabel.Size = new System.Drawing.Size(105, 16);
-        this.DummyCoursesInStudentLabel.TabIndex = 0;
-        this.DummyCoursesInStudentLabel.Text = "Student Name";
-        // 
-        // CoursesPrerequisites
-        // 
-        this.CoursesPrerequisites.Controls.Add(this.CPQDataGrid);
-        this.CoursesPrerequisites.Controls.Add(this.InputCPQ);
-        this.CoursesPrerequisites.Controls.Add(this.CPQGoButton);
-        this.CoursesPrerequisites.Controls.Add(this.CPQDummyLabel);
-        this.CoursesPrerequisites.Location = new System.Drawing.Point(0, 0);
-        this.CoursesPrerequisites.Name = "CoursesPrerequisites";
-        this.CoursesPrerequisites.Size = new System.Drawing.Size(448, 214);
-        this.CoursesPrerequisites.TabIndex = 12;
-        this.CoursesPrerequisites.Visible = false;
-        this.CoursesPrerequisites.VisibleChanged += new System.EventHandler(this.CoursesPrerequisites_VisibleChanged);
-        // 
-        // CPQDataGrid
-        // 
-        this.CPQDataGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-        this.CPQDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.CPQDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CoursesInStudentGrid.Location = new System.Drawing.Point(1, 28);
+            this.CoursesInStudentGrid.Name = "CoursesInStudentGrid";
+            this.CoursesInStudentGrid.ReadOnly = true;
+            this.CoursesInStudentGrid.Size = new System.Drawing.Size(447, 186);
+            this.CoursesInStudentGrid.TabIndex = 3;
+            // 
+            // CIS_NameColumn
+            // 
+            this.CIS_NameColumn.HeaderText = "Course Name";
+            this.CIS_NameColumn.Name = "CIS_NameColumn";
+            this.CIS_NameColumn.ReadOnly = true;
+            // 
+            // CIS_DescriptionColumn
+            // 
+            this.CIS_DescriptionColumn.HeaderText = "Course Description";
+            this.CIS_DescriptionColumn.Name = "CIS_DescriptionColumn";
+            this.CIS_DescriptionColumn.ReadOnly = true;
+            this.CIS_DescriptionColumn.Width = 304;
+            // 
+            // StudentInCoursesGoButton
+            // 
+            this.StudentInCoursesGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentInCoursesGoButton.Location = new System.Drawing.Point(300, 3);
+            this.StudentInCoursesGoButton.Name = "StudentInCoursesGoButton";
+            this.StudentInCoursesGoButton.Size = new System.Drawing.Size(75, 23);
+            this.StudentInCoursesGoButton.TabIndex = 2;
+            this.StudentInCoursesGoButton.Text = "Go";
+            this.StudentInCoursesGoButton.UseVisualStyleBackColor = true;
+            // 
+            // InputCoursesInStudent
+            // 
+            this.InputCoursesInStudent.Location = new System.Drawing.Point(194, 5);
+            this.InputCoursesInStudent.Name = "InputCoursesInStudent";
+            this.InputCoursesInStudent.Size = new System.Drawing.Size(100, 20);
+            this.InputCoursesInStudent.TabIndex = 1;
+            // 
+            // DummyCoursesInStudentLabel
+            // 
+            this.DummyCoursesInStudentLabel.AutoSize = true;
+            this.DummyCoursesInStudentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DummyCoursesInStudentLabel.Location = new System.Drawing.Point(83, 5);
+            this.DummyCoursesInStudentLabel.Name = "DummyCoursesInStudentLabel";
+            this.DummyCoursesInStudentLabel.Size = new System.Drawing.Size(105, 16);
+            this.DummyCoursesInStudentLabel.TabIndex = 0;
+            this.DummyCoursesInStudentLabel.Text = "Student Name";
+            // 
+            // CoursesPrerequisites
+            // 
+            this.CoursesPrerequisites.Controls.Add(this.CPQGroupBox);
+            this.CoursesPrerequisites.Controls.Add(this.CPQDummyActiveCourseLabel);
+            this.CoursesPrerequisites.Controls.Add(this.CPQActiveCourseLabel);
+            this.CoursesPrerequisites.Controls.Add(this.CPQDataGrid);
+            this.CoursesPrerequisites.Controls.Add(this.InputCPQ);
+            this.CoursesPrerequisites.Controls.Add(this.CPQGoButton);
+            this.CoursesPrerequisites.Controls.Add(this.CPQDummyLabel);
+            this.CoursesPrerequisites.Location = new System.Drawing.Point(0, 0);
+            this.CoursesPrerequisites.Name = "CoursesPrerequisites";
+            this.CoursesPrerequisites.Size = new System.Drawing.Size(448, 214);
+            this.CoursesPrerequisites.TabIndex = 12;
+            this.CoursesPrerequisites.Visible = false;
+            this.CoursesPrerequisites.VisibleChanged += new System.EventHandler(this.CoursesPrerequisites_VisibleChanged);
+            // 
+            // CPQGroupBox
+            // 
+            this.CPQGroupBox.Controls.Add(this.DummyCourseNameInBoxLabel);
+            this.CPQGroupBox.Controls.Add(this.CPQAddButton);
+            this.CPQGroupBox.Controls.Add(this.CPQAddInputTextBox);
+            this.CPQGroupBox.Location = new System.Drawing.Point(15, 102);
+            this.CPQGroupBox.Name = "CPQGroupBox";
+            this.CPQGroupBox.Size = new System.Drawing.Size(224, 100);
+            this.CPQGroupBox.TabIndex = 6;
+            this.CPQGroupBox.TabStop = false;
+            this.CPQGroupBox.Text = "Add Course";
+            // 
+            // DummyCourseNameInBoxLabel
+            // 
+            this.DummyCourseNameInBoxLabel.AutoSize = true;
+            this.DummyCourseNameInBoxLabel.Location = new System.Drawing.Point(3, 43);
+            this.DummyCourseNameInBoxLabel.Name = "DummyCourseNameInBoxLabel";
+            this.DummyCourseNameInBoxLabel.Size = new System.Drawing.Size(77, 13);
+            this.DummyCourseNameInBoxLabel.TabIndex = 2;
+            this.DummyCourseNameInBoxLabel.Text = "Course Name :";
+            // 
+            // CPQAddButton
+            // 
+            this.CPQAddButton.Location = new System.Drawing.Point(125, 58);
+            this.CPQAddButton.Name = "CPQAddButton";
+            this.CPQAddButton.Size = new System.Drawing.Size(75, 23);
+            this.CPQAddButton.TabIndex = 1;
+            this.CPQAddButton.Text = "Add";
+            this.CPQAddButton.UseVisualStyleBackColor = true;
+            this.CPQAddButton.Click += new System.EventHandler(this.CPQAddButton_Click);
+            // 
+            // CPQAddInputTextBox
+            // 
+            this.CPQAddInputTextBox.Location = new System.Drawing.Point(6, 60);
+            this.CPQAddInputTextBox.Name = "CPQAddInputTextBox";
+            this.CPQAddInputTextBox.Size = new System.Drawing.Size(113, 20);
+            this.CPQAddInputTextBox.TabIndex = 0;
+            // 
+            // CPQDummyActiveCourseLabel
+            // 
+            this.CPQDummyActiveCourseLabel.AutoSize = true;
+            this.CPQDummyActiveCourseLabel.Location = new System.Drawing.Point(26, 23);
+            this.CPQDummyActiveCourseLabel.Name = "CPQDummyActiveCourseLabel";
+            this.CPQDummyActiveCourseLabel.Size = new System.Drawing.Size(79, 13);
+            this.CPQDummyActiveCourseLabel.TabIndex = 5;
+            this.CPQDummyActiveCourseLabel.Text = "Active Course :";
+            // 
+            // CPQActiveCourseLabel
+            // 
+            this.CPQActiveCourseLabel.AutoSize = true;
+            this.CPQActiveCourseLabel.Location = new System.Drawing.Point(111, 23);
+            this.CPQActiveCourseLabel.Name = "CPQActiveCourseLabel";
+            this.CPQActiveCourseLabel.Size = new System.Drawing.Size(23, 13);
+            this.CPQActiveCourseLabel.TabIndex = 4;
+            this.CPQActiveCourseLabel.Text = "null";
+            // 
+            // CPQDataGrid
+            // 
+            this.CPQDataGrid.AllowUserToAddRows = false;
+            this.CPQDataGrid.AllowUserToResizeRows = false;
+            this.CPQDataGrid.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.CPQDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CPQDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CPQ_NameColumn});
-        this.CPQDataGrid.Location = new System.Drawing.Point(251, 3);
-        this.CPQDataGrid.Name = "CPQDataGrid";
-        this.CPQDataGrid.ReadOnly = true;
-        this.CPQDataGrid.Size = new System.Drawing.Size(194, 208);
-        this.CPQDataGrid.TabIndex = 3;
-        this.CPQDataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.CPQDataGrid_CellValueChanged);
-        // 
-        // CPQ_NameColumn
-        // 
-        this.CPQ_NameColumn.HeaderText = "Course Name";
-        this.CPQ_NameColumn.Name = "CPQ_NameColumn";
-        this.CPQ_NameColumn.Width = 150;
-        // 
-        // InputCPQ
-        // 
-        this.InputCPQ.Location = new System.Drawing.Point(29, 73);
-        this.InputCPQ.Name = "InputCPQ";
-        this.InputCPQ.Size = new System.Drawing.Size(185, 20);
-        this.InputCPQ.TabIndex = 2;
-        // 
-        // CPQGoButton
-        // 
-        this.CPQGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.CPQGoButton.Location = new System.Drawing.Point(82, 117);
-        this.CPQGoButton.Name = "CPQGoButton";
-        this.CPQGoButton.Size = new System.Drawing.Size(75, 23);
-        this.CPQGoButton.TabIndex = 1;
-        this.CPQGoButton.Text = "Go";
-        this.CPQGoButton.UseVisualStyleBackColor = true;
-        this.CPQGoButton.Click += new System.EventHandler(this.CPQGoButton_Click);
-        // 
-        // CPQDummyLabel
-        // 
-        this.CPQDummyLabel.AutoSize = true;
-        this.CPQDummyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.CPQDummyLabel.Location = new System.Drawing.Point(26, 31);
-        this.CPQDummyLabel.Name = "CPQDummyLabel";
-        this.CPQDummyLabel.Size = new System.Drawing.Size(106, 16);
-        this.CPQDummyLabel.TabIndex = 0;
-        this.CPQDummyLabel.Text = "Course Name:";
-        // 
-        // LogIn
-        // 
-        this.LogIn.BackColor = System.Drawing.SystemColors.ControlLightLight;
-        this.LogIn.Controls.Add(this.LoginButton);
-        this.LogIn.Controls.Add(this.PasswordPlaceHolder);
-        this.LogIn.Controls.Add(this.PasswordLabel);
-        this.LogIn.Controls.Add(this.UserNamePlaceHolder);
-        this.LogIn.Controls.Add(this.UserNameLabel);
-        this.LogIn.Controls.Add(this.BigUserPicture);
-        this.LogIn.Location = new System.Drawing.Point(0, 0);
-        this.LogIn.Name = "LogIn";
-        this.LogIn.Size = new System.Drawing.Size(576, 214);
-        this.LogIn.TabIndex = 4;
-        // 
-        // LoginButton
-        // 
-        this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-        this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-        this.LoginButton.Location = new System.Drawing.Point(390, 178);
-        this.LoginButton.Name = "LoginButton";
-        this.LoginButton.Size = new System.Drawing.Size(43, 20);
-        this.LoginButton.TabIndex = 8;
-        this.LoginButton.Text = "OK";
-        this.LoginButton.UseVisualStyleBackColor = true;
-        this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
-        // 
-        // PasswordPlaceHolder
-        // 
-        this.PasswordPlaceHolder.Controls.Add(this.PasswordTextBox);
-        this.PasswordPlaceHolder.Controls.Add(this.DumyyPasswordPicture);
-        this.PasswordPlaceHolder.Location = new System.Drawing.Point(301, 118);
-        this.PasswordPlaceHolder.Name = "PasswordPlaceHolder";
-        this.PasswordPlaceHolder.Size = new System.Drawing.Size(231, 40);
-        this.PasswordPlaceHolder.TabIndex = 7;
-        // 
-        // PasswordTextBox
-        // 
-        this.PasswordTextBox.Location = new System.Drawing.Point(55, 3);
-        this.PasswordTextBox.Name = "PasswordTextBox";
-        this.PasswordTextBox.Size = new System.Drawing.Size(173, 20);
-        this.PasswordTextBox.TabIndex = 1;
-        // 
-        // DumyyPasswordPicture
-        // 
-        this.DumyyPasswordPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyPasswordPicture.BackgroundImage")));
-        this.DumyyPasswordPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-        this.DumyyPasswordPicture.Location = new System.Drawing.Point(0, 0);
-        this.DumyyPasswordPicture.Name = "DumyyPasswordPicture";
-        this.DumyyPasswordPicture.Size = new System.Drawing.Size(49, 40);
-        this.DumyyPasswordPicture.TabIndex = 0;
-        // 
-        // PasswordLabel
-        // 
-        this.PasswordLabel.AutoSize = true;
-        this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.PasswordLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-        this.PasswordLabel.Location = new System.Drawing.Point(298, 99);
-        this.PasswordLabel.Name = "PasswordLabel";
-        this.PasswordLabel.Size = new System.Drawing.Size(76, 16);
-        this.PasswordLabel.TabIndex = 6;
-        this.PasswordLabel.Text = "Password";
-        // 
-        // UserNamePlaceHolder
-        // 
-        this.UserNamePlaceHolder.Controls.Add(this.UserNameTextBox);
-        this.UserNamePlaceHolder.Controls.Add(this.DumyyUserPicture);
-        this.UserNamePlaceHolder.Location = new System.Drawing.Point(300, 37);
-        this.UserNamePlaceHolder.Name = "UserNamePlaceHolder";
-        this.UserNamePlaceHolder.Size = new System.Drawing.Size(232, 40);
-        this.UserNamePlaceHolder.TabIndex = 5;
-        // 
-        // UserNameTextBox
-        // 
-        this.UserNameTextBox.Location = new System.Drawing.Point(55, 4);
-        this.UserNameTextBox.Name = "UserNameTextBox";
-        this.UserNameTextBox.Size = new System.Drawing.Size(174, 20);
-        this.UserNameTextBox.TabIndex = 1;
-        // 
-        // DumyyUserPicture
-        // 
-        this.DumyyUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyUserPicture.BackgroundImage")));
-        this.DumyyUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-        this.DumyyUserPicture.Location = new System.Drawing.Point(1, 2);
-        this.DumyyUserPicture.Name = "DumyyUserPicture";
-        this.DumyyUserPicture.Size = new System.Drawing.Size(48, 37);
-        this.DumyyUserPicture.TabIndex = 0;
-        // 
-        // UserNameLabel
-        // 
-        this.UserNameLabel.AutoSize = true;
-        this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-        this.UserNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-        this.UserNameLabel.Location = new System.Drawing.Point(300, 16);
-        this.UserNameLabel.Name = "UserNameLabel";
-        this.UserNameLabel.Size = new System.Drawing.Size(79, 16);
-        this.UserNameLabel.TabIndex = 4;
-        this.UserNameLabel.Text = "Username";
-        // 
-        // BigUserPicture
-        // 
-        this.BigUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BigUserPicture.BackgroundImage")));
-        this.BigUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-        this.BigUserPicture.Location = new System.Drawing.Point(2, 2);
-        this.BigUserPicture.Name = "BigUserPicture";
-        this.BigUserPicture.Size = new System.Drawing.Size(240, 209);
-        this.BigUserPicture.TabIndex = 1;
-        // 
-        // SO_IDColumn
-        // 
-        this.SO_IDColumn.HeaderText = "ID";
-        this.SO_IDColumn.Name = "SO_IDColumn";
-        this.SO_IDColumn.Width = 50;
-        // 
-        // SO_NameColumn
-        // 
-        this.SO_NameColumn.HeaderText = "Student Name";
-        this.SO_NameColumn.Name = "SO_NameColumn";
-        this.SO_NameColumn.Width = 148;
-        // 
-        // SO_PasswordColumn
-        // 
-        this.SO_PasswordColumn.HeaderText = "Password";
-        this.SO_PasswordColumn.Name = "SO_PasswordColumn";
-        // 
-        // SO_YearColumn
-        // 
-        this.SO_YearColumn.HeaderText = "Acadmic Year";
-        this.SO_YearColumn.Name = "SO_YearColumn";
-        // 
-        // AdminForm
-        // 
-        this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-        this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-        this.ClientSize = new System.Drawing.Size(577, 214);
-        this.Controls.Add(this.CoursesPrerequisites);
-        this.Controls.Add(this.StudentOverviewPanel);
-        this.Controls.Add(this.CourseOverviewPanel);
-        this.Controls.Add(this.StudentsInCourse);
-        this.Controls.Add(this.CoursesInStudent);
-        this.Controls.Add(this.Home);
-        this.Controls.Add(this.LogIn);
-        this.ForeColor = System.Drawing.SystemColors.HotTrack;
-        this.Name = "AdminForm";
-        this.Text = "Admin Control";
-        this.Home.ResumeLayout(false);
-        this.HomeStudentBox.ResumeLayout(false);
-        this.HomeCourseBox.ResumeLayout(false);
-        this.CourseOverviewPanel.ResumeLayout(false);
-        this.CourseOverviewPanel.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.AllCoursesGrid)).EndInit();
-        this.StudentOverviewPanel.ResumeLayout(false);
-        this.StudentOverviewPanel.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.AllStudentsGrid)).EndInit();
-        this.StudentsInCourse.ResumeLayout(false);
-        this.StudentsInCourse.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).EndInit();
-        this.CoursesInStudent.ResumeLayout(false);
-        this.CoursesInStudent.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.CoursesInStudentGrid)).EndInit();
-        this.CoursesPrerequisites.ResumeLayout(false);
-        this.CoursesPrerequisites.PerformLayout();
-        ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).EndInit();
-        this.LogIn.ResumeLayout(false);
-        this.LogIn.PerformLayout();
-        this.PasswordPlaceHolder.ResumeLayout(false);
-        this.PasswordPlaceHolder.PerformLayout();
-        this.UserNamePlaceHolder.ResumeLayout(false);
-        this.UserNamePlaceHolder.PerformLayout();
-        this.ResumeLayout(false);
+            this.CPQDataGrid.Location = new System.Drawing.Point(251, 3);
+            this.CPQDataGrid.Name = "CPQDataGrid";
+            this.CPQDataGrid.ReadOnly = true;
+            this.CPQDataGrid.Size = new System.Drawing.Size(194, 208);
+            this.CPQDataGrid.TabIndex = 3;
+            this.CPQDataGrid.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.CPQDataGrid_UserDeletingRow);
+            // 
+            // CPQ_NameColumn
+            // 
+            this.CPQ_NameColumn.HeaderText = "Course Name";
+            this.CPQ_NameColumn.Name = "CPQ_NameColumn";
+            this.CPQ_NameColumn.ReadOnly = true;
+            this.CPQ_NameColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.CPQ_NameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.CPQ_NameColumn.Width = 150;
+            // 
+            // InputCPQ
+            // 
+            this.InputCPQ.Location = new System.Drawing.Point(40, 73);
+            this.InputCPQ.Name = "InputCPQ";
+            this.InputCPQ.Size = new System.Drawing.Size(103, 20);
+            this.InputCPQ.TabIndex = 2;
+            // 
+            // CPQGoButton
+            // 
+            this.CPQGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPQGoButton.Location = new System.Drawing.Point(149, 71);
+            this.CPQGoButton.Name = "CPQGoButton";
+            this.CPQGoButton.Size = new System.Drawing.Size(101, 23);
+            this.CPQGoButton.TabIndex = 1;
+            this.CPQGoButton.Text = "Go";
+            this.CPQGoButton.UseVisualStyleBackColor = true;
+            this.CPQGoButton.Click += new System.EventHandler(this.CPQGoButton_Click);
+            // 
+            // CPQDummyLabel
+            // 
+            this.CPQDummyLabel.AutoSize = true;
+            this.CPQDummyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPQDummyLabel.Location = new System.Drawing.Point(12, 54);
+            this.CPQDummyLabel.Name = "CPQDummyLabel";
+            this.CPQDummyLabel.Size = new System.Drawing.Size(106, 16);
+            this.CPQDummyLabel.TabIndex = 0;
+            this.CPQDummyLabel.Text = "Course Name:";
+            // 
+            // LogIn
+            // 
+            this.LogIn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LogIn.Controls.Add(this.LoginButton);
+            this.LogIn.Controls.Add(this.PasswordPlaceHolder);
+            this.LogIn.Controls.Add(this.PasswordLabel);
+            this.LogIn.Controls.Add(this.UserNamePlaceHolder);
+            this.LogIn.Controls.Add(this.UserNameLabel);
+            this.LogIn.Controls.Add(this.BigUserPicture);
+            this.LogIn.Location = new System.Drawing.Point(0, 0);
+            this.LogIn.Name = "LogIn";
+            this.LogIn.Size = new System.Drawing.Size(576, 214);
+            this.LogIn.TabIndex = 4;
+            // 
+            // LoginButton
+            // 
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LoginButton.Location = new System.Drawing.Point(390, 178);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(43, 20);
+            this.LoginButton.TabIndex = 8;
+            this.LoginButton.Text = "OK";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
+            // 
+            // PasswordPlaceHolder
+            // 
+            this.PasswordPlaceHolder.Controls.Add(this.PasswordTextBox);
+            this.PasswordPlaceHolder.Controls.Add(this.DumyyPasswordPicture);
+            this.PasswordPlaceHolder.Location = new System.Drawing.Point(301, 118);
+            this.PasswordPlaceHolder.Name = "PasswordPlaceHolder";
+            this.PasswordPlaceHolder.Size = new System.Drawing.Size(231, 40);
+            this.PasswordPlaceHolder.TabIndex = 7;
+            // 
+            // PasswordTextBox
+            // 
+            this.PasswordTextBox.Location = new System.Drawing.Point(55, 3);
+            this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.Size = new System.Drawing.Size(173, 20);
+            this.PasswordTextBox.TabIndex = 1;
+            // 
+            // DumyyPasswordPicture
+            // 
+            this.DumyyPasswordPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyPasswordPicture.BackgroundImage")));
+            this.DumyyPasswordPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DumyyPasswordPicture.Location = new System.Drawing.Point(0, 0);
+            this.DumyyPasswordPicture.Name = "DumyyPasswordPicture";
+            this.DumyyPasswordPicture.Size = new System.Drawing.Size(49, 40);
+            this.DumyyPasswordPicture.TabIndex = 0;
+            // 
+            // PasswordLabel
+            // 
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.PasswordLabel.Location = new System.Drawing.Point(298, 99);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(76, 16);
+            this.PasswordLabel.TabIndex = 6;
+            this.PasswordLabel.Text = "Password";
+            // 
+            // UserNamePlaceHolder
+            // 
+            this.UserNamePlaceHolder.Controls.Add(this.UserNameTextBox);
+            this.UserNamePlaceHolder.Controls.Add(this.DumyyUserPicture);
+            this.UserNamePlaceHolder.Location = new System.Drawing.Point(300, 37);
+            this.UserNamePlaceHolder.Name = "UserNamePlaceHolder";
+            this.UserNamePlaceHolder.Size = new System.Drawing.Size(232, 40);
+            this.UserNamePlaceHolder.TabIndex = 5;
+            // 
+            // UserNameTextBox
+            // 
+            this.UserNameTextBox.Location = new System.Drawing.Point(55, 4);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(174, 20);
+            this.UserNameTextBox.TabIndex = 1;
+            // 
+            // DumyyUserPicture
+            // 
+            this.DumyyUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyUserPicture.BackgroundImage")));
+            this.DumyyUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DumyyUserPicture.Location = new System.Drawing.Point(1, 2);
+            this.DumyyUserPicture.Name = "DumyyUserPicture";
+            this.DumyyUserPicture.Size = new System.Drawing.Size(48, 37);
+            this.DumyyUserPicture.TabIndex = 0;
+            // 
+            // UserNameLabel
+            // 
+            this.UserNameLabel.AutoSize = true;
+            this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.UserNameLabel.Location = new System.Drawing.Point(300, 16);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(79, 16);
+            this.UserNameLabel.TabIndex = 4;
+            this.UserNameLabel.Text = "Username";
+            // 
+            // BigUserPicture
+            // 
+            this.BigUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BigUserPicture.BackgroundImage")));
+            this.BigUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BigUserPicture.Location = new System.Drawing.Point(2, 2);
+            this.BigUserPicture.Name = "BigUserPicture";
+            this.BigUserPicture.Size = new System.Drawing.Size(240, 209);
+            this.BigUserPicture.TabIndex = 1;
+            // 
+            // AdminForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.ClientSize = new System.Drawing.Size(577, 214);
+            this.Controls.Add(this.CoursesPrerequisites);
+            this.Controls.Add(this.StudentOverviewPanel);
+            this.Controls.Add(this.CourseOverviewPanel);
+            this.Controls.Add(this.StudentsInCourse);
+            this.Controls.Add(this.CoursesInStudent);
+            this.Controls.Add(this.Home);
+            this.Controls.Add(this.LogIn);
+            this.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Name = "AdminForm";
+            this.Text = "Admin Control";
+            this.Home.ResumeLayout(false);
+            this.HomeStudentBox.ResumeLayout(false);
+            this.HomeCourseBox.ResumeLayout(false);
+            this.CourseOverviewPanel.ResumeLayout(false);
+            this.CourseOverviewPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AllCoursesGrid)).EndInit();
+            this.StudentOverviewPanel.ResumeLayout(false);
+            this.StudentOverviewPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AllStudentsGrid)).EndInit();
+            this.StudentsInCourse.ResumeLayout(false);
+            this.StudentsInCourse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).EndInit();
+            this.CoursesInStudent.ResumeLayout(false);
+            this.CoursesInStudent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CoursesInStudentGrid)).EndInit();
+            this.CoursesPrerequisites.ResumeLayout(false);
+            this.CoursesPrerequisites.PerformLayout();
+            this.CPQGroupBox.ResumeLayout(false);
+            this.CPQGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).EndInit();
+            this.LogIn.ResumeLayout(false);
+            this.LogIn.PerformLayout();
+            this.PasswordPlaceHolder.ResumeLayout(false);
+            this.PasswordPlaceHolder.PerformLayout();
+            this.UserNamePlaceHolder.ResumeLayout(false);
+            this.UserNamePlaceHolder.PerformLayout();
+            this.ResumeLayout(false);
 
     }
 
@@ -666,7 +739,6 @@ partial class AdminForm
     private System.Windows.Forms.TextBox InputCPQ;
     private System.Windows.Forms.Button CPQGoButton;
     private System.Windows.Forms.Label CPQDummyLabel;
-    private System.Windows.Forms.DataGridViewTextBoxColumn CPQ_NameColumn;
     private System.Windows.Forms.Button HomeCPQButton;
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.TextBox textBox1;
@@ -686,5 +758,12 @@ partial class AdminForm
     private System.Windows.Forms.DataGridViewTextBoxColumn SO_NameColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn SO_PasswordColumn;
     private System.Windows.Forms.DataGridViewTextBoxColumn SO_YearColumn;
+    private System.Windows.Forms.Label CPQActiveCourseLabel;
+    private System.Windows.Forms.Label CPQDummyActiveCourseLabel;
+    private System.Windows.Forms.DataGridViewTextBoxColumn CPQ_NameColumn;
+    private System.Windows.Forms.GroupBox CPQGroupBox;
+    private System.Windows.Forms.Label DummyCourseNameInBoxLabel;
+    private System.Windows.Forms.Button CPQAddButton;
+    private System.Windows.Forms.TextBox CPQAddInputTextBox;
 }
 

@@ -1,2 +1,3 @@
-Math
-Geography
+Math 1
+french
+geo
