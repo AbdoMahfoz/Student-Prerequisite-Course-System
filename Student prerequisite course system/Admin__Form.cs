@@ -258,4 +258,52 @@ public partial class AdminForm : Form
     {
         AdminOperations.CourseFunctions.DisconnectCourses(CPQActiveCourseLabel.Text, e.Row.Cells[0].Value as string);
     }
+    //Students in Course
+    private void CoursesInStudentGoButton_Click(object sender, System.EventArgs e)
+    {
+        CoursesInStudentGrid.Rows.Clear();
+        foreach(Student s in AdminOperations.StudentFunctions.AllStudents)
+        {
+            if(s.ID == InputCoursesInStudent.Value)
+            {
+                foreach(Pair<bool, Course> p in s.RegisteredCourses)
+                {
+                    CoursesInStudentGrid.Rows.Add(p.Second.Name, p.First.ToString());
+                }
+                return;
+            }
+        }
+        MessageBox.Show("Student ID nonexistant");
+        InputCoursesInStudent.Value = 0;
+    }
+    private void CoursesInStudent_VisibleChanged(object sender, System.EventArgs e)
+    {
+        if(CoursesInStudentGrid.Visible)
+        {
+            CoursesInStudentGrid.Rows.Clear();
+        }
+    }
+    //Courses in Student
+    private void StudentsInCourseGoButton_Click(object sender, System.EventArgs e)
+    {
+        StudentsInCourseGrid.Rows.Clear();
+        foreach (Course c in AdminOperations.CourseFunctions.Courses)
+        {
+            if (c.Name == InputStudentsInCourse.Text)
+            {
+                foreach(Student s in AdminOperations.CourseFunctions.GetStudentsEnrolledInCourse(c))
+                {
+                    StudentsInCourseGrid.Rows.Add(s.ID.ToString(), s.Name);
+                }
+                return;
+            }
+        }
+        MessageBox.Show("Course Non Existant");
+        InputStudentsInCourse.Text = "";
+    }
+    private void StudentsInCourse_VisibleChanged(object sender, System.EventArgs e)
+    {
+        InputStudentsInCourse.Text = "";
+        StudentsInCourseGrid.Rows.Clear();
+    }
 }

@@ -1,3 +1,4 @@
 Math
+Geo
 french
-geo
+english

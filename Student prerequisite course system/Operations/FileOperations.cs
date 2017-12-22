@@ -70,6 +70,7 @@ static public class FileOperations
             for (int i = 0; i < Records.Length; i++)
             {
                 Fields = Records[i].Split('@');
+                if (Fields.Length == 1) continue;
                 Data.Append(new Student()
                 {
                     ID = int.Parse(Fields[0]),

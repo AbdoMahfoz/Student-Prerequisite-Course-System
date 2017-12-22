@@ -71,9 +71,8 @@ static public class AdminOperations
         {
             Courses.Disconnect(FileOperations.CoursesFile.GetCourse(DependantName), FileOperations.CoursesFile.GetCourse(DependeeName));
         }
-        static public Student[] GetStudentsEnrolledInCourse(string CourseName)
+        static public Student[] GetStudentsEnrolledInCourse(Course c)
         {
-            Course c = FileOperations.CoursesFile.GetCourse(CourseName);
             return FileOperations.Subjects_UsersFile.GetStudents(c);
         }
         static public Course[] GetAllConnectedCourses(string CourseName)
