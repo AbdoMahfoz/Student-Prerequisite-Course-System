@@ -16,5 +16,5 @@ D:\Projects\Student prerequsite course system\Student prerequisite course system
 D:\Projects\Student prerequsite course system\Student prerequisite course system\obj\Debug\Student_form.resources
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_form.resources
 C:\A.Dsproject\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.MainForm.resources
-D:\Projects\Student prerequsite course system\Student prerequisite course system\obj\Debug\Student prerequisite course system.csprojResolveAssemblyReference.cache
 D:\Projects\Student prerequsite course system\Student prerequisite course system\obj\Debug\Student_prerequisite_course_system.AdminForm.resources
+D:\Projects\Student prerequsite course system\Student prerequisite course system\obj\Debug\Student prerequisite course system.csprojResolveAssemblyReference.cache

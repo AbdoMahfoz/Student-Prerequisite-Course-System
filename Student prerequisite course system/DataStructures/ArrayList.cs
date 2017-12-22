@@ -98,7 +98,7 @@ public class ArrayList<T> : IEnumerable<T>
     {
         if(count == 0)
         {
-            return null;
+            return new T[0];
         }
         T[] tmp = new T[count];
         Array.ConstrainedCopy(arr, 0, tmp, 0, count);

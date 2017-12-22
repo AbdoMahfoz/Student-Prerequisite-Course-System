@@ -4,22 +4,25 @@ static public class AdminOperations
 {
     static public class StudentFunctions
     {
-        static public Student[] GetAllStudents()
+        static public Student[] AllStudents
         {
-            throw new NotImplementedException();
+            get
+            {
+                return FileOperations.UsersFile.GetAllStudents();
+            }
         }
         static public bool AddStudent(Student s)
         {
-            if(FileOperations.UsersFile.CheckUser(s))
+            if(FileOperations.UsersFile.CheckUser(s.Name, s.Password) != -1)
             {
                 return false;
             }
-            FileOperations.UsersFile.WriteUser(s);
+            FileOperations.UsersFile.AddStudent(s);
             return true;
         }
-        static public bool UpdateStudent(Student s)
+        static public bool DeleteStudent(Student s)
         {
-            throw new NotImplementedException();
+            return FileOperations.UsersFile.DeleteStudent(s);
         }
     }
     static public class CourseFunctions

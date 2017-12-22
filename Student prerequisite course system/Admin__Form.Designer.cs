@@ -45,8 +45,6 @@
             this.DummyAllStudentsLabel = new System.Windows.Forms.Label();
             this.StudentOverviewPanel = new System.Windows.Forms.Panel();
             this.AllStudentsGrid = new System.Windows.Forms.DataGridView();
-            this.SO_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SO_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentsInCourse = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -78,6 +76,10 @@
             this.DumyyUserPicture = new System.Windows.Forms.Panel();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.BigUserPicture = new System.Windows.Forms.Panel();
+            this.SO_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SO_YearColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Home.SuspendLayout();
             this.HomeStudentBox.SuspendLayout();
             this.HomeCourseBox.SuspendLayout();
@@ -253,29 +255,22 @@
             this.StudentOverviewPanel.Size = new System.Drawing.Size(450, 214);
             this.StudentOverviewPanel.TabIndex = 7;
             this.StudentOverviewPanel.Visible = false;
+            this.StudentOverviewPanel.VisibleChanged += new System.EventHandler(this.StudentOverviewPanel_VisibleChanged);
             // 
             // AllStudentsGrid
             // 
             this.AllStudentsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AllStudentsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SO_IDColumn,
-            this.SO_NameColumn});
+            this.SO_NameColumn,
+            this.SO_PasswordColumn,
+            this.SO_YearColumn});
             this.AllStudentsGrid.Location = new System.Drawing.Point(3, 35);
             this.AllStudentsGrid.Name = "AllStudentsGrid";
             this.AllStudentsGrid.Size = new System.Drawing.Size(442, 176);
             this.AllStudentsGrid.TabIndex = 9;
-            // 
-            // SO_IDColumn
-            // 
-            this.SO_IDColumn.HeaderText = "ID";
-            this.SO_IDColumn.Name = "SO_IDColumn";
-            this.SO_IDColumn.Width = 50;
-            // 
-            // SO_NameColumn
-            // 
-            this.SO_NameColumn.HeaderText = "Student Name";
-            this.SO_NameColumn.Name = "SO_NameColumn";
-            this.SO_NameColumn.Width = 348;
+            this.AllStudentsGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllStudentsGrid_CellValueChanged);
+            this.AllStudentsGrid.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.AllStudentsGrid_UserDeletingRow);
             // 
             // StudentsInCourse
             // 
@@ -573,16 +568,38 @@
             this.BigUserPicture.Size = new System.Drawing.Size(240, 209);
             this.BigUserPicture.TabIndex = 1;
             // 
+            // SO_IDColumn
+            // 
+            this.SO_IDColumn.HeaderText = "ID";
+            this.SO_IDColumn.Name = "SO_IDColumn";
+            this.SO_IDColumn.Width = 50;
+            // 
+            // SO_NameColumn
+            // 
+            this.SO_NameColumn.HeaderText = "Student Name";
+            this.SO_NameColumn.Name = "SO_NameColumn";
+            this.SO_NameColumn.Width = 148;
+            // 
+            // SO_PasswordColumn
+            // 
+            this.SO_PasswordColumn.HeaderText = "Password";
+            this.SO_PasswordColumn.Name = "SO_PasswordColumn";
+            // 
+            // SO_YearColumn
+            // 
+            this.SO_YearColumn.HeaderText = "Acadmic Year";
+            this.SO_YearColumn.Name = "SO_YearColumn";
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(577, 214);
+            this.Controls.Add(this.StudentOverviewPanel);
             this.Controls.Add(this.CourseOverviewPanel);
             this.Controls.Add(this.CoursesPrerequisites);
             this.Controls.Add(this.StudentsInCourse);
-            this.Controls.Add(this.StudentOverviewPanel);
             this.Controls.Add(this.CoursesInStudent);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.LogIn);
@@ -625,8 +642,6 @@
         private System.Windows.Forms.Label DummyAllStudentsLabel;
         private System.Windows.Forms.Panel StudentOverviewPanel;
         private System.Windows.Forms.DataGridView AllStudentsGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SO_IDColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SO_NameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CO_NameColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn CO_DescriptionColumn;
         private System.Windows.Forms.Panel StudentsInCourse;
@@ -667,6 +682,10 @@
         private System.Windows.Forms.TextBox PasswordTextBox;
         private System.Windows.Forms.Panel DumyyPasswordPicture;
         private System.Windows.Forms.Button LoginButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_IDColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_NameColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_PasswordColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SO_YearColumn;
     }
 }
 

@@ -13,9 +13,35 @@ static public class FileOperations
     static public class UsersFile
     {
         static ArrayList<Student> Data = null;
+        static public Student[] GetAllStudents()
+        {
+            if (Data == null)
+            {
+                Read();
+            }
+            return Data.ToArray();
+        }
         static public void AddStudent(Student s)
         {
             Data.Append(s);
+            Users_SubjectsFile.RegisterStudent(s);
+        }
+        static public bool DeleteStudent(Student s)
+        {
+            if (Data == null)
+            {
+                Read();
+            }
+            for (int i = 0; i < Data.Count; i++)
+            {
+                if (Data[i] == s)
+                {
+                    Users_SubjectsFile.DeleteStudent(s);
+                    Data.DeleteAt(i);
+                    return true;
+                }
+            }
+            return false;
         }
         static public Student GetUser(int ID)
         {
@@ -44,27 +70,35 @@ static public class FileOperations
             for (int i = 0; i < Records.Length; i++)
             {
                 Fields = Records[i].Split('@');
-                Data[i].ID = int.Parse(Fields[0]);
-                Data[i].Name = Fields[1];
-                Data[i].Password = Fields[2];
-                Data[i].AcademicYear = Fields[3];
+                Data.Append(new Student()
+                {
+                    ID = int.Parse(Fields[0]),
+                    Name = Fields[1],
+                    Password = Fields[2],
+                    AcademicYear = Fields[3]
+                });
             }
+            sr.Close();
         }
         static public void WriteinFile()
         {
+            if (Data == null) return;
             FileStream fs = new FileStream("User.Txt", FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
             string Recordss = "";
             for (int i = 0; i < Data.Count; i++)
             {
-                Recordss = Data[i].ID + "@" + Data[i].Name + "@" + Data[i].Password + "@" + Data[i].AcademicYear + "#";
+                Recordss += Data[i].ID + "@" + Data[i].Name + "@" + Data[i].Password + "@" + Data[i].AcademicYear;
+                if (i != Data.Count - 1) Recordss += '#';
             }
             sw.Write(Recordss);
+            sw.Close();
         }
-        static public bool CheckUser(string Name, string Password)
+        static public int CheckUser(string Name, string Password)
         {
             bool found = false;
             bool RightPass = false;
+            int res = -1;
             for (int i = 0; i < Data.Count; i++)
             {
                 if (Data[i].Name.CompareTo(Name) == 0)
@@ -74,11 +108,12 @@ static public class FileOperations
                     {
                         RightPass = true;
                     }
+                    res = Data[i].ID;
                     break;
                 }
             }
-            if (found && RightPass) return true;
-            else return false;
+            if (found && RightPass) return res;
+            else return -1;
         }
     }
     static public class AdminFile
@@ -146,6 +181,7 @@ static public class FileOperations
             {
                 if (Data[i] == c)
                 {
+                    Subjects_UsersFile.DeleteCourse(c);
                     Data.DeleteAt(i);
                     return;
                 }
@@ -165,6 +201,7 @@ static public class FileOperations
                 }
             }
             Data.Append(c);
+            Subjects_UsersFile.RegisterCourse(c);
             return true;
         }
         static public Course GetCourse(string name)
@@ -244,7 +281,7 @@ static public class FileOperations
         static ArrayList<Pair<int, ArrayList<Pair<bool, Course>>>> Data = null;
         static void LoadData()
         {
-            FileStream FS = new FileStream("Users_Subjects.txt", FileMode.Open);
+            FileStream FS = new FileStream("Users_Subjects.txt", FileMode.OpenOrCreate);
             StreamReader SR = new StreamReader(FS);
             Data = new ArrayList<Pair<int, ArrayList<Pair<bool, Course>>>>();
             while (!SR.EndOfStream)
@@ -257,6 +294,7 @@ static public class FileOperations
                 n = int.Parse(fields[0]);
                 for (int i = 1; i < fields.Length; i += 2)
                 {
+                    if (fields[i] == "") continue;
                     Pair<bool, Course> bc = new Pair<bool, Course>();
                     if (fields[i] == "1")
                     {
@@ -274,6 +312,33 @@ static public class FileOperations
                 Data.Append(sn);
             }
             SR.Close();
+        }
+        static public void DeleteStudent(Student s)
+        {
+            if(Data == null)
+            {
+                LoadData();
+            }
+            for(int i = 0; i < Data.Count; i++)
+            {
+                if(Data[i].First == s.ID)
+                {
+                    Data.DeleteAt(i);
+                    return;
+                }
+            }
+        }
+        static public void RegisterStudent(Student s)
+        {
+            if (Data == null)
+            {
+                LoadData();
+            }
+            Data.Append(new Pair<int, ArrayList<Pair<bool, Course>>>()
+            {
+                First = s.ID,
+                Second = s.RegisteredCourses
+            });
         }
         static public ArrayList<Pair<bool, Course>> GetSubjects(Student s)
         {
@@ -297,7 +362,11 @@ static public class FileOperations
             StreamWriter sw = new StreamWriter(fs);
             for (int i = 0; i < Data.Count; i++)
             {
-                sw.Write(Data[i].First.ToString() + "@");
+                sw.Write(Data[i].First.ToString());
+                if(Data[i].Second.Count > 0)
+                {
+                    sw.Write('@');
+                }
                 for (int j = 0; i < Data[i].Second.Count; j++)
                 {
                     if (Data[i].Second[j].First)
@@ -322,7 +391,7 @@ static public class FileOperations
         static ArrayList<Pair<Course, ArrayList<Student>>> Data = null;
         static void LoadData()
         {
-            FileStream FS = new FileStream("Subjects_User.txt", FileMode.Open);
+            FileStream FS = new FileStream("Subjects_User.txt", FileMode.OpenOrCreate);
             StreamReader SR = new StreamReader(FS);
             Data = new ArrayList<Pair<Course, ArrayList<Student>>>();
             while (!SR.EndOfStream)
@@ -335,6 +404,7 @@ static public class FileOperations
                 c = CoursesFile.GetCourse(fields[0]);
                 for (int i = 1; i < fields.Length; i++)
                 {
+                    if (fields[i] == "") continue;
                     s.Append(UsersFile.GetUser(int.Parse(fields[i])));
                 }
                 cs.First = c;
@@ -342,6 +412,33 @@ static public class FileOperations
                 Data.Append(cs);
             }
             SR.Close();
+        }
+        static public void DeleteCourse(Course c)
+        {
+            if(Data == null)
+            {
+                LoadData();
+            }
+            for(int i = 0; i < Data.Count; i++)
+            {
+                if(Data[i].First == c)
+                {
+                    Data.DeleteAt(i);
+                    return;
+                }
+            }
+        }
+        static public void RegisterCourse(Course c)
+        {
+            if (Data == null)
+            {
+                LoadData();
+            }
+            Data.Append(new Pair<Course, ArrayList<Student>>()
+            {
+                First = c,
+                Second = new ArrayList<Student>()
+            });
         }
         static public void UpdateSubject(Course c, Student s)
         {
@@ -380,7 +477,8 @@ static public class FileOperations
             StreamWriter sw = new StreamWriter(fs);
             for (int i = 0; i < Data.Count; i++)
             {
-                sw.Write(Data[i].First.Name + "@");
+                sw.Write(Data[i].First.Name);
+                if (Data[i].Second.Count > 0) sw.Write('@');
                 for (int j = 0; i < Data[i].Second.Count; j++)
                 {
                     sw.Write(Data[i].Second[j].ID.ToString());

@@ -2,10 +2,12 @@
 
 static public class UserOperations
 {
-    static public bool LogIn(Student s)
+    static public bool LogIn(string UserName, string Password)
     {
-        if (FileOperations.UsersFile.CheckUser(s))
+        int ID = FileOperations.UsersFile.CheckUser(UserName, Password);
+        if (ID != -1)
         {
+            Student s = FileOperations.UsersFile.GetUser(ID);
             s.RegisteredCourses = FileOperations.Users_SubjectsFile.GetSubjects(s);
             return true;
         }
