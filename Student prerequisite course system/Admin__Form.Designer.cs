@@ -48,6 +48,9 @@
             this.SO_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SO_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentsInCourse = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.StudentsInCourseGrid = new System.Windows.Forms.DataGridView();
             this.SIC_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SIC_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,20 +67,17 @@
             this.InputCPQ = new System.Windows.Forms.TextBox();
             this.CPQGoButton = new System.Windows.Forms.Button();
             this.CPQDummyLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.LogIn = new System.Windows.Forms.Panel();
-            this.BigUserPicture = new System.Windows.Forms.Panel();
-            this.UserNameLabel = new System.Windows.Forms.Label();
-            this.UserNamePlaceHolder = new System.Windows.Forms.Panel();
-            this.UserNameTextBox = new System.Windows.Forms.TextBox();
-            this.DumyyUserPicture = new System.Windows.Forms.Panel();
-            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.LoginButton = new System.Windows.Forms.Button();
             this.PasswordPlaceHolder = new System.Windows.Forms.Panel();
             this.PasswordTextBox = new System.Windows.Forms.TextBox();
             this.DumyyPasswordPicture = new System.Windows.Forms.Panel();
-            this.LoginButton = new System.Windows.Forms.Button();
+            this.PasswordLabel = new System.Windows.Forms.Label();
+            this.UserNamePlaceHolder = new System.Windows.Forms.Panel();
+            this.UserNameTextBox = new System.Windows.Forms.TextBox();
+            this.DumyyUserPicture = new System.Windows.Forms.Panel();
+            this.UserNameLabel = new System.Windows.Forms.Label();
+            this.BigUserPicture = new System.Windows.Forms.Panel();
             this.Home.SuspendLayout();
             this.HomeStudentBox.SuspendLayout();
             this.HomeCourseBox.SuspendLayout();
@@ -92,8 +92,8 @@
             this.CoursesPrerequisites.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).BeginInit();
             this.LogIn.SuspendLayout();
-            this.UserNamePlaceHolder.SuspendLayout();
             this.PasswordPlaceHolder.SuspendLayout();
+            this.UserNamePlaceHolder.SuspendLayout();
             this.SuspendLayout();
             // 
             // Home
@@ -104,6 +104,7 @@
             this.Home.Name = "Home";
             this.Home.Size = new System.Drawing.Size(132, 214);
             this.Home.TabIndex = 8;
+            this.Home.Visible = false;
             // 
             // HomeStudentBox
             // 
@@ -125,6 +126,7 @@
             this.HomeCoursesOfStudentButton.TabIndex = 1;
             this.HomeCoursesOfStudentButton.Text = "Courses Of Student";
             this.HomeCoursesOfStudentButton.UseVisualStyleBackColor = true;
+            this.HomeCoursesOfStudentButton.Click += new System.EventHandler(this.HomeButtonClick);
             // 
             // HomeAllStudentsButton
             // 
@@ -135,6 +137,7 @@
             this.HomeAllStudentsButton.TabIndex = 0;
             this.HomeAllStudentsButton.Text = "All Students";
             this.HomeAllStudentsButton.UseVisualStyleBackColor = true;
+            this.HomeAllStudentsButton.Click += new System.EventHandler(this.HomeButtonClick);
             // 
             // HomeCourseBox
             // 
@@ -157,6 +160,7 @@
             this.HomeCPQButton.TabIndex = 2;
             this.HomeCPQButton.Text = "Set Prerequisites";
             this.HomeCPQButton.UseVisualStyleBackColor = true;
+            this.HomeCPQButton.Click += new System.EventHandler(this.HomeButtonClick);
             // 
             // HomeStudentsOfCourseButton
             // 
@@ -167,6 +171,7 @@
             this.HomeStudentsOfCourseButton.TabIndex = 1;
             this.HomeStudentsOfCourseButton.Text = "Students Of Course";
             this.HomeStudentsOfCourseButton.UseVisualStyleBackColor = true;
+            this.HomeStudentsOfCourseButton.Click += new System.EventHandler(this.HomeButtonClick);
             // 
             // HomeAllCoursesButton
             // 
@@ -177,6 +182,7 @@
             this.HomeAllCoursesButton.TabIndex = 0;
             this.HomeAllCoursesButton.Text = "All Courses";
             this.HomeAllCoursesButton.UseVisualStyleBackColor = true;
+            this.HomeAllCoursesButton.Click += new System.EventHandler(this.HomeButtonClick);
             // 
             // CourseOverviewPanel
             // 
@@ -189,6 +195,7 @@
             this.CourseOverviewPanel.Size = new System.Drawing.Size(446, 214);
             this.CourseOverviewPanel.TabIndex = 10;
             this.CourseOverviewPanel.Visible = false;
+            this.CourseOverviewPanel.VisibleChanged += new System.EventHandler(this.CourseOverviewPanel_VisibleChanged);
             // 
             // AllCoursesGrid
             // 
@@ -201,6 +208,8 @@
             this.AllCoursesGrid.Name = "AllCoursesGrid";
             this.AllCoursesGrid.Size = new System.Drawing.Size(442, 183);
             this.AllCoursesGrid.TabIndex = 10;
+            this.AllCoursesGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.AllCoursesGrid_CellValueChanged);
+            this.AllCoursesGrid.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.AllCoursesGrid_UserDeletingRow);
             // 
             // CO_NameColumn
             // 
@@ -279,6 +288,33 @@
             this.StudentsInCourse.Size = new System.Drawing.Size(448, 214);
             this.StudentsInCourse.TabIndex = 11;
             this.StudentsInCourse.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(282, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "GO";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(164, 7);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(47, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(110, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Courses Name";
             // 
             // StudentsInCourseGrid
             // 
@@ -381,6 +417,7 @@
             this.CoursesPrerequisites.Size = new System.Drawing.Size(448, 214);
             this.CoursesPrerequisites.TabIndex = 12;
             this.CoursesPrerequisites.Visible = false;
+            this.CoursesPrerequisites.VisibleChanged += new System.EventHandler(this.CoursesPrerequisites_VisibleChanged);
             // 
             // CPQDataGrid
             // 
@@ -392,6 +429,7 @@
             this.CPQDataGrid.Name = "CPQDataGrid";
             this.CPQDataGrid.Size = new System.Drawing.Size(194, 208);
             this.CPQDataGrid.TabIndex = 3;
+            this.CPQDataGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.CPQDataGrid_CellValueChanged);
             // 
             // CPQ_NameColumn
             // 
@@ -415,6 +453,7 @@
             this.CPQGoButton.TabIndex = 1;
             this.CPQGoButton.Text = "Go";
             this.CPQGoButton.UseVisualStyleBackColor = true;
+            this.CPQGoButton.Click += new System.EventHandler(this.CPQGoButton_Click);
             // 
             // CPQDummyLabel
             // 
@@ -425,33 +464,6 @@
             this.CPQDummyLabel.Size = new System.Drawing.Size(106, 16);
             this.CPQDummyLabel.TabIndex = 0;
             this.CPQDummyLabel.Text = "Course Name:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Courses Name";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(164, 7);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(282, 7);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "GO";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // LogIn
             // 
@@ -467,67 +479,24 @@
             this.LogIn.Size = new System.Drawing.Size(576, 214);
             this.LogIn.TabIndex = 4;
             // 
-            // BigUserPicture
+            // LoginButton
             // 
-            this.BigUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BigUserPicture.BackgroundImage")));
-            this.BigUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BigUserPicture.Location = new System.Drawing.Point(2, 2);
-            this.BigUserPicture.Name = "BigUserPicture";
-            this.BigUserPicture.Size = new System.Drawing.Size(240, 209);
-            this.BigUserPicture.TabIndex = 1;
-            // 
-            // UserNameLabel
-            // 
-            this.UserNameLabel.AutoSize = true;
-            this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.UserNameLabel.Location = new System.Drawing.Point(248, 16);
-            this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(79, 16);
-            this.UserNameLabel.TabIndex = 4;
-            this.UserNameLabel.Text = "Username";
-            // 
-            // UserNamePlaceHolder
-            // 
-            this.UserNamePlaceHolder.Controls.Add(this.UserNameTextBox);
-            this.UserNamePlaceHolder.Controls.Add(this.DumyyUserPicture);
-            this.UserNamePlaceHolder.Location = new System.Drawing.Point(248, 37);
-            this.UserNamePlaceHolder.Name = "UserNamePlaceHolder";
-            this.UserNamePlaceHolder.Size = new System.Drawing.Size(232, 40);
-            this.UserNamePlaceHolder.TabIndex = 5;
-            // 
-            // UserNameTextBox
-            // 
-            this.UserNameTextBox.Location = new System.Drawing.Point(55, 4);
-            this.UserNameTextBox.Name = "UserNameTextBox";
-            this.UserNameTextBox.Size = new System.Drawing.Size(174, 20);
-            this.UserNameTextBox.TabIndex = 1;
-            // 
-            // DumyyUserPicture
-            // 
-            this.DumyyUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyUserPicture.BackgroundImage")));
-            this.DumyyUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.DumyyUserPicture.Location = new System.Drawing.Point(1, 2);
-            this.DumyyUserPicture.Name = "DumyyUserPicture";
-            this.DumyyUserPicture.Size = new System.Drawing.Size(48, 37);
-            this.DumyyUserPicture.TabIndex = 0;
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.PasswordLabel.Location = new System.Drawing.Point(250, 99);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(76, 16);
-            this.PasswordLabel.TabIndex = 6;
-            this.PasswordLabel.Text = "Password";
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LoginButton.Location = new System.Drawing.Point(390, 178);
+            this.LoginButton.Name = "LoginButton";
+            this.LoginButton.Size = new System.Drawing.Size(43, 20);
+            this.LoginButton.TabIndex = 8;
+            this.LoginButton.Text = "OK";
+            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // PasswordPlaceHolder
             // 
             this.PasswordPlaceHolder.Controls.Add(this.PasswordTextBox);
             this.PasswordPlaceHolder.Controls.Add(this.DumyyPasswordPicture);
-            this.PasswordPlaceHolder.Location = new System.Drawing.Point(253, 118);
+            this.PasswordPlaceHolder.Location = new System.Drawing.Point(301, 118);
             this.PasswordPlaceHolder.Name = "PasswordPlaceHolder";
             this.PasswordPlaceHolder.Size = new System.Drawing.Size(231, 40);
             this.PasswordPlaceHolder.TabIndex = 7;
@@ -548,17 +517,61 @@
             this.DumyyPasswordPicture.Size = new System.Drawing.Size(49, 40);
             this.DumyyPasswordPicture.TabIndex = 0;
             // 
-            // LoginButton
+            // PasswordLabel
             // 
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.LoginButton.Location = new System.Drawing.Point(342, 178);
-            this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(43, 20);
-            this.LoginButton.TabIndex = 8;
-            this.LoginButton.Text = "OK";
-            this.LoginButton.UseVisualStyleBackColor = true;
+            this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.PasswordLabel.Location = new System.Drawing.Point(298, 99);
+            this.PasswordLabel.Name = "PasswordLabel";
+            this.PasswordLabel.Size = new System.Drawing.Size(76, 16);
+            this.PasswordLabel.TabIndex = 6;
+            this.PasswordLabel.Text = "Password";
+            // 
+            // UserNamePlaceHolder
+            // 
+            this.UserNamePlaceHolder.Controls.Add(this.UserNameTextBox);
+            this.UserNamePlaceHolder.Controls.Add(this.DumyyUserPicture);
+            this.UserNamePlaceHolder.Location = new System.Drawing.Point(300, 37);
+            this.UserNamePlaceHolder.Name = "UserNamePlaceHolder";
+            this.UserNamePlaceHolder.Size = new System.Drawing.Size(232, 40);
+            this.UserNamePlaceHolder.TabIndex = 5;
+            // 
+            // UserNameTextBox
+            // 
+            this.UserNameTextBox.Location = new System.Drawing.Point(55, 4);
+            this.UserNameTextBox.Name = "UserNameTextBox";
+            this.UserNameTextBox.Size = new System.Drawing.Size(174, 20);
+            this.UserNameTextBox.TabIndex = 1;
+            // 
+            // DumyyUserPicture
+            // 
+            this.DumyyUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyUserPicture.BackgroundImage")));
+            this.DumyyUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.DumyyUserPicture.Location = new System.Drawing.Point(1, 2);
+            this.DumyyUserPicture.Name = "DumyyUserPicture";
+            this.DumyyUserPicture.Size = new System.Drawing.Size(48, 37);
+            this.DumyyUserPicture.TabIndex = 0;
+            // 
+            // UserNameLabel
+            // 
+            this.UserNameLabel.AutoSize = true;
+            this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.UserNameLabel.Location = new System.Drawing.Point(300, 16);
+            this.UserNameLabel.Name = "UserNameLabel";
+            this.UserNameLabel.Size = new System.Drawing.Size(79, 16);
+            this.UserNameLabel.TabIndex = 4;
+            this.UserNameLabel.Text = "Username";
+            // 
+            // BigUserPicture
+            // 
+            this.BigUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BigUserPicture.BackgroundImage")));
+            this.BigUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BigUserPicture.Location = new System.Drawing.Point(2, 2);
+            this.BigUserPicture.Name = "BigUserPicture";
+            this.BigUserPicture.Size = new System.Drawing.Size(240, 209);
+            this.BigUserPicture.TabIndex = 1;
             // 
             // AdminForm
             // 
@@ -566,13 +579,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(577, 214);
-            this.Controls.Add(this.LogIn);
+            this.Controls.Add(this.CourseOverviewPanel);
             this.Controls.Add(this.CoursesPrerequisites);
+            this.Controls.Add(this.StudentsInCourse);
             this.Controls.Add(this.StudentOverviewPanel);
             this.Controls.Add(this.CoursesInStudent);
-            this.Controls.Add(this.StudentsInCourse);
             this.Controls.Add(this.Home);
-            this.Controls.Add(this.CourseOverviewPanel);
+            this.Controls.Add(this.LogIn);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "AdminForm";
             this.Text = "Admin Control";
@@ -596,10 +609,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).EndInit();
             this.LogIn.ResumeLayout(false);
             this.LogIn.PerformLayout();
-            this.UserNamePlaceHolder.ResumeLayout(false);
-            this.UserNamePlaceHolder.PerformLayout();
             this.PasswordPlaceHolder.ResumeLayout(false);
             this.PasswordPlaceHolder.PerformLayout();
+            this.UserNamePlaceHolder.ResumeLayout(false);
+            this.UserNamePlaceHolder.PerformLayout();
             this.ResumeLayout(false);
 
         }

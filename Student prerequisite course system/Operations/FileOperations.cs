@@ -122,20 +122,36 @@ static public class FileOperations
         {
             if (Data != null) return;
             Data = new ArrayList<Course>();
-            FileStream fs = new FileStream("Courses.txt", FileMode.Open);
+            FileStream fs = new FileStream("Courses.txt", FileMode.OpenOrCreate);
             StreamReader sr = new StreamReader(fs);
             string[] Records, Fields;
             Records = sr.ReadToEnd().Split('#');
             sr.Close();
-            for (int i = 0; i < Records.Length - 1; i++)
+            for (int i = 0; i < Records.Length; i++)
             {
                 Fields = Records[i].Split('@');
+                if (Fields.Length == 1) continue;
                 Course course = new Course()
                 {
                     Name = Fields[0],
                     Description = Fields[1]
                 };
                 Data.Append(course);
+            }
+        }
+        static public void DeleteCourse(Course c)
+        {
+            if(Data == null)
+            {
+                Read();
+            }
+            for(int i = 0; i < Data.Count; i++)
+            {
+                if(Data[i] == c)
+                {
+                    Data.DeleteAt(i);
+                    return;
+                }
             }
         }
         static public bool AddCourse(Course c)
@@ -190,7 +206,10 @@ static public class FileOperations
             {
                 str += c.Name + "@" + c.Description + "#";
             }
-            SW.Write(str.Substring(0, str.Length - 1));
+            if(str != "")
+            {
+                SW.Write(str.Substring(0, str.Length - 1));
+            }
             SW.Close();
         }
     }
@@ -198,7 +217,7 @@ static public class FileOperations
     {
         static public void Write(string[] data)
         {
-            FileStream file = new FileStream("Tree.txt", FileMode.Append, FileAccess.Write);
+            FileStream file = new FileStream("Tree.txt", FileMode.Create, FileAccess.Write);
             StreamWriter writer = new StreamWriter(file);
             foreach (string s in data)
             {

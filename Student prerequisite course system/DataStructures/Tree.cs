@@ -8,7 +8,6 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
     ArrayList<T> Elements;
     ArrayList<ArrayList<int>> AdjacencyList;
     int count;
-    int capacity;
     void CheckIndex(params int[] indecies)
     {
         foreach (int n in indecies)
@@ -25,7 +24,6 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
         AdjacencyList = new ArrayList<ArrayList<int>>();
         Elements = new ArrayList<T>();
         count = 0;
-        capacity = 0;
     }
     public int Count
     {
@@ -36,6 +34,11 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
         value.TreeIndex = count;
         Elements.Append(value);
         AdjacencyList.Count++;
+        count++;
+        if(typeof(T) == typeof(Course))
+        {
+            FileOperations.CoursesFile.AddCourse(value as Course);
+        }
     }
     public void Connect(T dependant, T dependee)
     {
@@ -45,6 +48,68 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
             AdjacencyList[dependant.TreeIndex] = new ArrayList<int>();
         }
         AdjacencyList[dependant.TreeIndex].Append(dependee.TreeIndex);
+    }
+    public void DeleteElement(T value)
+    {
+        if(value.TreeIndex == -1)
+        {
+            return;
+        }
+        for(int i = 0; i < AdjacencyList.Count; i++)
+        {
+            if(i == value.TreeIndex)
+            {
+                AdjacencyList.DeleteAt(i);
+                i--;
+            }
+            else
+            {
+                bool UpdateIndex = false;
+                for(int j = 0; j < AdjacencyList[i].Count; j++)
+                {
+                    if(j == value.TreeIndex)
+                    {
+                        AdjacencyList[i].DeleteAt(j);
+                        j--;
+                        UpdateIndex = true;
+                    }
+                    else if(UpdateIndex)
+                    {
+                        AdjacencyList[i][j]--;
+                    }
+                }
+            }
+        }
+        bool Flag = false;
+        for(int i = 0; i < Elements.Count; i++)
+        {
+            if(Elements[i] == value)
+            {
+                Flag = true;
+            }
+            else if(Flag)
+            {
+                Elements[i].TreeIndex--;
+            }
+        }
+        Elements.DeleteAt(value.TreeIndex);
+        count--;
+    }
+    public T[] GetAllConnectedElements(T Target)
+    {
+        foreach(T c in Elements)
+        {
+            if(c == Target)
+            {
+                ArrayList<T> res = new ArrayList<T>();
+                foreach(int i in AdjacencyList[c.TreeIndex].ToArray())
+                {
+                    res.Append(Elements[i]);
+                }
+                return res.ToArray();
+            }
+        }
+        return null;
     }
     public T[] GetDependantElements(T Target, T[] AlreadyTaken)
     {
@@ -146,10 +211,16 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
         if (typeof(T) == typeof(Course))
         {
             AdjacencyList.Count = filedata.Length;
+            count = filedata.Length;
             for (int i = 0; i < filedata.Length; i++)
             {
-                AdjacencyList[i] = new ArrayList<int>();
                 string[] fields = filedata[i].Split(' ', '\0');
+                if (fields[0] == "")
+                {
+                    count--;
+                    continue;
+                }
+                AdjacencyList[i] = new ArrayList<int>();
                 Course c = FileOperations.CoursesFile.GetCourse(fields[0]);
                 c.TreeIndex = i;
                 Elements.Append(c as T);
@@ -194,5 +265,9 @@ public class Tree<T> : IEnumerable<T> where T : ITreeElement
     public T[] ToArray()
     {
         return Elements.ToArray();
+    }
+    ~Tree()
+    {
+        FileOperations.TreeFile.Write(UnloadToFile());
     }
 }

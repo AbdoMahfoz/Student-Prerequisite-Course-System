@@ -24,11 +24,18 @@ static public class AdminOperations
     }
     static public class CourseFunctions
     {
-        static Tree<Course> Courses;
-        static void LoadCourse()
+        static public Tree<Course> Courses;
+        static public void LoadCourse()
         {
+            if (Courses != null) return;
             Courses = new Tree<Course>();
             Courses.LoadFromFile(FileOperations.TreeFile.Read());
+        }
+        static public void DeleteCourse(string CourseName)
+        {
+            Course c = FileOperations.CoursesFile.GetCourse(CourseName);
+            Courses.DeleteElement(c);
+            FileOperations.CoursesFile.DeleteCourse(c);
         }
         static public bool AddCourse(Course c)
         {
@@ -46,9 +53,15 @@ static public class AdminOperations
             Courses.AddElement(c);
             return true;
         }
-        static public Student[] GetStudentsEnrolledInCourse(Course c)
+        static public Student[] GetStudentsEnrolledInCourse(string CourseName)
         {
+            Course c = FileOperations.CoursesFile.GetCourse(CourseName);
             return FileOperations.Subjects_UsersFile.GetStudents(c);
+        }
+        static public Course[] GetAllConnectedCourses(string CourseName)
+        {
+            Course c = FileOperations.CoursesFile.GetCourse(CourseName);
+            return Courses.GetAllConnectedElements(c);
         }
         static public void SetPrerequisite(Course dependant, Course dependee)
         {
