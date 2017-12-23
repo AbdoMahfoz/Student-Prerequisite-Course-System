@@ -48,7 +48,9 @@
     <Compile Include="DataStructures\ArrayList.cs" />
     <Compile Include="DataStructures\Queue.cs" />
     <Compile Include="DataStructures\SmallContainers.cs" />
+    <Compile Include="FormViews\AllCoursesView.cs" />
     <Compile Include="FormViews\CourseView.cs" />
+    <Compile Include="FormViews\CurrentCourseView.cs" />
     <Compile Include="Operations\AdminOperations.cs" />
     <Compile Include="Student_form.cs">
       <SubType>Form</SubType>

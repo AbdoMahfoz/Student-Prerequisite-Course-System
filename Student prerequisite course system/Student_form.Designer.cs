@@ -43,21 +43,37 @@ partial class Student_form
             this.AvailCourseCheckbox = new System.Windows.Forms.CheckBox();
             this.DynamicCourcesPanel = new System.Windows.Forms.Panel();
             this.CurrentDetails = new System.Windows.Forms.Panel();
-            this.CurrentCoursesList = new System.Windows.Forms.ListView();
-            this.RegisterPanel = new System.Windows.Forms.Panel();
-            this.RegistercheckedListBox = new System.Windows.Forms.CheckedListBox();
-            this.Register = new System.Windows.Forms.Button();
             this.NavigationPanel = new System.Windows.Forms.Panel();
-            this.HomeRegister = new System.Windows.Forms.Button();
-            this.HomeView = new System.Windows.Forms.Button();
+            this.EditGroupbox = new System.Windows.Forms.GroupBox();
+            this.HomeEditProfile = new System.Windows.Forms.Button();
+            this.HomeEditCourse = new System.Windows.Forms.Button();
+            this.ViewCoursesGroupBOX = new System.Windows.Forms.GroupBox();
+            this.HomeSpecificCourse = new System.Windows.Forms.Button();
             this.HomeCurrent = new System.Windows.Forms.Button();
+            this.HomeView = new System.Windows.Forms.Button();
+            this.SpecificCourse = new System.Windows.Forms.Panel();
+            this.GoSpecificCourse = new System.Windows.Forms.Button();
+            this.CourseNameSpecificCourse = new System.Windows.Forms.Label();
+            this.ListOfPrerequisitesSpecificCourse = new System.Windows.Forms.Label();
+            this.DesicriptionSpecificCourse = new System.Windows.Forms.Label();
+            this.CourseNameText = new System.Windows.Forms.TextBox();
+            this.LisboxofPrerequisites = new System.Windows.Forms.ListBox();
+            this.DescriptionText = new System.Windows.Forms.TextBox();
+            this.EditProfile = new System.Windows.Forms.Panel();
+            this.UsernameText = new System.Windows.Forms.TextBox();
+            this.Username = new System.Windows.Forms.Label();
+            this.Password = new System.Windows.Forms.Label();
+            this.PasswordText = new System.Windows.Forms.TextBox();
+            this.GoEditProfile = new System.Windows.Forms.Button();
             this.LoginPanel.SuspendLayout();
             this.UserNamePlaceHolder.SuspendLayout();
             this.PasswordPlaceHolder.SuspendLayout();
             this.ViewCourses.SuspendLayout();
-            this.CurrentDetails.SuspendLayout();
-            this.RegisterPanel.SuspendLayout();
             this.NavigationPanel.SuspendLayout();
+            this.EditGroupbox.SuspendLayout();
+            this.ViewCoursesGroupBOX.SuspendLayout();
+            this.SpecificCourse.SuspendLayout();
+            this.EditProfile.SuspendLayout();
             this.SuspendLayout();
             // 
             // LoginPanel
@@ -68,7 +84,7 @@ partial class Student_form
             this.LoginPanel.Controls.Add(this.BigUserPicture);
             this.LoginPanel.Controls.Add(this.PasswordLabel);
             this.LoginPanel.Controls.Add(this.UserNameLabel);
-            this.LoginPanel.Location = new System.Drawing.Point(0, 1);
+            this.LoginPanel.Location = new System.Drawing.Point(0, 0);
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(681, 246);
             this.LoginPanel.TabIndex = 0;
@@ -202,98 +218,249 @@ partial class Student_form
             // 
             // CurrentDetails
             // 
-            this.CurrentDetails.Controls.Add(this.LoginPanel);
-            this.CurrentDetails.Controls.Add(this.CurrentCoursesList);
             this.CurrentDetails.Location = new System.Drawing.Point(0, 0);
             this.CurrentDetails.Name = "CurrentDetails";
             this.CurrentDetails.Size = new System.Drawing.Size(530, 247);
             this.CurrentDetails.TabIndex = 1;
             this.CurrentDetails.Visible = false;
-            // 
-            // CurrentCoursesList
-            // 
-            this.CurrentCoursesList.Location = new System.Drawing.Point(3, 2);
-            this.CurrentCoursesList.Name = "CurrentCoursesList";
-            this.CurrentCoursesList.Size = new System.Drawing.Size(524, 239);
-            this.CurrentCoursesList.TabIndex = 5;
-            this.CurrentCoursesList.UseCompatibleStateImageBehavior = false;
-            // 
-            // RegisterPanel
-            // 
-            this.RegisterPanel.Controls.Add(this.RegistercheckedListBox);
-            this.RegisterPanel.Controls.Add(this.Register);
-            this.RegisterPanel.Location = new System.Drawing.Point(0, 0);
-            this.RegisterPanel.Name = "RegisterPanel";
-            this.RegisterPanel.Size = new System.Drawing.Size(530, 247);
-            this.RegisterPanel.TabIndex = 3;
-            this.RegisterPanel.Visible = false;
-            // 
-            // RegistercheckedListBox
-            // 
-            this.RegistercheckedListBox.FormattingEnabled = true;
-            this.RegistercheckedListBox.Location = new System.Drawing.Point(3, 2);
-            this.RegistercheckedListBox.Name = "RegistercheckedListBox";
-            this.RegistercheckedListBox.Size = new System.Drawing.Size(524, 214);
-            this.RegistercheckedListBox.TabIndex = 5;
-            // 
-            // Register
-            // 
-            this.Register.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.Register.Location = new System.Drawing.Point(230, 221);
-            this.Register.Name = "Register";
-            this.Register.Size = new System.Drawing.Size(75, 23);
-            this.Register.TabIndex = 2;
-            this.Register.Text = "Register";
-            this.Register.UseVisualStyleBackColor = true;
+            this.CurrentDetails.VisibleChanged += new System.EventHandler(this.CurrentDetails_VisibleChanged);
             // 
             // NavigationPanel
             // 
-            this.NavigationPanel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.NavigationPanel.Controls.Add(this.HomeRegister);
-            this.NavigationPanel.Controls.Add(this.HomeView);
-            this.NavigationPanel.Controls.Add(this.HomeCurrent);
+            this.NavigationPanel.BackColor = System.Drawing.Color.White;
+            this.NavigationPanel.Controls.Add(this.EditGroupbox);
+            this.NavigationPanel.Controls.Add(this.ViewCoursesGroupBOX);
             this.NavigationPanel.Location = new System.Drawing.Point(533, 1);
             this.NavigationPanel.Name = "NavigationPanel";
             this.NavigationPanel.Size = new System.Drawing.Size(148, 246);
             this.NavigationPanel.TabIndex = 7;
             this.NavigationPanel.Visible = false;
             // 
-            // HomeRegister
+            // EditGroupbox
             // 
-            this.HomeRegister.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.HomeRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeRegister.Location = new System.Drawing.Point(15, 183);
-            this.HomeRegister.Name = "HomeRegister";
-            this.HomeRegister.Size = new System.Drawing.Size(108, 23);
-            this.HomeRegister.TabIndex = 2;
-            this.HomeRegister.Text = "Register Courses";
-            this.HomeRegister.UseVisualStyleBackColor = true;
-            this.HomeRegister.Click += new System.EventHandler(this.HomeRegister_Click);
+            this.EditGroupbox.Controls.Add(this.HomeEditProfile);
+            this.EditGroupbox.Controls.Add(this.HomeEditCourse);
+            this.EditGroupbox.Location = new System.Drawing.Point(3, 151);
+            this.EditGroupbox.Name = "EditGroupbox";
+            this.EditGroupbox.Size = new System.Drawing.Size(136, 83);
+            this.EditGroupbox.TabIndex = 5;
+            this.EditGroupbox.TabStop = false;
+            this.EditGroupbox.Text = "Personal";
             // 
-            // HomeView
+            // HomeEditProfile
             // 
-            this.HomeView.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.HomeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeView.Location = new System.Drawing.Point(15, 103);
-            this.HomeView.Name = "HomeView";
-            this.HomeView.Size = new System.Drawing.Size(108, 23);
-            this.HomeView.TabIndex = 1;
-            this.HomeView.Text = "View Courses";
-            this.HomeView.UseVisualStyleBackColor = true;
-            this.HomeView.Click += new System.EventHandler(this.HomeView_Click);
+            this.HomeEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeEditProfile.Location = new System.Drawing.Point(17, 48);
+            this.HomeEditProfile.Name = "HomeEditProfile";
+            this.HomeEditProfile.Size = new System.Drawing.Size(108, 23);
+            this.HomeEditProfile.TabIndex = 3;
+            this.HomeEditProfile.Text = "Edit Profile";
+            this.HomeEditProfile.UseVisualStyleBackColor = true;
+            this.HomeEditProfile.Click += new System.EventHandler(this.HomeClick);
+            // 
+            // HomeEditCourse
+            // 
+            this.HomeEditCourse.BackColor = System.Drawing.Color.White;
+            this.HomeEditCourse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeEditCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeEditCourse.Location = new System.Drawing.Point(17, 19);
+            this.HomeEditCourse.Name = "HomeEditCourse";
+            this.HomeEditCourse.Size = new System.Drawing.Size(108, 23);
+            this.HomeEditCourse.TabIndex = 2;
+            this.HomeEditCourse.Text = "Edit Courses";
+            this.HomeEditCourse.UseVisualStyleBackColor = false;
+            this.HomeEditCourse.Click += new System.EventHandler(this.HomeClick);
+            // 
+            // ViewCoursesGroupBOX
+            // 
+            this.ViewCoursesGroupBOX.Controls.Add(this.HomeSpecificCourse);
+            this.ViewCoursesGroupBOX.Controls.Add(this.HomeCurrent);
+            this.ViewCoursesGroupBOX.Controls.Add(this.HomeView);
+            this.ViewCoursesGroupBOX.Location = new System.Drawing.Point(3, 19);
+            this.ViewCoursesGroupBOX.Name = "ViewCoursesGroupBOX";
+            this.ViewCoursesGroupBOX.Size = new System.Drawing.Size(136, 109);
+            this.ViewCoursesGroupBOX.TabIndex = 4;
+            this.ViewCoursesGroupBOX.TabStop = false;
+            this.ViewCoursesGroupBOX.Text = "Courses";
+            // 
+            // HomeSpecificCourse
+            // 
+            this.HomeSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeSpecificCourse.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.HomeSpecificCourse.Location = new System.Drawing.Point(17, 77);
+            this.HomeSpecificCourse.Name = "HomeSpecificCourse";
+            this.HomeSpecificCourse.Size = new System.Drawing.Size(108, 23);
+            this.HomeSpecificCourse.TabIndex = 2;
+            this.HomeSpecificCourse.Text = "Specific Course";
+            this.HomeSpecificCourse.UseVisualStyleBackColor = true;
+            this.HomeSpecificCourse.Click += new System.EventHandler(this.HomeClick);
             // 
             // HomeCurrent
             // 
             this.HomeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.HomeCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeCurrent.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.HomeCurrent.Location = new System.Drawing.Point(15, 25);
+            this.HomeCurrent.Location = new System.Drawing.Point(17, 48);
             this.HomeCurrent.Name = "HomeCurrent";
             this.HomeCurrent.Size = new System.Drawing.Size(108, 23);
             this.HomeCurrent.TabIndex = 0;
             this.HomeCurrent.Text = "Current Courses";
             this.HomeCurrent.UseVisualStyleBackColor = true;
-            this.HomeCurrent.Click += new System.EventHandler(this.HomeCurrent_Click);
+            this.HomeCurrent.Click += new System.EventHandler(this.HomeClick);
+            // 
+            // HomeView
+            // 
+            this.HomeView.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeView.Location = new System.Drawing.Point(17, 19);
+            this.HomeView.Name = "HomeView";
+            this.HomeView.Size = new System.Drawing.Size(108, 23);
+            this.HomeView.TabIndex = 1;
+            this.HomeView.Text = "All Courses";
+            this.HomeView.UseVisualStyleBackColor = true;
+            this.HomeView.Click += new System.EventHandler(this.HomeClick);
+            // 
+            // SpecificCourse
+            // 
+            this.SpecificCourse.Controls.Add(this.GoSpecificCourse);
+            this.SpecificCourse.Controls.Add(this.CourseNameSpecificCourse);
+            this.SpecificCourse.Controls.Add(this.ListOfPrerequisitesSpecificCourse);
+            this.SpecificCourse.Controls.Add(this.DesicriptionSpecificCourse);
+            this.SpecificCourse.Controls.Add(this.CourseNameText);
+            this.SpecificCourse.Controls.Add(this.LisboxofPrerequisites);
+            this.SpecificCourse.Controls.Add(this.DescriptionText);
+            this.SpecificCourse.Location = new System.Drawing.Point(3, 4);
+            this.SpecificCourse.Name = "SpecificCourse";
+            this.SpecificCourse.Size = new System.Drawing.Size(524, 236);
+            this.SpecificCourse.TabIndex = 7;
+            this.SpecificCourse.Visible = false;
+            this.SpecificCourse.VisibleChanged += new System.EventHandler(this.SpecificCourse_VisibleChanged);
+            // 
+            // GoSpecificCourse
+            // 
+            this.GoSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.GoSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoSpecificCourse.Location = new System.Drawing.Point(166, 124);
+            this.GoSpecificCourse.Name = "GoSpecificCourse";
+            this.GoSpecificCourse.Size = new System.Drawing.Size(50, 23);
+            this.GoSpecificCourse.TabIndex = 7;
+            this.GoSpecificCourse.Text = "Go";
+            this.GoSpecificCourse.UseVisualStyleBackColor = true;
+            this.GoSpecificCourse.Click += new System.EventHandler(this.GoSpecificCourse_Click);
+            // 
+            // CourseNameSpecificCourse
+            // 
+            this.CourseNameSpecificCourse.AutoSize = true;
+            this.CourseNameSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseNameSpecificCourse.Location = new System.Drawing.Point(7, 98);
+            this.CourseNameSpecificCourse.Name = "CourseNameSpecificCourse";
+            this.CourseNameSpecificCourse.Size = new System.Drawing.Size(102, 15);
+            this.CourseNameSpecificCourse.TabIndex = 0;
+            this.CourseNameSpecificCourse.Text = "Course Name :";
+            // 
+            // ListOfPrerequisitesSpecificCourse
+            // 
+            this.ListOfPrerequisitesSpecificCourse.AutoSize = true;
+            this.ListOfPrerequisitesSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListOfPrerequisitesSpecificCourse.Location = new System.Drawing.Point(283, 9);
+            this.ListOfPrerequisitesSpecificCourse.Name = "ListOfPrerequisitesSpecificCourse";
+            this.ListOfPrerequisitesSpecificCourse.Size = new System.Drawing.Size(195, 16);
+            this.ListOfPrerequisitesSpecificCourse.TabIndex = 6;
+            this.ListOfPrerequisitesSpecificCourse.Text = "List Of Unmet Prerequisites";
+            // 
+            // DesicriptionSpecificCourse
+            // 
+            this.DesicriptionSpecificCourse.AutoSize = true;
+            this.DesicriptionSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DesicriptionSpecificCourse.Location = new System.Drawing.Point(7, 160);
+            this.DesicriptionSpecificCourse.Name = "DesicriptionSpecificCourse";
+            this.DesicriptionSpecificCourse.Size = new System.Drawing.Size(80, 15);
+            this.DesicriptionSpecificCourse.TabIndex = 5;
+            this.DesicriptionSpecificCourse.Text = "Description";
+            // 
+            // CourseNameText
+            // 
+            this.CourseNameText.Location = new System.Drawing.Point(10, 124);
+            this.CourseNameText.Name = "CourseNameText";
+            this.CourseNameText.Size = new System.Drawing.Size(151, 20);
+            this.CourseNameText.TabIndex = 4;
+            // 
+            // LisboxofPrerequisites
+            // 
+            this.LisboxofPrerequisites.FormattingEnabled = true;
+            this.LisboxofPrerequisites.Location = new System.Drawing.Point(242, 41);
+            this.LisboxofPrerequisites.Name = "LisboxofPrerequisites";
+            this.LisboxofPrerequisites.Size = new System.Drawing.Size(250, 186);
+            this.LisboxofPrerequisites.TabIndex = 2;
+            // 
+            // DescriptionText
+            // 
+            this.DescriptionText.Location = new System.Drawing.Point(10, 191);
+            this.DescriptionText.Multiline = true;
+            this.DescriptionText.Name = "DescriptionText";
+            this.DescriptionText.ReadOnly = true;
+            this.DescriptionText.Size = new System.Drawing.Size(206, 32);
+            this.DescriptionText.TabIndex = 1;
+            // 
+            // EditProfile
+            // 
+            this.EditProfile.Controls.Add(this.GoEditProfile);
+            this.EditProfile.Controls.Add(this.PasswordText);
+            this.EditProfile.Controls.Add(this.UsernameText);
+            this.EditProfile.Controls.Add(this.Password);
+            this.EditProfile.Controls.Add(this.Username);
+            this.EditProfile.Location = new System.Drawing.Point(0, 0);
+            this.EditProfile.Name = "EditProfile";
+            this.EditProfile.Size = new System.Drawing.Size(530, 246);
+            this.EditProfile.TabIndex = 0;
+            this.EditProfile.Visible = false;
+            this.EditProfile.VisibleChanged += new System.EventHandler(this.EditProfile_VisibleChanged);
+            // 
+            // UsernameText
+            // 
+            this.UsernameText.Location = new System.Drawing.Point(228, 25);
+            this.UsernameText.Name = "UsernameText";
+            this.UsernameText.Size = new System.Drawing.Size(137, 20);
+            this.UsernameText.TabIndex = 0;
+            // 
+            // Username
+            // 
+            this.Username.AutoSize = true;
+            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.Location = new System.Drawing.Point(69, 26);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(87, 16);
+            this.Username.TabIndex = 1;
+            this.Username.Text = "Username :";
+            // 
+            // Password
+            // 
+            this.Password.AutoSize = true;
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Location = new System.Drawing.Point(69, 75);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(84, 16);
+            this.Password.TabIndex = 2;
+            this.Password.Text = "Password :";
+            // 
+            // PasswordText
+            // 
+            this.PasswordText.Location = new System.Drawing.Point(228, 74);
+            this.PasswordText.Name = "PasswordText";
+            this.PasswordText.Size = new System.Drawing.Size(137, 20);
+            this.PasswordText.TabIndex = 4;
+            // 
+            // GoEditProfile
+            // 
+            this.GoEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoEditProfile.Location = new System.Drawing.Point(207, 126);
+            this.GoEditProfile.Name = "GoEditProfile";
+            this.GoEditProfile.Size = new System.Drawing.Size(71, 23);
+            this.GoEditProfile.TabIndex = 6;
+            this.GoEditProfile.Text = "Update";
+            this.GoEditProfile.UseVisualStyleBackColor = true;
+            this.GoEditProfile.Click += new System.EventHandler(this.GoEditProfile_Click);
             // 
             // Student_form
             // 
@@ -301,10 +468,12 @@ partial class Student_form
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(682, 247);
+            this.Controls.Add(this.EditProfile);
             this.Controls.Add(this.CurrentDetails);
-            this.Controls.Add(this.NavigationPanel);
+            this.Controls.Add(this.SpecificCourse);
             this.Controls.Add(this.ViewCourses);
-            this.Controls.Add(this.RegisterPanel);
+            this.Controls.Add(this.NavigationPanel);
+            this.Controls.Add(this.LoginPanel);
             this.Name = "Student_form";
             this.Text = "Previous";
             this.LoginPanel.ResumeLayout(false);
@@ -315,9 +484,13 @@ partial class Student_form
             this.PasswordPlaceHolder.PerformLayout();
             this.ViewCourses.ResumeLayout(false);
             this.ViewCourses.PerformLayout();
-            this.CurrentDetails.ResumeLayout(false);
-            this.RegisterPanel.ResumeLayout(false);
             this.NavigationPanel.ResumeLayout(false);
+            this.EditGroupbox.ResumeLayout(false);
+            this.ViewCoursesGroupBOX.ResumeLayout(false);
+            this.SpecificCourse.ResumeLayout(false);
+            this.SpecificCourse.PerformLayout();
+            this.EditProfile.ResumeLayout(false);
+            this.EditProfile.PerformLayout();
             this.ResumeLayout(false);
 
     }
@@ -333,18 +506,32 @@ partial class Student_form
     private System.Windows.Forms.Panel DumyyUserPicture;
     private System.Windows.Forms.Label PasswordLabel;
     private System.Windows.Forms.Panel ViewCourses;
-    private System.Windows.Forms.Panel RegisterPanel;
     private System.Windows.Forms.Panel CurrentDetails;
-    private System.Windows.Forms.Button Register;
     private System.Windows.Forms.Button LoginButton;
-    private System.Windows.Forms.CheckedListBox RegistercheckedListBox;
-    private System.Windows.Forms.ListView CurrentCoursesList;
     private System.Windows.Forms.TextBox PasswordTextBox;
     private System.Windows.Forms.TextBox UserNameTextBox;
     private System.Windows.Forms.Panel NavigationPanel;
-    private System.Windows.Forms.Button HomeRegister;
     private System.Windows.Forms.Button HomeView;
     private System.Windows.Forms.Button HomeCurrent;
     private System.Windows.Forms.CheckBox AvailCourseCheckbox;
     private System.Windows.Forms.Panel DynamicCourcesPanel;
+    private System.Windows.Forms.Button HomeEditProfile;
+    private System.Windows.Forms.GroupBox EditGroupbox;
+    private System.Windows.Forms.Button HomeEditCourse;
+    private System.Windows.Forms.GroupBox ViewCoursesGroupBOX;
+    private System.Windows.Forms.Button HomeSpecificCourse;
+    private System.Windows.Forms.Panel SpecificCourse;
+    private System.Windows.Forms.Label DesicriptionSpecificCourse;
+    private System.Windows.Forms.TextBox CourseNameText;
+    private System.Windows.Forms.ListBox LisboxofPrerequisites;
+    private System.Windows.Forms.TextBox DescriptionText;
+    private System.Windows.Forms.Label CourseNameSpecificCourse;
+    private System.Windows.Forms.Label ListOfPrerequisitesSpecificCourse;
+    private System.Windows.Forms.Button GoSpecificCourse;
+    private System.Windows.Forms.Panel EditProfile;
+    private System.Windows.Forms.Button GoEditProfile;
+    private System.Windows.Forms.TextBox PasswordText;
+    private System.Windows.Forms.TextBox UsernameText;
+    private System.Windows.Forms.Label Password;
+    private System.Windows.Forms.Label Username;
 }

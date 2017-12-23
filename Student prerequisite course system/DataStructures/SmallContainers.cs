@@ -15,13 +15,26 @@ public class Student
     public string Name, Password, AcademicYear;
     public int ID;
     public ArrayList<Pair<bool, Course>> RegisteredCourses;
-    public bool Remove(Course c)
+    public Course[] GetTaken()
     {
-        throw new NotImplementedException();
+        ArrayList<Course> Taken = new ArrayList<Course>();
+        foreach (Pair<bool, Course> P in RegisteredCourses)
+        {
+            if (P.First)
+            {
+                Taken.Append(P.Second);
+            }
+        }
+        return Taken.ToArray();
     }
-    public bool Add(Course c)
+    public Course[] GetRegisterd()
     {
-        throw new NotImplementedException();
+        ArrayList<Course> Taken = new ArrayList<Course>();
+        foreach (Pair<bool, Course> P in RegisteredCourses)
+        {
+            Taken.Append(P.Second);
+        }
+        return Taken.ToArray();
     }
 }
 

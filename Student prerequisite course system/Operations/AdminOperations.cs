@@ -27,12 +27,20 @@ static public class AdminOperations
     }
     static public class CourseFunctions
     {
-        static public Tree<Course> Courses;
+        static public Tree<Course> courses;
+        static public Tree<Course> Courses
+        {
+            get
+            {
+                LoadCourse();
+                return courses;
+            }
+        }
         static public void LoadCourse()
         {
-            if (Courses != null) return;
-            Courses = new Tree<Course>();
-            Courses.LoadFromFile(FileOperations.TreeFile.Read());
+            if (courses != null) return;
+            courses = new Tree<Course>();
+            courses.LoadFromFile(FileOperations.TreeFile.Read());
         }
         static public void DeleteCourse(string CourseName)
         {

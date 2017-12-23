@@ -1,11 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 public partial class Student_form : Form
 {
     Panel _currentActivePanel;
-    List<CourseView> DrawnCourses = new List<CourseView>();
+    Student ActiveStudent;
+    ArrayList<CourseView> DrawnCourses = new ArrayList<CourseView>();
     Panel CurrentActivePanel
     {
         get
@@ -14,21 +14,32 @@ public partial class Student_form : Form
         }
         set
         {
+            if (_currentActivePanel != null)
+            {
+                _currentActivePanel.Visible = false;
+            }
+            value.Visible = true;
             _currentActivePanel = value;
             HomeCurrent.Enabled = true;
-            HomeRegister.Enabled = true;
+            HomeEditCourse.Enabled = true;
             HomeView.Enabled = true;
-            if(value == ViewCourses)
+            HomeSpecificCourse.Enabled = true;
+            HomeEditProfile.Enabled = true;
+            if (value == ViewCourses)
             {
                 HomeView.Enabled = false;
             }
-            else if(value == RegisterPanel)
+            else if (value == SpecificCourse)
             {
-                HomeRegister.Enabled = false;
+                HomeSpecificCourse.Enabled = false;
             }
-            else
+            else if (value == CurrentDetails)
             {
                 HomeCurrent.Enabled = false;
+            }
+            else if(value == EditProfile)
+            {
+                HomeEditProfile.Enabled = false;
             }
         }
     }
@@ -38,70 +49,147 @@ public partial class Student_form : Form
     }
     private void LoginButton_Click(object sender, EventArgs e)
     {
-        /*Student s = new Student()
+        Student s = UserOperations.LogIn(UserNameTextBox.Text, PasswordTextBox.Text);
+        if (s != null)
         {
-            Name = UserNameTextBox.Text,
-            Password = PasswordTextBox.Text
-        };*/
-        if(/*UserOperations.LogIn(s)*/ UserNameTextBox.Text == "Admin" && PasswordTextBox.Text == "Admin")
-        {
+            ActiveStudent = s;
+            CurrentActivePanel = ViewCourses;
             ViewCourses.Visible = true;
             NavigationPanel.Visible = true;
             LoginPanel.Visible = false;
-            CurrentActivePanel = ViewCourses;
         }
         else
         {
-            MessageBox.Show("No");
+            MessageBox.Show("Invalid username or password");
             UserNameTextBox.Text = "";
             PasswordTextBox.Text = "";
         }
     }
-    private void HomeCurrent_Click(object sender, EventArgs e)
+    private void HomeClick(object sender, EventArgs e)
     {
-        CurrentDetails.Visible = true;
-        CurrentActivePanel.Visible = false;
-        CurrentActivePanel = CurrentDetails;
+        Button btn = sender as Button;
+        if (btn == HomeCurrent)
+        {
+            CurrentActivePanel = CurrentDetails;
+        }
+        else if (btn == HomeView)
+        {
+            CurrentActivePanel = ViewCourses;
+        }
+        else if (btn == HomeSpecificCourse)
+        {
+            CurrentActivePanel = SpecificCourse;
+        }
+        else if(btn == HomeEditProfile)
+        {
+            CurrentActivePanel = EditProfile;
+        }
     }
-    private void HomeRegister_Click(object sender, EventArgs e)
+    private void DrawCourses(Course[] courses)
     {
-        RegisterPanel.Visible = true;
-        CurrentActivePanel.Visible = false;
-        CurrentActivePanel = RegisterPanel;
+        int offset = 0;
+        foreach (Course c in courses)
+        {
+            bool IsAvail = false;
+            Course[] AvailList = UserOperations.Courses.GetAvailableElements(ActiveStudent.GetRegisterd());
+            foreach (Course cs in AvailList)
+            {
+                if (c == cs)
+                {
+                    IsAvail = true;
+                    break;
+                }
+            }
+            DrawnCourses.Append(new AllCoursesView(c.Name, c.Description, offset, IsAvail, DynamicCourcesPanel, ActiveStudent));
+            offset += 100;
+        }
     }
-    private void HomeView_Click(object sender, EventArgs e)
+    private void DeleteCourses()
     {
-        ViewCourses.Visible = true;
-        CurrentActivePanel.Visible = false;
-        CurrentActivePanel = ViewCourses;
+        foreach (CourseView c in DrawnCourses)
+        {
+            c.Clear();
+        }
+        DrawnCourses.Clear();
     }
     private void ViewCourses_VisibleChanged(object sender, EventArgs e)
     {
-        if(ViewCourses.Visible)
+        if (ViewCourses.Visible)
         {
-            DrawnCourses.Add(new CourseView("Test Name", "Test Description", 0, DynamicCourcesPanel));
-            DrawnCourses.Add(new CourseView("Test Name", "Test Description", 100, DynamicCourcesPanel));
-            DrawnCourses.Add(new CourseView("Test Name", "Test Description", 200, DynamicCourcesPanel));
+            AvailCourseCheckbox.Checked = false;
+            DrawCourses(UserOperations.Courses.ToArray());
         }
         else
         {
-            foreach(CourseView c in DrawnCourses)
-            {
-                c.Clear();
-            }
-            DrawnCourses.Clear();
+            DeleteCourses();
             AvailCourseCheckbox.Checked = false;
         }
     }
     private void AvailCourseCheckbox_CheckedChanged(object sender, EventArgs e)
     {
-        if(AvailCourseCheckbox.Checked)
+        if (AvailCourseCheckbox.Checked)
         {
-
+            Course[] Avail = UserOperations.GetAvailableCourses(ActiveStudent);
+            DeleteCourses();
+            DrawCourses(Avail);
         }
         else
         {
-
+            DeleteCourses();
+            DrawCourses(UserOperations.Courses.ToArray());
         }
+    }
+    private void GoSpecificCourse_Click(object sender, EventArgs e)
+    {
+        LisboxofPrerequisites.Items.Clear();
+        foreach (Course c in UserOperations.Courses)
+        {
+            if (c.Name == CourseNameText.Text)
+            {
+                DescriptionText.Text = c.Description;
+                Course[] Registered = ActiveStudent.GetRegisterd();
+                foreach (Course cs in UserOperations.Courses.GetDependantElements(c, Registered))
+                {
+                    LisboxofPrerequisites.Items.Add(cs.Name);
+                }
+                return;
+            }
+        }
+        MessageBox.Show("No");
+        CourseNameText.Text = "";
+        DescriptionText.Text = "";
+    }
+    private void SpecificCourse_VisibleChanged(object sender, EventArgs e)
+    {
+        LisboxofPrerequisites.Items.Clear();
+        CourseNameText.Text = "";
+        DescriptionText.Text = "";
+    }
+    private void CurrentDetails_VisibleChanged(object sender, EventArgs e)
+    {
+        if (CurrentDetails.Visible)
+        {
+            int offset = 0;
+            DrawnCourses.Clear();
+            foreach (Pair<bool, Course> P in ActiveStudent.RegisteredCourses)
+            {
+                DrawnCourses.Append(new CurrentCourseView(P.Second.Name, P.Second.Description, offset, P.First, CurrentDetails));
+                offset += 100;
+            }
+        }
+        else
+        {
+            DeleteCourses();
+        }
+    }
+    private void EditProfile_VisibleChanged(object sender, EventArgs e)
+    {
+        UsernameText.Text = ActiveStudent.Name;
+        PasswordText.Text = ActiveStudent.Password;
+    }
+    private void GoEditProfile_Click(object sender, EventArgs e)
+    {
+        ActiveStudent.Name = UsernameText.Text;
+        ActiveStudent.Password = PasswordText.Text;
     }
 }

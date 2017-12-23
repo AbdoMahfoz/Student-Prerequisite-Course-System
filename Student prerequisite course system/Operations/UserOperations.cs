@@ -2,18 +2,30 @@
 
 static public class UserOperations
 {
-    static public bool LogIn(string UserName, string Password)
+    static Tree<Course> courses;
+    static public Tree<Course> Courses
+    {
+        get
+        {
+            if(courses == null)
+            {
+                courses = new Tree<Course>();
+                courses.LoadFromFile(FileOperations.TreeFile.Read());
+            }
+            return courses;
+        }
+    }
+    static public Student LogIn(string UserName, string Password)
     {
         int ID = FileOperations.UsersFile.CheckUser(UserName, Password);
         if (ID != -1)
         {
             Student s = FileOperations.UsersFile.GetUser(ID);
-            s.RegisteredCourses = FileOperations.Users_SubjectsFile.GetSubjects(s);
-            return true;
+            return s;
         }
-        return false;
+        return null;
     }
-    static public Course[] GetAvailableCourses(Student s, Tree<Course> t)
+    static public Course[] GetAvailableCourses(Student s)
     {
         ArrayList<Course> tmp = new ArrayList<Course>();
         foreach (Pair<bool, Course> e in s.RegisteredCourses)
@@ -23,6 +35,6 @@ static public class UserOperations
                 tmp.Append(e.Second);
             }
         }
-        return t.GetAvailableElements(tmp.ToArray());
+        return Courses.GetAvailableElements(tmp.ToArray());
     }
 }

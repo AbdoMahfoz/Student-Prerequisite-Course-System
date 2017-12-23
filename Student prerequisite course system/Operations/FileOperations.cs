@@ -76,7 +76,8 @@ static public class FileOperations
                     ID = int.Parse(Fields[0]),
                     Name = Fields[1],
                     Password = Fields[2],
-                    AcademicYear = Fields[3]
+                    AcademicYear = Fields[3],
+                    RegisteredCourses = Users_SubjectsFile.GetSubjects(int.Parse(Fields[0])),
                 });
             }
             sr.Close();
@@ -97,6 +98,10 @@ static public class FileOperations
         }
         static public int CheckUser(string Name, string Password)
         {
+            if(Data == null)
+            {
+                Read();
+            }
             bool found = false;
             bool RightPass = false;
             int res = -1;
@@ -341,7 +346,7 @@ static public class FileOperations
                 Second = s.RegisteredCourses
             });
         }
-        static public ArrayList<Pair<bool, Course>> GetSubjects(Student s)
+        static public ArrayList<Pair<bool, Course>> GetSubjects(int ID)
         {
             if (Data == null)
             {
@@ -349,7 +354,7 @@ static public class FileOperations
             }
             for (int i = 0; i < Data.Count; i++)
             {
-                if (s.ID == Data[i].First)
+                if (ID == Data[i].First)
                 {
                     return Data[i].Second;
                 }
@@ -368,7 +373,7 @@ static public class FileOperations
                 {
                     sw.Write('@');
                 }
-                for (int j = 0; i < Data[i].Second.Count; j++)
+                for (int j = 0; j < Data[i].Second.Count; j++)
                 {
                     if (Data[i].Second[j].First)
                     {
@@ -480,7 +485,7 @@ static public class FileOperations
             {
                 sw.Write(Data[i].First.Name);
                 if (Data[i].Second.Count > 0) sw.Write('@');
-                for (int j = 0; i < Data[i].Second.Count; j++)
+                for (int j = 0; j < Data[i].Second.Count; j++)
                 {
                     sw.Write(Data[i].Second[j].ID.ToString());
                     if (j != Data[i].Second.Count - 1)
