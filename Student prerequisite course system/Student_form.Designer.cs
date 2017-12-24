@@ -60,11 +60,11 @@ partial class Student_form
             this.LisboxofPrerequisites = new System.Windows.Forms.ListBox();
             this.DescriptionText = new System.Windows.Forms.TextBox();
             this.EditProfile = new System.Windows.Forms.Panel();
-            this.UsernameText = new System.Windows.Forms.TextBox();
-            this.Username = new System.Windows.Forms.Label();
-            this.Password = new System.Windows.Forms.Label();
-            this.PasswordText = new System.Windows.Forms.TextBox();
             this.GoEditProfile = new System.Windows.Forms.Button();
+            this.PasswordText = new System.Windows.Forms.TextBox();
+            this.UsernameText = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.Label();
+            this.Username = new System.Windows.Forms.Label();
             this.LoginPanel.SuspendLayout();
             this.UserNamePlaceHolder.SuspendLayout();
             this.PasswordPlaceHolder.SuspendLayout();
@@ -91,15 +91,16 @@ partial class Student_form
             // 
             // LoginButton
             // 
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LoginButton.BackColor = System.Drawing.Color.Transparent;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LoginButton.ForeColor = System.Drawing.Color.MediumTurquoise;
             this.LoginButton.Location = new System.Drawing.Point(452, 195);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(43, 20);
+            this.LoginButton.Size = new System.Drawing.Size(43, 28);
             this.LoginButton.TabIndex = 6;
-            this.LoginButton.Text = "OK";
-            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Text = "Ok";
+            this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // UserNamePlaceHolder
@@ -249,20 +250,24 @@ partial class Student_form
             // 
             // HomeEditProfile
             // 
+            this.HomeEditProfile.BackColor = System.Drawing.Color.Transparent;
+            this.HomeEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeEditProfile.ForeColor = System.Drawing.SystemColors.Highlight;
             this.HomeEditProfile.Location = new System.Drawing.Point(17, 48);
             this.HomeEditProfile.Name = "HomeEditProfile";
             this.HomeEditProfile.Size = new System.Drawing.Size(108, 23);
             this.HomeEditProfile.TabIndex = 3;
             this.HomeEditProfile.Text = "Edit Profile";
-            this.HomeEditProfile.UseVisualStyleBackColor = true;
+            this.HomeEditProfile.UseVisualStyleBackColor = false;
             this.HomeEditProfile.Click += new System.EventHandler(this.HomeClick);
             // 
             // HomeEditCourse
             // 
-            this.HomeEditCourse.BackColor = System.Drawing.Color.White;
-            this.HomeEditCourse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeEditCourse.BackColor = System.Drawing.Color.Transparent;
+            this.HomeEditCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeEditCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeEditCourse.ForeColor = System.Drawing.SystemColors.Highlight;
             this.HomeEditCourse.Location = new System.Drawing.Point(17, 19);
             this.HomeEditCourse.Name = "HomeEditCourse";
             this.HomeEditCourse.Size = new System.Drawing.Size(108, 23);
@@ -285,7 +290,8 @@ partial class Student_form
             // 
             // HomeSpecificCourse
             // 
-            this.HomeSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeSpecificCourse.BackColor = System.Drawing.Color.Transparent;
+            this.HomeSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeSpecificCourse.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.HomeSpecificCourse.Location = new System.Drawing.Point(17, 77);
@@ -293,12 +299,13 @@ partial class Student_form
             this.HomeSpecificCourse.Size = new System.Drawing.Size(108, 23);
             this.HomeSpecificCourse.TabIndex = 2;
             this.HomeSpecificCourse.Text = "Specific Course";
-            this.HomeSpecificCourse.UseVisualStyleBackColor = true;
+            this.HomeSpecificCourse.UseVisualStyleBackColor = false;
             this.HomeSpecificCourse.Click += new System.EventHandler(this.HomeClick);
             // 
             // HomeCurrent
             // 
-            this.HomeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeCurrent.BackColor = System.Drawing.Color.Transparent;
+            this.HomeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeCurrent.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.HomeCurrent.Location = new System.Drawing.Point(17, 48);
@@ -306,19 +313,21 @@ partial class Student_form
             this.HomeCurrent.Size = new System.Drawing.Size(108, 23);
             this.HomeCurrent.TabIndex = 0;
             this.HomeCurrent.Text = "Current Courses";
-            this.HomeCurrent.UseVisualStyleBackColor = true;
+            this.HomeCurrent.UseVisualStyleBackColor = false;
             this.HomeCurrent.Click += new System.EventHandler(this.HomeClick);
             // 
             // HomeView
             // 
-            this.HomeView.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeView.BackColor = System.Drawing.Color.Transparent;
+            this.HomeView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeView.ForeColor = System.Drawing.SystemColors.Highlight;
             this.HomeView.Location = new System.Drawing.Point(17, 19);
             this.HomeView.Name = "HomeView";
             this.HomeView.Size = new System.Drawing.Size(108, 23);
             this.HomeView.TabIndex = 1;
             this.HomeView.Text = "All Courses";
-            this.HomeView.UseVisualStyleBackColor = true;
+            this.HomeView.UseVisualStyleBackColor = false;
             this.HomeView.Click += new System.EventHandler(this.HomeClick);
             // 
             // SpecificCourse
@@ -339,30 +348,35 @@ partial class Student_form
             // 
             // GoSpecificCourse
             // 
-            this.GoSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.GoSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoSpecificCourse.Location = new System.Drawing.Point(166, 124);
+            this.GoSpecificCourse.BackColor = System.Drawing.Color.Transparent;
+            this.GoSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GoSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoSpecificCourse.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.GoSpecificCourse.Location = new System.Drawing.Point(181, 64);
             this.GoSpecificCourse.Name = "GoSpecificCourse";
             this.GoSpecificCourse.Size = new System.Drawing.Size(50, 23);
             this.GoSpecificCourse.TabIndex = 7;
             this.GoSpecificCourse.Text = "Go";
-            this.GoSpecificCourse.UseVisualStyleBackColor = true;
+            this.GoSpecificCourse.UseVisualStyleBackColor = false;
             this.GoSpecificCourse.Click += new System.EventHandler(this.GoSpecificCourse_Click);
             // 
             // CourseNameSpecificCourse
             // 
             this.CourseNameSpecificCourse.AutoSize = true;
             this.CourseNameSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseNameSpecificCourse.Location = new System.Drawing.Point(7, 98);
+            this.CourseNameSpecificCourse.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.CourseNameSpecificCourse.Location = new System.Drawing.Point(7, 21);
             this.CourseNameSpecificCourse.Name = "CourseNameSpecificCourse";
             this.CourseNameSpecificCourse.Size = new System.Drawing.Size(102, 15);
             this.CourseNameSpecificCourse.TabIndex = 0;
             this.CourseNameSpecificCourse.Text = "Course Name :";
+            this.CourseNameSpecificCourse.Click += new System.EventHandler(this.CourseNameSpecificCourse_Click);
             // 
             // ListOfPrerequisitesSpecificCourse
             // 
             this.ListOfPrerequisitesSpecificCourse.AutoSize = true;
             this.ListOfPrerequisitesSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListOfPrerequisitesSpecificCourse.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.ListOfPrerequisitesSpecificCourse.Location = new System.Drawing.Point(283, 9);
             this.ListOfPrerequisitesSpecificCourse.Name = "ListOfPrerequisitesSpecificCourse";
             this.ListOfPrerequisitesSpecificCourse.Size = new System.Drawing.Size(195, 16);
@@ -373,7 +387,8 @@ partial class Student_form
             // 
             this.DesicriptionSpecificCourse.AutoSize = true;
             this.DesicriptionSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DesicriptionSpecificCourse.Location = new System.Drawing.Point(7, 160);
+            this.DesicriptionSpecificCourse.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.DesicriptionSpecificCourse.Location = new System.Drawing.Point(9, 109);
             this.DesicriptionSpecificCourse.Name = "DesicriptionSpecificCourse";
             this.DesicriptionSpecificCourse.Size = new System.Drawing.Size(80, 15);
             this.DesicriptionSpecificCourse.TabIndex = 5;
@@ -381,9 +396,9 @@ partial class Student_form
             // 
             // CourseNameText
             // 
-            this.CourseNameText.Location = new System.Drawing.Point(10, 124);
+            this.CourseNameText.Location = new System.Drawing.Point(9, 64);
             this.CourseNameText.Name = "CourseNameText";
-            this.CourseNameText.Size = new System.Drawing.Size(151, 20);
+            this.CourseNameText.Size = new System.Drawing.Size(166, 20);
             this.CourseNameText.TabIndex = 4;
             // 
             // LisboxofPrerequisites
@@ -396,7 +411,9 @@ partial class Student_form
             // 
             // DescriptionText
             // 
-            this.DescriptionText.Location = new System.Drawing.Point(10, 191);
+            this.DescriptionText.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DescriptionText.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DescriptionText.Location = new System.Drawing.Point(12, 148);
             this.DescriptionText.Multiline = true;
             this.DescriptionText.Name = "DescriptionText";
             this.DescriptionText.ReadOnly = true;
@@ -417,32 +434,19 @@ partial class Student_form
             this.EditProfile.Visible = false;
             this.EditProfile.VisibleChanged += new System.EventHandler(this.EditProfile_VisibleChanged);
             // 
-            // UsernameText
+            // GoEditProfile
             // 
-            this.UsernameText.Location = new System.Drawing.Point(228, 25);
-            this.UsernameText.Name = "UsernameText";
-            this.UsernameText.Size = new System.Drawing.Size(137, 20);
-            this.UsernameText.TabIndex = 0;
-            // 
-            // Username
-            // 
-            this.Username.AutoSize = true;
-            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(69, 26);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(87, 16);
-            this.Username.TabIndex = 1;
-            this.Username.Text = "Username :";
-            // 
-            // Password
-            // 
-            this.Password.AutoSize = true;
-            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(69, 75);
-            this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(84, 16);
-            this.Password.TabIndex = 2;
-            this.Password.Text = "Password :";
+            this.GoEditProfile.BackColor = System.Drawing.Color.Transparent;
+            this.GoEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GoEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoEditProfile.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.GoEditProfile.Location = new System.Drawing.Point(207, 126);
+            this.GoEditProfile.Name = "GoEditProfile";
+            this.GoEditProfile.Size = new System.Drawing.Size(73, 25);
+            this.GoEditProfile.TabIndex = 6;
+            this.GoEditProfile.Text = "Update";
+            this.GoEditProfile.UseVisualStyleBackColor = false;
+            this.GoEditProfile.Click += new System.EventHandler(this.GoEditProfile_Click);
             // 
             // PasswordText
             // 
@@ -451,16 +455,34 @@ partial class Student_form
             this.PasswordText.Size = new System.Drawing.Size(137, 20);
             this.PasswordText.TabIndex = 4;
             // 
-            // GoEditProfile
+            // UsernameText
             // 
-            this.GoEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoEditProfile.Location = new System.Drawing.Point(207, 126);
-            this.GoEditProfile.Name = "GoEditProfile";
-            this.GoEditProfile.Size = new System.Drawing.Size(71, 23);
-            this.GoEditProfile.TabIndex = 6;
-            this.GoEditProfile.Text = "Update";
-            this.GoEditProfile.UseVisualStyleBackColor = true;
-            this.GoEditProfile.Click += new System.EventHandler(this.GoEditProfile_Click);
+            this.UsernameText.Location = new System.Drawing.Point(228, 25);
+            this.UsernameText.Name = "UsernameText";
+            this.UsernameText.Size = new System.Drawing.Size(137, 20);
+            this.UsernameText.TabIndex = 0;
+            // 
+            // Password
+            // 
+            this.Password.AutoSize = true;
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Password.Location = new System.Drawing.Point(69, 75);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(84, 16);
+            this.Password.TabIndex = 2;
+            this.Password.Text = "Password :";
+            // 
+            // Username
+            // 
+            this.Username.AutoSize = true;
+            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Username.Location = new System.Drawing.Point(69, 26);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(87, 16);
+            this.Username.TabIndex = 1;
+            this.Username.Text = "Username :";
             // 
             // Student_form
             // 
@@ -469,10 +491,10 @@ partial class Student_form
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(682, 247);
             this.Controls.Add(this.EditProfile);
-            this.Controls.Add(this.CurrentDetails);
-            this.Controls.Add(this.SpecificCourse);
             this.Controls.Add(this.ViewCourses);
+            this.Controls.Add(this.CurrentDetails);
             this.Controls.Add(this.NavigationPanel);
+            this.Controls.Add(this.SpecificCourse);
             this.Controls.Add(this.LoginPanel);
             this.Name = "Student_form";
             this.Text = "Previous";

@@ -192,4 +192,9 @@ public partial class Student_form : Form
         ActiveStudent.Name = UsernameText.Text;
         ActiveStudent.Password = PasswordText.Text;
     }
+
+    private void CourseNameSpecificCourse_Click(object sender, EventArgs e)
+    {
+
+    }
 }
