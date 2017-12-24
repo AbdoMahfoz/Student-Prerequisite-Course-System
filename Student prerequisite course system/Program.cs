@@ -16,7 +16,7 @@ namespace Student_prerequisite_course_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Student_form());
+            Application.Run(new AdminForm());
             FileOperations.Write();
         }
     }
