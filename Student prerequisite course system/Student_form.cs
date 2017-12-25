@@ -73,6 +73,24 @@ public partial class Student_form : Form
         }
         DrawnCourses.Clear();
     }
+    public void RefreshCurrent(string DeletedCourse)
+    {
+        int offset = 0;
+        for (int i = 0; i < DrawnCourses.Count; i++)
+        {
+            if (DrawnCourses[i].Name == DeletedCourse)
+            {
+                DrawnCourses[i].Clear();
+                DrawnCourses.DeleteAt(i);
+                i--;
+            }
+            else
+            {
+                DrawnCourses[i].ResetLocation(offset);
+                offset += 100;
+            }
+        }
+    }
     //Constructor
     public Student_form()
     {
@@ -185,7 +203,7 @@ public partial class Student_form : Form
             DrawnCourses.Clear();
             foreach (Pair<bool, Course> P in ActiveStudent.RegisteredCourses)
             {
-                DrawnCourses.Append(new CurrentCourseView(P.Second.Name, P.Second.Description, offset, P.First, CurrentDetails));
+                DrawnCourses.Append(new CurrentCourseView(P.Second.Name, P.Second.Description, offset, P.First, CurrentDetails, this, ActiveStudent));
                 offset += 100;
             }
         }
@@ -204,10 +222,5 @@ public partial class Student_form : Form
     {
         ActiveStudent.Name = UsernameText.Text;
         ActiveStudent.Password = PasswordText.Text;
-    }
-
-    private void CourseNameSpecificCourse_Click(object sender, EventArgs e)
-    {
-
     }
 }

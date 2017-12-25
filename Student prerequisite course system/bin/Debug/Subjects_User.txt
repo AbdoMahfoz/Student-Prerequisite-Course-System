@@ -1,4 +1,4 @@
 Math
 Geo
 french@2
-english
+english@2

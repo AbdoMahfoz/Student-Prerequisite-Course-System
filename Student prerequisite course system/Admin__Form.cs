@@ -261,7 +261,8 @@ public partial class AdminForm : Form
     {
         AdminOperations.CourseFunctions.DisconnectCourses(CPQActiveCourseLabel.Text, e.Row.Cells[0].Value as string);
     }
-    //Students in Course
+    //Courses in Student
+    Student ActiveStudent;
     private void CoursesInStudentGoButton_Click(object sender, System.EventArgs e)
     {
         CoursesInStudentGrid.Rows.Clear();
@@ -269,9 +270,10 @@ public partial class AdminForm : Form
         {
             if(s.ID == InputCoursesInStudent.Value)
             {
+                ActiveStudent = s;
                 foreach(Pair<bool, Course> p in s.RegisteredCourses)
                 {
-                    CoursesInStudentGrid.Rows.Add(p.Second.Name, p.First.ToString());
+                    CoursesInStudentGrid.Rows.Add(p.Second.Name, p.First);
                 }
                 return;
             }
@@ -286,7 +288,18 @@ public partial class AdminForm : Form
             CoursesInStudentGrid.Rows.Clear();
         }
     }
-    //Courses in Student
+    private void CoursesInStudentGrid_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+    {
+        if (e.RowIndex == -1) return;
+        foreach(Pair<bool, Course> P in ActiveStudent.RegisteredCourses)
+        {
+            if(P.Second.Name == CoursesInStudentGrid.Rows[e.RowIndex].Cells[0].Value as string)
+            {
+                P.First = (bool)CoursesInStudentGrid.Rows[e.RowIndex].Cells[1].Value;
+            }
+        }
+    }
+    //Students in Course
     private void StudentsInCourseGoButton_Click(object sender, System.EventArgs e)
     {
         StudentsInCourseGrid.Rows.Clear();
@@ -308,10 +321,5 @@ public partial class AdminForm : Form
     {
         InputStudentsInCourse.Text = "";
         StudentsInCourseGrid.Rows.Clear();
-    }
-
-    private void Home_Paint(object sender, PaintEventArgs e)
-    {
-
     }
 }

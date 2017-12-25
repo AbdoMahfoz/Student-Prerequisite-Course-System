@@ -375,7 +375,6 @@ partial class Student_form
             this.CourseNameSpecificCourse.Size = new System.Drawing.Size(110, 16);
             this.CourseNameSpecificCourse.TabIndex = 0;
             this.CourseNameSpecificCourse.Text = "Course Name :";
-            this.CourseNameSpecificCourse.Click += new System.EventHandler(this.CourseNameSpecificCourse_Click);
             // 
             // ListOfPrerequisitesSpecificCourse
             // 
@@ -506,7 +505,7 @@ partial class Student_form
             this.Controls.Add(this.ViewCourses);
             this.Controls.Add(this.LoginPanel);
             this.Name = "Student_form";
-            this.Text = "Previous";
+            this.Text = "Course Contorl";
             this.LoginPanel.ResumeLayout(false);
             this.LoginPanel.PerformLayout();
             this.UserNamePlaceHolder.ResumeLayout(false);

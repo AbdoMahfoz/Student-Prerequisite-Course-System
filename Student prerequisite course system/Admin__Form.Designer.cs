@@ -72,8 +72,6 @@ partial class AdminForm
             this.CoursesInStudent = new System.Windows.Forms.Panel();
             this.InputCoursesInStudent = new System.Windows.Forms.NumericUpDown();
             this.CoursesInStudentGrid = new System.Windows.Forms.DataGridView();
-            this.CIS_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SIC_StatusColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CoursesInStudentGoButton = new System.Windows.Forms.Button();
             this.DummyCoursesInStudentLabel = new System.Windows.Forms.Label();
             this.LogIn = new System.Windows.Forms.Panel();
@@ -87,6 +85,8 @@ partial class AdminForm
             this.DumyyUserPicture = new System.Windows.Forms.Panel();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.BigUserPicture = new System.Windows.Forms.Panel();
+            this.CIS_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIC_StatusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Home.SuspendLayout();
             this.HomeStudentBox.SuspendLayout();
             this.HomeCourseBox.SuspendLayout();
@@ -118,7 +118,6 @@ partial class AdminForm
             this.Home.Size = new System.Drawing.Size(127, 214);
             this.Home.TabIndex = 8;
             this.Home.Visible = false;
-            this.Home.Paint += new System.Windows.Forms.PaintEventHandler(this.Home_Paint);
             // 
             // HomeStudentBox
             // 
@@ -589,23 +588,9 @@ partial class AdminForm
             this.SIC_StatusColumn});
             this.CoursesInStudentGrid.Location = new System.Drawing.Point(1, 28);
             this.CoursesInStudentGrid.Name = "CoursesInStudentGrid";
-            this.CoursesInStudentGrid.ReadOnly = true;
             this.CoursesInStudentGrid.Size = new System.Drawing.Size(447, 186);
             this.CoursesInStudentGrid.TabIndex = 3;
-            // 
-            // CIS_NameColumn
-            // 
-            this.CIS_NameColumn.HeaderText = "Course Name";
-            this.CIS_NameColumn.Name = "CIS_NameColumn";
-            this.CIS_NameColumn.ReadOnly = true;
-            this.CIS_NameColumn.Width = 202;
-            // 
-            // SIC_StatusColumn
-            // 
-            this.SIC_StatusColumn.HeaderText = "Status";
-            this.SIC_StatusColumn.Name = "SIC_StatusColumn";
-            this.SIC_StatusColumn.ReadOnly = true;
-            this.SIC_StatusColumn.Width = 202;
+            this.CoursesInStudentGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.CoursesInStudentGrid_CellValueChanged);
             // 
             // CoursesInStudentGoButton
             // 
@@ -748,6 +733,22 @@ partial class AdminForm
             this.BigUserPicture.Size = new System.Drawing.Size(258, 209);
             this.BigUserPicture.TabIndex = 1;
             // 
+            // CIS_NameColumn
+            // 
+            this.CIS_NameColumn.HeaderText = "Course Name";
+            this.CIS_NameColumn.Name = "CIS_NameColumn";
+            this.CIS_NameColumn.ReadOnly = true;
+            this.CIS_NameColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CIS_NameColumn.Width = 202;
+            // 
+            // SIC_StatusColumn
+            // 
+            this.SIC_StatusColumn.HeaderText = "Status";
+            this.SIC_StatusColumn.Name = "SIC_StatusColumn";
+            this.SIC_StatusColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SIC_StatusColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SIC_StatusColumn.Width = 202;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -851,11 +852,11 @@ partial class AdminForm
     private System.Windows.Forms.Label DummyCourseNameInBoxLabel;
     private System.Windows.Forms.Button CPQAddButton;
     private System.Windows.Forms.TextBox CPQAddInputTextBox;
-    private System.Windows.Forms.DataGridViewTextBoxColumn CIS_NameColumn;
-    private System.Windows.Forms.DataGridViewTextBoxColumn SIC_StatusColumn;
     private System.Windows.Forms.NumericUpDown InputCoursesInStudent;
     private System.Windows.Forms.TextBox InputStudentsInCourse;
     private System.Windows.Forms.GroupBox CPQActiveBox;
     private System.Windows.Forms.Label label2;
+    private System.Windows.Forms.DataGridViewTextBoxColumn CIS_NameColumn;
+    private System.Windows.Forms.DataGridViewCheckBoxColumn SIC_StatusColumn;
 }
 

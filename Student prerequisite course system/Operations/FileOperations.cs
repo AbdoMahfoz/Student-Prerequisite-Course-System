@@ -11,13 +11,20 @@ static public class FileOperations
     }
     static public class UsersFile
     {
-        static ArrayList<Student> Data = null;
+        static ArrayList<Student> data;
+        static ArrayList<Student> Data
+        {
+            get
+            {
+                if(data == null)
+                {
+                    Read();
+                }
+                return data;
+            }
+        }
         static public Student[] GetAllStudents()
         {
-            if (Data == null)
-            {
-                Read();
-            }
             return Data.ToArray();
         }
         static public void AddStudent(Student s)
@@ -27,10 +34,6 @@ static public class FileOperations
         }
         static public bool DeleteStudent(Student s)
         {
-            if (Data == null)
-            {
-                Read();
-            }
             for (int i = 0; i < Data.Count; i++)
             {
                 if (Data[i] == s)
@@ -56,8 +59,8 @@ static public class FileOperations
         }
         static void Read()
         {
-            if (Data != null) return;
-            Data = new ArrayList<Student>();
+            if (data != null) return;
+            data = new ArrayList<Student>();
             if (!File.Exists("User.txt"))
             {
                 return;
@@ -71,7 +74,7 @@ static public class FileOperations
             {
                 Fields = Records[i].Split('@');
                 if (Fields.Length == 1) continue;
-                Data.Append(new Student()
+                data.Append(new Student()
                 {
                     ID = int.Parse(Fields[0]),
                     Name = Fields[1],
@@ -84,7 +87,7 @@ static public class FileOperations
         }
         static public void WriteinFile()
         {
-            if (Data == null) return;
+            if (data == null) return;
             FileStream fs = new FileStream("User.Txt", FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
             string Recordss = "";
@@ -98,10 +101,6 @@ static public class FileOperations
         }
         static public int CheckUser(string Name, string Password)
         {
-            if(Data == null)
-            {
-                Read();
-            }
             bool found = false;
             bool RightPass = false;
             int res = -1;
@@ -155,11 +154,22 @@ static public class FileOperations
     }
     static public class CoursesFile
     {
-        static ArrayList<Course> Data = null;
+        static ArrayList<Course> data = null;
+        static ArrayList<Course> Data
+        {
+            get
+            {
+                if(data == null)
+                {
+                    Read();
+                }
+                return data;
+            }
+        }
         static void Read()
         {
-            if (Data != null) return;
-            Data = new ArrayList<Course>();
+            if (data != null) return;
+            data = new ArrayList<Course>();
             FileStream fs = new FileStream("Courses.txt", FileMode.OpenOrCreate);
             StreamReader sr = new StreamReader(fs);
             string[] Records, Fields;
@@ -174,15 +184,11 @@ static public class FileOperations
                     Name = Fields[0],
                     Description = Fields[1]
                 };
-                Data.Append(course);
+                data.Append(course);
             }
         }
         static public void DeleteCourse(Course c)
         {
-            if (Data == null)
-            {
-                Read();
-            }
             for (int i = 0; i < Data.Count; i++)
             {
                 if (Data[i] == c)
@@ -196,10 +202,6 @@ static public class FileOperations
         }
         static public bool AddCourse(Course c)
         {
-            if (Data == null)
-            {
-                Read();
-            }
             foreach (Course s in Data)
             {
                 if (s.Name == c.Name)
@@ -213,10 +215,6 @@ static public class FileOperations
         }
         static public Course GetCourse(string name)
         {
-            if (Data == null)
-            {
-                Read();
-            }
             foreach (Course c in Data)
             {
                 if (c.Name == name)
@@ -228,15 +226,11 @@ static public class FileOperations
         }
         static public Course[] GetAllCourse()
         {
-            if (Data == null)
-            {
-                Read();
-            }
             return Data.ToArray();
         }
         static public void Write()
         {
-            if (Data == null)
+            if (data == null)
             {
                 return;
             }
@@ -285,12 +279,23 @@ static public class FileOperations
     }
     static public class Users_SubjectsFile
     {
-        static ArrayList<Pair<int, ArrayList<Pair<bool, Course>>>> Data = null;
+        static ArrayList<Pair<int, ArrayList<Pair<bool, Course>>>> data = null;
+        static ArrayList<Pair<int, ArrayList<Pair<bool, Course>>>> Data
+        {
+            get
+            {
+                if (data == null)
+                {
+                    LoadData();
+                }
+                return data;
+            }
+        }
         static void LoadData()
         {
             FileStream FS = new FileStream("Users_Subjects.txt", FileMode.OpenOrCreate);
             StreamReader SR = new StreamReader(FS);
-            Data = new ArrayList<Pair<int, ArrayList<Pair<bool, Course>>>>();
+            data = new ArrayList<Pair<int, ArrayList<Pair<bool, Course>>>>();
             while (!SR.EndOfStream)
             {
                 ArrayList<Pair<bool, Course>> s = new ArrayList<Pair<bool, Course>>();
@@ -316,16 +321,12 @@ static public class FileOperations
                 }
                 sn.First = n;
                 sn.Second = s;
-                Data.Append(sn);
+                data.Append(sn);
             }
             SR.Close();
         }
         static public void DeleteStudent(Student s)
         {
-            if(Data == null)
-            {
-                LoadData();
-            }
             for(int i = 0; i < Data.Count; i++)
             {
                 if(Data[i].First == s.ID)
@@ -351,10 +352,6 @@ static public class FileOperations
         }
         static public void RegisterStudent(Student s)
         {
-            if (Data == null)
-            {
-                LoadData();
-            }
             Data.Append(new Pair<int, ArrayList<Pair<bool, Course>>>()
             {
                 First = s.ID,
@@ -363,10 +360,6 @@ static public class FileOperations
         }
         static public ArrayList<Pair<bool, Course>> GetSubjects(int ID)
         {
-            if (Data == null)
-            {
-                LoadData();
-            }
             for (int i = 0; i < Data.Count; i++)
             {
                 if (ID == Data[i].First)
@@ -378,7 +371,7 @@ static public class FileOperations
         }
         static public void WriteData()
         {
-            if (Data == null) return;
+            if (data == null) return;
             FileStream fs = new FileStream("Users_Subjects.txt", FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
             for (int i = 0; i < Data.Count; i++)
@@ -409,12 +402,23 @@ static public class FileOperations
     }
     static public class Subjects_UsersFile
     {
-        static ArrayList<Pair<Course, ArrayList<Student>>> Data = null;
+        static ArrayList<Pair<Course, ArrayList<Student>>> data = null;
+        static ArrayList<Pair<Course, ArrayList<Student>>> Data
+        {
+            get
+            {
+                if(data == null)
+                {
+                    LoadData();
+                }
+                return data;
+            }
+        }
         static void LoadData()
         {
             FileStream FS = new FileStream("Subjects_User.txt", FileMode.OpenOrCreate);
             StreamReader SR = new StreamReader(FS);
-            Data = new ArrayList<Pair<Course, ArrayList<Student>>>();
+            data = new ArrayList<Pair<Course, ArrayList<Student>>>();
             while (!SR.EndOfStream)
             {
                 ArrayList<Student> s = new ArrayList<Student>();
@@ -430,16 +434,12 @@ static public class FileOperations
                 }
                 cs.First = c;
                 cs.Second = s;
-                Data.Append(cs);
+                data.Append(cs);
             }
             SR.Close();
         }
         static public void DeleteCourse(Course c)
         {
-            if(Data == null)
-            {
-                LoadData();
-            }
             for(int i = 0; i < Data.Count; i++)
             {
                 if(Data[i].First == c)
@@ -465,22 +465,32 @@ static public class FileOperations
         }
         static public void RegisterCourse(Course c)
         {
-            if (Data == null)
-            {
-                LoadData();
-            }
             Data.Append(new Pair<Course, ArrayList<Student>>()
             {
                 First = c,
                 Second = new ArrayList<Student>()
             });
         }
+        static public void DeleteStudentFromCourse(Course c, Student s)
+        {
+            foreach(Pair<Course, ArrayList<Student>> P in Data)
+            {
+                if(P.First.Name == c.Name)
+                {
+                    for(int i = 0; i < P.Second.Count; i++)
+                    {
+                        if(P.Second[i].ID == s.ID)
+                        {
+                            P.Second.DeleteAt(i);
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+        }
         static public void UpdateSubject(Course c, Student s)
         {
-            if (Data == null)
-            {
-                LoadData();
-            }
             for (int i = 0; i < Data.Count; i++)
             {
                 if (c == Data[i].First)
@@ -492,10 +502,6 @@ static public class FileOperations
         }
         static public Student[] GetStudents(Course c)
         {
-            if (Data == null)
-            {
-                LoadData();
-            }
             for (int i = 0; i < Data.Count; i++)
             {
                 if (c == Data[i].First)
@@ -507,7 +513,7 @@ static public class FileOperations
         }
         static public void WriteSubjects()
         {
-            if (Data == null) return;
+            if (data == null) return;
             FileStream fs = new FileStream("Subjects_User.txt", FileMode.Create);
             StreamWriter sw = new StreamWriter(fs);
             for (int i = 0; i < Data.Count; i++)
