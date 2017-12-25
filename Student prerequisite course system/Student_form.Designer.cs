@@ -44,9 +44,7 @@ partial class Student_form
             this.DynamicCourcesPanel = new System.Windows.Forms.Panel();
             this.CurrentDetails = new System.Windows.Forms.Panel();
             this.NavigationPanel = new System.Windows.Forms.Panel();
-            this.EditGroupbox = new System.Windows.Forms.GroupBox();
             this.HomeEditProfile = new System.Windows.Forms.Button();
-            this.HomeEditCourse = new System.Windows.Forms.Button();
             this.ViewCoursesGroupBOX = new System.Windows.Forms.GroupBox();
             this.HomeSpecificCourse = new System.Windows.Forms.Button();
             this.HomeCurrent = new System.Windows.Forms.Button();
@@ -70,7 +68,6 @@ partial class Student_form
             this.PasswordPlaceHolder.SuspendLayout();
             this.ViewCourses.SuspendLayout();
             this.NavigationPanel.SuspendLayout();
-            this.EditGroupbox.SuspendLayout();
             this.ViewCoursesGroupBOX.SuspendLayout();
             this.SpecificCourse.SuspendLayout();
             this.EditProfile.SuspendLayout();
@@ -234,7 +231,7 @@ partial class Student_form
             // NavigationPanel
             // 
             this.NavigationPanel.BackColor = System.Drawing.Color.AliceBlue;
-            this.NavigationPanel.Controls.Add(this.EditGroupbox);
+            this.NavigationPanel.Controls.Add(this.HomeEditProfile);
             this.NavigationPanel.Controls.Add(this.ViewCoursesGroupBOX);
             this.NavigationPanel.Location = new System.Drawing.Point(533, 1);
             this.NavigationPanel.Name = "NavigationPanel";
@@ -242,53 +239,28 @@ partial class Student_form
             this.NavigationPanel.TabIndex = 7;
             this.NavigationPanel.Visible = false;
             // 
-            // EditGroupbox
-            // 
-            this.EditGroupbox.Controls.Add(this.HomeEditProfile);
-            this.EditGroupbox.Controls.Add(this.HomeEditCourse);
-            this.EditGroupbox.Location = new System.Drawing.Point(3, 151);
-            this.EditGroupbox.Name = "EditGroupbox";
-            this.EditGroupbox.Size = new System.Drawing.Size(136, 83);
-            this.EditGroupbox.TabIndex = 5;
-            this.EditGroupbox.TabStop = false;
-            this.EditGroupbox.Text = "Personal";
-            // 
             // HomeEditProfile
             // 
             this.HomeEditProfile.BackColor = System.Drawing.Color.Transparent;
             this.HomeEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeEditProfile.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.HomeEditProfile.Location = new System.Drawing.Point(17, 48);
+            this.HomeEditProfile.Location = new System.Drawing.Point(20, 20);
             this.HomeEditProfile.Name = "HomeEditProfile";
-            this.HomeEditProfile.Size = new System.Drawing.Size(108, 23);
+            this.HomeEditProfile.Size = new System.Drawing.Size(108, 28);
             this.HomeEditProfile.TabIndex = 3;
             this.HomeEditProfile.Text = "Edit Profile";
             this.HomeEditProfile.UseVisualStyleBackColor = false;
             this.HomeEditProfile.Click += new System.EventHandler(this.HomeClick);
-            // 
-            // HomeEditCourse
-            // 
-            this.HomeEditCourse.BackColor = System.Drawing.Color.Transparent;
-            this.HomeEditCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeEditCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeEditCourse.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.HomeEditCourse.Location = new System.Drawing.Point(17, 19);
-            this.HomeEditCourse.Name = "HomeEditCourse";
-            this.HomeEditCourse.Size = new System.Drawing.Size(108, 23);
-            this.HomeEditCourse.TabIndex = 2;
-            this.HomeEditCourse.Text = "Edit Courses";
-            this.HomeEditCourse.UseVisualStyleBackColor = false;
-            this.HomeEditCourse.Click += new System.EventHandler(this.HomeClick);
             // 
             // ViewCoursesGroupBOX
             // 
             this.ViewCoursesGroupBOX.Controls.Add(this.HomeSpecificCourse);
             this.ViewCoursesGroupBOX.Controls.Add(this.HomeCurrent);
             this.ViewCoursesGroupBOX.Controls.Add(this.HomeView);
-            this.ViewCoursesGroupBOX.Location = new System.Drawing.Point(3, 19);
+            this.ViewCoursesGroupBOX.Location = new System.Drawing.Point(9, 67);
             this.ViewCoursesGroupBOX.Name = "ViewCoursesGroupBOX";
-            this.ViewCoursesGroupBOX.Size = new System.Drawing.Size(136, 109);
+            this.ViewCoursesGroupBOX.Size = new System.Drawing.Size(136, 172);
             this.ViewCoursesGroupBOX.TabIndex = 4;
             this.ViewCoursesGroupBOX.TabStop = false;
             this.ViewCoursesGroupBOX.Text = "Courses";
@@ -299,7 +271,7 @@ partial class Student_form
             this.HomeSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeSpecificCourse.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.HomeSpecificCourse.Location = new System.Drawing.Point(17, 77);
+            this.HomeSpecificCourse.Location = new System.Drawing.Point(17, 117);
             this.HomeSpecificCourse.Name = "HomeSpecificCourse";
             this.HomeSpecificCourse.Size = new System.Drawing.Size(108, 23);
             this.HomeSpecificCourse.TabIndex = 2;
@@ -313,7 +285,7 @@ partial class Student_form
             this.HomeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeCurrent.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.HomeCurrent.Location = new System.Drawing.Point(17, 48);
+            this.HomeCurrent.Location = new System.Drawing.Point(17, 67);
             this.HomeCurrent.Name = "HomeCurrent";
             this.HomeCurrent.Size = new System.Drawing.Size(108, 23);
             this.HomeCurrent.TabIndex = 0;
@@ -515,7 +487,6 @@ partial class Student_form
             this.ViewCourses.ResumeLayout(false);
             this.ViewCourses.PerformLayout();
             this.NavigationPanel.ResumeLayout(false);
-            this.EditGroupbox.ResumeLayout(false);
             this.ViewCoursesGroupBOX.ResumeLayout(false);
             this.SpecificCourse.ResumeLayout(false);
             this.SpecificCourse.PerformLayout();
@@ -546,8 +517,6 @@ partial class Student_form
     private System.Windows.Forms.CheckBox AvailCourseCheckbox;
     private System.Windows.Forms.Panel DynamicCourcesPanel;
     private System.Windows.Forms.Button HomeEditProfile;
-    private System.Windows.Forms.GroupBox EditGroupbox;
-    private System.Windows.Forms.Button HomeEditCourse;
     private System.Windows.Forms.GroupBox ViewCoursesGroupBOX;
     private System.Windows.Forms.Button HomeSpecificCourse;
     private System.Windows.Forms.Panel SpecificCourse;
