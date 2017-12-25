@@ -306,4 +306,9 @@ public partial class AdminForm : Form
         InputStudentsInCourse.Text = "";
         StudentsInCourseGrid.Rows.Clear();
     }
+
+    private void Home_Paint(object sender, PaintEventArgs e)
+    {
+
+    }
 }

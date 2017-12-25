@@ -110,6 +110,7 @@ partial class AdminForm
             // 
             // Home
             // 
+            this.Home.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.Home.Controls.Add(this.HomeStudentBox);
             this.Home.Controls.Add(this.HomeCourseBox);
             this.Home.Location = new System.Drawing.Point(449, 0);
@@ -117,6 +118,7 @@ partial class AdminForm
             this.Home.Size = new System.Drawing.Size(127, 214);
             this.Home.TabIndex = 8;
             this.Home.Visible = false;
+            this.Home.Paint += new System.Windows.Forms.PaintEventHandler(this.Home_Paint);
             // 
             // HomeStudentBox
             // 
@@ -134,6 +136,7 @@ partial class AdminForm
             this.HomeCoursesOfStudentButton.BackColor = System.Drawing.Color.Transparent;
             this.HomeCoursesOfStudentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeCoursesOfStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeCoursesOfStudentButton.ForeColor = System.Drawing.Color.White;
             this.HomeCoursesOfStudentButton.Location = new System.Drawing.Point(-1, 48);
             this.HomeCoursesOfStudentButton.Name = "HomeCoursesOfStudentButton";
             this.HomeCoursesOfStudentButton.Size = new System.Drawing.Size(120, 23);
@@ -147,6 +150,7 @@ partial class AdminForm
             this.HomeAllStudentsButton.BackColor = System.Drawing.Color.Transparent;
             this.HomeAllStudentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeAllStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeAllStudentsButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.HomeAllStudentsButton.Location = new System.Drawing.Point(-1, 19);
             this.HomeAllStudentsButton.Name = "HomeAllStudentsButton";
             this.HomeAllStudentsButton.Size = new System.Drawing.Size(120, 23);
@@ -172,6 +176,7 @@ partial class AdminForm
             this.HomeCPQButton.BackColor = System.Drawing.Color.Transparent;
             this.HomeCPQButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeCPQButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeCPQButton.ForeColor = System.Drawing.Color.White;
             this.HomeCPQButton.Location = new System.Drawing.Point(1, 77);
             this.HomeCPQButton.Name = "HomeCPQButton";
             this.HomeCPQButton.Size = new System.Drawing.Size(120, 23);
@@ -185,6 +190,7 @@ partial class AdminForm
             this.HomeStudentsOfCourseButton.BackColor = System.Drawing.Color.Transparent;
             this.HomeStudentsOfCourseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeStudentsOfCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeStudentsOfCourseButton.ForeColor = System.Drawing.Color.White;
             this.HomeStudentsOfCourseButton.Location = new System.Drawing.Point(0, 48);
             this.HomeStudentsOfCourseButton.Name = "HomeStudentsOfCourseButton";
             this.HomeStudentsOfCourseButton.Size = new System.Drawing.Size(120, 23);
@@ -198,6 +204,7 @@ partial class AdminForm
             this.HomeAllCoursesButton.BackColor = System.Drawing.Color.Transparent;
             this.HomeAllCoursesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeAllCoursesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeAllCoursesButton.ForeColor = System.Drawing.Color.White;
             this.HomeAllCoursesButton.Location = new System.Drawing.Point(1, 19);
             this.HomeAllCoursesButton.Name = "HomeAllCoursesButton";
             this.HomeAllCoursesButton.Size = new System.Drawing.Size(119, 23);
@@ -221,11 +228,12 @@ partial class AdminForm
             // 
             // AllCoursesGrid
             // 
-            this.AllCoursesGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AllCoursesGrid.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.AllCoursesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AllCoursesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CO_NameColumn,
             this.CO_DescriptionColumn});
+            this.AllCoursesGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.AllCoursesGrid.Location = new System.Drawing.Point(1, 28);
             this.AllCoursesGrid.Name = "AllCoursesGrid";
             this.AllCoursesGrid.Size = new System.Drawing.Size(442, 183);
@@ -248,7 +256,8 @@ partial class AdminForm
             // 
             this.DummyAllCoursesLabel.AutoSize = true;
             this.DummyAllCoursesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DummyAllCoursesLabel.Location = new System.Drawing.Point(163, 9);
+            this.DummyAllCoursesLabel.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DummyAllCoursesLabel.Location = new System.Drawing.Point(174, 9);
             this.DummyAllCoursesLabel.Name = "DummyAllCoursesLabel";
             this.DummyAllCoursesLabel.Size = new System.Drawing.Size(87, 16);
             this.DummyAllCoursesLabel.TabIndex = 9;
@@ -279,7 +288,7 @@ partial class AdminForm
             // 
             // AllStudentsGrid
             // 
-            this.AllStudentsGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AllStudentsGrid.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.AllStudentsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AllStudentsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SO_IDColumn,
@@ -361,7 +370,7 @@ partial class AdminForm
             // StudentsInCourseGrid
             // 
             this.StudentsInCourseGrid.AllowUserToAddRows = false;
-            this.StudentsInCourseGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.StudentsInCourseGrid.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.StudentsInCourseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentsInCourseGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SIC_IDColumn,
@@ -412,6 +421,7 @@ partial class AdminForm
             // 
             // CPQActiveBox
             // 
+            this.CPQActiveBox.BackColor = System.Drawing.Color.AliceBlue;
             this.CPQActiveBox.Controls.Add(this.CPQActiveCourseLabel);
             this.CPQActiveBox.Controls.Add(this.CPQDummyActiveCourseLabel);
             this.CPQActiveBox.Controls.Add(this.CPQDummyLabel);
@@ -474,6 +484,7 @@ partial class AdminForm
             // 
             // CPQGroupBox
             // 
+            this.CPQGroupBox.BackColor = System.Drawing.Color.AliceBlue;
             this.CPQGroupBox.Controls.Add(this.DummyCourseNameInBoxLabel);
             this.CPQGroupBox.Controls.Add(this.CPQAddButton);
             this.CPQGroupBox.Controls.Add(this.CPQAddInputTextBox);
@@ -499,6 +510,7 @@ partial class AdminForm
             this.CPQAddButton.BackColor = System.Drawing.Color.Transparent;
             this.CPQAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CPQAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPQAddButton.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.CPQAddButton.Location = new System.Drawing.Point(126, 44);
             this.CPQAddButton.Name = "CPQAddButton";
             this.CPQAddButton.Size = new System.Drawing.Size(84, 23);
@@ -518,7 +530,7 @@ partial class AdminForm
             // 
             this.CPQDataGrid.AllowUserToAddRows = false;
             this.CPQDataGrid.AllowUserToResizeRows = false;
-            this.CPQDataGrid.BackgroundColor = System.Drawing.SystemColors.MenuHighlight;
+            this.CPQDataGrid.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.CPQDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CPQDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CPQ_NameColumn});
@@ -562,7 +574,7 @@ partial class AdminForm
             // 
             this.CoursesInStudentGrid.AllowUserToAddRows = false;
             this.CoursesInStudentGrid.AllowUserToDeleteRows = false;
-            this.CoursesInStudentGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CoursesInStudentGrid.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.CoursesInStudentGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CoursesInStudentGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CIS_NameColumn,
@@ -612,7 +624,8 @@ partial class AdminForm
             // 
             // LogIn
             // 
-            this.LogIn.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.LogIn.BackColor = System.Drawing.Color.AliceBlue;
+            this.LogIn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LogIn.Controls.Add(this.LoginButton);
             this.LogIn.Controls.Add(this.PasswordPlaceHolder);
             this.LogIn.Controls.Add(this.PasswordLabel);
@@ -629,7 +642,7 @@ partial class AdminForm
             this.LoginButton.BackColor = System.Drawing.Color.Transparent;
             this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LoginButton.ForeColor = System.Drawing.Color.Blue;
             this.LoginButton.Location = new System.Drawing.Point(390, 175);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(43, 23);
@@ -640,6 +653,7 @@ partial class AdminForm
             // 
             // PasswordPlaceHolder
             // 
+            this.PasswordPlaceHolder.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PasswordPlaceHolder.Controls.Add(this.PasswordTextBox);
             this.PasswordPlaceHolder.Controls.Add(this.DumyyPasswordPicture);
             this.PasswordPlaceHolder.Location = new System.Drawing.Point(301, 118);
@@ -656,6 +670,7 @@ partial class AdminForm
             // 
             // DumyyPasswordPicture
             // 
+            this.DumyyPasswordPicture.BackColor = System.Drawing.Color.White;
             this.DumyyPasswordPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyPasswordPicture.BackgroundImage")));
             this.DumyyPasswordPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DumyyPasswordPicture.Location = new System.Drawing.Point(0, 0);
@@ -666,9 +681,10 @@ partial class AdminForm
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
+            this.PasswordLabel.BackColor = System.Drawing.Color.AliceBlue;
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.PasswordLabel.Location = new System.Drawing.Point(298, 99);
+            this.PasswordLabel.ForeColor = System.Drawing.Color.Blue;
+            this.PasswordLabel.Location = new System.Drawing.Point(298, 98);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(76, 16);
             this.PasswordLabel.TabIndex = 6;
@@ -676,6 +692,7 @@ partial class AdminForm
             // 
             // UserNamePlaceHolder
             // 
+            this.UserNamePlaceHolder.BackColor = System.Drawing.Color.White;
             this.UserNamePlaceHolder.Controls.Add(this.UserNameTextBox);
             this.UserNamePlaceHolder.Controls.Add(this.DumyyUserPicture);
             this.UserNamePlaceHolder.Location = new System.Drawing.Point(300, 37);
@@ -692,6 +709,7 @@ partial class AdminForm
             // 
             // DumyyUserPicture
             // 
+            this.DumyyUserPicture.BackColor = System.Drawing.Color.White;
             this.DumyyUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DumyyUserPicture.BackgroundImage")));
             this.DumyyUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.DumyyUserPicture.Location = new System.Drawing.Point(1, 2);
@@ -703,7 +721,7 @@ partial class AdminForm
             // 
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.UserNameLabel.ForeColor = System.Drawing.Color.Blue;
             this.UserNameLabel.Location = new System.Drawing.Point(300, 16);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(79, 16);
@@ -712,11 +730,12 @@ partial class AdminForm
             // 
             // BigUserPicture
             // 
+            this.BigUserPicture.BackColor = System.Drawing.Color.White;
             this.BigUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BigUserPicture.BackgroundImage")));
             this.BigUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BigUserPicture.Location = new System.Drawing.Point(2, 2);
             this.BigUserPicture.Name = "BigUserPicture";
-            this.BigUserPicture.Size = new System.Drawing.Size(240, 209);
+            this.BigUserPicture.Size = new System.Drawing.Size(258, 209);
             this.BigUserPicture.TabIndex = 1;
             // 
             // AdminForm
@@ -725,13 +744,13 @@ partial class AdminForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(577, 214);
-            this.Controls.Add(this.CourseOverviewPanel);
-            this.Controls.Add(this.CoursesPrerequisites);
-            this.Controls.Add(this.StudentsInCourse);
-            this.Controls.Add(this.CoursesInStudent);
             this.Controls.Add(this.StudentOverviewPanel);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.LogIn);
+            this.Controls.Add(this.CoursesPrerequisites);
+            this.Controls.Add(this.CourseOverviewPanel);
+            this.Controls.Add(this.CoursesInStudent);
+            this.Controls.Add(this.StudentsInCourse);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "AdminForm";
             this.Text = "Admin Control";
