@@ -78,6 +78,7 @@ partial class Student_form
             // 
             // LoginPanel
             // 
+            this.LoginPanel.BackColor = System.Drawing.Color.AliceBlue;
             this.LoginPanel.Controls.Add(this.LoginButton);
             this.LoginPanel.Controls.Add(this.UserNamePlaceHolder);
             this.LoginPanel.Controls.Add(this.PasswordPlaceHolder);
@@ -91,19 +92,21 @@ partial class Student_form
             // 
             // LoginButton
             // 
-            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LoginButton.BackColor = System.Drawing.Color.Transparent;
+            this.LoginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.LoginButton.ForeColor = System.Drawing.Color.Blue;
             this.LoginButton.Location = new System.Drawing.Point(452, 195);
             this.LoginButton.Name = "LoginButton";
-            this.LoginButton.Size = new System.Drawing.Size(43, 20);
+            this.LoginButton.Size = new System.Drawing.Size(43, 28);
             this.LoginButton.TabIndex = 6;
-            this.LoginButton.Text = "OK";
-            this.LoginButton.UseVisualStyleBackColor = true;
+            this.LoginButton.Text = "Ok";
+            this.LoginButton.UseVisualStyleBackColor = false;
             this.LoginButton.Click += new System.EventHandler(this.LoginButton_Click);
             // 
             // UserNamePlaceHolder
             // 
+            this.UserNamePlaceHolder.BackColor = System.Drawing.Color.White;
             this.UserNamePlaceHolder.Controls.Add(this.UserNameTextBox);
             this.UserNamePlaceHolder.Controls.Add(this.DumyyUserPicture);
             this.UserNamePlaceHolder.Location = new System.Drawing.Point(367, 57);
@@ -129,9 +132,10 @@ partial class Student_form
             // 
             // PasswordPlaceHolder
             // 
+            this.PasswordPlaceHolder.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PasswordPlaceHolder.Controls.Add(this.PasswordTextBox);
             this.PasswordPlaceHolder.Controls.Add(this.DumyyPasswordPicture);
-            this.PasswordPlaceHolder.Location = new System.Drawing.Point(367, 137);
+            this.PasswordPlaceHolder.Location = new System.Drawing.Point(368, 137);
             this.PasswordPlaceHolder.Name = "PasswordPlaceHolder";
             this.PasswordPlaceHolder.Size = new System.Drawing.Size(231, 40);
             this.PasswordPlaceHolder.TabIndex = 2;
@@ -154,19 +158,20 @@ partial class Student_form
             // 
             // BigUserPicture
             // 
+            this.BigUserPicture.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.BigUserPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BigUserPicture.BackgroundImage")));
             this.BigUserPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.BigUserPicture.Location = new System.Drawing.Point(0, 0);
             this.BigUserPicture.Name = "BigUserPicture";
-            this.BigUserPicture.Size = new System.Drawing.Size(240, 243);
+            this.BigUserPicture.Size = new System.Drawing.Size(305, 243);
             this.BigUserPicture.TabIndex = 0;
             // 
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.PasswordLabel.Location = new System.Drawing.Point(371, 113);
+            this.PasswordLabel.ForeColor = System.Drawing.Color.Blue;
+            this.PasswordLabel.Location = new System.Drawing.Point(340, 112);
             this.PasswordLabel.Name = "PasswordLabel";
             this.PasswordLabel.Size = new System.Drawing.Size(76, 16);
             this.PasswordLabel.TabIndex = 4;
@@ -176,8 +181,8 @@ partial class Student_form
             // 
             this.UserNameLabel.AutoSize = true;
             this.UserNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserNameLabel.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.UserNameLabel.Location = new System.Drawing.Point(374, 35);
+            this.UserNameLabel.ForeColor = System.Drawing.Color.Blue;
+            this.UserNameLabel.Location = new System.Drawing.Point(337, 25);
             this.UserNameLabel.Name = "UserNameLabel";
             this.UserNameLabel.Size = new System.Drawing.Size(79, 16);
             this.UserNameLabel.TabIndex = 3;
@@ -199,7 +204,7 @@ partial class Student_form
             this.AvailCourseCheckbox.AutoSize = true;
             this.AvailCourseCheckbox.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AvailCourseCheckbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AvailCourseCheckbox.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.AvailCourseCheckbox.ForeColor = System.Drawing.Color.DarkBlue;
             this.AvailCourseCheckbox.Location = new System.Drawing.Point(184, 4);
             this.AvailCourseCheckbox.Name = "AvailCourseCheckbox";
             this.AvailCourseCheckbox.Size = new System.Drawing.Size(213, 20);
@@ -211,6 +216,7 @@ partial class Student_form
             // DynamicCourcesPanel
             // 
             this.DynamicCourcesPanel.AutoScroll = true;
+            this.DynamicCourcesPanel.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.DynamicCourcesPanel.Location = new System.Drawing.Point(0, 26);
             this.DynamicCourcesPanel.Name = "DynamicCourcesPanel";
             this.DynamicCourcesPanel.Size = new System.Drawing.Size(530, 221);
@@ -227,7 +233,7 @@ partial class Student_form
             // 
             // NavigationPanel
             // 
-            this.NavigationPanel.BackColor = System.Drawing.Color.White;
+            this.NavigationPanel.BackColor = System.Drawing.Color.AliceBlue;
             this.NavigationPanel.Controls.Add(this.EditGroupbox);
             this.NavigationPanel.Controls.Add(this.ViewCoursesGroupBOX);
             this.NavigationPanel.Location = new System.Drawing.Point(533, 1);
@@ -249,20 +255,24 @@ partial class Student_form
             // 
             // HomeEditProfile
             // 
+            this.HomeEditProfile.BackColor = System.Drawing.Color.Transparent;
+            this.HomeEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeEditProfile.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.HomeEditProfile.Location = new System.Drawing.Point(17, 48);
             this.HomeEditProfile.Name = "HomeEditProfile";
             this.HomeEditProfile.Size = new System.Drawing.Size(108, 23);
             this.HomeEditProfile.TabIndex = 3;
             this.HomeEditProfile.Text = "Edit Profile";
-            this.HomeEditProfile.UseVisualStyleBackColor = true;
+            this.HomeEditProfile.UseVisualStyleBackColor = false;
             this.HomeEditProfile.Click += new System.EventHandler(this.HomeClick);
             // 
             // HomeEditCourse
             // 
-            this.HomeEditCourse.BackColor = System.Drawing.Color.White;
-            this.HomeEditCourse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeEditCourse.BackColor = System.Drawing.Color.Transparent;
+            this.HomeEditCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeEditCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeEditCourse.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.HomeEditCourse.Location = new System.Drawing.Point(17, 19);
             this.HomeEditCourse.Name = "HomeEditCourse";
             this.HomeEditCourse.Size = new System.Drawing.Size(108, 23);
@@ -285,40 +295,44 @@ partial class Student_form
             // 
             // HomeSpecificCourse
             // 
-            this.HomeSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeSpecificCourse.BackColor = System.Drawing.Color.Transparent;
+            this.HomeSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeSpecificCourse.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.HomeSpecificCourse.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.HomeSpecificCourse.Location = new System.Drawing.Point(17, 77);
             this.HomeSpecificCourse.Name = "HomeSpecificCourse";
             this.HomeSpecificCourse.Size = new System.Drawing.Size(108, 23);
             this.HomeSpecificCourse.TabIndex = 2;
             this.HomeSpecificCourse.Text = "Specific Course";
-            this.HomeSpecificCourse.UseVisualStyleBackColor = true;
+            this.HomeSpecificCourse.UseVisualStyleBackColor = false;
             this.HomeSpecificCourse.Click += new System.EventHandler(this.HomeClick);
             // 
             // HomeCurrent
             // 
-            this.HomeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeCurrent.BackColor = System.Drawing.Color.Transparent;
+            this.HomeCurrent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HomeCurrent.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.HomeCurrent.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.HomeCurrent.Location = new System.Drawing.Point(17, 48);
             this.HomeCurrent.Name = "HomeCurrent";
             this.HomeCurrent.Size = new System.Drawing.Size(108, 23);
             this.HomeCurrent.TabIndex = 0;
             this.HomeCurrent.Text = "Current Courses";
-            this.HomeCurrent.UseVisualStyleBackColor = true;
+            this.HomeCurrent.UseVisualStyleBackColor = false;
             this.HomeCurrent.Click += new System.EventHandler(this.HomeClick);
             // 
             // HomeView
             // 
-            this.HomeView.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.HomeView.BackColor = System.Drawing.Color.Transparent;
+            this.HomeView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeView.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeView.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.HomeView.Location = new System.Drawing.Point(17, 19);
             this.HomeView.Name = "HomeView";
             this.HomeView.Size = new System.Drawing.Size(108, 23);
             this.HomeView.TabIndex = 1;
             this.HomeView.Text = "All Courses";
-            this.HomeView.UseVisualStyleBackColor = true;
+            this.HomeView.UseVisualStyleBackColor = false;
             this.HomeView.Click += new System.EventHandler(this.HomeClick);
             // 
             // SpecificCourse
@@ -332,37 +346,42 @@ partial class Student_form
             this.SpecificCourse.Controls.Add(this.DescriptionText);
             this.SpecificCourse.Location = new System.Drawing.Point(3, 4);
             this.SpecificCourse.Name = "SpecificCourse";
-            this.SpecificCourse.Size = new System.Drawing.Size(524, 236);
+            this.SpecificCourse.Size = new System.Drawing.Size(527, 236);
             this.SpecificCourse.TabIndex = 7;
             this.SpecificCourse.Visible = false;
             this.SpecificCourse.VisibleChanged += new System.EventHandler(this.SpecificCourse_VisibleChanged);
             // 
             // GoSpecificCourse
             // 
-            this.GoSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.GoSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoSpecificCourse.Location = new System.Drawing.Point(166, 124);
+            this.GoSpecificCourse.BackColor = System.Drawing.Color.Transparent;
+            this.GoSpecificCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GoSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoSpecificCourse.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.GoSpecificCourse.Location = new System.Drawing.Point(181, 64);
             this.GoSpecificCourse.Name = "GoSpecificCourse";
             this.GoSpecificCourse.Size = new System.Drawing.Size(50, 23);
             this.GoSpecificCourse.TabIndex = 7;
             this.GoSpecificCourse.Text = "Go";
-            this.GoSpecificCourse.UseVisualStyleBackColor = true;
+            this.GoSpecificCourse.UseVisualStyleBackColor = false;
             this.GoSpecificCourse.Click += new System.EventHandler(this.GoSpecificCourse_Click);
             // 
             // CourseNameSpecificCourse
             // 
             this.CourseNameSpecificCourse.AutoSize = true;
-            this.CourseNameSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CourseNameSpecificCourse.Location = new System.Drawing.Point(7, 98);
+            this.CourseNameSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CourseNameSpecificCourse.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.CourseNameSpecificCourse.Location = new System.Drawing.Point(7, 21);
             this.CourseNameSpecificCourse.Name = "CourseNameSpecificCourse";
-            this.CourseNameSpecificCourse.Size = new System.Drawing.Size(102, 15);
+            this.CourseNameSpecificCourse.Size = new System.Drawing.Size(110, 16);
             this.CourseNameSpecificCourse.TabIndex = 0;
             this.CourseNameSpecificCourse.Text = "Course Name :";
+            this.CourseNameSpecificCourse.Click += new System.EventHandler(this.CourseNameSpecificCourse_Click);
             // 
             // ListOfPrerequisitesSpecificCourse
             // 
             this.ListOfPrerequisitesSpecificCourse.AutoSize = true;
             this.ListOfPrerequisitesSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListOfPrerequisitesSpecificCourse.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.ListOfPrerequisitesSpecificCourse.Location = new System.Drawing.Point(283, 9);
             this.ListOfPrerequisitesSpecificCourse.Name = "ListOfPrerequisitesSpecificCourse";
             this.ListOfPrerequisitesSpecificCourse.Size = new System.Drawing.Size(195, 16);
@@ -372,39 +391,44 @@ partial class Student_form
             // DesicriptionSpecificCourse
             // 
             this.DesicriptionSpecificCourse.AutoSize = true;
-            this.DesicriptionSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DesicriptionSpecificCourse.Location = new System.Drawing.Point(7, 160);
+            this.DesicriptionSpecificCourse.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DesicriptionSpecificCourse.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.DesicriptionSpecificCourse.Location = new System.Drawing.Point(9, 109);
             this.DesicriptionSpecificCourse.Name = "DesicriptionSpecificCourse";
-            this.DesicriptionSpecificCourse.Size = new System.Drawing.Size(80, 15);
+            this.DesicriptionSpecificCourse.Size = new System.Drawing.Size(87, 16);
             this.DesicriptionSpecificCourse.TabIndex = 5;
             this.DesicriptionSpecificCourse.Text = "Description";
             // 
             // CourseNameText
             // 
-            this.CourseNameText.Location = new System.Drawing.Point(10, 124);
+            this.CourseNameText.Location = new System.Drawing.Point(9, 64);
             this.CourseNameText.Name = "CourseNameText";
-            this.CourseNameText.Size = new System.Drawing.Size(151, 20);
+            this.CourseNameText.Size = new System.Drawing.Size(166, 20);
             this.CourseNameText.TabIndex = 4;
             // 
             // LisboxofPrerequisites
             // 
+            this.LisboxofPrerequisites.BackColor = System.Drawing.Color.PaleTurquoise;
             this.LisboxofPrerequisites.FormattingEnabled = true;
-            this.LisboxofPrerequisites.Location = new System.Drawing.Point(242, 41);
+            this.LisboxofPrerequisites.Location = new System.Drawing.Point(265, 35);
             this.LisboxofPrerequisites.Name = "LisboxofPrerequisites";
             this.LisboxofPrerequisites.Size = new System.Drawing.Size(250, 186);
             this.LisboxofPrerequisites.TabIndex = 2;
             // 
             // DescriptionText
             // 
-            this.DescriptionText.Location = new System.Drawing.Point(10, 191);
+            this.DescriptionText.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.DescriptionText.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DescriptionText.Location = new System.Drawing.Point(12, 148);
             this.DescriptionText.Multiline = true;
             this.DescriptionText.Name = "DescriptionText";
             this.DescriptionText.ReadOnly = true;
-            this.DescriptionText.Size = new System.Drawing.Size(206, 32);
+            this.DescriptionText.Size = new System.Drawing.Size(219, 32);
             this.DescriptionText.TabIndex = 1;
             // 
             // EditProfile
             // 
+            this.EditProfile.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.EditProfile.Controls.Add(this.GoEditProfile);
             this.EditProfile.Controls.Add(this.PasswordText);
             this.EditProfile.Controls.Add(this.UsernameText);
@@ -419,46 +443,53 @@ partial class Student_form
             // 
             // GoEditProfile
             // 
+            this.GoEditProfile.BackColor = System.Drawing.Color.Transparent;
+            this.GoEditProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoEditProfile.Location = new System.Drawing.Point(207, 126);
+            this.GoEditProfile.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.GoEditProfile.Location = new System.Drawing.Point(413, 183);
             this.GoEditProfile.Name = "GoEditProfile";
-            this.GoEditProfile.Size = new System.Drawing.Size(71, 23);
+            this.GoEditProfile.Size = new System.Drawing.Size(95, 42);
             this.GoEditProfile.TabIndex = 6;
             this.GoEditProfile.Text = "Update";
-            this.GoEditProfile.UseVisualStyleBackColor = true;
+            this.GoEditProfile.UseVisualStyleBackColor = false;
             this.GoEditProfile.Click += new System.EventHandler(this.GoEditProfile_Click);
             // 
             // PasswordText
             // 
-            this.PasswordText.Location = new System.Drawing.Point(228, 74);
+            this.PasswordText.Location = new System.Drawing.Point(168, 154);
+            this.PasswordText.Multiline = true;
             this.PasswordText.Name = "PasswordText";
-            this.PasswordText.Size = new System.Drawing.Size(137, 20);
+            this.PasswordText.Size = new System.Drawing.Size(205, 30);
             this.PasswordText.TabIndex = 4;
             // 
             // UsernameText
             // 
-            this.UsernameText.Location = new System.Drawing.Point(228, 25);
+            this.UsernameText.Location = new System.Drawing.Point(168, 56);
+            this.UsernameText.Multiline = true;
             this.UsernameText.Name = "UsernameText";
-            this.UsernameText.Size = new System.Drawing.Size(137, 20);
+            this.UsernameText.Size = new System.Drawing.Size(205, 32);
             this.UsernameText.TabIndex = 0;
             // 
             // Password
             // 
             this.Password.AutoSize = true;
-            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.Location = new System.Drawing.Point(69, 75);
+            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Password.Location = new System.Drawing.Point(19, 113);
             this.Password.Name = "Password";
-            this.Password.Size = new System.Drawing.Size(84, 16);
+            this.Password.Size = new System.Drawing.Size(159, 31);
             this.Password.TabIndex = 2;
             this.Password.Text = "Password :";
             // 
             // Username
             // 
             this.Username.AutoSize = true;
-            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(69, 26);
+            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Username.Location = new System.Drawing.Point(32, 15);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(87, 16);
+            this.Username.Size = new System.Drawing.Size(146, 29);
             this.Username.TabIndex = 1;
             this.Username.Text = "Username :";
             // 
@@ -468,13 +499,12 @@ partial class Student_form
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(682, 247);
-            this.Controls.Add(this.EditProfile);
-            this.Controls.Add(this.CurrentDetails);
-            this.Controls.Add(this.SpecificCourse);
-            this.Controls.Add(this.ViewCourses);
             this.Controls.Add(this.NavigationPanel);
+            this.Controls.Add(this.EditProfile);
+            this.Controls.Add(this.SpecificCourse);
+            this.Controls.Add(this.CurrentDetails);
+            this.Controls.Add(this.ViewCourses);
             this.Controls.Add(this.LoginPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Student_form";
             this.Text = "Previous";
             this.LoginPanel.ResumeLayout(false);
