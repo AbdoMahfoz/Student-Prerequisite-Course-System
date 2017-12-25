@@ -342,6 +342,7 @@ partial class AdminForm
             this.StudentsInCourseGoButton.BackColor = System.Drawing.Color.Transparent;
             this.StudentsInCourseGoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.StudentsInCourseGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentsInCourseGoButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.StudentsInCourseGoButton.Location = new System.Drawing.Point(282, 7);
             this.StudentsInCourseGoButton.Name = "StudentsInCourseGoButton";
             this.StudentsInCourseGoButton.Size = new System.Drawing.Size(52, 23);
@@ -361,6 +362,7 @@ partial class AdminForm
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label1.Location = new System.Drawing.Point(47, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 16);
@@ -413,6 +415,7 @@ partial class AdminForm
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label2.Location = new System.Drawing.Point(225, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(219, 13);
@@ -437,6 +440,7 @@ partial class AdminForm
             // CPQActiveCourseLabel
             // 
             this.CPQActiveCourseLabel.AutoSize = true;
+            this.CPQActiveCourseLabel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.CPQActiveCourseLabel.Location = new System.Drawing.Point(89, 17);
             this.CPQActiveCourseLabel.Name = "CPQActiveCourseLabel";
             this.CPQActiveCourseLabel.Size = new System.Drawing.Size(23, 13);
@@ -446,6 +450,7 @@ partial class AdminForm
             // CPQDummyActiveCourseLabel
             // 
             this.CPQDummyActiveCourseLabel.AutoSize = true;
+            this.CPQDummyActiveCourseLabel.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.CPQDummyActiveCourseLabel.Location = new System.Drawing.Point(4, 16);
             this.CPQDummyActiveCourseLabel.Name = "CPQDummyActiveCourseLabel";
             this.CPQDummyActiveCourseLabel.Size = new System.Drawing.Size(79, 13);
@@ -456,6 +461,7 @@ partial class AdminForm
             // 
             this.CPQDummyLabel.AutoSize = true;
             this.CPQDummyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPQDummyLabel.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.CPQDummyLabel.Location = new System.Drawing.Point(1, 39);
             this.CPQDummyLabel.Name = "CPQDummyLabel";
             this.CPQDummyLabel.Size = new System.Drawing.Size(106, 16);
@@ -474,6 +480,7 @@ partial class AdminForm
             this.CPQGoButton.BackColor = System.Drawing.Color.Transparent;
             this.CPQGoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CPQGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPQGoButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.CPQGoButton.Location = new System.Drawing.Point(126, 61);
             this.CPQGoButton.Name = "CPQGoButton";
             this.CPQGoButton.Size = new System.Drawing.Size(84, 23);
@@ -499,6 +506,7 @@ partial class AdminForm
             // 
             this.DummyCourseNameInBoxLabel.AutoSize = true;
             this.DummyCourseNameInBoxLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DummyCourseNameInBoxLabel.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.DummyCourseNameInBoxLabel.Location = new System.Drawing.Point(2, 23);
             this.DummyCourseNameInBoxLabel.Name = "DummyCourseNameInBoxLabel";
             this.DummyCourseNameInBoxLabel.Size = new System.Drawing.Size(110, 16);
@@ -510,7 +518,7 @@ partial class AdminForm
             this.CPQAddButton.BackColor = System.Drawing.Color.Transparent;
             this.CPQAddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CPQAddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPQAddButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.CPQAddButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.CPQAddButton.Location = new System.Drawing.Point(126, 44);
             this.CPQAddButton.Name = "CPQAddButton";
             this.CPQAddButton.Size = new System.Drawing.Size(84, 23);
@@ -604,6 +612,7 @@ partial class AdminForm
             this.CoursesInStudentGoButton.BackColor = System.Drawing.Color.Transparent;
             this.CoursesInStudentGoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CoursesInStudentGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CoursesInStudentGoButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.CoursesInStudentGoButton.Location = new System.Drawing.Point(303, 2);
             this.CoursesInStudentGoButton.Name = "CoursesInStudentGoButton";
             this.CoursesInStudentGoButton.Size = new System.Drawing.Size(49, 23);
@@ -616,6 +625,7 @@ partial class AdminForm
             // 
             this.DummyCoursesInStudentLabel.AutoSize = true;
             this.DummyCoursesInStudentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DummyCoursesInStudentLabel.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.DummyCoursesInStudentLabel.Location = new System.Drawing.Point(92, 5);
             this.DummyCoursesInStudentLabel.Name = "DummyCoursesInStudentLabel";
             this.DummyCoursesInStudentLabel.Size = new System.Drawing.Size(79, 16);
@@ -744,13 +754,13 @@ partial class AdminForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(577, 214);
+            this.Controls.Add(this.CoursesInStudent);
+            this.Controls.Add(this.StudentsInCourse);
+            this.Controls.Add(this.CoursesPrerequisites);
+            this.Controls.Add(this.CourseOverviewPanel);
             this.Controls.Add(this.StudentOverviewPanel);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.LogIn);
-            this.Controls.Add(this.CoursesPrerequisites);
-            this.Controls.Add(this.CourseOverviewPanel);
-            this.Controls.Add(this.CoursesInStudent);
-            this.Controls.Add(this.StudentsInCourse);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "AdminForm";
             this.Text = "Admin Control";
