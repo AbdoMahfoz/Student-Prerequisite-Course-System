@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 static public class AdminOperations
 {
     static public class StudentFunctions
@@ -13,7 +12,7 @@ static public class AdminOperations
         }
         static public bool AddStudent(Student s)
         {
-            if(FileOperations.UsersFile.CheckUser(s.Name, s.Password) != -1)
+            if (FileOperations.UsersFile.CheckUser(s.Name, s.Password) != -1)
             {
                 return false;
             }
@@ -32,7 +31,10 @@ static public class AdminOperations
         {
             get
             {
-                LoadCourse();
+                if (courses == null)
+                {
+                    LoadCourse();
+                }
                 return courses;
             }
         }
@@ -50,13 +52,13 @@ static public class AdminOperations
         }
         static public bool AddCourse(Course c)
         {
-            if(Courses == null)
+            if (Courses == null)
             {
                 LoadCourse();
             }
-            foreach(Course s in Courses)
+            foreach (Course s in Courses)
             {
-                if(c == s)
+                if (c == s)
                 {
                     return false;
                 }
@@ -68,7 +70,7 @@ static public class AdminOperations
         {
             Course Dependant = FileOperations.CoursesFile.GetCourse(DependantName);
             Course Dependee = FileOperations.CoursesFile.GetCourse(DependeeName);
-            if(Dependant == null || Dependee == null)
+            if (Dependant == null || Dependee == null)
             {
                 return false;
             }
@@ -85,7 +87,7 @@ static public class AdminOperations
         }
         static public Course[] GetAllConnectedCourses(string CourseName)
         {
-            if(Courses == null)
+            if (Courses == null)
             {
                 LoadCourse();
             }

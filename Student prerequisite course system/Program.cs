@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Student_prerequisite_course_system
@@ -16,7 +13,7 @@ namespace Student_prerequisite_course_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminForm());
+            Application.Run(new Student_form());
             FileOperations.Write();
         }
     }

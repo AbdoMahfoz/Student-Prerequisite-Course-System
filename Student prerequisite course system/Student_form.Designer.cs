@@ -60,11 +60,11 @@ partial class Student_form
             this.LisboxofPrerequisites = new System.Windows.Forms.ListBox();
             this.DescriptionText = new System.Windows.Forms.TextBox();
             this.EditProfile = new System.Windows.Forms.Panel();
-            this.UsernameText = new System.Windows.Forms.TextBox();
-            this.Username = new System.Windows.Forms.Label();
-            this.Password = new System.Windows.Forms.Label();
-            this.PasswordText = new System.Windows.Forms.TextBox();
             this.GoEditProfile = new System.Windows.Forms.Button();
+            this.PasswordText = new System.Windows.Forms.TextBox();
+            this.UsernameText = new System.Windows.Forms.TextBox();
+            this.Password = new System.Windows.Forms.Label();
+            this.Username = new System.Windows.Forms.Label();
             this.LoginPanel.SuspendLayout();
             this.UserNamePlaceHolder.SuspendLayout();
             this.PasswordPlaceHolder.SuspendLayout();
@@ -417,22 +417,30 @@ partial class Student_form
             this.EditProfile.Visible = false;
             this.EditProfile.VisibleChanged += new System.EventHandler(this.EditProfile_VisibleChanged);
             // 
+            // GoEditProfile
+            // 
+            this.GoEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoEditProfile.Location = new System.Drawing.Point(207, 126);
+            this.GoEditProfile.Name = "GoEditProfile";
+            this.GoEditProfile.Size = new System.Drawing.Size(71, 23);
+            this.GoEditProfile.TabIndex = 6;
+            this.GoEditProfile.Text = "Update";
+            this.GoEditProfile.UseVisualStyleBackColor = true;
+            this.GoEditProfile.Click += new System.EventHandler(this.GoEditProfile_Click);
+            // 
+            // PasswordText
+            // 
+            this.PasswordText.Location = new System.Drawing.Point(228, 74);
+            this.PasswordText.Name = "PasswordText";
+            this.PasswordText.Size = new System.Drawing.Size(137, 20);
+            this.PasswordText.TabIndex = 4;
+            // 
             // UsernameText
             // 
             this.UsernameText.Location = new System.Drawing.Point(228, 25);
             this.UsernameText.Name = "UsernameText";
             this.UsernameText.Size = new System.Drawing.Size(137, 20);
             this.UsernameText.TabIndex = 0;
-            // 
-            // Username
-            // 
-            this.Username.AutoSize = true;
-            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(69, 26);
-            this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(87, 16);
-            this.Username.TabIndex = 1;
-            this.Username.Text = "Username :";
             // 
             // Password
             // 
@@ -444,23 +452,15 @@ partial class Student_form
             this.Password.TabIndex = 2;
             this.Password.Text = "Password :";
             // 
-            // PasswordText
+            // Username
             // 
-            this.PasswordText.Location = new System.Drawing.Point(228, 74);
-            this.PasswordText.Name = "PasswordText";
-            this.PasswordText.Size = new System.Drawing.Size(137, 20);
-            this.PasswordText.TabIndex = 4;
-            // 
-            // GoEditProfile
-            // 
-            this.GoEditProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoEditProfile.Location = new System.Drawing.Point(207, 126);
-            this.GoEditProfile.Name = "GoEditProfile";
-            this.GoEditProfile.Size = new System.Drawing.Size(71, 23);
-            this.GoEditProfile.TabIndex = 6;
-            this.GoEditProfile.Text = "Update";
-            this.GoEditProfile.UseVisualStyleBackColor = true;
-            this.GoEditProfile.Click += new System.EventHandler(this.GoEditProfile_Click);
+            this.Username.AutoSize = true;
+            this.Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.Location = new System.Drawing.Point(69, 26);
+            this.Username.Name = "Username";
+            this.Username.Size = new System.Drawing.Size(87, 16);
+            this.Username.TabIndex = 1;
+            this.Username.Text = "Username :";
             // 
             // Student_form
             // 
@@ -474,6 +474,7 @@ partial class Student_form
             this.Controls.Add(this.ViewCourses);
             this.Controls.Add(this.NavigationPanel);
             this.Controls.Add(this.LoginPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Student_form";
             this.Text = "Previous";
             this.LoginPanel.ResumeLayout(false);

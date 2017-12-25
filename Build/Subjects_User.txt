@@ -1,4 +1,3 @@
-Math
-Geo
+Math@2
 french@2
 english

@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 static public class UserOperations
 {
     static Tree<Course> courses;
@@ -7,7 +6,7 @@ static public class UserOperations
     {
         get
         {
-            if(courses == null)
+            if (courses == null)
             {
                 courses = new Tree<Course>();
                 courses.LoadFromFile(FileOperations.TreeFile.Read());
@@ -27,6 +26,24 @@ static public class UserOperations
     }
     static public Course[] GetAvailableCourses(Student s)
     {
-        return Courses.GetAvailableElements(s.GetRegisterd());
+        ArrayList<Course> res = new ArrayList<Course>();
+        Course[] AvailList = Courses.GetAvailableElements(s.GetTaken());
+        foreach (Course cs in AvailList)
+        {
+            bool IsReg = false;
+            foreach (Course c in s.GetRegisterd())
+            {
+                if (c == cs)
+                {
+                    IsReg = true;
+                    break;
+                }
+            }
+            if(!IsReg)
+            {
+                res.Append(cs);
+            }
+        }
+        return res.ToArray();
     }
 }

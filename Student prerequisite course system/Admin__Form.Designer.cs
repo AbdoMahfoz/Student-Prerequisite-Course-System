@@ -49,6 +49,12 @@ partial class AdminForm
             this.SO_PasswordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SO_YearColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentsInCourse = new System.Windows.Forms.Panel();
+            this.StudentsInCourseGoButton = new System.Windows.Forms.Button();
+            this.InputStudentsInCourse = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.StudentsInCourseGrid = new System.Windows.Forms.DataGridView();
+            this.SIC_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIC_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CoursesPrerequisites = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.CPQActiveBox = new System.Windows.Forms.GroupBox();
@@ -63,12 +69,6 @@ partial class AdminForm
             this.CPQAddInputTextBox = new System.Windows.Forms.TextBox();
             this.CPQDataGrid = new System.Windows.Forms.DataGridView();
             this.CPQ_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentsInCourseGoButton = new System.Windows.Forms.Button();
-            this.InputStudentsInCourse = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.StudentsInCourseGrid = new System.Windows.Forms.DataGridView();
-            this.SIC_IDColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SIC_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CoursesInStudent = new System.Windows.Forms.Panel();
             this.InputCoursesInStudent = new System.Windows.Forms.NumericUpDown();
             this.CoursesInStudentGrid = new System.Windows.Forms.DataGridView();
@@ -95,11 +95,11 @@ partial class AdminForm
             this.StudentOverviewPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AllStudentsGrid)).BeginInit();
             this.StudentsInCourse.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).BeginInit();
             this.CoursesPrerequisites.SuspendLayout();
             this.CPQActiveBox.SuspendLayout();
             this.CPQGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).BeginInit();
             this.CoursesInStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputCoursesInStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CoursesInStudentGrid)).BeginInit();
@@ -317,6 +317,61 @@ partial class AdminForm
             this.StudentsInCourse.Visible = false;
             this.StudentsInCourse.VisibleChanged += new System.EventHandler(this.StudentsInCourse_VisibleChanged);
             // 
+            // StudentsInCourseGoButton
+            // 
+            this.StudentsInCourseGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentsInCourseGoButton.Location = new System.Drawing.Point(282, 7);
+            this.StudentsInCourseGoButton.Name = "StudentsInCourseGoButton";
+            this.StudentsInCourseGoButton.Size = new System.Drawing.Size(52, 23);
+            this.StudentsInCourseGoButton.TabIndex = 6;
+            this.StudentsInCourseGoButton.Text = "GO";
+            this.StudentsInCourseGoButton.UseVisualStyleBackColor = true;
+            this.StudentsInCourseGoButton.Click += new System.EventHandler(this.StudentsInCourseGoButton_Click);
+            // 
+            // InputStudentsInCourse
+            // 
+            this.InputStudentsInCourse.Location = new System.Drawing.Point(164, 7);
+            this.InputStudentsInCourse.Name = "InputStudentsInCourse";
+            this.InputStudentsInCourse.Size = new System.Drawing.Size(100, 20);
+            this.InputStudentsInCourse.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(47, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 16);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Course Name";
+            // 
+            // StudentsInCourseGrid
+            // 
+            this.StudentsInCourseGrid.AllowUserToAddRows = false;
+            this.StudentsInCourseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudentsInCourseGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SIC_IDColumn,
+            this.SIC_NameColumn});
+            this.StudentsInCourseGrid.Location = new System.Drawing.Point(3, 31);
+            this.StudentsInCourseGrid.Name = "StudentsInCourseGrid";
+            this.StudentsInCourseGrid.ReadOnly = true;
+            this.StudentsInCourseGrid.Size = new System.Drawing.Size(442, 180);
+            this.StudentsInCourseGrid.TabIndex = 3;
+            // 
+            // SIC_IDColumn
+            // 
+            this.SIC_IDColumn.HeaderText = "Student ID";
+            this.SIC_IDColumn.Name = "SIC_IDColumn";
+            this.SIC_IDColumn.ReadOnly = true;
+            this.SIC_IDColumn.Width = 50;
+            // 
+            // SIC_NameColumn
+            // 
+            this.SIC_NameColumn.HeaderText = "Student Name";
+            this.SIC_NameColumn.Name = "SIC_NameColumn";
+            this.SIC_NameColumn.ReadOnly = true;
+            this.SIC_NameColumn.Width = 348;
+            // 
             // CoursesPrerequisites
             // 
             this.CoursesPrerequisites.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -464,61 +519,6 @@ partial class AdminForm
             this.CPQ_NameColumn.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.CPQ_NameColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.CPQ_NameColumn.Width = 150;
-            // 
-            // StudentsInCourseGoButton
-            // 
-            this.StudentsInCourseGoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentsInCourseGoButton.Location = new System.Drawing.Point(282, 7);
-            this.StudentsInCourseGoButton.Name = "StudentsInCourseGoButton";
-            this.StudentsInCourseGoButton.Size = new System.Drawing.Size(52, 23);
-            this.StudentsInCourseGoButton.TabIndex = 6;
-            this.StudentsInCourseGoButton.Text = "GO";
-            this.StudentsInCourseGoButton.UseVisualStyleBackColor = true;
-            this.StudentsInCourseGoButton.Click += new System.EventHandler(this.StudentsInCourseGoButton_Click);
-            // 
-            // InputStudentsInCourse
-            // 
-            this.InputStudentsInCourse.Location = new System.Drawing.Point(164, 7);
-            this.InputStudentsInCourse.Name = "InputStudentsInCourse";
-            this.InputStudentsInCourse.Size = new System.Drawing.Size(100, 20);
-            this.InputStudentsInCourse.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(47, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Course Name";
-            // 
-            // StudentsInCourseGrid
-            // 
-            this.StudentsInCourseGrid.AllowUserToAddRows = false;
-            this.StudentsInCourseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsInCourseGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SIC_IDColumn,
-            this.SIC_NameColumn});
-            this.StudentsInCourseGrid.Location = new System.Drawing.Point(3, 31);
-            this.StudentsInCourseGrid.Name = "StudentsInCourseGrid";
-            this.StudentsInCourseGrid.ReadOnly = true;
-            this.StudentsInCourseGrid.Size = new System.Drawing.Size(442, 180);
-            this.StudentsInCourseGrid.TabIndex = 3;
-            // 
-            // SIC_IDColumn
-            // 
-            this.SIC_IDColumn.HeaderText = "Student ID";
-            this.SIC_IDColumn.Name = "SIC_IDColumn";
-            this.SIC_IDColumn.ReadOnly = true;
-            this.SIC_IDColumn.Width = 50;
-            // 
-            // SIC_NameColumn
-            // 
-            this.SIC_NameColumn.HeaderText = "Student Name";
-            this.SIC_NameColumn.Name = "SIC_NameColumn";
-            this.SIC_NameColumn.ReadOnly = true;
-            this.SIC_NameColumn.Width = 348;
             // 
             // CoursesInStudent
             // 
@@ -711,6 +711,7 @@ partial class AdminForm
             this.Controls.Add(this.LogIn);
             this.Controls.Add(this.CoursesInStudent);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "AdminForm";
             this.Text = "Admin Control";
             this.Home.ResumeLayout(false);
@@ -724,6 +725,7 @@ partial class AdminForm
             ((System.ComponentModel.ISupportInitialize)(this.AllStudentsGrid)).EndInit();
             this.StudentsInCourse.ResumeLayout(false);
             this.StudentsInCourse.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).EndInit();
             this.CoursesPrerequisites.ResumeLayout(false);
             this.CoursesPrerequisites.PerformLayout();
             this.CPQActiveBox.ResumeLayout(false);
@@ -731,7 +733,6 @@ partial class AdminForm
             this.CPQGroupBox.ResumeLayout(false);
             this.CPQGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CPQDataGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.StudentsInCourseGrid)).EndInit();
             this.CoursesInStudent.ResumeLayout(false);
             this.CoursesInStudent.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InputCoursesInStudent)).EndInit();

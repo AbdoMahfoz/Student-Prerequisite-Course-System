@@ -1,4 +1,3 @@
 Math 1
-Geo 3
 french
-english
+english 0

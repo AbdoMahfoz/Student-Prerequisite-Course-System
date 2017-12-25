@@ -2,8 +2,10 @@
 
 public partial class AdminForm : Form
 {
+    //Fields
     Panel activePanel;
     Button ActiveButton;
+    //Properties
     Panel ActivePanel
     {
         get
@@ -49,10 +51,12 @@ public partial class AdminForm : Form
             }
         }
     }
+    //Constructor
     public AdminForm()
     {
         InitializeComponent();
     }
+    //Login
     private void LoginButton_Click(object sender, System.EventArgs e)
     {
         if (UserNameTextBox.Text == "Admin" && PasswordTextBox.Text == "Admin")
@@ -90,7 +94,6 @@ public partial class AdminForm : Form
     {
         if (CourseOverviewPanel.Visible)
         {
-            AdminOperations.CourseFunctions.LoadCourse();
             AllCoursesGrid.Rows.Clear();
             Course[] Courses = AdminOperations.CourseFunctions.GetAllCourses();
             if (Courses == null)
