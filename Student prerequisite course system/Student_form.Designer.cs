@@ -470,12 +470,12 @@ partial class Student_form
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(682, 247);
-            this.Controls.Add(this.NavigationPanel);
-            this.Controls.Add(this.EditProfile);
-            this.Controls.Add(this.SpecificCourse);
-            this.Controls.Add(this.CurrentDetails);
-            this.Controls.Add(this.ViewCourses);
             this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.ViewCourses);
+            this.Controls.Add(this.CurrentDetails);
+            this.Controls.Add(this.SpecificCourse);
+            this.Controls.Add(this.EditProfile);
+            this.Controls.Add(this.NavigationPanel);
             this.Name = "Student_form";
             this.Text = "Course Contorl";
             this.LoginPanel.ResumeLayout(false);

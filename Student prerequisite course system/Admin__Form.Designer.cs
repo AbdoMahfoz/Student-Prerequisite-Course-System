@@ -227,7 +227,7 @@ partial class AdminForm
             // 
             // AllCoursesGrid
             // 
-            this.AllCoursesGrid.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.AllCoursesGrid.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.AllCoursesGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AllCoursesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CO_NameColumn,
@@ -266,6 +266,7 @@ partial class AdminForm
             // 
             this.DummyAllStudentsLabel.AutoSize = true;
             this.DummyAllStudentsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DummyAllStudentsLabel.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.DummyAllStudentsLabel.Location = new System.Drawing.Point(176, 9);
             this.DummyAllStudentsLabel.Name = "DummyAllStudentsLabel";
             this.DummyAllStudentsLabel.Size = new System.Drawing.Size(90, 16);
@@ -287,7 +288,7 @@ partial class AdminForm
             // 
             // AllStudentsGrid
             // 
-            this.AllStudentsGrid.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.AllStudentsGrid.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.AllStudentsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.AllStudentsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SO_IDColumn,
@@ -371,7 +372,7 @@ partial class AdminForm
             // StudentsInCourseGrid
             // 
             this.StudentsInCourseGrid.AllowUserToAddRows = false;
-            this.StudentsInCourseGrid.BackgroundColor = System.Drawing.Color.AliceBlue;
+            this.StudentsInCourseGrid.BackgroundColor = System.Drawing.Color.DeepSkyBlue;
             this.StudentsInCourseGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.StudentsInCourseGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SIC_IDColumn,
@@ -635,7 +636,7 @@ partial class AdminForm
             // 
             // LogIn
             // 
-            this.LogIn.BackColor = System.Drawing.Color.AliceBlue;
+            this.LogIn.BackColor = System.Drawing.Color.White;
             this.LogIn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LogIn.Controls.Add(this.LoginButton);
             this.LogIn.Controls.Add(this.PasswordPlaceHolder);
@@ -758,8 +759,8 @@ partial class AdminForm
             this.Controls.Add(this.CoursesInStudent);
             this.Controls.Add(this.StudentsInCourse);
             this.Controls.Add(this.CoursesPrerequisites);
-            this.Controls.Add(this.CourseOverviewPanel);
             this.Controls.Add(this.StudentOverviewPanel);
+            this.Controls.Add(this.CourseOverviewPanel);
             this.Controls.Add(this.Home);
             this.Controls.Add(this.LogIn);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
