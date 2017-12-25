@@ -37,6 +37,7 @@ static public class FileOperations
                 if (Data[i] == s)
                 {
                     Users_SubjectsFile.DeleteStudent(s);
+                    Subjects_UsersFile.DeleteStudent(s);
                     Data.DeleteAt(i);
                     return true;
                 }
@@ -188,6 +189,7 @@ static public class FileOperations
                 if (Data[i] == c)
                 {
                     Subjects_UsersFile.DeleteCourse(c);
+                    Users_SubjectsFile.DeleteCourse(c);
                     Data.DeleteAt(i);
                     return;
                 }
@@ -334,6 +336,20 @@ static public class FileOperations
                 }
             }
         }
+        static public void DeleteCourse(Course c)
+        {
+            foreach(Pair<int, ArrayList<Pair<bool, Course>>> P in Data)
+            {
+                for(int i = 0; i < P.Second.Count; i++)
+                {
+                    if(P.Second[i].Second.Name == c.Name)
+                    {
+                        P.Second.DeleteAt(i);
+                        break;
+                    }
+                }
+            }
+        }
         static public void RegisterStudent(Student s)
         {
             if (Data == null)
@@ -431,6 +447,20 @@ static public class FileOperations
                 {
                     Data.DeleteAt(i);
                     return;
+                }
+            }
+        }
+        static public void DeleteStudent(Student s)
+        {
+            foreach(Pair<Course, ArrayList<Student>> P in Data)
+            {
+                for(int i = 0; i < P.Second.Count; i++)
+                {
+                    if(P.Second[i].ID == s.ID)
+                    {
+                        P.Second.DeleteAt(i);
+                        break;
+                    }
                 }
             }
         }

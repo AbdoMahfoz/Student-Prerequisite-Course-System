@@ -27,14 +27,6 @@ static public class UserOperations
     }
     static public Course[] GetAvailableCourses(Student s)
     {
-        ArrayList<Course> tmp = new ArrayList<Course>();
-        foreach (Pair<bool, Course> e in s.RegisteredCourses)
-        {
-            if (e.First)
-            {
-                tmp.Append(e.Second);
-            }
-        }
-        return Courses.GetAvailableElements(tmp.ToArray());
+        return Courses.GetAvailableElements(s.GetRegisterd());
     }
 }
