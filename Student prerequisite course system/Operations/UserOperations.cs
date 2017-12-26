@@ -14,13 +14,11 @@ static public class UserOperations
             return courses;
         }
     }
-    static public Student LogIn(string UserName, string Password)
+    static public Student LogIn(int ID, string Password)
     {
-        int ID = FileOperations.UsersFile.CheckUser(UserName, Password);
-        if (ID != -1)
+        if(FileOperations.UsersFile.CheckUser(ID, Password))
         {
-            Student s = FileOperations.UsersFile.GetUser(ID);
-            return s;
+            return FileOperations.UsersFile.GetUser(ID);
         }
         return null;
     }

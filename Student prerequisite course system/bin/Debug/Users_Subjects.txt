@@ -1,4 +1,4 @@
-1
-2@1@english@0@french
+1@1@Math_1
+2@0@Math_1
 3
 4

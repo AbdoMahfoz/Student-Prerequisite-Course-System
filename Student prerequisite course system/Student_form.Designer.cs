@@ -75,7 +75,7 @@ partial class Student_form
             // 
             // LoginPanel
             // 
-            this.LoginPanel.BackColor = System.Drawing.Color.AliceBlue;
+            this.LoginPanel.BackColor = System.Drawing.Color.White;
             this.LoginPanel.Controls.Add(this.LoginButton);
             this.LoginPanel.Controls.Add(this.UserNamePlaceHolder);
             this.LoginPanel.Controls.Add(this.PasswordPlaceHolder);
@@ -141,6 +141,7 @@ partial class Student_form
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(55, 3);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(173, 20);
             this.PasswordTextBox.TabIndex = 1;
             // 
@@ -181,9 +182,9 @@ partial class Student_form
             this.UserNameLabel.ForeColor = System.Drawing.Color.Blue;
             this.UserNameLabel.Location = new System.Drawing.Point(337, 25);
             this.UserNameLabel.Name = "UserNameLabel";
-            this.UserNameLabel.Size = new System.Drawing.Size(79, 16);
+            this.UserNameLabel.Size = new System.Drawing.Size(23, 16);
             this.UserNameLabel.TabIndex = 3;
-            this.UserNameLabel.Text = "Username";
+            this.UserNameLabel.Text = "ID";
             // 
             // ViewCourses
             // 

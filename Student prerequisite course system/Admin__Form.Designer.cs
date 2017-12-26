@@ -72,8 +72,6 @@ partial class AdminForm
             this.CoursesInStudent = new System.Windows.Forms.Panel();
             this.InputCoursesInStudent = new System.Windows.Forms.NumericUpDown();
             this.CoursesInStudentGrid = new System.Windows.Forms.DataGridView();
-            this.CIS_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SIC_StatusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.CoursesInStudentGoButton = new System.Windows.Forms.Button();
             this.DummyCoursesInStudentLabel = new System.Windows.Forms.Label();
             this.LogIn = new System.Windows.Forms.Panel();
@@ -87,6 +85,8 @@ partial class AdminForm
             this.DumyyUserPicture = new System.Windows.Forms.Panel();
             this.UserNameLabel = new System.Windows.Forms.Label();
             this.BigUserPicture = new System.Windows.Forms.Panel();
+            this.CIS_NameColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SIC_StatusColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Home.SuspendLayout();
             this.HomeStudentBox.SuspendLayout();
             this.HomeCourseBox.SuspendLayout();
@@ -136,9 +136,9 @@ partial class AdminForm
             this.HomeCoursesOfStudentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeCoursesOfStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeCoursesOfStudentButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.HomeCoursesOfStudentButton.Location = new System.Drawing.Point(-1, 48);
+            this.HomeCoursesOfStudentButton.Location = new System.Drawing.Point(0, 48);
             this.HomeCoursesOfStudentButton.Name = "HomeCoursesOfStudentButton";
-            this.HomeCoursesOfStudentButton.Size = new System.Drawing.Size(120, 23);
+            this.HomeCoursesOfStudentButton.Size = new System.Drawing.Size(119, 23);
             this.HomeCoursesOfStudentButton.TabIndex = 1;
             this.HomeCoursesOfStudentButton.Text = "Courses Of Student";
             this.HomeCoursesOfStudentButton.UseVisualStyleBackColor = false;
@@ -150,9 +150,9 @@ partial class AdminForm
             this.HomeAllStudentsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeAllStudentsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeAllStudentsButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.HomeAllStudentsButton.Location = new System.Drawing.Point(-1, 19);
+            this.HomeAllStudentsButton.Location = new System.Drawing.Point(1, 19);
             this.HomeAllStudentsButton.Name = "HomeAllStudentsButton";
-            this.HomeAllStudentsButton.Size = new System.Drawing.Size(120, 23);
+            this.HomeAllStudentsButton.Size = new System.Drawing.Size(118, 23);
             this.HomeAllStudentsButton.TabIndex = 0;
             this.HomeAllStudentsButton.Text = "All Students";
             this.HomeAllStudentsButton.UseVisualStyleBackColor = false;
@@ -190,9 +190,9 @@ partial class AdminForm
             this.HomeStudentsOfCourseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HomeStudentsOfCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HomeStudentsOfCourseButton.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.HomeStudentsOfCourseButton.Location = new System.Drawing.Point(0, 48);
+            this.HomeStudentsOfCourseButton.Location = new System.Drawing.Point(1, 48);
             this.HomeStudentsOfCourseButton.Name = "HomeStudentsOfCourseButton";
-            this.HomeStudentsOfCourseButton.Size = new System.Drawing.Size(120, 23);
+            this.HomeStudentsOfCourseButton.Size = new System.Drawing.Size(119, 23);
             this.HomeStudentsOfCourseButton.TabIndex = 1;
             this.HomeStudentsOfCourseButton.Text = "Students Of Course";
             this.HomeStudentsOfCourseButton.UseVisualStyleBackColor = false;
@@ -424,7 +424,7 @@ partial class AdminForm
             // 
             // CPQActiveBox
             // 
-            this.CPQActiveBox.BackColor = System.Drawing.Color.AliceBlue;
+            this.CPQActiveBox.BackColor = System.Drawing.Color.Transparent;
             this.CPQActiveBox.Controls.Add(this.CPQActiveCourseLabel);
             this.CPQActiveBox.Controls.Add(this.CPQDummyActiveCourseLabel);
             this.CPQActiveBox.Controls.Add(this.CPQDummyLabel);
@@ -435,7 +435,7 @@ partial class AdminForm
             this.CPQActiveBox.Size = new System.Drawing.Size(216, 90);
             this.CPQActiveBox.TabIndex = 7;
             this.CPQActiveBox.TabStop = false;
-            this.CPQActiveBox.Text = "State";
+            this.CPQActiveBox.Text = "Active Course";
             // 
             // CPQActiveCourseLabel
             // 
@@ -491,7 +491,7 @@ partial class AdminForm
             // 
             // CPQGroupBox
             // 
-            this.CPQGroupBox.BackColor = System.Drawing.Color.AliceBlue;
+            this.CPQGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.CPQGroupBox.Controls.Add(this.DummyCourseNameInBoxLabel);
             this.CPQGroupBox.Controls.Add(this.CPQAddButton);
             this.CPQGroupBox.Controls.Add(this.CPQAddInputTextBox);
@@ -500,7 +500,7 @@ partial class AdminForm
             this.CPQGroupBox.Size = new System.Drawing.Size(216, 81);
             this.CPQGroupBox.TabIndex = 6;
             this.CPQGroupBox.TabStop = false;
-            this.CPQGroupBox.Text = "Add Course";
+            this.CPQGroupBox.Text = "Set Prerequisite";
             // 
             // DummyCourseNameInBoxLabel
             // 
@@ -523,7 +523,7 @@ partial class AdminForm
             this.CPQAddButton.Name = "CPQAddButton";
             this.CPQAddButton.Size = new System.Drawing.Size(84, 23);
             this.CPQAddButton.TabIndex = 1;
-            this.CPQAddButton.Text = "Add";
+            this.CPQAddButton.Text = "Set Pre.";
             this.CPQAddButton.UseVisualStyleBackColor = false;
             this.CPQAddButton.Click += new System.EventHandler(this.CPQAddButton_Click);
             // 
@@ -589,25 +589,9 @@ partial class AdminForm
             this.SIC_StatusColumn});
             this.CoursesInStudentGrid.Location = new System.Drawing.Point(3, 28);
             this.CoursesInStudentGrid.Name = "CoursesInStudentGrid";
-            this.CoursesInStudentGrid.Size = new System.Drawing.Size(444, 183);
+            this.CoursesInStudentGrid.Size = new System.Drawing.Size(443, 183);
             this.CoursesInStudentGrid.TabIndex = 3;
             this.CoursesInStudentGrid.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.CoursesInStudentGrid_CellValueChanged);
-            // 
-            // CIS_NameColumn
-            // 
-            this.CIS_NameColumn.HeaderText = "Course Name";
-            this.CIS_NameColumn.Name = "CIS_NameColumn";
-            this.CIS_NameColumn.ReadOnly = true;
-            this.CIS_NameColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.CIS_NameColumn.Width = 202;
-            // 
-            // SIC_StatusColumn
-            // 
-            this.SIC_StatusColumn.HeaderText = "Status";
-            this.SIC_StatusColumn.Name = "SIC_StatusColumn";
-            this.SIC_StatusColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.SIC_StatusColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.SIC_StatusColumn.Width = 202;
             // 
             // CoursesInStudentGoButton
             // 
@@ -637,7 +621,6 @@ partial class AdminForm
             // LogIn
             // 
             this.LogIn.BackColor = System.Drawing.Color.White;
-            this.LogIn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LogIn.Controls.Add(this.LoginButton);
             this.LogIn.Controls.Add(this.PasswordPlaceHolder);
             this.LogIn.Controls.Add(this.PasswordLabel);
@@ -677,6 +660,7 @@ partial class AdminForm
             // 
             this.PasswordTextBox.Location = new System.Drawing.Point(55, 3);
             this.PasswordTextBox.Name = "PasswordTextBox";
+            this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(173, 20);
             this.PasswordTextBox.TabIndex = 1;
             // 
@@ -693,7 +677,7 @@ partial class AdminForm
             // PasswordLabel
             // 
             this.PasswordLabel.AutoSize = true;
-            this.PasswordLabel.BackColor = System.Drawing.Color.AliceBlue;
+            this.PasswordLabel.BackColor = System.Drawing.Color.Transparent;
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PasswordLabel.ForeColor = System.Drawing.Color.Blue;
             this.PasswordLabel.Location = new System.Drawing.Point(298, 98);
@@ -750,19 +734,35 @@ partial class AdminForm
             this.BigUserPicture.Size = new System.Drawing.Size(258, 209);
             this.BigUserPicture.TabIndex = 1;
             // 
+            // CIS_NameColumn
+            // 
+            this.CIS_NameColumn.HeaderText = "Course Name";
+            this.CIS_NameColumn.Name = "CIS_NameColumn";
+            this.CIS_NameColumn.ReadOnly = true;
+            this.CIS_NameColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.CIS_NameColumn.Width = 202;
+            // 
+            // SIC_StatusColumn
+            // 
+            this.SIC_StatusColumn.HeaderText = "Status";
+            this.SIC_StatusColumn.Name = "SIC_StatusColumn";
+            this.SIC_StatusColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.SIC_StatusColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.SIC_StatusColumn.Width = 198;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(577, 214);
+            this.Controls.Add(this.LogIn);
+            this.Controls.Add(this.CoursesPrerequisites);
             this.Controls.Add(this.CoursesInStudent);
             this.Controls.Add(this.StudentsInCourse);
-            this.Controls.Add(this.CoursesPrerequisites);
-            this.Controls.Add(this.StudentOverviewPanel);
             this.Controls.Add(this.CourseOverviewPanel);
+            this.Controls.Add(this.StudentOverviewPanel);
             this.Controls.Add(this.Home);
-            this.Controls.Add(this.LogIn);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.Name = "AdminForm";
             this.Text = "Admin Control";

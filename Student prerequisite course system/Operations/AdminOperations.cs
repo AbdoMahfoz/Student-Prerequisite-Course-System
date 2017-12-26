@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+
 static public class AdminOperations
 {
     static public class StudentFunctions
@@ -10,14 +11,9 @@ static public class AdminOperations
                 return FileOperations.UsersFile.GetAllStudents();
             }
         }
-        static public bool AddStudent(Student s)
+        static public void AddStudent(Student s)
         {
-            if (FileOperations.UsersFile.CheckUser(s.Name, s.Password) != -1)
-            {
-                return false;
-            }
             FileOperations.UsersFile.AddStudent(s);
-            return true;
         }
         static public bool DeleteStudent(Student s)
         {
@@ -83,7 +79,15 @@ static public class AdminOperations
         }
         static public Student[] GetStudentsEnrolledInCourse(Course c)
         {
-            return FileOperations.Subjects_UsersFile.GetStudents(c);
+            ArrayList<Student> res = new ArrayList<Student>();
+            foreach (Student s in FileOperations.Subjects_UsersFile.GetStudents(c))
+            {
+                if (!Array.Exists(s.GetTaken(), (Course cour) => { return cour == c; }))
+                {
+                    res.Append(s);
+                }
+            }
+            return res.ToArray();
         }
         static public Course[] GetAllConnectedCourses(string CourseName)
         {

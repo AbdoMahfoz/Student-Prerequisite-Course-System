@@ -23,7 +23,6 @@ public partial class Student_form : Form
             value.Visible = true;
             _currentActivePanel = value;
             HomeCurrent.Enabled = true;
-            HomeEditCourse.Enabled = true;
             HomeView.Enabled = true;
             HomeSpecificCourse.Enabled = true;
             HomeEditProfile.Enabled = true;
@@ -99,7 +98,13 @@ public partial class Student_form : Form
     //Login
     private void LoginButton_Click(object sender, EventArgs e)
     {
-        Student s = UserOperations.LogIn(UserNameTextBox.Text, PasswordTextBox.Text);
+        if(!int.TryParse(UserNameTextBox.Text, out int ID))
+        {
+            MessageBox.Show("ID has to be an integer");
+            UserNameTextBox.Text = "";
+            return;
+        }
+        Student s = UserOperations.LogIn(ID, PasswordTextBox.Text);
         if (s != null)
         {
             ActiveStudent = s;
@@ -110,7 +115,7 @@ public partial class Student_form : Form
         }
         else
         {
-            MessageBox.Show("Invalid username or password");
+            MessageBox.Show("Invalid ID or password");
             UserNameTextBox.Text = "";
             PasswordTextBox.Text = "";
         }

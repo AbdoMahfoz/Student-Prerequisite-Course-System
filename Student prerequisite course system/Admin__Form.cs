@@ -130,6 +130,18 @@ public partial class AdminForm : Form
                 return;
             }
         }
+        if((AllCoursesGrid.Rows[e.RowIndex].Cells[0].Value as string).Contains(" "))
+        {
+            MessageBox.Show("Course name cannot contain white spaces");
+            if (IsNewRow)
+            {
+                AllCoursesGrid.Rows.RemoveAt(AllCoursesGrid.Rows.Count - 2);
+            }
+            else
+            {
+                AllCoursesGrid.Rows[e.RowIndex].Cells[0].Value = AdminOperations.CourseFunctions.Courses[e.RowIndex].Name;
+            }
+        }
         if (IsNewRow)
         {
             AdminOperations.CourseFunctions.AddCourse(new Course()
@@ -186,7 +198,7 @@ public partial class AdminForm : Form
         {
             if ((IsNewRow || AdminOperations.StudentFunctions.AllStudents[e.RowIndex] != s) && s.ID == ID)
             {
-                MessageBox.Show("No");
+                MessageBox.Show("Same ID already exists");
                 if (IsNewRow)
                 {
                     AllStudentsGrid.Rows.RemoveAt(AllStudentsGrid.Rows.Count - 2);
@@ -226,18 +238,22 @@ public partial class AdminForm : Form
     {
         CPQDataGrid.Rows.Clear();
         InputCPQ.Text = "";
+        CPQAddButton.Enabled = false;
         CPQActiveCourseLabel.Text = "null";
     }
     private void CPQGoButton_Click(object sender, System.EventArgs e)
     {
         CPQDataGrid.Rows.Clear();
         Course[] childs = AdminOperations.CourseFunctions.GetAllConnectedCourses(InputCPQ.Text);
-        if(childs == null)
+        if (childs == null)
         {
             MessageBox.Show("Course non existant");
             CPQActiveCourseLabel.Text = "null";
+            CPQAddInputTextBox.Text = "";
+            CPQAddButton.Enabled = false;
             return;
         }
+        CPQAddButton.Enabled = true;
         CPQActiveCourseLabel.Text = InputCPQ.Text;
         InputCPQ.Text = "";
         foreach (Course c in childs)

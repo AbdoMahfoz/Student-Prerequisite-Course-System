@@ -99,26 +99,24 @@ static public class FileOperations
             sw.Write(Recordss);
             sw.Close();
         }
-        static public int CheckUser(string Name, string Password)
+        static public bool CheckUser(int ID, string Password)
         {
             bool found = false;
             bool RightPass = false;
-            int res = -1;
             for (int i = 0; i < Data.Count; i++)
             {
-                if (Data[i].Name.CompareTo(Name) == 0)
+                if (Data[i].ID == ID)
                 {
                     found = true;
                     if (Data[i].Password.CompareTo(Password) == 0)
                     {
                         RightPass = true;
                     }
-                    res = Data[i].ID;
                     break;
                 }
             }
-            if (found && RightPass) return res;
-            else return -1;
+            if (found && RightPass) return true;
+            else return false;
         }
     }
     static public class AdminFile

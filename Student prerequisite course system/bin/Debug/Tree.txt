@@ -1,4 +1,4 @@
-Math 1
-Geo 3
-french
-english
+Math_1
+Math_2 0
+Math_3 1
+Math_4 2
